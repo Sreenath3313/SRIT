@@ -1,0 +1,368 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ChevronRight, ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import CollegeBuildingOutline from "./CollegeBuildingOutline";
+
+interface Department {
+    slug: string;
+    code: string;
+    name: string;
+    fullName?: string;
+    layout?: 'sidebar' | 'full-width';
+}
+
+interface DepartmentNavItem {
+    key: string;
+    label: string;
+    icon: React.ReactNode;
+}
+
+interface DepartmentNavbarProps {
+    dept: Department;
+    items: DepartmentNavItem[];
+    activeTab: string;
+    onTabChange: (tabKey: string) => void;
+}
+
+const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
+    dept,
+    items,
+    activeTab,
+    onTabChange,
+}) => {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const isActive = (key: string) => {
+        if (key === "about") {
+            return activeTab === "about" || activeTab === "";
+        }
+
+        return activeTab === key;
+    };
+
+    return (
+        <header className="sticky top-0 z-50 w-full bg-white border-b border-neutral-200">
+
+            {/* =====================================================
+                DEPARTMENT HEADER
+            ===================================================== */}
+
+            {(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? (
+                /* ── Sidebar Layout: Custom Header ── */
+                <div className="bg-white text-neutral-900 relative overflow-hidden border-b border-neutral-100">
+
+                    {/* Left geometric accents */}
+                    <div
+                        className="absolute left-0 top-0 h-full w-[120px] sm:w-[160px] md:w-[200px] pointer-events-none"
+                        style={{
+                            background: 'linear-gradient(135deg, #FF5422 0%, #FF764D 100%)',
+                            clipPath: 'polygon(0 0, 80% 0, 40% 100%, 0 100%)',
+                            opacity: 0.85
+                        }}
+                    />
+                    <div
+                        className="absolute left-0 top-0 h-full w-[180px] sm:w-[220px] md:w-[280px] pointer-events-none"
+                        style={{
+                            background: '#FF5422',
+                            clipPath: 'polygon(0 0, 60% 0, 90% 100%, 0 100%)',
+                            opacity: 0.15
+                        }}
+                    />
+
+                    {/* Right geometric accents & watermark */}
+                    <div className="absolute right-0 top-0 h-full w-[100px] sm:w-[140px] md:w-[200px] lg:w-[450px] pointer-events-none flex justify-end">
+                        <CollegeBuildingOutline
+                            className="h-full w-[400px] sm:w-[500px] md:w-[600px] lg:w-[800px] object-cover object-right text-[#FF5422] mix-blend-multiply opacity-50 hidden lg:block"
+                            style={{
+                                maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%)'
+                            }}
+                        />
+                        <CollegeBuildingOutline
+                            className="h-full w-[200px] object-cover object-right text-[#FF5422] mix-blend-multiply opacity-50 lg:hidden"
+                            style={{
+                                maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, transparent 100%)'
+                            }}
+                        />
+                        {/* Right orange angular shape */}
+                        <div
+                            className="absolute right-0 top-0 h-full w-[80px] sm:w-[100px] lg:w-[120px]"
+                            style={{
+                                background: '#FF5422',
+                                clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 0 100%)',
+                                opacity: 0.9
+                            }}
+                        />
+                        <div
+                            className="absolute right-0 top-0 h-full w-[120px] sm:w-[150px] lg:w-[180px]"
+                            style={{
+                                background: '#FF5422',
+                                clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 20% 100%)',
+                                opacity: 0.15
+                            }}
+                        />
+                    </div>
+
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+                        <div className="h-[56px] sm:h-[62px] flex items-center justify-between">
+
+                            {/* LEFT - IDENTITY */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -24 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                                className="flex items-center min-w-0"
+                            >
+                                {/* CIRCULAR BACK BUTTON */}
+                                <Link
+                                    to="/departments"
+                                    title="All Departments"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md mr-2 relative z-20"
+                                >
+                                    <ArrowLeft size={16} strokeWidth={2} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+                                </Link>
+
+                                {/* HOME BUTTON */}
+                                <Link
+                                    to="/"
+                                    title="Home"
+                                    className="h-8 sm:h-9 flex items-center justify-center transition-opacity duration-200 hover:opacity-80 shrink-0 relative z-20"
+                                >
+                                    <img src="/optimized/SRIT_LOGO.jpg.webp" alt="SRIT Logo" className="h-full w-auto object-contain bg-white rounded-sm" loading="lazy" />
+                                </Link>
+
+                                {/* DIVIDER */}
+                                <div className="h-6 sm:h-7 w-[1px] bg-neutral-200 mx-3 sm:mx-5" />
+
+                                {/* TITLE & SUBTITLE */}
+                                <div className="min-w-0">
+                                    <h1 className="text-[13px] sm:text-[15px] lg:text-[16px] font-bold leading-tight truncate text-neutral-900 tracking-tight">
+                                        {dept.code} – {dept.name}
+                                    </h1>
+                                    <p className="text-[10px] sm:text-[11px] lg:text-[12px] font-medium text-neutral-500 leading-tight mt-0.5 truncate max-w-[400px] sm:max-w-[600px]">
+                                        {dept.fullName || `Department of ${dept.name}`}
+                                    </p>
+                                </div>
+                            </motion.div>
+
+                            {/* INSTITUTE NAME */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.25, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                                className="hidden lg:flex items-center shrink-0 ml-8 relative z-20"
+                            >
+                                <span className="text-[12px] lg:text-[13px] font-semibold tracking-wide text-[#FF5422] bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-neutral-100">
+                                    Srinivasa Ramanujan Institute of Technology
+                                </span>
+                            </motion.div>
+
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                /* ── OTHER DEPARTMENTS: Original Header ── */
+                <div className="bg-[#FF5422] text-white relative overflow-hidden">
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+                        <div className="h-[56px] sm:h-[62px] flex items-center justify-between">
+
+                            {/* LEFT - DEPARTMENT IDENTITY */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -24 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                                className="flex items-center min-w-0"
+                            >
+                                {/* BACK BUTTON */}
+                                <Link
+                                    to="/departments"
+                                    title="All Departments"
+                                    className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-white text-[#FF5422] border border-neutral-200 hover:bg-neutral-50 transition-all duration-200 shrink-0 group shadow-md mr-2 relative z-20"
+                                >
+                                    <ArrowLeft size={16} strokeWidth={2} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+                                </Link>
+
+                                {/* HOME BUTTON */}
+                                <Link
+                                    to="/"
+                                    title="Home"
+                                    className="h-8 sm:h-9 flex items-center justify-center transition-opacity duration-200 hover:opacity-80 shrink-0 relative z-20"
+                                >
+                                    <img src="/optimized/SRIT_LOGO.jpg.webp" alt="SRIT Logo" className="h-full w-auto object-contain bg-white rounded-sm px-1" loading="lazy" />
+                                </Link>
+
+                                {/* DIVIDER */}
+                                <div className="h-6 sm:h-7 w-px bg-white/25 mx-3 sm:mx-4" />
+
+                                {/* DEPARTMENT CODE */}
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.85 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: 0.12, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                                    className="h-7 sm:h-8 min-w-[48px] sm:min-w-[56px] px-2 sm:px-3 flex items-center justify-center rounded-full bg-white text-[#FF5422] text-[11px] sm:text-[12px] font-bold tracking-wide shrink-0"
+                                >
+                                    {dept.code}
+                                </motion.div>
+
+                                {/* DEPARTMENT NAME */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -12 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.18, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                                    className="ml-3 sm:ml-4 min-w-0"
+                                >
+                                    <h1 className="text-[12px] sm:text-[14px] lg:text-[15px] font-medium leading-tight truncate">
+                                        {dept.name}
+                                    </h1>
+                                    {dept.fullName && dept.fullName !== dept.name && (
+                                        <p className="text-[10px] sm:text-[11px] lg:text-[12px] font-normal text-white/80 leading-tight mt-0.5 truncate max-w-[400px] sm:max-w-[500px]">
+                                            {dept.fullName}
+                                        </p>
+                                    )}
+                                </motion.div>
+                            </motion.div>
+
+                            {/* INSTITUTE NAME */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0.25, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                                className="hidden lg:flex items-center shrink-0 ml-8"
+                            >
+                                <span className="text-[11px] lg:text-[12px] font-normal tracking-wide text-white/80">
+                                    Srinivasa Ramanujan Institute of Technology
+                                </span>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+
+
+
+            {/* =====================================================
+                DEPARTMENT NAVIGATION
+                Hidden for CSE — uses left sidebar in DepartmentPage
+            ===================================================== */}
+
+            {/* =====================================================
+                DEPARTMENT NAVIGATION
+            ===================================================== */}
+
+            <div className={`bg-white border-b border-[#FF5422]/20 shadow-sm relative z-20 ${(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? 'lg:hidden' : ''}`}>
+
+                <div className="max-w-[1440px] mx-auto px-3 sm:px-5 lg:px-10">
+
+                    {/* MOBILE DROPDOWN TABS */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="w-full h-[54px] flex items-center justify-between px-2 text-[#FF5422] font-semibold"
+                        >
+                            <div className="flex items-center gap-2">
+                                <span className="bg-[#FF5422]/10 p-1.5 rounded-full">{items.find(i => isActive(i.key))?.icon}</span>
+                                <span>{items.find(i => isActive(i.key))?.label}</span>
+                            </div>
+                            <ChevronDown className={`w-5 h-5 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        
+                        <AnimatePresence>
+                            {isMenuOpen && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden bg-white absolute left-0 right-0 top-[54px] shadow-lg border-b border-neutral-100 z-50"
+                                >
+                                    <div className="flex flex-col pb-2 max-h-[60vh] overflow-y-auto">
+                                        {items.map((item) => {
+                                            const active = isActive(item.key);
+                                            return (
+                                                <button
+                                                    key={item.key}
+                                                    onClick={() => {
+                                                        onTabChange(item.key);
+                                                        setIsMenuOpen(false);
+                                                    }}
+                                                    className={`flex items-center gap-3 px-5 py-3.5 border-t border-neutral-50 transition-colors ${active ? 'bg-[#FF5422]/5 text-[#FF5422]' : 'text-neutral-600 hover:bg-neutral-50'}`}
+                                                >
+                                                    <span className={`${active ? 'text-[#FF5422]' : 'text-neutral-400'}`}>{item.icon}</span>
+                                                    <span className="font-medium text-[14px]">{item.label}</span>
+                                                </button>
+                                            )
+                                        })}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+
+                    {/* DESKTOP TABS */}
+                    <nav
+                        className="
+                            hidden md:flex
+                            items-center overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar
+                            justify-start
+                            gap-1
+                            sm:gap-2
+                            lg:gap-3
+                            xl:gap-4
+                            min-h-[54px] sm:min-h-[60px]
+                            px-2 sm:px-0
+                        "
+                    >
+
+                        {items.map((item, index) => {
+                            const active = isActive(item.key);
+
+                            return (
+                                <motion.button
+                                    key={item.key}
+                                    type="button"
+                                    onClick={() => onTabChange(item.key)}
+                                    initial={{ opacity: 0, y: 8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.3 + index * 0.055, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                                    whileHover={{ y: -1 }}
+                                    whileTap={{ scale: 0.97 }}
+                                    className={`
+                                        relative h-[54px] sm:h-[60px] px-2 sm:px-3
+                                        flex items-center justify-center gap-1.5 sm:gap-2
+                                        whitespace-nowrap shrink-0 text-[12px] sm:text-[13px] font-medium
+                                        transition-colors duration-200 group
+                                        ${active ? "text-[#FF5422]" : "text-neutral-600 hover:text-[#FF5422]"}
+                                    `}
+                                >
+                                    <motion.span
+                                        animate={{ y: active ? -0.5 : 0 }}
+                                        transition={{ duration: 0.2 }}
+                                        className={`
+                                            flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8
+                                            rounded-full shrink-0 transition-colors duration-200
+                                            ${active ? "bg-[#FF5422]/10 text-[#FF5422]" : "bg-transparent text-neutral-400 group-hover:text-[#FF5422]"}
+                                        `}
+                                    >
+                                        {item.icon}
+                                    </motion.span>
+                                    <span>{item.label}</span>
+                                    <motion.span
+                                        className="absolute bottom-0 left-0 h-[3px] rounded-t-full bg-[#FF5422]"
+                                        initial={false}
+                                        animate={{ width: active ? "100%" : "0%", opacity: active ? 1 : 0, left: active ? "0%" : "50%", x: active ? "0%" : "-50%" }}
+                                        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                                    />
+                                </motion.button>
+                            );
+                        })}
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+    );
+};
+
+export default DepartmentNavbar;
