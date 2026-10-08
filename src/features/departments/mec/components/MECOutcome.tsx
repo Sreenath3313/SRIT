@@ -18,6 +18,7 @@ const MECOutcome: React.FC<MECOutcomeProps> = ({ dept }) => {
             title="OUTCOME BASED EDUCATION"
             items={items}
             defaultOpenIndex={-1}
+            variant="mec"
         />
     );
 };

@@ -4,7 +4,6 @@ import Navbar from '../components/layout/Navbar';
 import Hero from '../features/home/Hero';
 import About from '../features/home/About';
 import Placements from '../features/placements/Placements';
-import Admissions from '../features/admissions/Admissions';
 import Footer from '../components/layout/Footer';
 import Accreditations from '../features/home/Accreditations';
 import GlobalTieUps from '../features/institution/GlobalTieUps';
@@ -57,7 +56,8 @@ const HomePage: React.FC = () => {
 
                 <Hero />
                 <div data-home-reveal><AnnouncementBand /></div>
-                <div id="home-recognition" data-home-reveal className="bg-white py-10 sm:py-14"><div className="section-container"><Accreditations /></div></div>
+                <div id="home-recognition" data-home-reveal className="bg-white pb-6 pt-8 sm:pb-8 sm:pt-12"><div className="section-container"><Accreditations /></div></div>
+                <div aria-hidden="true" className="relative h-px bg-neutral-200 after:absolute after:left-1/2 after:top-0 after:h-[2px] after:w-16 after:-translate-x-1/2 after:bg-[#FF5421]" />
                 <About />
                 <ProgramsDepartments />
                 <GlobalTieUps />
@@ -67,7 +67,6 @@ const HomePage: React.FC = () => {
                 <StudentAchievements />
                 <CSRActivities />
                 <SocialMediaFeeds />
-                <Admissions />
 
             </main>
 

@@ -27,7 +27,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
-  font-size: 90%;
+  zoom: 0.9;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   /* Prevent layout shifts during scroll */

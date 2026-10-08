@@ -38,7 +38,7 @@ const MECEContent: React.FC<MECEContentProps> = ({ dept }) => {
             content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4FsSi_x4lXRx9mafLxv2jGh5-YtUzyuBVsLUxLKaSCRRvIRFv_kWy-_N_Cjmw-g/pubhtml?widget=true&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
         },
     ];
-    return <DepartmentAccordion title="E-CONTENT" items={items} defaultOpenIndex={-1} />;
+    return <DepartmentAccordion title="E-CONTENT" items={items} defaultOpenIndex={-1} variant="mec" />;
 };
 
 export default MECEContent;

@@ -13,7 +13,7 @@ const DepartmentStudentChapters: React.FC<DepartmentStudentChaptersProps> = ({ d
             title: chapter.title,
             content: chapter.content ? <ContentRenderer content={chapter.content} /> : null
         }));
-        return <DepartmentAccordion title="STUDENT CHAPTERS" items={items} />;
+        return <DepartmentAccordion title="STUDENT CHAPTERS" items={items} variant={dept.slug === 'csm' ? 'csm' : 'default'} />;
     }
 
     if (dept.slug === 'cse') {

@@ -9,12 +9,12 @@ import type { DepartmentData } from "../../shared/types";
 export const eeeDepartment: DepartmentData = {
   slug: "eee",
   code: "EEE",
-  name: "Electrical & Electronics",
-  fullName: "Department of Electrical & Electronics Engineering",
+  name: "Electrical and Electronics",
+  fullName: "Department of Electrical and Electronics Engineering",
   tagline:
     "Electrical circuits, machines, power systems, and control engineering.",
   description: [
-    "The Electrical & Electronics Engineering department provides students with a wide range of fundamental knowledge in core disciplines such as Electrical Circuits, Electrical Machines, Power Systems, Control Systems, and Power Electronics.",
+    "The Electrical and Electronics Engineering department provides students with a wide range of fundamental knowledge in core disciplines such as Electrical Circuits, Electrical Machines, Power Systems, Control Systems, and Power Electronics.",
     "The B.Tech EEE programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. The programme is NBA-accredited. Students develop skills in power generation, transmission, distribution, and automation, preparing them for roles in the energy sector and industrial automation.",
     "Core subjects include Electrical Circuit Analysis, Electrical Machines, Power Systems, Control Systems, Power Electronics, Renewable Energy Systems, Smart Grid Technologies, and Industrial Drives.",
   ],
@@ -27,10 +27,10 @@ export const eeeDepartment: DepartmentData = {
   ],
   image: "/optimized/departments/dept about us coverpages/eee.jpg.webp",
   researchAreas: [
-    "Power Systems & Smart Grids",
+    "Power Systems and Smart Grids",
     "Renewable Energy Integration",
     "Power Electronics",
-    "Control & Automation",
+    "Control and Automation",
   ],
   stats: {
     faculty: "28+",
@@ -41,9 +41,9 @@ export const eeeDepartment: DepartmentData = {
   intake: 60,
   accreditation: "NBA Accredited",
   eligibility:
-    "10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.",
+    "10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.",
   vision:
-    "To emerge as a premier center of learning in Electrical & Electronics Engineering with scientific quest having focus on professional ethics and human values.",
+    "To emerge as a premier center of learning in Electrical and Electronics Engineering with scientific quest having focus on professional ethics and human values.",
   mission: [
     {
       id: "DM1",
@@ -62,7 +62,7 @@ export const eeeDepartment: DepartmentData = {
     "EEE graduates will have successful careers in any organization or excel in higher education programs, be successful professionals with ethical values capable of working in multi-disciplinary areas, and practice lifelong learning to comprehend, analyze and design solutions for real life problems.",
   hodMessage: {
     name: "Dr. G. Meerimatha",
-    designation: "Professor & Head",
+    designation: "Professor and Head",
     message:
       "The EEE department strives to provide a comprehensive education that prepares students for successful careers in electrical engineering and related fields. We emphasize both theoretical foundations and practical skills, enabling our graduates to contribute effectively to power sector, automation, and the growing renewable energy industry.",
     image: "",
@@ -70,7 +70,7 @@ export const eeeDepartment: DepartmentData = {
   faculty: [
     {
       name: "Dr. G. Balakrishna",
-      designation: "Professor & Principal",
+      designation: "Professor and Principal",
       qualification: "M. Tech. Ph. D.",
       joiningDate: "25/11/2016",
       association: "Regular",
@@ -79,7 +79,7 @@ export const eeeDepartment: DepartmentData = {
     },
     {
       name: "Dr. G. Meerimatha",
-      designation: "Professor & Head",
+      designation: "Professor and Head",
       qualification: "M. Tech. Ph. D.",
       joiningDate: "01/06/2010",
       association: "Regular",
@@ -87,7 +87,7 @@ export const eeeDepartment: DepartmentData = {
     },
     {
       name: "Dr. U. Sreenivas",
-      designation: "Professor & Vice Principal",
+      designation: "Professor and Vice Principal",
       qualification: "M. Tech. Ph. D.",
       joiningDate: "05/07/2022",
       association: "Regular",
@@ -323,7 +323,7 @@ export const eeeDepartment: DepartmentData = {
   ],
   overview: [
     {
-      title: "Vision & Mission",
+      title: "Vision and Mission",
       content: "<p>Content coming soon.</p>",
     },
     {
@@ -369,7 +369,7 @@ export const eeeDepartment: DepartmentData = {
   ],
   courseStructureItems: [
     {
-      title: "Regulations & Syllabus",
+      title: "Regulations and Syllabus",
       content:
         '<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKLllqUpvENsfiJcaM12CT-KiEPm1bBOi5mLfCMDQeB_Y9WED5apWvoCHqySxgFGbPntK2AudrQJj5/pubhtml?widget=true&headers=false" width="100%" height="500" style="border: none; overflow: hidden;"></iframe>',
     },
@@ -398,10 +398,10 @@ export const eeeDepartment: DepartmentData = {
     {
       title: "Program Educational Objectives (PEOs)",
       content:
-        '<p style="padding-left: 20px;"><strong>An SRIT graduate in Electrical and Electronics Engineering, after three to four years of graduation will:</strong></p><p align="justify" style="padding-left: 20px;"><strong><span style="color: #ff6600;">PEO1:</span> </strong>Work in multi-disciplinary environment with ethical &amp; social responsibilities.</p>',
+        '<p style="padding-left: 20px;"><strong>An SRIT graduate in Electrical and Electronics Engineering, after three to four years of graduation will:</strong></p><p align="justify" style="padding-left: 20px;"><strong><span style="color: #ff6600;">PEO1:</span> </strong>Work in multi-disciplinary environment with ethical and social responsibilities.</p>',
     },
     {
-      title: "Program Outcomes (POs) & Program Specific Outcome (PSOs)",
+      title: "Program Outcomes (POs) and Program Specific Outcome (PSOs)",
       content: "<p>Content coming soon.</p>",
     },
     {

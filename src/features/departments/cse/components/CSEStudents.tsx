@@ -12,6 +12,7 @@ const CSEStudents: React.FC<CSEStudentsProps> = () => {
     return (
         <DepartmentAccordion
             title="STUDENTS"
+            variant="numbered"
             items={[
                 { title: 'Student Academic Activities', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRuAxZK1SH3XidaoqLqr5ofPUwSIUUcLjy73h6-MlrKUbysGphXgl1u73gGGotyqw/pubhtml?widget=true&headers=false" style={iframeStyle} /> },
                 { title: 'Cocurricular and Extra Curricular Activities', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW3yF_lWl9AhCohuLhjzwk7bO3A6G3aU-ZsJZ0SuxQNbrYxm4PvAYDOF4U8R8Oeg/pubhtml?widget=true&headers=false" style={iframeStyle} /> },

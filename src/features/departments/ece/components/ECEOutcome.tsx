@@ -17,6 +17,7 @@ const ECEOutcome: React.FC<ECEOutcomeProps> = ({ dept }) => {
         <DepartmentAccordion
             title="OUTCOME BASED EDUCATION"
             items={items}
+            variant="ece"
         />
     );
 };

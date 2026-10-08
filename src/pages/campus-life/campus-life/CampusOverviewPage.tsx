@@ -12,7 +12,7 @@ export const CampusOverviewPage: React.FC = () => {
 
     return (
         <CampusLifeLayout activeSectionId="campus">
-            <>
+            <div className="space-y-6 sm:space-y-8">
                                 {/* === 1. KEY STATISTICS CARDS (Warm Orange Shades & Hover Animations) === */}
                                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
                                     {[
@@ -45,17 +45,14 @@ export const CampusOverviewPage: React.FC = () => {
                                         return (
                                             <div
                                                 key={idx}
-                                                className="relative group rounded-xl border border-orange-200/90 bg-gradient-to-br from-white via-orange-50/40 to-orange-100/30 p-4 sm:p-5 shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                                                className="group relative overflow-hidden border border-neutral-200 bg-white p-4 transition-colors duration-200 hover:border-[#FF5422]/50 sm:p-5"
                                             >
-                                                {/* Top Animated Orange Glow Bar */}
-                                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF5422] via-orange-400 to-[#FF5422] opacity-70 group-hover:opacity-100 transition-opacity" />
-
                                                 <div className="flex items-center gap-3.5">
-                                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF5422] to-[#FF7A45] text-white shadow-md shadow-orange-500/25 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                                        <StatIcon size={22} />
+                                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#FFF3ED] text-[#FF5422] transition-colors duration-200 group-hover:bg-[#FF5422] group-hover:text-white">
+                                                        <StatIcon size={19} />
                                                     </div>
                                                     <div>
-                                                        <div className="font-serif text-2xl sm:text-3xl font-black text-[#FF5422] group-hover:text-[#e04515] leading-none transition-colors">
+                                                        <div className="font-serif text-2xl font-semibold leading-none text-neutral-900 sm:text-3xl">
                                                             {stat.value}
                                                         </div>
                                                         <div className="mt-1 text-xs sm:text-sm font-bold text-neutral-900">
@@ -72,7 +69,7 @@ export const CampusOverviewPage: React.FC = () => {
                                 </div>
 
                                 {/* === 2. ABOUT CAMPUS OVERVIEW (Side-by-Side with Orange Accents & Badges) === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm relative overflow-hidden">
+                                <div className="relative overflow-hidden border border-neutral-200 bg-white p-5 sm:p-7">
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         {/* Left Column: Descriptions & Highlights */}
                                         <div className="lg:col-span-7 space-y-3.5">
@@ -97,22 +94,22 @@ export const CampusOverviewPage: React.FC = () => {
 
                                             {/* Feature Tags */}
                                             <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                                <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                <span className="px-2.5 py-1 rounded-sm bg-neutral-50 text-neutral-700 border border-neutral-200">
                                                     25+ Acres Green Campus
                                                 </span>
-                                                <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                <span className="px-2.5 py-1 bg-neutral-100 text-neutral-800 border border-neutral-200">
                                                     NAAC "A" Grade Accredited
                                                 </span>
-                                                <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                <span className="px-2.5 py-1 bg-neutral-100 text-neutral-800 border border-neutral-200">
                                                     NBA Accredited Programs
                                                 </span>
-                                                <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                <span className="px-2.5 py-1 bg-neutral-100 text-neutral-800 border border-neutral-200">
                                                     Permanent JNTUA Affiliation
                                                 </span>
-                                                <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                <span className="px-2.5 py-1 bg-neutral-100 text-neutral-800 border border-neutral-200">
                                                     AICTE Approved Institution
                                                 </span>
-                                                <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
+                                                <span className="px-2.5 py-1 bg-neutral-100 text-neutral-800 border border-neutral-200">
                                                     Autonomous Status
                                                 </span>
                                             </div>
@@ -120,7 +117,7 @@ export const CampusOverviewPage: React.FC = () => {
 
                                         {/* Right Column: Campus Main Image with Orange Frame & Hover Effect */}
                                         <div className="lg:col-span-5 self-stretch flex flex-col min-h-[280px]">
-                                            <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-orange-50/20 group relative flex-1 w-full min-h-[280px]">
+                                            <div className="group relative min-h-[280px] w-full flex-1 overflow-hidden bg-neutral-100">
                                                 <img
                                                     src="/optimized/CollegeMain.jpg.webp"
                                                     alt="SRIT Main Campus Building"
@@ -135,7 +132,7 @@ export const CampusOverviewPage: React.FC = () => {
                                 </div>
 
                                 {/* === 3. KEY HIGHLIGHTS & FACILITIES (4 Cards with Rich Orange Shades & Lift Animation) === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
+                                <div className="space-y-4 border border-neutral-200 bg-white p-5 sm:p-7">
                                     <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
                                         <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
                                         <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
@@ -170,13 +167,10 @@ export const CampusOverviewPage: React.FC = () => {
                                             return (
                                                 <div
                                                     key={idx}
-                                                    className="group relative rounded-xl border border-orange-200/80 bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20 p-4 sm:p-5 hover:border-[#FF5422] hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                                                    className="group flex flex-col justify-between overflow-hidden border border-neutral-200 bg-white p-4 transition-colors duration-200 hover:border-[#FF5422]/50 sm:p-5"
                                                 >
-                                                    {/* Top Accent Line */}
-                                                    <div className="absolute top-0 left-0 right-0 h-1 bg-[#FF5422] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
                                                     <div>
-                                                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#FF5422] to-[#FF7A45] text-white shadow-md shadow-orange-500/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 mb-3">
+                                                        <div className="mb-3 flex h-10 w-10 shrink-0 items-center justify-center bg-[#FFF3ED] text-[#FF5422] transition-colors duration-200 group-hover:bg-[#FF5422] group-hover:text-white">
                                                             <ItemIcon size={20} />
                                                         </div>
                                                         <h4 className="font-bold text-sm sm:text-[14.5px] text-neutral-900 group-hover:text-[#FF5422] transition-colors">
@@ -193,7 +187,7 @@ export const CampusOverviewPage: React.FC = () => {
                                 </div>
 
                                 {/* === 4. CAMPUS FACILITIES & AMENITIES (8 Cards in 2 Rows × 4 Columns with Orange Hover & Glow) === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
+                                <div className="space-y-4 border border-neutral-200 bg-white p-5 sm:p-7">
                                     <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
                                         <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
                                         <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
@@ -255,7 +249,7 @@ export const CampusOverviewPage: React.FC = () => {
                                             <div
                                                 key={idx}
                                                 onClick={() => navigate(item.link)}
-                                                className="group rounded-xl overflow-hidden border border-neutral-200/60 bg-white shadow-sm hover:shadow-xl hover:border-[#FF5422] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-pointer"
+                                                className="group flex cursor-pointer flex-col justify-between overflow-hidden border border-neutral-200 bg-white transition-colors duration-200 hover:border-[#FF5422]/50"
                                             >
                                                 {/* Image */}
                                                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/20">
@@ -271,7 +265,7 @@ export const CampusOverviewPage: React.FC = () => {
                                                 </div>
 
                                                 {/* Content */}
-                                                <div className="p-3.5 bg-gradient-to-b from-white to-orange-50/40 border-t border-orange-100/60">
+                                                <div className="border-t border-neutral-100 bg-white p-3.5">
                                                     <div className="min-w-0">
                                                         <h4 className="font-bold text-sm text-neutral-900 group-hover:text-[#FF5422] transition-colors truncate">
                                                             {item.title}
@@ -288,14 +282,14 @@ export const CampusOverviewPage: React.FC = () => {
 
                                 {/* === 5. OPERATING SCHEDULES & GUIDELINES === */}
                                 {activeSection.highlights && activeSection.highlights.length > 0 && (
-                                    <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-sm space-y-3">
+                                    <div className="space-y-3 border border-neutral-200 bg-white p-5 sm:p-7">
                                         <h3 className="font-serif text-lg font-bold text-neutral-900 flex items-center gap-2">
                                             <span className="h-4 w-1 rounded-full bg-[#FF5422]" />
                                             <span>Operating Schedules & Key Guidelines</span>
                                         </h3>
                                         <div className="grid sm:grid-cols-2 gap-2.5">
                                             {activeSection.highlights.map((hl, hi) => (
-                                                <div key={hi} className="flex items-start gap-2.5 p-3 rounded-lg bg-orange-50/40 border border-orange-100/70">
+                                                <div key={hi} className="flex items-start gap-2.5 border border-neutral-200 bg-neutral-50 p-3">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-[#FF5422] mt-1.5 shrink-0" />
                                                     <span className="text-xs sm:text-[13px] text-neutral-800 leading-relaxed font-medium">
                                                         {hl}
@@ -305,7 +299,7 @@ export const CampusOverviewPage: React.FC = () => {
                                         </div>
                                     </div>
                                 )}
-                            </>
+            </div>
         </CampusLifeLayout>
     );
 };

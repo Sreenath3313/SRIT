@@ -40,7 +40,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                 content: <ContentRenderer content={acc.content} />
             }))
         ];
-        return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} />;
+        return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} variant="csm" />;
     }
 
     if (dept.slug === 'cse') {
@@ -51,7 +51,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                     <FacultyProfiles
                         faculty={dept.faculty}
                         title="Faculty Profiles"
-                        subtitle="Department of Computer Science & Engineering"
+                        subtitle="Department of Computer Science and Engineering"
                     />
                 ),
             },
@@ -83,7 +83,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
         }))
     ];
 
-    return <DepartmentAccordion title="FACULTY" items={defaultItems} defaultOpenIndex={0} />;
+    return <DepartmentAccordion title="FACULTY" items={defaultItems} defaultOpenIndex={0} variant={dept.slug === 'ece' ? 'ece' : 'default'} />;
 };
 
 export default DepartmentFaculty;

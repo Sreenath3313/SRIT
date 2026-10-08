@@ -18,6 +18,7 @@ const CSMOutcome: React.FC<CSMOutcomeProps> = ({ dept }) => {
             title="OUTCOME BASED EDUCATION"
             items={items}
             defaultOpenIndex={-1}
+            variant="csm"
         />
     );
 };

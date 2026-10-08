@@ -1,7 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
-const achievements = [
+type Achievement = {
+    name: string;
+    role: string;
+    quote: string;
+    illustrative?: boolean;
+};
+
+const achievements: Achievement[] = [
     {
         name: "Tejaswini",
         role: "Mechanical Student",
@@ -16,58 +23,81 @@ const achievements = [
         name: "Ravichandra Reddy",
         role: "Mechanical Student",
         quote: "I believe that Mechanical Engineers have the power to shift the trend. We are seeing a burst of opportunities in the industry. I thank each and everyone who believed in me & contributed to my success. Placed in Mobileum as an Associate Software Engineer with a package of 7 LPA."
+    },
+    {
+        name: "Aarav Reddy",
+        role: "Computer Science Student",
+        quote: "Working through project challenges helped me connect classroom concepts with practical engineering. I grew more confident collaborating with peers and presenting ideas.",
+        illustrative: true,
+    },
+    {
+        name: "Nisha Rao",
+        role: "Electronics Student",
+        quote: "Exploring circuits in the lab helped me turn my curiosity into a clear academic direction. Faculty encouragement made it easier to stay curious and keep learning.",
+        illustrative: true,
+    },
+    {
+        name: "Kiran Kumar",
+        role: "Civil Engineering Student",
+        quote: "Team assignments taught me to plan carefully, listen to different ideas, and keep improving when the first solution did not work.",
+        illustrative: true,
     }
 ];
 
-// Duplicate array for seamless infinite marquee scrolling
 const duplicatedAchievements = [...achievements, ...achievements];
 
 const StudentAchievements: React.FC = () => {
+    const reduceMotion = useReducedMotion();
+
+    const renderCard = (item: Achievement, index: number) => (
+        <motion.article
+            key={`${item.name}-${index}`}
+            whileHover={{ y: -4, transition: { duration: .2 } }}
+            className="group flex min-h-[330px] w-[min(82vw,350px)] shrink-0 flex-col border border-[#E99036] bg-[#FFAD52] p-5 shadow-[0_5px_16px_rgba(114,61,12,.08)] transition-shadow duration-300 hover:shadow-[0_14px_28px_rgba(114,61,12,.14)] sm:min-h-[350px] sm:w-[360px] sm:p-6 lg:w-[380px] lg:p-7"
+        >
+            <div className="flex items-center justify-between gap-3 border-b border-[#8D4B12]/20 pb-4">
+                <span className="text-[10px] font-bold uppercase tracking-[.18em] text-[#713B12]">{item.illustrative ? 'Illustrative sample' : 'Student story'}</span>
+                <span className="border border-[#8D4B12]/25 bg-[#FFD39B] px-3 py-1.5 text-xs font-semibold text-[#713B12]">{item.role}</span>
+            </div>
+            <p className="my-5 flex-1 text-[15px] leading-[1.75] text-[#202632] sm:text-base">{item.quote}</p>
+            <div className="border-t border-[#8D4B12]/20 pt-4">
+                <h3 className="font-serif text-xl font-semibold text-[#171b24] sm:text-2xl">{item.name}</h3>
+                <p className="mt-1 text-sm font-medium text-[#713B12]">{item.role}</p>
+            </div>
+        </motion.article>
+    );
+
     return (
-        <section id="student-achievements" className="py-10 md:py-20 bg-[#fafaf9] overflow-hidden border-y border-neutral-200">
-            <div className="section-container mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold text-[#171b24] mb-4">
+        <section id="student-achievements" className="border-y border-neutral-200 bg-white py-10 md:py-16">
+            <div className="section-container">
+                <h2 className="mb-3 font-serif text-3xl font-semibold text-[#171b24] md:text-4xl">
                     Students Achievements
                 </h2>
-                <p className="text-neutral-600 max-w-3xl leading-relaxed text-lg text-justify md:text-left">
+                <p className="mb-8 max-w-3xl text-base leading-relaxed text-neutral-600 md:mb-10 md:text-lg">
                     Our Students have been achieving their dreams in all aspects. In short, our students have been spread over various fields and streams of society and have been growing with greater positions in society.
                 </p>
+                <p className="-mt-5 mb-6 text-xs text-neutral-500">Cards marked “Illustrative sample” are fictional examples.</p>
             </div>
-
-            {/* Marquee Container */}
-            <div className="relative w-full overflow-hidden py-10">
-                {/* CSS animation for infinite right-to-left scroll */}
-                <motion.div
-                    className="flex w-max"
-                    animate={{
-                        x: ['0%', '-50%'],
-                    }}
-                    transition={{
-                        ease: 'linear',
-                        duration: 30, // Adjust speed here
-                        repeat: Infinity,
-                    }}
-                >
-                    {duplicatedAchievements.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className="relative w-[280px] sm:w-[320px] md:w-[450px] shrink-0 mx-3 sm:mx-4 md:mx-6 flex flex-col justify-between"
-                        >
-                            {/* Simple Card Content */}
-                            <div className="relative z-10 bg-white border border-neutral-200 p-6 md:p-10 h-full flex flex-col">
-                                <p className="text-neutral-900 text-sm md:text-lg leading-relaxed text-left mb-6 md:mb-10 flex-grow">
-                                    {item.quote}
-                                </p>
-                                <div className="text-right mt-auto">
-                                    <h4 className="text-neutral-900 font-semibold text-xl md:text-2xl mb-1">{item.name}</h4>
-                                    <p className="text-neutral-500 font-medium text-base">{item.role}</p>
-                                </div>
+            {reduceMotion ? (
+                <div className="section-container grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+                    {achievements.map((item, index) => renderCard(item, index))}
+                </div>
+            ) : (
+                <div className="overflow-hidden py-2" aria-label="Student achievement stories moving right to left">
+                    <motion.div
+                        initial={{ x: '0%' }}
+                        animate={{ x: '-50%' }}
+                        transition={{ ease: 'linear', duration: 48, repeat: Infinity }}
+                        className="flex w-max"
+                    >
+                        {[0, 1].map((group) => (
+                            <div key={group} className="flex w-max gap-4 pr-4 sm:gap-5 sm:pr-5" aria-hidden={group === 1}>
+                                {achievements.map((item, index) => renderCard(item, index + group * achievements.length))}
                             </div>
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
-
+                        ))}
+                    </motion.div>
+                </div>
+            )}
         </section>
     );
 };

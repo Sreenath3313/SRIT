@@ -32,7 +32,7 @@ const sections: SectionData[] = [
         key: 'academic',
         title: 'Student Academic Activities',
         subtitle: 'Participation of Students in Academic Events',
-        columns: ['S. No', 'Student Name', 'Event Name', 'Event Type', 'College Name & Venue', 'Participation/Prizes Won'],
+        columns: ['S. No', 'Student Name', 'Event Name', 'Event Type', 'College Name and Venue', 'Participation/Prizes Won'],
 
         // EXAMPLE OF HOW TO ADD SPREADSHEET LINKS:
         sheetUrls: {
@@ -75,7 +75,7 @@ const sections: SectionData[] = [
     {
         key: 'cocurricular',
         title: 'Cocurricular and Extra Curricular Activities',
-        subtitle: 'Student Participation in Cocurricular & Extracurricular Events',
+        subtitle: 'Student Participation in Cocurricular and Extracurricular Events',
         columns: ['S. No', 'Student Name', 'Activity Name', 'Activity Type', 'Venue', 'Achievement'],
         data: {
             '2025-26': [
@@ -243,7 +243,7 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
             title: group.title,
             content: <ContentRenderer content={group.content} />
         }));
-        return <DepartmentAccordion title="STUDENTS" items={items} defaultOpenIndex={0} />;
+        return <DepartmentAccordion title="STUDENTS" items={items} defaultOpenIndex={0} variant={dept.slug === 'csm' ? 'csm' : 'default'} />;
     }
 
     // Effect to fetch CSV data when a section and year are active

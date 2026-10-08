@@ -34,7 +34,7 @@ const DepartmentProjects: React.FC<DepartmentProjectsProps> = ({ dept }) => {
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="mb-12">
                 <h2 className="font-serif text-3xl font-semibold text-neutral-dark mb-4">
-                    Research & Projects
+                    Research and Projects
                 </h2>
                 <p className="text-neutral-600 max-w-2xl leading-relaxed">
                     Innovation is at the core of the {dept.code} department. Explore some of the recent groundbreaking projects and research conducted by our students and faculty.

@@ -21,6 +21,7 @@ const ECEStudentChapters: React.FC<ECEStudentChaptersProps> = ({ dept }) => {
         <DepartmentAccordion
             title="STUDENTS CHAPTERS"
             items={items}
+            variant="ece"
         />
     );
 };

@@ -5,8 +5,8 @@ import type { DepartmentData } from '../../shared/types';
 export const cseDepartment: DepartmentData = {
     "slug": "cse",
     "code": "CSE",
-    "name": "Computer Science & Engineering",
-    "fullName": "Department of Computer Science & Engineering",
+    "name": "Computer Science and Engineering",
+    "fullName": "Department of Computer Science and Engineering",
     "tagline": "Knowledge creation and innovation driving every aspect of modern life.",
     "description": [
         "Computer Science and Engineering animates our world, driving knowledge creation and innovation that touches every aspect of our lives, from communications devices to the latest medical technology. The Department of Computer Science and Engineering embodies the college tradition of excellence in engineering education.",
@@ -20,7 +20,11 @@ export const cseDepartment: DepartmentData = {
         "Focus on professional ethics and social responsibility"
     ],
     "image": "https://www.srit.ac.in/wp-content/uploads/2022/07/Computer-Science-and-Engineering-2.jpg",
-    "researchAreas": [],
+    "researchAreas": [
+        "Artificial Intelligence and Machine Learning",
+        "Cloud Computing and Big Data",
+        "Cybersecurity and Network Systems"
+    ],
     "stats": {
         "faculty": "32",
         "labs": "Not specified",
@@ -34,7 +38,7 @@ export const cseDepartment: DepartmentData = {
     "mission": [
         {
             "id": "DM1",
-            "text": "Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical & practical aspects of computer science applications."
+            "text": "Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical and practical aspects of computer science applications."
         },
         {
             "id": "DM2",
@@ -48,15 +52,15 @@ export const cseDepartment: DepartmentData = {
     "goals": "The department aims to prepare CSE graduates for successful professional careers with ethical values, communication and leadership skills, lifelong learning, and relevant professional competencies.",
     "hodMessage": {
         "name": "Dr. P. Veera Prakash",
-        "designation": "Associate Professor & Head",
-        "message": "The Department of Computer Science & Engineering works to provide comprehensive teaching and learning practices, exposure to emerging technologies, industry interaction, and opportunities to work on real-time problems while developing professional ethics and social responsibility.",
+        "designation": "Associate Professor and Head",
+        "message": "The Department of Computer Science and Engineering works to provide comprehensive teaching and learning practices, exposure to emerging technologies, industry interaction, and opportunities to work on real-time problems while developing professional ethics and social responsibility.",
         "image": "/optimized/cse_hod.jpg.webp"
     },
     "faculty": [
         {
             "name": "Dr. P. Veera Prakash",
-            "designation": "Associate Professor & Head",
-            "specialization": "Computer Science & Engineering",
+            "designation": "Associate Professor and Head",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/view/pvprakash/home",
             "image": "/optimized/cse_hod.jpg.webp"
@@ -64,7 +68,7 @@ export const cseDepartment: DepartmentData = {
         {
             "name": "Dr. M. Ranjit Reddy",
             "designation": "Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/view/ranjit",
             "image": "/optimized/ranjit.jpg.webp"
@@ -72,296 +76,296 @@ export const cseDepartment: DepartmentData = {
         {
             "name": "Dr. T. Venkata Naga Jayudu",
             "designation": "Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/prod/view/tvnjayudu"
         },
         {
             "name": "Dr. T. Giri Babu",
             "designation": "Associate Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/view/giricse/personal-details-qualifications"
         },
         {
             "name": "Dr. D. Rajesh Babu",
             "designation": "Associate Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D."
         },
         {
             "name": "Dr. S. Ravi Kumar",
             "designation": "Associate Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph. D.",
             "profileUrl": "https://sites.google.com/srit.ac.in/drsravikumar/home"
         },
         {
             "name": "Dr. S. Sunitha",
             "designation": "Associate Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/srit.ac.in/sunitha-s/home"
         },
         {
             "name": "Dr. C. Nagesh",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech. Ph.D.",
             "profileUrl": "https://sites.google.com/srit.ac.in/nagesh-cse/home"
         },
         {
             "name": "Mr. L. Suman",
             "designation": "Assistant Professor (Regular)",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech, (Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/ssuman/home"
         },
         {
             "name": "Mr. M. Narasimhulu",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/view/mr-m-narasimhulu/home"
         },
         {
             "name": "Mr. C. Sudheer Kumar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/sudheerkumar/home"
         },
         {
             "name": "Mr. G. Chinna Pullaiah",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/gandla-chinna-pullaiah"
         },
         {
             "name": "Mrs. T. Kavitha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/kavitha"
         },
         {
             "name": "Mrs. M. Soumya",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/soumya-madduru/home"
         },
         {
             "name": "Mr. A. Erriswami Reddy",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/swamy/home"
         },
         {
             "name": "Mrs. P. Rohini",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/rohini/home"
         },
         {
             "name": "Mr. K. Lokeshnath",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/lokeshnath-k/home"
         },
         {
             "name": "Mrs. G. Nagaleela",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/nagaleela-g/home"
         },
         {
             "name": "Mr. A. Bala Ankanna",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/abalaankanna"
         },
         {
             "name": "Mrs. K. Umadevi",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/view/kambamumadevi/home"
         },
         {
             "name": "Mr. P. Shajahan",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/pagidipalle-shajahan/home"
         },
         {
             "name": "Ms. G. Lokeswari",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)",
             "profileUrl": "https://sites.google.com/srit.ac.in/lokeswarig/home"
         },
         {
             "name": "Mr. G. Ganesh",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/ganeshcse/home"
         },
         {
             "name": "Ms. C. Rekha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/rekha/home"
         },
         {
             "name": "Mr. E. Nagaprabhakar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech,(Ph.D)"
         },
         {
             "name": "Mrs. N. Ahamadunnisa Begum",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/department-of-cse?usp=sharing"
         },
         {
             "name": "Mr. N. Madhava Reddy",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/madhavareddy/copy-of-home"
         },
         {
             "name": "Mrs. K. Lavanya",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/srit.ac.in/lavanya/home"
         },
         {
             "name": "Mr. k. Shakir Ahamad",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. K. Hymavathi",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. D. Vishalakshi",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. C. Sekhar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. N. Ushasree",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech.",
             "profileUrl": "https://sites.google.com/view/ushasree/home"
         },
         {
             "name": "Mrs. K. Geetha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. K.R. Lokesh",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. P. Seenamma",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. K. Mohan Ranga Rao",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. T. Sushma Priya",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mrs. P. Manasa",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Ms. K. Asritha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Ms. R. Indu",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Ms. V. Kavitha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. V. Naveen Kumar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Ms. P. Sowmitha",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. C. Ashok Kumar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         },
         {
             "name": "Mr. B. Kishore Kumar",
             "designation": "Assistant Professor",
-            "specialization": "Computer Science & Engineering",
+            "specialization": "Computer Science and Engineering",
             "qualification": "M.Tech."
         }
     ],
     "overview": [
         {
-            "title": "Vision & Mission",
+            "title": "Vision and Mission",
             "content": "\n                <h4>VISION</h4>\n                <p>\n                    To evolve as a leading department by offering best comprehensive\n                    teaching and learning practices for students to be self-competent\n                    technocrats with professional ethics and social responsibilities.\n                </p>\n\n                <h4>MISSION</h4>\n\n                <p>\n                    <strong>DM1:</strong>\n                    Continuous enhancement of teaching-learning practices for theoretical\n                    and practical computer science knowledge.\n                </p>\n\n                <p>\n                    <strong>DM2:</strong>\n                    Training on emerging technologies, self-learning, ethics and social\n                    consciousness.\n                </p>\n\n                <p>\n                    <strong>DM3:</strong>\n                    Industry-Institute interaction and real-time problems for society.\n                </p>\n            "
         },
         {
@@ -450,7 +454,7 @@ export const cseDepartment: DepartmentData = {
     courses: [
         {
             key: "regulations",
-            title: "Regulations & Syllabus",
+            title: "Regulations and Syllabus",
             iframeSrc: "https://docs.google.com/spreadsheets/d/e/2PACX-1vShcsvd29gzu2WPcf8gORkugN5uGZZO6ebQBiCW1wmZ-FHvEPZGVseIrrMLjKWzOA/pubhtml?widget=true&headers=false"
         },
         {

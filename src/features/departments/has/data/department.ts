@@ -7,11 +7,11 @@ import type { DepartmentData } from '../../shared/types';
 export const hasDepartment: DepartmentData = {
     "slug": "has",
     "code": "H&S",
-    "name": "Humanities & Sciences",
-    "fullName": "Department of Humanities & Sciences",
+    "name": "Humanities and Sciences",
+    "fullName": "Department of Humanities and Sciences",
     "tagline": "Building strong foundations in mathematics, sciences, and professional communication.",
     "description": [
-        "The Humanities & Sciences department plays a unique and distinctive role in an institute where the ethos of science and technology prevails. It is believed that engineering and science are, by their very nature, humanistic and socially derived enterprises.",
+        "The Humanities and Sciences department plays a unique and distinctive role in an institute where the ethos of science and technology prevails. It is believed that engineering and science are, by their very nature, humanistic and socially derived enterprises.",
         "The department provides foundational knowledge in Mathematics, Physics, Chemistry, and English. It focuses on developing students' analytical, communication, and interpersonal skills.",
         "English, Mathematics, Physics, and Chemistry courses prepare students for their core engineering subjects and help them become well-rounded professionals."
     ],
@@ -36,7 +36,7 @@ export const hasDepartment: DepartmentData = {
         "placement": "NA"
     },
     "intake": 0, 
-    "accreditation": "UGC & AICTE Approved",
+    "accreditation": "UGC and AICTE Approved",
     "eligibility": "N/A",
     "vision": "To instill scientific temper and professional communication skills in students, thereby preparing them to tackle global engineering challenges.",
     "mission": [
@@ -56,14 +56,14 @@ export const hasDepartment: DepartmentData = {
     "goals": "To provide a strong foundation for engineering students and to develop them into well-rounded professionals.",
     "hodMessage": {
         "name": "Dr. J. Gurusiddappa",
-        "designation": "HOD, Humanities & Sciences",
-        "message": "Welcome to the Department of Humanities & Sciences. Our goal is to provide a strong foundation for our engineering students. We focus on developing not just technical skills, but also communication, analytical, and interpersonal skills.",
+        "designation": "HOD, Humanities and Sciences",
+        "message": "Welcome to the Department of Humanities and Sciences. Our goal is to provide a strong foundation for our engineering students. We focus on developing not just technical skills, but also communication, analytical, and interpersonal skills.",
         "image": ""
     },
     "faculty": [
             {
                     "name": "Dr. J. Gurusiddappa",
-                    "designation": "Associate Professor & Head",
+                    "designation": "Associate Professor and Head",
                     "qualification": "M.Sc., Ph.D",
                     "joiningDate": "2019-12-06 00:00:00",
                     "association": "Regular",
@@ -422,7 +422,7 @@ export const hasDepartment: DepartmentData = {
 ],
     "overview": [
     {
-        "title": "Vision & Mission",
+        "title": "Vision and Mission",
         "content": "<p>Content coming soon.</p>"
     },
     {
@@ -452,7 +452,7 @@ export const hasDepartment: DepartmentData = {
 ],
     "courseStructureItems": [
     {
-        "title": "Regulations & Syllabus",
+        "title": "Regulations and Syllabus",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQXAFjOQ3WPN__IYlIKiXFQJKcXynA-ZmZTBEZvBahljEiuSfGY5aixRdAG4VwIzA/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
@@ -471,27 +471,27 @@ export const hasDepartment: DepartmentData = {
     "outcome": [],
     "eContent": [
     {
-        "title": "H & S- 2025-29 Batch",
+        "title": "H and S- 2025-29 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRGrwlJxBlC42zWDyqKZ8Hs2InQ6pMH-CSwUdtfoMQtkjEM98rFD4LUV86eTISwvA/pubhtml?widget=true&chrome=false&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
-        "title": "H & S- 2024-28 Batch",
+        "title": "H and S- 2024-28 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/1aeCRyj1XSUQBg5mhlhMTJJVtZv5jk5bu/pubhtml?widget=true&chrome=false&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
-        "title": "H & S- 2023-27 Batch",
+        "title": "H and S- 2023-27 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRDH9OFePCY8myzb1Vdlqb99vknKtAcuAExZhdpMqa8_3OAXBxwkPAzQJHP7hkxuw/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
-        "title": "H & S- 2022-26 Batch",
+        "title": "H and S- 2022-26 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSuGdYf0GGngHFsEw3tcsJLC7qfM4HiIzzXisbrMWu-_1hSmJupA6p-txdKEFrCfA/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
-        "title": "H & S- 2021-25 Batch",
+        "title": "H and S- 2021-25 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQdthxrhJHUvH2xEir__ENxnUOwkYBpSYdFoiLbQ8jhpLofkgOr0Kewb8ltevBssA/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     },
     {
-        "title": "H & S- 2020-24 Batch",
+        "title": "H and S- 2020-24 Batch",
         "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vQqFypoj_L8mQG2LOD8XUx25L2T05581ywdXod9PLH61nhoI78k8rRtX4Pr3h5CqQ/pubhtml?widget=true&headers=false\" width=\"100%\" height=\"500\" style=\"border: none; overflow: hidden;\"></iframe>"
     }
 ],

@@ -17,7 +17,7 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                         <span className="w-10 h-[3px] bg-primary rounded-full"></span>
                         ABOUT THE DEPARTMENT
                     </h2>
-                    <div className="relative flex-1 rounded-xl overflow-hidden shadow-md max-w-2xl min-h-[250px]">
+                    <div className="relative h-[240px] sm:h-[300px] lg:h-[340px] w-full rounded-xl overflow-hidden shadow-md max-w-2xl">
                         <img src="/optimized/cse_image.jpg.webp" alt={dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                         <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 text-[#FF5422] text-[11px] font-bold tracking-[0.18em] uppercase rounded shadow-sm">
                             FEATURED PROGRAM
@@ -42,9 +42,9 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                 </div>
             </div>
 
-            {/* Middle Section: Vision, Mission & Achievements Grid */}
+            {/* Middle Section: Vision, Mission and Achievements Grid */}
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-6">
-                {/* Vision & Mission */}
+                {/* Vision and Mission */}
                 <div className="flex flex-col gap-3">
                     <div className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
                         <h3 className="text-[#FF5422] font-black text-base lg:text-lg uppercase tracking-[0.2em] mb-2">Vision</h3>
@@ -55,9 +55,9 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                     <div className="bg-white rounded-xl p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">
                         <h3 className="text-[#FF5422] font-black text-base lg:text-lg uppercase tracking-[0.2em] mb-2">Mission</h3>
                         <div className="text-neutral-700 text-[15px] lg:text-[16px] leading-[1.7] space-y-4 text-justify">
-                            {dept.mission.map((m) => (
+                            {dept.mission.map((m, index) => (
                                 <p key={m.id}>
-                                    <strong className="text-neutral-900 font-bold">{m.id.replace('DM', 'DM ')}:</strong> {m.text}
+                                    <strong className="text-neutral-900 font-bold">DM {index + 1}:</strong> {m.text}
                                 </p>
                             ))}
                         </div>
@@ -83,7 +83,7 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                 </div>
             </div>
 
-            {/* Bottom Section: HOD Profile & Contact Us Grid */}
+            {/* Bottom Section: HOD Profile and Contact Us Grid */}
             <div className="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-4 lg:gap-6">
                 {/* HOD Profile */}
                 <div className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col sm:flex-row gap-8 items-center sm:items-start h-full">

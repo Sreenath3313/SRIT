@@ -14,7 +14,7 @@ const MECStudentChapters: React.FC<MECStudentChaptersProps> = ({ dept }) => {
             content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS8oNKcQWIf6LtowdotweDDqn_MxEoMppcO257hRrHlKBVbQfxvWuc596OEZLMFBw/pubhtml?widget=true&chrome=false&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
         }
     ];
-    return <DepartmentAccordion title="STUDENTS CHAPTERS" items={items} defaultOpenIndex={-1} />;
+    return <DepartmentAccordion title="STUDENTS CHAPTERS" items={items} defaultOpenIndex={-1} variant="mec" />;
 };
 
 export default MECStudentChapters;

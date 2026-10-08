@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AccordionWave from '../../../../components/common/AccordionWave';
 import type { DepartmentData } from '../../index';
 
 interface DepartmentCourseStructureProps {
@@ -72,22 +73,27 @@ const DepartmentCourseStructure: React.FC<
             </div>
 
             {/* Accordion Sections */}
-            <div className="space-y-3">
-                {(sections || []).map((section) => {
+            <div className={dept.slug === 'cse' ? 'space-y-0' : dept.slug === 'csm' || dept.slug === 'mec' ? 'space-y-3' : 'space-y-3'}>
+                {(sections || []).map((section, index) => {
                     const isOpen =
                         openSection === section.key;
+                    const number = String(index + 1).padStart(2, '0');
 
                     return (
                         <div
                             key={section.key}
-                            className="rounded-xl overflow-hidden transition-all duration-300"
+                            className={`overflow-hidden transition-all duration-300 ${dept.slug === 'cse' ? 'rounded-none first:rounded-t-xl last:rounded-b-xl bg-[#fdf0e6]' : 'rounded-xl'} ${dept.slug === 'csm' ? 'rounded-xl bg-[#fff8f4]' : ''} ${dept.slug === 'mec' ? 'rounded-2xl bg-white' : ''}`}
                             style={{
-                                border: isOpen
-                                    ? '1px solid rgba(255, 84, 34, 0.25)'
-                                    : '1px solid rgba(10, 9, 3, 0.06)',
-                                boxShadow: isOpen
-                                    ? '0 4px 20px rgba(255, 84, 34, 0.12)'
-                                    : '0 1px 4px rgba(0,0,0,0.06)',
+                                border: dept.slug === 'cse'
+                                    ? '1px solid rgba(255,120,50,0.18)'
+                                    : dept.slug === 'csm' ? '1px solid rgba(255,140,80,0.24)'
+                                    : dept.slug === 'mec' ? '1px solid #f6dfd0'
+                                    : isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)',
+                                boxShadow: dept.slug === 'cse'
+                                    ? '0 1px 4px rgba(0,0,0,0.06)'
+                                    : dept.slug === 'csm' ? '0 2px 9px rgba(173,79,35,0.08)'
+                                    : dept.slug === 'mec' ? '0 3px 12px rgba(161,91,48,0.06)'
+                                    : isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)',
                             }}
                         >
                             {/* Accordion Header */}
@@ -95,29 +101,40 @@ const DepartmentCourseStructure: React.FC<
                                 onClick={() =>
                                     toggleSection(section.key)
                                 }
-                                className="w-full flex items-center justify-between px-6 py-4 lg:px-8 lg:py-5 transition-colors duration-300"
+                                className={`group relative isolate w-full flex justify-between overflow-hidden transition-colors duration-300 ${dept.slug === 'cse' ? 'items-stretch gap-0 p-0 text-left' : dept.slug === 'mec' ? 'items-center gap-3 px-2.5 py-2 text-left sm:gap-5 sm:px-3' : 'items-center px-6 py-4 lg:px-8 lg:py-5'} ${dept.slug === 'csm' ? 'items-stretch gap-0 rounded-xl bg-[#fff8f4] p-0 text-left' : ''}`}
                                 style={{
-                                    background: '#0A0903',
+                                    background: dept.slug === 'cse' ? (isOpen ? 'rgba(255,120,50,0.08)' : 'transparent') : dept.slug === 'csm' ? (isOpen ? '#fff0e7' : '#fff8f4') : dept.slug === 'mec' ? (isOpen ? '#fffdfa' : '#ffffff') : '#0A0903',
                                 }}
                                 onMouseEnter={(e) => {
-                                    if (!isOpen) {
+                                    if (!isOpen && dept.slug !== 'cse' && dept.slug !== 'csm' && dept.slug !== 'mec') {
                                         e.currentTarget.style.background =
                                             '#1a1812';
                                     }
                                 }}
                                 onMouseLeave={(e) => {
-                                    e.currentTarget.style.background =
-                                        '#0A0903';
+                                    e.currentTarget.style.background = dept.slug === 'cse' ? (isOpen ? 'rgba(255,120,50,0.08)' : 'transparent') : dept.slug === 'csm' ? (isOpen ? '#fff0e7' : '#fff8f4') : dept.slug === 'mec' ? (isOpen ? '#fffdfa' : '#ffffff') : '#0A0903';
                                 }}
                             >
+                                {dept.slug === 'csm' && <>
+                                    <span className="relative z-10 flex min-h-[58px] w-[58px] shrink-0 items-center justify-center bg-gradient-to-br from-[#ff4f0b] to-[#ff7625] text-sm font-bold text-white sm:text-base">{number}</span>
+                                    <span className="relative z-10 w-[2px] shrink-0 self-stretch bg-orange-200/80" />
+                                    <AccordionWave className="inset-y-0 left-[58px] z-0 h-full w-[calc(100%-58px)]" />
+                                </>}
+                                {dept.slug === 'cse' && <>
+                                    <span className="flex min-h-[52px] w-[52px] shrink-0 items-center justify-center bg-[#FF5422] text-sm font-bold text-white sm:text-base">{number}</span>
+                                    <span className="w-[3px] shrink-0 self-stretch bg-[#FF5422]/25" />
+                                </>}
+                                {dept.slug === 'mec' && <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f8dfd0] bg-[#fff0e7] text-sm font-bold tracking-wide text-[#e96a27] sm:h-[42px] sm:w-[42px]">{number}</span>}
                                 <h3
-                                    className="font-serif text-lg lg:text-xl font-semibold"
+                                    className={`font-semibold ${dept.slug === 'cse' ? 'flex flex-1 items-center px-4 py-3.5 text-[15px] text-slate-800 transition-colors group-hover:text-[#FF5422] sm:px-5' : dept.slug === 'csm' ? 'relative z-10 flex flex-1 items-center px-4 py-3.5 text-[15px] text-[#293548] transition-colors group-hover:text-[#d94b16] sm:px-5' : dept.slug === 'mec' ? 'flex-1 py-2 text-[14px] text-[#34404e] transition-colors group-hover:text-[#dd6528] sm:text-[15px]' : 'font-serif text-lg lg:text-xl'}`}
                                     style={{
-                                        color: '#FF5422',
+                                        color: dept.slug === 'cse' || dept.slug === 'csm' || dept.slug === 'mec' ? undefined : '#FF5422',
                                     }}
                                 >
                                     {section.title}
                                 </h3>
+
+                                {dept.slug === 'cse' && <span className="hidden shrink-0 items-center px-4 text-sm font-bold text-[#FF5422]/35 sm:flex">{number}</span>}
 
                                 <motion.span
                                     animate={{
@@ -126,7 +143,7 @@ const DepartmentCourseStructure: React.FC<
                                     transition={{
                                         duration: 0.3,
                                     }}
-                                    className="shrink-0 ml-4"
+                                    className={`shrink-0 ${dept.slug === 'cse' ? 'mr-4 my-auto flex h-[30px] w-[30px] items-center justify-center rounded-full border-[1.5px] border-[#FF5422] text-[#FF5422]' : dept.slug === 'csm' ? 'relative z-10 mr-4 my-auto flex h-[34px] w-[34px] items-center justify-center rounded-full bg-white text-[#f15b24] shadow-[0_2px_8px_rgba(164,76,31,0.12)]' : dept.slug === 'mec' ? 'mr-1 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#fff1e8] text-[#e96a27] sm:mr-2' : 'ml-4'}`}
                                 >
                                     <svg
                                         width="20"
@@ -136,7 +153,7 @@ const DepartmentCourseStructure: React.FC<
                                     >
                                         <path
                                             d="M5 8L10 13L15 8"
-                                            stroke="#FF5422"
+                                            stroke={dept.slug === 'csm' || dept.slug === 'mec' ? '#e96a27' : '#FF5422'}
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
@@ -170,13 +187,13 @@ const DepartmentCourseStructure: React.FC<
                                                 1,
                                             ],
                                         }}
-                                        className="overflow-hidden"
+                                        className={`overflow-hidden ${dept.slug === 'cse' || dept.slug === 'mec' ? 'border-t border-[#f8e8de]' : ''}`}
                                         style={{
-                                            background: 'white',
+                                            background: dept.slug === 'cse' ? '#fff8f3' : 'white',
                                         }}
                                     >
                                         {section.subtitle && (
-                                            <div className="px-6 pt-4 pb-2 lg:px-8">
+                                            <div className={`px-6 pt-4 pb-2 lg:px-8 ${dept.slug === 'cse' ? 'text-[#737b87]' : ''}`}>
                                                 <p className="text-sm text-neutral-400">
                                                     {
                                                         section.subtitle

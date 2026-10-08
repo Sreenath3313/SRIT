@@ -9,7 +9,7 @@ export const gallery = [
         { src: '/srit1.jpg', caption: 'Student Seminar Presentation', category: 'Students' },
         { src: '/optimized/Campus.JPG.webp', caption: 'Tech Fest Opening Ceremony', category: 'Events' },
         { src: '/optimized/College 1.jpg.webp', caption: 'Placement Training Session', category: 'Students' },
-        { src: '/optimized/College 2.JPG.webp', caption: 'AI & ML Workshop', category: 'Events' },
+        { src: '/optimized/College 2.JPG.webp', caption: 'AI and ML Workshop', category: 'Events' },
         { src: '/optimized/College 3.JPG.webp', caption: 'Computer Lab Infrastructure', category: 'Labs' },
         { src: '/optimized/College.JPG.webp', caption: 'Innovation Club Brainstorm', category: 'Clubs' },
         { src: '/optimized/ComputerLab.JPG.webp', caption: 'Annual Day Celebration', category: 'Events' },

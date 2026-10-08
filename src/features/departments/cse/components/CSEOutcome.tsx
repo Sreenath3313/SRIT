@@ -11,13 +11,14 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = () => {
     return (
         <DepartmentAccordion
             title="OUTCOME BASED EDUCATION"
+            variant="numbered"
             items={[
                 { 
                     title: 'Program Educational Objectives (PEOs)',
                     content: (
                         <div className="space-y-6 text-neutral-700">
                             <p className="font-bold text-neutral-900 text-lg">
-                                An SRIT graduate in Computer Science & Engineering, after three to four years of graduation will:
+                                An SRIT graduate in Computer Science and Engineering, after three to four years of graduation will:
                             </p>
                             <div className="space-y-4">
                                 <div className="flex gap-4">
@@ -37,7 +38,7 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = () => {
                     )
                 },
                 { 
-                    title: 'Program Outcomes (POs) & Program Specific Outcome (PSOs)',
+                    title: 'Program Outcomes (POs) and Program Specific Outcome (PSOs)',
                     content: (
                         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
                             {/* Programme Outcomes */}

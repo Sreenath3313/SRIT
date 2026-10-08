@@ -19,6 +19,7 @@ const CADCourseStructure: React.FC<CADCourseStructureProps> = ({ dept }) => {
         <DepartmentAccordion
             title={`${dept.fullName} Course Structure`}
             items={items}
+            variant={dept.slug === 'ece' ? 'ece' : 'default'}
         />
     );
 };

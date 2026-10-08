@@ -3,6 +3,7 @@ import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { getDepartmentBySlug, type DepartmentData } from '../features/departments/index';
 import DepartmentNavbar from '../components/layout/DepartmentNavbar';
+import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import DepartmentAbout from '../features/departments/shared/components/DepartmentAbout';
 import DepartmentFaculty from '../features/departments/shared/components/DepartmentFaculty';
@@ -208,6 +209,7 @@ const DepartmentPage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
 
     const dept = getDepartmentBySlug(slug || '');
+    const isEceDepartment = dept?.slug === 'ece';
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -316,7 +318,9 @@ const DepartmentPage: React.FC = () => {
 
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className={`min-h-screen bg-white ${isEceDepartment ? 'pt-[178px] md:pt-[110px] lg:pt-[118px]' : ''}`}>
+
+            {isEceDepartment && <Navbar showPlacementTicker={false} />}
 
             {/* =====================================================
                 DEPARTMENT NAVBAR
@@ -338,11 +342,11 @@ const DepartmentPage: React.FC = () => {
 
                 {(dept.layout === 'sidebar' || dept.slug === 'eee' || dept.slug === 'has') ? (
                     /* ── Sidebar + Content layout ── */
-                    <div className="flex min-h-[calc(100vh-62px)] bg-neutral-50/30">
+                    <div className="flex min-h-[calc(111.111vh-62px)] bg-neutral-50/30">
 
                         {/* LEFT SIDEBAR — CSE Reference Match */}
                         <aside
-                            className="hidden lg:flex w-[280px] shrink-0 sticky top-[62px] self-start h-[calc(100vh-62px)] flex-col overflow-hidden"
+                            className="hidden lg:flex w-[280px] shrink-0 sticky top-[62px] self-start h-[calc(111.111vh-62px)] flex-col overflow-hidden"
                             style={{ background: '#1C2133', boxShadow: '4px 0 20px rgba(0,0,0,0.25)' }}
                         >
 

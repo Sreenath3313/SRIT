@@ -19,7 +19,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                     </h2>
 
                     <div className="mt-6 mb-8 bg-white rounded-xl shadow-md border border-neutral-100 overflow-hidden flex flex-col lg:flex-row">
-                        <div className="lg:w-5/12 relative aspect-[4/3] lg:aspect-auto overflow-hidden">
+                        <div className="relative h-[260px] sm:h-[320px] lg:h-[360px] lg:w-4/12 lg:shrink-0 self-center overflow-hidden">
                             <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" loading="lazy" />
                             <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase rounded shadow-sm">
                                 Featured Program
@@ -92,7 +92,11 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                         <div>
                             <h3 className="text-primary font-black text-sm lg:text-[15px] uppercase tracking-[0.2em] mb-5">Mission</h3>
                             <div className="text-neutral-600 text-[15px] lg:text-[17px] leading-[1.8] space-y-3 text-justify">
-                                {dept.mission.map((m) => <p key={m.id}>{m.text}</p>)}
+                                {dept.mission.map((m, index) => (
+                                    <p key={m.id}>
+                                        <strong className="text-neutral-900 font-bold">DM {index + 1}:</strong> {m.text}
+                                    </p>
+                                ))}
                             </div>
                         </div>
                     </div>

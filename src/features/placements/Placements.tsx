@@ -1,51 +1,15 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { TrendingUp, Users, Building, Award } from 'lucide-react';
+import { placementStats } from '../../data/placements';
 
-const stats = [
-    {
-        icon: TrendingUp,
-        value: '9.08 LPA',
-        label: 'Highest Package',
-        subtext: 'TCS Prime',
-    },
-    {
-        icon: Users,
-        value: '370+',
-        label: 'Total Offers',
-        subtext: '2024-25 Season',
-    },
-    {
-        icon: Building,
-        value: '20+',
-        label: 'Companies Visited',
-        subtext: 'Top MNCs & Startups',
-    },
-    {
-        icon: Award,
-        value: '80%',
-        label: 'Placement Rate',
-        subtext: 'Consistent Performance',
-    },
-];
+const statIcons = [TrendingUp, Users, Building, Award];
 
 const recruiters = [
-    { name: 'TCS', logo: 'https://icons.duckduckgo.com/ip3/tcs.com.ico' },
-    { name: 'Cognizant', logo: '/optimized/logos/cognizant.png.webp' },
-    { name: 'HCL', logo: 'https://icons.duckduckgo.com/ip3/hcltech.com.ico' },
-    { name: 'Infosys', logo: '/optimized/logos/infosys.png.webp' },
-    { name: 'Lumen Technologies', logo: '/optimized/logos/lumen_technologies.png.webp' },
-    { name: 'Foxconn', logo: '/optimized/logos/foxconn.png.webp' },
-    { name: 'Cadsys', logo: 'https://icons.duckduckgo.com/ip3/cadsys.com.ico' },
-    { name: 'Playto Labs', logo: '/optimized/logos/playto_labs.png.webp' },
-    { name: 'IOpex Tech', logo: '/optimized/logos/iopex_tech.png.webp' },
-    { name: 'Snovasys', logo: 'https://icons.duckduckgo.com/ip3/snovasys.com.ico' },
-    { name: 'INDO-MIM', logo: '/optimized/logos/indo_mim.png.webp' },
-    { name: 'IRMAI', logo: 'https://icons.duckduckgo.com/ip3/irmai.in.ico' },
-    { name: 'Calix', logo: '/optimized/logos/calix.png.webp' },
-    { name: 'Wayvo.AI', logo: '/optimized/logos/wayvo_ai.png.webp' },
-    { name: 'IndiGrid', logo: '/optimized/logos/indigrid.png.webp' },
-    { name: 'Bonito Designs', logo: '/optimized/logos/bonito_designs.png.webp' }
+    'TCS', 'Cognizant', 'HCL', 'Infosys',
+    'Lumen Technologies', 'Foxconn', 'Cadsys', 'Playto Labs',
+    'IOpex Tech', 'Snovasys', 'INDO-MIM', 'IRMAI',
+    'Calix', 'Wayvo.AI', 'IndiGrid', 'Bonito Designs'
 ];
 
 const Placements: React.FC = () => {
@@ -66,43 +30,43 @@ const Placements: React.FC = () => {
     };
 
     return (
-        <section id="placements" ref={ref} className="relative py-10 lg:py-20 bg-white border-t border-neutral-200/60 text-neutral-800 overflow-hidden">
+        <section id="placements" ref={ref} className="relative bg-white py-6 text-neutral-800 lg:py-10">
             <div className="section-container relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div className="grid items-center gap-8 lg:grid-cols-[.92fr_1.08fr] lg:gap-10">
                     
                     {/* Left Side: Content & Stats */}
                     <motion.div 
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="pr-0 lg:pr-12 relative z-10"
+                            className="relative z-10 pr-0 lg:pr-8"
                     >
-                        <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
+                        <motion.div variants={itemVariants} className="mb-4 flex items-center gap-3">
                             <span className="text-neutral-500 font-bold tracking-[0.2em] text-xs uppercase">
                                 PLACEMENTS @ SRIT
                             </span>
                         </motion.div>
                         <motion.h2 
                             variants={itemVariants} 
-                            className="font-serif text-[2.5rem] lg:text-5xl font-bold text-neutral-900 mb-6 leading-[1.15]"
+                            className="mb-4 font-serif text-[2.25rem] font-bold leading-[1.08] text-neutral-900 lg:text-[2.75rem]"
                         >
                             Building Careers, Creating Leaders
                         </motion.h2>
                         <motion.p 
                             variants={itemVariants} 
-                            className="text-neutral-600 text-sm md:text-[15px] leading-relaxed mb-10 max-w-lg text-justify"
+                            className="mb-6 max-w-lg text-justify text-sm leading-relaxed text-neutral-600 md:text-[15px]"
                         >
                             SRIT has an outstanding placement record with top companies recruiting our students year after year. Our dedicated Training &amp; Placement cell prepares students with industry-ready skills.
                         </motion.p>
  
                         {/* Stats Grid */}
-                        <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 lg:gap-5 mb-8">
-                            {stats.map((stat, idx) => {
-                                const Icon = stat.icon;
+                        <motion.div variants={itemVariants} className="mb-5 grid grid-cols-2 gap-3 lg:gap-4">
+                            {placementStats.map((stat, idx) => {
+                                const Icon = statIcons[idx];
                                 return (
-                                    <div key={idx} className="bg-neutral-50/50 border border-neutral-200/60 p-4 sm:p-5 rounded hover:border-neutral-300 hover:bg-white transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.01)]">
-                                        <Icon className="w-5 h-5 text-neutral-500 mb-3" />
-                                        <div className="font-serif text-2xl lg:text-[1.75rem] font-bold text-neutral-900 mb-1.5 leading-none">
+                                    <div key={idx} className="group border border-neutral-200/80 bg-white p-3.5 transition-colors duration-200 hover:border-[#FF5421]/50 sm:p-4">
+                                        <Icon className="mb-2.5 h-4 w-4 text-neutral-500 transition-colors duration-200 group-hover:text-[#FF5421]" />
+                                        <div className="mb-1 font-serif text-2xl font-bold leading-none text-neutral-900 lg:text-[1.65rem]">
                                             {stat.value}
                                         </div>
                                         <div className="text-neutral-800 text-xs sm:text-sm font-bold mb-1">
@@ -119,7 +83,7 @@ const Placements: React.FC = () => {
                         <motion.a 
                             variants={itemVariants}
                             href="/placements/about-t-and-p"
-                            className="inline-block px-8 py-3.5 bg-[#171b24] text-white font-semibold text-sm rounded-sm hover:bg-primary transition-colors"
+                            className="inline-flex items-center gap-2 rounded-md bg-[#171b24] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FF5421]"
                         >
                             Know More
                         </motion.a>
@@ -130,37 +94,29 @@ const Placements: React.FC = () => {
                         initial={{ opacity: 0, x: 40 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.3 , ease: [0.22, 1, 0.36, 1] }}
-                        className="bg-neutral-50/80 backdrop-blur-md border border-neutral-200/60 p-6 sm:p-8 lg:p-10 rounded-lg relative z-10 shadow-2xl"
+                        className="relative z-10 border border-neutral-200 bg-white p-5 text-neutral-800 sm:p-7 lg:p-8"
                     >
                         <div className="text-center mb-8">
-                            <h3 className="font-serif text-xl sm:text-2xl font-bold text-neutral-900 mb-3">
+                            <h3 className="relative mb-3 font-serif text-xl font-bold text-neutral-900 sm:text-2xl">
                                 Our Recruiters
                             </h3>
-                            <div className="w-10 h-px bg-neutral-400 mx-auto" />
+                            <div className="relative mx-auto h-[3px] w-12 rounded-full bg-[#FF5421]" />
                         </div>
  
-                        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-2 lg:gap-3">
+                        <div className="relative grid grid-cols-2 gap-2 sm:grid-cols-4 lg:gap-3">
                             {recruiters.map((recruiter, idx) => (
                                 <motion.div 
-                                    key={idx}
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    transition={{ type: 'spring', stiffness: 220, damping: 24 }}
-                                    className="border border-neutral-200/60 bg-white p-3 flex items-center justify-center text-center hover:border-neutral-300 transition-all duration-300 rounded-sm min-h-[70px] lg:min-h-[80px] cursor-pointer group hover:shadow-md"
+                                    key={recruiter}
+                                    whileHover={{ y: -1, transition: { duration: .18 } }}
+                                    transition={{ duration: .36, delay: Math.min(idx * .035, .5), ease: [0.22, 1, 0.36, 1] }}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                                    className="group relative flex min-h-[56px] cursor-default items-center justify-center overflow-hidden border border-neutral-200/80 bg-white px-2 py-2.5 text-center transition-colors duration-200 hover:border-[#FF5421]/50 hover:bg-[#FFF9F6] sm:min-h-[60px]"
                                 >
-                                    {recruiter.logo ? (
-                                        <img 
-                                            src={recruiter.logo} 
-                                            alt={recruiter.name} 
-                                            className="max-h-[35px] max-w-full object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                                            onError={(e) => {
-                                                e.currentTarget.style.display = 'none';
-                                                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                                            }}
-                                        />
-                                    ) : null}
-                                    <span className={`text-[13px] lg:text-sm font-bold text-neutral-700 group-hover:text-neutral-900 transition-colors duration-300 ${recruiter.logo ? 'hidden' : ''}`}>
-                                        {recruiter.name}
+                                    <span className="text-[12px] font-semibold tracking-[-.015em] text-neutral-700 transition-colors duration-200 group-hover:text-[#D94B20] sm:text-[13px]">
+                                        {recruiter}
                                     </span>
+                                    <span aria-hidden="true" className="absolute inset-x-4 bottom-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#FF5421] transition-transform duration-300 group-hover:scale-x-100" />
                                 </motion.div>
                             ))}
                         </div>
@@ -168,8 +124,6 @@ const Placements: React.FC = () => {
 
                 </div>
                 
-                {/* Decorative background split element */}
-                <div className="absolute top-0 bottom-0 right-0 w-[45%] bg-neutral-50/30 z-0 hidden lg:block border-l border-neutral-100" />
             </div>
         </section>
     );

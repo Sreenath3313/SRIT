@@ -27,7 +27,7 @@ const Departments: React.FC = () => {
                     className="text-center mb-16"
                 >
                     <p className="label-caps text-primary tracking-[0.25em] mb-5">
-                        Academics & Research
+                        Academics and Research
                     </p>
                     <h2 className="heading-lg text-neutral-dark">
                         Engineering Departments
@@ -98,10 +98,10 @@ const Departments: React.FC = () => {
                                     <div className="hidden md:flex p-7 absolute inset-0 bg-warm-50 translate-y-full transition-transform duration-500 ease-[0.22,1,0.36,1] group-hover:translate-y-0 flex-col justify-between">
                                         <div>
                                             <span className="text-primary text-[10px] font-bold tracking-[0.15em] uppercase block mb-3">
-                                                Research Focus
+                                                {dept.researchAreas.length ? 'Research Focus' : 'Department Highlights'}
                                             </span>
                                             <ul className="space-y-2">
-                                                {dept.researchAreas.slice(0, 3).map(area => (
+                                                {(dept.researchAreas.length ? dept.researchAreas : dept.highlights).slice(0, 3).map(area => (
                                                     <li key={area} className="flex items-start gap-2 text-[13px] text-neutral-700 font-medium">
                                                         <span className="text-primary mt-1 text-[10px]">■</span>
                                                         <span className="leading-tight">{area}</span>

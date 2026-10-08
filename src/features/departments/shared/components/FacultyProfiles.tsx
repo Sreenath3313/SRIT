@@ -91,7 +91,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                 </div>
             </div>
 
-            {/* Responsive Faculty Grid - Spacious & High-Definition 3-Column Grid */}
+            {/* Responsive Faculty Grid - Spacious and High-Definition 3-Column Grid */}
             <div className={`grid gap-7 sm:gap-8 lg:gap-9 mx-auto ${
                 variant === 'csm'
                     ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1240px]'

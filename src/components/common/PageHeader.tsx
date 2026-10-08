@@ -5,10 +5,34 @@ interface PageHeaderProps {
   title: string;
   categoryTitle?: string;
   icon?: React.ReactNode;
+  variant?: 'default' | 'editorial';
 }
 
-export default function PageHeader({ title, categoryTitle }: PageHeaderProps) {
-  const coverImage = '/optimized/coverpage.png.webp';
+export default function PageHeader({ title, categoryTitle, variant = 'default' }: PageHeaderProps) {
+  const isEditorial = variant === 'editorial';
+  const coverImage = isEditorial ? '/optimized/CollegeMain.webp.webp' : '/optimized/coverpage.png.webp';
+
+  if (isEditorial) {
+    return (
+      <div className="relative mb-8 lg:mb-10">
+        <div className="relative mt-[90px] h-[38svh] min-h-[300px] max-h-[480px] w-full overflow-hidden bg-[#171b24] lg:mt-[110px]">
+          <motion.img
+            src={coverImage}
+            alt="SRIT campus"
+            initial={{ opacity: 0, scale: 1.025 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, ease: 'easeOut' }}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111722]/75 via-[#111722]/30 to-transparent" />
+          <div className="section-container absolute inset-x-0 bottom-0 pb-8 sm:pb-10 lg:pb-12">
+            {categoryTitle && <p className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[.2em] text-white/80"><span className="h-px w-8 bg-[#FF5422]" />{categoryTitle}</p>}
+            <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight tracking-[-.025em] text-white sm:text-5xl lg:text-6xl">{title}</h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative mb-12 lg:mb-16">

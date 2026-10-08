@@ -13,7 +13,7 @@ const DepartmentEContent: React.FC<DepartmentEContentProps> = ({ dept }) => {
             title: item.title,
             content: <ContentRenderer content={item.content} />
         }));
-        return <DepartmentAccordion title="E-CONTENT" items={items} />;
+        return <DepartmentAccordion title="E-CONTENT" items={items} variant={dept.slug === 'ece' ? 'ece' : dept.slug === 'csm' ? 'csm' : 'default'} />;
     }
 
     if (dept.slug === 'cse') {

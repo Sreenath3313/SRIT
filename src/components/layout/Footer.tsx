@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { GraduationCap, Instagram, Landmark, Mail, MapPin, Network, Phone, Send } from 'lucide-react';
 
 interface FooterLink {
     label: string;
@@ -56,302 +57,77 @@ const socialLinks = [
         href: 'https://www.linkedin.com/school/sritatp/',
         icon: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
     },
+    { label: 'Instagram', href: 'https://www.instagram.com/sritatp/', icon: '' },
 ];
 
-const Footer: React.FC = () => {
-    return (
-        <footer className="relative overflow-hidden bg-[#080808] text-white">
+const footerIcons = { About: Landmark, Academics: GraduationCap, Departments: Network, Connect: Send };
 
-            {/* =====================================================
-                ORANGE TOP ACCENT
-            ===================================================== */}
-
-            <div className="relative h-[4px] bg-[#FF5422]">
-                <div className="absolute inset-0 bg-[#FF5422] shadow-[0_0_20px_rgba(255,84,34,0.35)]" />
-            </div>
-
-
-            {/* =====================================================
-                SUBTLE ORANGE AMBIENT GLOW
-            ===================================================== */}
-
-            <div
-                className="
-                    pointer-events-none
-                    absolute
-                    -top-40
-                    left-1/4
-                    w-[500px]
-                    h-[300px]
-                    rounded-full
-                    bg-[#FF5422]/[0.045]
-                    blur-[100px]
-                "
-            />
-
-            <div
-                className="
-                    pointer-events-none
-                    absolute
-                    bottom-0
-                    right-0
-                    w-[350px]
-                    h-[300px]
-                    rounded-full
-                    bg-[#FF5422]/[0.035]
-                    blur-[100px]
-                "
-            />
-
-
-            <div className="relative section-container pt-12 pb-7">
-
-                {/* =================================================
-                    BRAND + CONTACT
-                ================================================= */}
-
-                <div
-                    className="
-                        flex
-                        flex-col
-                        lg:flex-row
-                        items-start
-                        lg:items-end
-                        justify-between
-                        gap-7
-                        mb-9
-                        pb-7
-                        border-b
-                        border-white/[0.09]
-                    "
-                >
-
-                    {/* Brand */}
-                    <div>
-
-                        <Link
-                            to="/"
-                            className="
-                                inline-block
-                                font-bold
-                                text-xl
-                                lg:text-2xl
-                                text-white
-                                tracking-wide
-                                leading-relaxed
-                                transition-colors
-                                duration-300
-                                hover:text-[#FF5422]
-                            "
-                        >
-                            Srinivasa Ramanujan<br />
-                            Institute of Technology
-                        </Link>
-
-                        <p className="text-white/45 text-sm mt-2">
-                            Rotarypuram, Anantapur — 515701, Andhra Pradesh
-                        </p>
-
-                    </div>
-
-
-                    {/* Contact */}
-                    <div
-                        className="
-                            flex
-                            flex-col
-                            sm:flex-row
-                            sm:items-center
-                            gap-2
-                            sm:gap-5
-                            text-sm
-                        "
-                    >
-
-                        <a
-                            href="tel:9515611111"
-                            className="
-                                text-white/55
-                                hover:text-[#FF5422]
-                                transition-colors
-                                duration-300
-                            "
-                        >
-                            91-951 561 1111
-                        </a>
-
-                        <span className="hidden sm:block w-px h-3 bg-white/15" />
-
-                        <a
-                            href="mailto:hr@srit.ac.in"
-                            className="
-                                text-white/55
-                                hover:text-[#FF5422]
-                                transition-colors
-                                duration-300
-                            "
-                        >
-                            hr@srit.ac.in
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                {/* =================================================
-                    LINK COLUMNS
-                ================================================= */}
-
-                <div
-                    className="
-                        grid
-                        grid-cols-1
-                        sm:grid-cols-2
-                        md:grid-cols-4
-                        gap-8
-                        lg:gap-10
-                        mb-9
-                    "
-                >
-
-                    {Object.entries(columns).map(([title, links]) => (
-                        <div key={title}>
-
-                            <p
-                                className="
-                                    label-caps
-                                    text-white/45
-                                    mb-4
-                                "
-                            >
-                                {title}
-                            </p>
-
-                            <ul className="space-y-2.5">
-
-                                {links.map((link) => (
-                                    <li key={link.label}>
-
-                                        {link.external ? (
-                                            <a
-                                                href={link.href}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="
-                                                    inline-block
-                                                    text-white/65
-                                                    text-sm
-                                                    transition-all
-                                                    duration-300
-                                                    hover:text-[#FF5422]
-                                                    hover:translate-x-1
-                                                "
-                                            >
-                                                {link.label}
-                                            </a>
-                                        ) : (
-                                            <Link
-                                                to={link.href}
-                                                className="
-                                                    inline-block
-                                                    text-white/65
-                                                    text-sm
-                                                    transition-all
-                                                    duration-300
-                                                    hover:text-[#FF5422]
-                                                    hover:translate-x-1
-                                                "
-                                            >
-                                                {link.label}
-                                            </Link>
-                                        )}
-
-                                    </li>
-                                ))}
-
-                            </ul>
-
-                        </div>
-                    ))}
-
-                </div>
-
-
-                {/* =================================================
-                    BOTTOM
-                ================================================= */}
-
-                <div
-                    className="
-                        pt-6
-                        border-t
-                        border-white/[0.09]
-                        flex
-                        flex-col
-                        md:flex-row
-                        items-center
-                        justify-between
-                        gap-4
-                    "
-                >
-
-                    <p className="text-white/40 text-xs">
-                        © 2007–{new Date().getFullYear()} Srinivasa Ramanujan Institute of Technology. All rights reserved.
+const Footer: React.FC = () => (
+    <footer className="relative isolate overflow-hidden border-t-2 border-[#FF5B18] bg-[#080C0E] text-white">
+        <div className="relative z-10 section-container py-10 md:py-12">
+            <div className="grid gap-7 border-b border-white/15 pb-7 lg:grid-cols-[1fr_auto_auto] lg:items-end lg:gap-10">
+                <div>
+                    <div className="mb-3 h-[3px] w-12 bg-[#FF5B18]" />
+                    <Link to="/" className="block max-w-max text-xl font-bold leading-tight tracking-tight transition-colors hover:text-[#FF7A32] md:text-2xl">
+                        Srinivasa Ramanujan<br /><span className="text-[#FF6422]">Institute of Technology</span>
+                    </Link>
+                    <p className="mt-3 flex items-center gap-2 text-sm text-slate-300">
+                        <MapPin className="h-4 w-4 shrink-0 text-[#FF6422]" />
+                        Rotarypuram, Anantapur — 515701, Andhra Pradesh
                     </p>
-
-
-                    {/* Social Icons */}
-                    <div className="flex items-center gap-2">
-
-                        {socialLinks.map((social) => (
-                            <a
-                                key={social.label}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="
-                                    group
-                                    w-10
-                                    h-10
-                                    rounded-full
-                                    flex
-                                    items-center
-                                    justify-center
-                                    text-white/40
-                                    border
-                                    border-white/[0.08]
-                                    bg-white/[0.02]
-                                    transition-all
-                                    duration-300
-                                    hover:text-white
-                                    hover:bg-[#FF5422]
-                                    hover:border-[#FF5422]
-                                    hover:-translate-y-1
-                                    hover:shadow-[0_8px_25px_rgba(255,84,34,0.22)]
-                                "
-                                aria-label={social.label}
-                            >
-
-                                <svg
-                                    className="w-4 h-4"
-                                    fill="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d={social.icon} />
-                                </svg>
-
-                            </a>
-                        ))}
-
-                    </div>
-
                 </div>
-
+                <div className="flex flex-col gap-3 text-sm text-slate-200 sm:flex-row sm:items-center sm:gap-6">
+                    <a href="tel:9515611111" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]"><Phone className="h-4 w-4 text-[#FF6422]" />91-951 561 1111</a>
+                    <span className="hidden h-6 w-px bg-white/20 sm:block" />
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]"><Mail className="h-4 w-4 text-[#FF6422]" />hr@srit.ac.in</a>
+                </div>
+                <p className="hidden border-l border-white/20 pl-6 text-[10px] font-semibold uppercase leading-[1.9] tracking-[.24em] text-slate-400 xl:block">
+                    Learn<br />Innovate<br />Build<br />Belong
+                </p>
             </div>
 
-        </footer>
-    );
-};
+            <div className="grid gap-8 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+                {Object.entries(columns).map(([title, links], index) => {
+                    const Icon = footerIcons[title as keyof typeof footerIcons];
+                    return (
+                        <div key={title} className={`flex gap-4 lg:px-6 ${index === 0 ? 'lg:pl-0' : 'lg:border-l lg:border-white/15'}`}>
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#FF6422]/25 bg-[#FF6422]/[0.06] text-[#FF6422]">
+                                <Icon className="h-5 w-5" strokeWidth={2.2} />
+                            </div>
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-[.16em] text-slate-100">{title}</p>
+                                <div className="mb-4 mt-2 h-[2px] w-7 bg-[#FF5B18]" />
+                                <ul className="space-y-2.5">
+                                    {links.map((link) => (
+                                        <li key={link.label}>
+                                            {link.external ? (
+                                                <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-300 transition-colors hover:text-[#FF7A32]">{link.label}</a>
+                                            ) : (
+                                                <Link to={link.href} className="text-sm text-slate-300 transition-colors hover:text-[#FF7A32]">{link.label}</Link>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div className="flex flex-col gap-4 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-xs text-slate-400">© 2007–{new Date().getFullYear()} Srinivasa Ramanujan Institute of Technology. All rights reserved.</p>
+                <div className="flex items-center gap-2">
+                    {socialLinks.map((social) => (
+                        <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#080C0E]/50 text-slate-200 transition-colors hover:border-[#FF6422] hover:bg-[#FF6422] hover:text-white" aria-label={social.label}>
+                            {social.label === 'Instagram' ? <Instagram className="h-4 w-4" /> : (
+                                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d={social.icon} /></svg>
+                            )}
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </footer>
+);
 
 export default Footer;

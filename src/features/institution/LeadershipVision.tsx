@@ -30,7 +30,7 @@ const LeadershipVision: React.FC = () => {
     return (
         <section
             ref={ref}
-            className="py-24 bg-[#f8f7f4] relative overflow-hidden"
+            className="py-24 bg-white relative overflow-hidden"
         >
             <div className="section-container max-w-[1400px] mx-auto">
 

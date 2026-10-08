@@ -23,7 +23,7 @@ const Admissions: React.FC = () => {
     };
 
     return (
-        <section id="admissions" ref={ref} className="relative pt-4 pb-12 lg:pt-6 lg:pb-20 bg-orange-50 overflow-hidden">
+        <section id="admissions" ref={ref} className="relative pt-4 pb-10 lg:pt-6 lg:pb-14 bg-orange-50 overflow-hidden">
             <div className="relative section-container max-w-[1100px] mx-auto z-10">
                 {/* The "Card" Container */}
                 <motion.div

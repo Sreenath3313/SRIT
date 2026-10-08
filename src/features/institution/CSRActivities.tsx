@@ -10,82 +10,47 @@ const csrImages = [
 
 const CSRActivities: React.FC = () => {
     return (
-        <section id="csr" className="section-y-lg bg-white overflow-hidden">
+        <section id="csr" className="overflow-hidden border-y border-[#E5DED4] bg-[#F4F1EA] py-10 md:py-14">
             <div className="section-container">
-                <div className="text-center mb-16">
+                <div className="mb-8 grid items-end gap-5 sm:mb-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-12">
+                    <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true }}>
+                        <p className="mb-3 text-[10px] font-bold uppercase tracking-[.24em] text-[#B64A27]">Beyond Academia <span className="ml-2 font-mono tracking-normal text-neutral-500">/ 04 initiatives</span></p>
+                        <h2 className="font-serif text-3xl font-semibold leading-tight tracking-[-.02em] text-[#171b24] sm:text-4xl lg:text-5xl">CSR Activities</h2>
+                    </motion.div>
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 14 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: .5, delay: .08, ease: [0.22, 1, 0.36, 1] }}
                         viewport={{ once: true }}
-                        className="label-caps text-neutral-500 tracking-[0.25em] mb-4"
-                    >
-                        Beyond Academia
-                    </motion.p>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 , ease: [0.22, 1, 0.36, 1] }}
-                        viewport={{ once: true }}
-                        className="heading-lg text-neutral-dark mb-6"
-                    >
-                        CSR Activities
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 , ease: [0.22, 1, 0.36, 1] }}
-                        viewport={{ once: true }}
-                        className="text-neutral-600 max-w-2xl mx-auto text-lg leading-relaxed"
+                        className="max-w-2xl text-base leading-relaxed text-neutral-600 lg:justify-self-end lg:text-lg"
                     >
                         At SRIT, we believe in holistic development and social impact. Our CSR initiatives are designed to create a meaningful difference in society.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
                     {csrImages.map((image, index) => (
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            whileHover={{ y: -4 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 , ease: [0.22, 1, 0.36, 1] }}
+                            key={image.title}
+                            initial={{ opacity: 0, y: 18 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: .5, delay: index * .07, ease: [0.22, 1, 0.36, 1] }}
                             viewport={{ once: true }}
-                            className="group relative h-[380px] sm:h-[400px] lg:h-[420px] w-full overflow-hidden rounded-sm shadow-md bg-neutral-200"
-                            style={{ position: 'relative' }}
+                            className="group flex h-full flex-col border border-[#DED8CF] bg-white transition-colors duration-300 hover:border-[#B64A27]/60"
                         >
-                            <img
-                                src={image.src}
-                                alt={image.title}
-                                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    objectPosition: 'center',
-                                    display: 'block'
-                                }}
-                            loading="lazy" />
-                            <div 
-                                className="flex flex-col justify-end p-6 z-10 transition-all duration-300"
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                    background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.05) 100%)'
-                                }}
-                            >
-                                <h3 className="text-xl font-bold text-white mb-2 leading-tight drop-shadow-md">
-                                    {image.title}
-                                </h3>
-                                <p className="text-white/85 text-sm leading-relaxed drop-shadow">
-                                    {image.description}
-                                </p>
+                            <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E3DA]">
+                                <img
+                                    src={image.src}
+                                    alt={image.title}
+                                    className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <div className="relative flex flex-1 flex-col border-l-[3px] border-transparent px-4 py-4 transition-colors duration-300 group-hover:border-[#B64A27] sm:px-5 sm:py-5">
+                                <span className="mb-2 font-mono text-[10px] tracking-[.16em] text-[#B64A27]">{String(index + 1).padStart(2, '0')}</span>
+                                <h3 className="font-serif text-lg font-semibold leading-snug text-[#171b24] sm:text-xl">{image.title}</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-neutral-600">{image.description}</p>
                             </div>
                         </motion.div>
                     ))}

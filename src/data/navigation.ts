@@ -28,7 +28,7 @@ export const navLinks: NavLink[] = [
             { label: 'Affiliations & Accreditations', href: '/about/affiliations-accreditations' },
             { label: 'Milestones', href: '/about/milestones' },
             { label: 'SRIT Standard Operating Procedures', href: '/about/standard-operating-procedures' },
-            { label: 'Institutional Strategic Plan', href: '/about/institutional-strategic-plan' },
+            { label: 'Strategy', href: '/about/institutional-strategic-plan' },
         ]
     },
     { label: 'Admissions', href: '/admissions/courses-offered', hasDropdown: true, subItems: items('/admissions', ['Courses Offered', 'Admission Procedure', 'Fee Structure', 'Online Fee Payment', 'Scholarships', 'EAMCET Ranks', 'ECET Ranks', 'Admissions Committee', 'Academic Calendars', 'Academic Regulations']) },
@@ -39,10 +39,10 @@ export const navLinks: NavLink[] = [
         subItems: [
             { label: 'All Departments', href: '/departments' },
             { label: 'Computer Science (CSE)', href: '/department/cse' },
-            { label: 'CSE — AI & ML (CSM)', href: '/department/csm' },
-            { label: 'CSE — AI & DS (CAD)', href: '/department/cad' },
-            { label: 'Electronics & Communication (ECE)', href: '/department/ece' },
-            { label: 'Electrical & Electronics (EEE)', href: '/department/eee' },
+            { label: 'CSE — AI and ML (CSM)', href: '/department/csm' },
+            { label: 'CSE — AI and DS (CAD)', href: '/department/cad' },
+            { label: 'Electronics and Communication (ECE)', href: '/department/ece' },
+            { label: 'Electrical and Electronics (EEE)', href: '/department/eee' },
             { label: 'Mechanical Engineering (MEC)', href: '/department/mec' },
             { label: 'Civil Engineering (CIVIL)', href: '/department/civil' },
             { label: 'H&S', href: '/department/has' }

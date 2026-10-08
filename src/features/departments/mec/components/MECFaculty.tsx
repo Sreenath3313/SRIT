@@ -42,7 +42,7 @@ const MECFaculty: React.FC<MECFacultyProps> = ({ dept }) => {
             content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTLU-cbqFKHM1srVTNdpeTLeHiUV1ujfNYpBz-4E8yXLo2oMWcatDgZmn4L5-056A/pubhtml?widget=true&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
         },
     ];
-    return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} />;
+    return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} variant="mec" />;
 };
 
 export default MECFaculty;

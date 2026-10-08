@@ -60,8 +60,8 @@ export const departments: DepartmentData[] = [
     {
         slug: 'cse',
         code: 'CSE',
-        name: 'Computer Science & Engineering',
-        fullName: 'Department of Computer Science & Engineering',
+        name: 'Computer Science and Engineering',
+        fullName: 'Department of Computer Science and Engineering',
 
         tagline:
             'Knowledge creation and innovation driving every aspect of modern life.',
@@ -104,7 +104,7 @@ export const departments: DepartmentData[] = [
         mission: [
             {
                 id: 'DM1',
-                text: 'Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical & practical aspects of computer science applications.',
+                text: 'Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical and practical aspects of computer science applications.',
             },
             {
                 id: 'DM2',
@@ -121,294 +121,294 @@ export const departments: DepartmentData[] = [
 
         hodMessage: {
             name: 'Dr. P. Veera Prakash',
-            designation: 'Associate Professor & Head',
+            designation: 'Associate Professor and Head',
             message:
-                'The Department of Computer Science & Engineering works to provide comprehensive teaching and learning practices, exposure to emerging technologies, industry interaction, and opportunities to work on real-time problems while developing professional ethics and social responsibility.',
+                'The Department of Computer Science and Engineering works to provide comprehensive teaching and learning practices, exposure to emerging technologies, industry interaction, and opportunities to work on real-time problems while developing professional ethics and social responsibility.',
             image: '/optimized/cse_hod.jpg.webp',
         },
 
         faculty: [
             {
                 name: 'Dr. P. Veera Prakash',
-                designation: 'Associate Professor & Head',
-                specialization: 'Computer Science & Engineering',
+                designation: 'Associate Professor and Head',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. M. Ranjit Reddy',
                 designation: 'Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. T. Venkata Naga Jayudu',
                 designation: 'Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. T. Giri Babu',
                 designation: 'Associate Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. D. Rajesh Babu',
                 designation: 'Associate Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. S. Ravi Kumar',
                 designation: 'Associate Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph. D.',
             },
             {
                 name: 'Dr. S. Sunitha',
                 designation: 'Associate Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Dr. C. Nagesh',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. L. Suman',
                 designation: 'Assistant Professor (Regular)',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. M. Narasimhulu',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. C. Sudheer Kumar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. G. Chinna Pullaiah',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mrs. T. Kavitha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. M. Soumya',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. A. Erriswami Reddy',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. P. Rohini',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. K. Lokeshnath',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mrs. G. Nagaleela',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. A. Bala Ankanna',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. K. Umadevi',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. P. Shajahan',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. G. Lokeswari',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mr. G. Ganesh',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. C. Rekha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. E. Nagaprabhakar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech. Ph.D.',
             },
             {
                 name: 'Mrs. N. Ahamadunnisa Begum',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. N. Madhava Reddy',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. K. Lavanya',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. k. Shakir Ahamad',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. K. Hymavathi',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. D. Vishalakshi',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. C. Sekhar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. N. Ushasree',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. K. Geetha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. K.R. Lokesh',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. P. Seenamma',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. K. Mohan Ranga Rao',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. T. Sushma Priya',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mrs. P. Manasa',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. K. Asritha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. R. Indu',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. V. Kavitha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. V. Naveen Kumar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Ms. P. Sowmitha',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. C. Ashok Kumar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
             {
                 name: 'Mr. B. Kishore Kumar',
                 designation: 'Assistant Professor',
-                specialization: 'Computer Science & Engineering',
+                specialization: 'Computer Science and Engineering',
                 qualification: 'M.Tech.',
             },
         ],
 
         overview: [
             {
-                title: 'Vision & Mission',
+                title: 'Vision and Mission',
                 content: `
                 <h4>VISION</h4>
                 <p>
@@ -563,16 +563,16 @@ export const departments: DepartmentData[] = [
     {
         slug: 'csm',
         code: 'CSM',
-        name: 'CSE — AI & Machine Learning',
-        fullName: 'Department of CSE (Artificial Intelligence & Machine Learning)',
+        name: 'CSE — AI and Machine Learning',
+        fullName: 'Department of CSE (Artificial Intelligence and Machine Learning)',
         tagline: 'Preparing students for the future of intelligent computing and automation.',
         description: [
-            'The CSE — AI & Machine Learning specialization prepares students for the rapidly evolving landscape of intelligent systems. The program covers core computer science fundamentals alongside specialized courses in machine learning, neural networks, natural language processing, and computer vision.',
-            'The B.Tech CSE (AI & ML) programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. Students gain deep expertise in AI frameworks, autonomous systems, and data engineering, equipping them for roles in AI research, product development, and intelligent automation.',
+            'The CSE — AI and Machine Learning specialization prepares students for the rapidly evolving landscape of intelligent systems. The program covers core computer science fundamentals alongside specialized courses in machine learning, neural networks, natural language processing, and computer vision.',
+            'The B.Tech CSE (AI and ML) programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. Students gain deep expertise in AI frameworks, autonomous systems, and data engineering, equipping them for roles in AI research, product development, and intelligent automation.',
             'Core subjects include Python Programming, Statistics for AI, Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Reinforcement Learning, and AI Ethics. Practical exposure is provided through dedicated AI/ML labs with GPU-enabled computing infrastructure.',
         ],
         highlights: [
-            'AICTE-approved B.Tech CSE (AI & ML) specialization',
+            'AICTE-approved B.Tech CSE (AI and ML) specialization',
             'Hands-on experience with modern AI frameworks (TensorFlow, PyTorch, Scikit-learn)',
             'GPU-enabled AI/ML computing laboratories',
             'Industry exposure through partner organizations (TCS, Infosys, Wipro)',
@@ -593,12 +593,12 @@ export const departments: DepartmentData[] = [
         },
         intake: 60,
         accreditation: 'AICTE Approved',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
-        vision: 'To become a center of excellence in AI & Machine Learning education, fostering innovation and producing industry-ready professionals capable of solving complex real-world problems.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        vision: 'To become a center of excellence in AI and Machine Learning education, fostering innovation and producing industry-ready professionals capable of solving complex real-world problems.',
         mission: [
             {
                 id: 'M1',
-                text: 'To provide quality education in AI & ML with emphasis on practical application and industry readiness.',
+                text: 'To provide quality education in AI and ML with emphasis on practical application and industry readiness.',
             },
             {
                 id: 'M2',
@@ -613,21 +613,21 @@ export const departments: DepartmentData[] = [
                 text: 'To build industry partnerships that provide students with real-world exposure and career opportunities.',
             },
         ],
-        goals: 'To produce competent AI & ML engineers who can design, develop, and deploy intelligent systems that address real-world challenges across diverse domains.',
+        goals: 'To produce competent AI and ML engineers who can design, develop, and deploy intelligent systems that address real-world challenges across diverse domains.',
         hodMessage: {
             name: 'Dr. P. Chitralingappa',
             designation: 'Head of the Department, CSM',
-            message: 'The AI & Machine Learning department is at the forefront of technological innovation. We are committed to providing our students with the skills and knowledge needed to excel in this rapidly evolving field. Our curriculum, combined with industry collaborations and research opportunities, ensures that our graduates are well-prepared to drive the AI revolution.',
+            message: 'The AI and Machine Learning department is at the forefront of technological innovation. We are committed to providing our students with the skills and knowledge needed to excel in this rapidly evolving field. Our curriculum, combined with industry collaborations and research opportunities, ensures that our graduates are well-prepared to drive the AI revolution.',
             image: '/optimized/csmhod.jpg.webp',
         },
         faculty: [
             {
                 name: 'Dr. P. Chitralingappa',
-                designation: 'Professor & Head',
+                designation: 'Professor and Head',
                 joiningDate: '02-12-2019',
                 qualification: 'M. Tech. Ph. D.',
                 association: 'Regular',
-                specialization: 'Machine Learning & Pattern Recognition',
+                specialization: 'Machine Learning and Pattern Recognition',
                 image: '/optimized/csmhod.jpg.webp',
                 profileUrl: 'https://sites.google.com/view/drpcl/home',
             },
@@ -637,7 +637,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '23-06-2017',
                 qualification: 'M. Tech. Ph. D.',
                 association: 'Regular',
-                specialization: 'Deep Learning & Computer Vision',
+                specialization: 'Deep Learning and Computer Vision',
                 image: '/optimized/Hemanth.png.webp',
                 profileUrl: 'https://sites.google.com/srit.ac.in/hemanthkumaryadav-cse/profile',
             },
@@ -656,7 +656,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '03-07-2023',
                 qualification: 'M. Tech. Ph. D.',
                 association: 'Regular',
-                specialization: 'Machine Learning & Data Mining',
+                specialization: 'Machine Learning and Data Mining',
             },
             {
                 name: 'Mr. P. Rama Bayapa Reddy',
@@ -664,7 +664,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '16-08-2022',
                 qualification: 'M. Tech. (Ph. D)',
                 association: 'Regular',
-                specialization: 'Data Structures & Algorithms',
+                specialization: 'Data Structures and Algorithms',
             },
             {
                 name: 'Mr. Nazeer Shaik',
@@ -672,7 +672,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '01-10-2021',
                 qualification: 'M. Tech. (Ph. D)',
                 association: 'Regular',
-                specialization: 'Computer Networks & Security',
+                specialization: 'Computer Networks and Security',
             },
             {
                 name: 'Mr. B.Vijaya Bhaskar Reddy',
@@ -680,7 +680,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '17-08-2022',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Cloud Computing & Virtualization',
+                specialization: 'Cloud Computing and Virtualization',
                 image: '/optimized/vijay bhaskar.png.webp',
                 profileUrl: 'https://sites.google.com/view/vijayareddy/about',
             },
@@ -690,7 +690,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '02-01-2021',
                 qualification: 'M. Tech. (Ph. D)',
                 association: 'Regular',
-                specialization: 'Internet of Things (IoT) & Embedded Systems',
+                specialization: 'Internet of Things (IoT) and Embedded Systems',
                 image: '/optimized/venkatesh.png.webp',
                 profileUrl: 'https://sites.google.com/view/venkateshk/home',
             },
@@ -700,7 +700,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '01-07-2022',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Operating Systems & Systems Programming',
+                specialization: 'Operating Systems and Systems Programming',
             },
             {
                 name: 'Ms. K. Rubiya Alam',
@@ -724,7 +724,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '15-04-2023',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Python Programming & AI Frameworks',
+                specialization: 'Python Programming and AI Frameworks',
             },
             {
                 name: 'Mr. Shaik Baba Fakruddin',
@@ -732,7 +732,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '01-06-2023',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Computer Networks & Security',
+                specialization: 'Computer Networks and Security',
             },
             {
                 name: 'Mr. E. Kishore Kumar Goud',
@@ -740,7 +740,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '01-06-2023',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Software Engineering & DevOps',
+                specialization: 'Software Engineering and DevOps',
             },
             {
                 name: 'Mrs. P. Manasa',
@@ -748,7 +748,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '12-07-2023',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'AI Ethics & Data Science',
+                specialization: 'AI Ethics and Data Science',
             },
             {
                 name: 'Ms. K. Nalini Priyanka',
@@ -756,7 +756,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '26-12-2023',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Neural Networks & Fuzzy Logic',
+                specialization: 'Neural Networks and Fuzzy Logic',
             },
             {
                 name: 'Mr. K. Mohan Ranga Rao',
@@ -780,7 +780,7 @@ export const departments: DepartmentData[] = [
                 joiningDate: '27-10-2025',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Robotics & Intelligent Systems',
+                specialization: 'Robotics and Intelligent Systems',
             },
             {
                 name: 'Ms. P. Likitha Sri',
@@ -788,13 +788,13 @@ export const departments: DepartmentData[] = [
                 joiningDate: '27-05-2026',
                 qualification: 'M. Tech.',
                 association: 'Regular',
-                specialization: 'Computer Vision & AI',
+                specialization: 'Computer Vision and AI',
             },
         ],
         overview: [
             {
-                title: 'Vision & Mission',
-                content: `<h4>VISION:</h4><p>To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.</p><h4>MISSION:</h4><p><strong>DM 1:</strong> Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical &amp; practical aspects of computer science applications.</p><p><strong>DM 2: </strong>Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.</p><p><strong>DM 3:</strong> Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.</p>`
+                title: 'Vision and Mission',
+                content: `<h4>VISION:</h4><p>To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.</p><h4>MISSION:</h4><p><strong>DM 1:</strong> Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical and practical aspects of computer science applications.</p><p><strong>DM 2: </strong>Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.</p><p><strong>DM 3:</strong> Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.</p>`
             },
             {
                 title: 'Course Expert Team',
@@ -833,17 +833,17 @@ export const departments: DepartmentData[] = [
     {
         slug: 'ece',
         code: 'ECE',
-        name: 'Electronics & Communication',
-        fullName: 'Department of Electronics & Communications Engineering',
+        name: 'Electronics and Communication',
+        fullName: 'Department of Electronics and Communications Engineering',
         tagline: 'Embedded systems, signal processing, VLSI design, and telecommunications.',
         description: [
             'Electronics and Communications Engineering at SRIT drives knowledge creation and innovation in communications devices, embedded systems, signal processing, and VLSI design. The department provides a comprehensive curriculum that spans analog and digital electronics, microprocessors, and communication systems.',
             'The B.Tech ECE programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. The programme is NBA-accredited. Students are trained in advanced areas including IoT, wireless communications, RF engineering, and VLSI design through industry-standard laboratory infrastructure.',
-            'Core subjects include Electronic Devices & Circuits, Signals & Systems, Digital Communications, Microprocessors & Microcontrollers, Antenna & Wave Propagation, VLSI Design, Embedded Systems, and Digital Signal Processing.',
+            'Core subjects include Electronic Devices and Circuits, Signals and Systems, Digital Communications, Microprocessors and Microcontrollers, Antenna and Wave Propagation, VLSI Design, Embedded Systems, and Digital Signal Processing.',
         ],
         highlights: [
             'NBA-accredited B.Tech (ECE) programme — AICTE approved',
-            'Modern communication systems curriculum with IoT & VLSI focus',
+            'Modern communication systems curriculum with IoT and VLSI focus',
             'Industry-standard laboratory equipment (10 labs)',
             'Active technical competitions and research participation',
             'Top recruiters: Qualcomm, Texas Instruments, BEL, ECIL, Infosys, Wipro',
@@ -863,7 +863,7 @@ export const departments: DepartmentData[] = [
         },
         intake: 120,
         accreditation: 'NBA Accredited',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
         vision: 'To become a department of excellence in Electronics and Communication and allied areas of engineering by empowering rural students with latest technological updates and human values.',
         mission: [
             {
@@ -879,7 +879,7 @@ export const departments: DepartmentData[] = [
                 text: 'Nurture a strong research eco-system that facilitates quality research by faculty and students.',
             },
         ],
-        goals: 'ECE graduates will work in multi-disciplinary environments with ethical & social responsibilities, acquire the latest technological skills by pursuing higher education and research, and lead teams with good leadership traits for a successful professional career.',
+        goals: 'ECE graduates will work in multi-disciplinary environments with ethical and social responsibilities, acquire the latest technological skills by pursuing higher education and research, and lead teams with good leadership traits for a successful professional career.',
         hodMessage: {
             name: 'Dr. M. Venkata Rao',
             designation: 'Head of the Department, ECE',
@@ -889,26 +889,26 @@ export const departments: DepartmentData[] = [
         faculty: [
             {
                 name: 'Dr. M. Venkata Rao',
-                designation: 'Professor & Head',
-                specialization: 'Signal Processing & Communication Systems',
+                designation: 'Professor and Head',
+                specialization: 'Signal Processing and Communication Systems',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. K. Madhavi Latha',
                 designation: 'Professor',
-                specialization: 'VLSI Design & Digital Circuits',
+                specialization: 'VLSI Design and Digital Circuits',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. S. Ramakrishna',
                 designation: 'Associate Professor',
-                specialization: 'Wireless Communication & RF Engineering',
+                specialization: 'Wireless Communication and RF Engineering',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Mr. P. Srinivasulu',
                 designation: 'Associate Professor',
-                specialization: 'Embedded Systems & Microcontrollers',
+                specialization: 'Embedded Systems and Microcontrollers',
                 qualification: 'M.Tech',
             },
             {
@@ -920,18 +920,18 @@ export const departments: DepartmentData[] = [
             {
                 name: 'Mr. D. Naresh Babu',
                 designation: 'Assistant Professor',
-                specialization: 'Internet of Things & Antenna Design',
+                specialization: 'Internet of Things and Antenna Design',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Ms. V. Padmaja',
                 designation: 'Assistant Professor',
-                specialization: 'Electronic Devices & Circuits',
+                specialization: 'Electronic Devices and Circuits',
                 qualification: 'M.Tech',
             },
         ],
         overview: [
-            { title: 'Vision & Mission', content: '<p>Content coming soon.</p>' },
+            { title: 'Vision and Mission', content: '<p>Content coming soon.</p>' },
             { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
             { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
             { title: 'Program Assessment Committee( PAC)', content: '<p>Content coming soon.</p>' },
@@ -948,11 +948,11 @@ export const departments: DepartmentData[] = [
     {
         slug: 'eee',
         code: 'EEE',
-        name: 'Electrical & Electronics',
-        fullName: 'Department of Electrical & Electronics Engineering',
+        name: 'Electrical and Electronics',
+        fullName: 'Department of Electrical and Electronics Engineering',
         tagline: 'Electrical circuits, machines, power systems, and control engineering.',
         description: [
-            'The Electrical & Electronics Engineering department provides students with a wide range of fundamental knowledge in core disciplines such as Electrical Circuits, Electrical Machines, Power Systems, Control Systems, and Power Electronics.',
+            'The Electrical and Electronics Engineering department provides students with a wide range of fundamental knowledge in core disciplines such as Electrical Circuits, Electrical Machines, Power Systems, Control Systems, and Power Electronics.',
             'The B.Tech EEE programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. The programme is NBA-accredited. Students develop skills in power generation, transmission, distribution, and automation, preparing them for roles in the energy sector and industrial automation.',
             'Core subjects include Electrical Circuit Analysis, Electrical Machines, Power Systems, Control Systems, Power Electronics, Renewable Energy Systems, Smart Grid Technologies, and Industrial Drives.',
         ],
@@ -965,10 +965,10 @@ export const departments: DepartmentData[] = [
         ],
         image: '/optimized/ComputerLab.JPG.webp',
         researchAreas: [
-            'Power Systems & Smart Grids',
+            'Power Systems and Smart Grids',
             'Renewable Energy Integration',
             'Power Electronics',
-            'Control & Automation',
+            'Control and Automation',
         ],
         stats: {
             faculty: '28+',
@@ -978,8 +978,8 @@ export const departments: DepartmentData[] = [
         },
         intake: 60,
         accreditation: 'NBA Accredited',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
-        vision: 'To emerge as a premier center of learning in Electrical & Electronics Engineering with scientific quest having focus on professional ethics and human values.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        vision: 'To emerge as a premier center of learning in Electrical and Electronics Engineering with scientific quest having focus on professional ethics and human values.',
         mission: [
             {
                 id: 'DM1',
@@ -1004,14 +1004,14 @@ export const departments: DepartmentData[] = [
         faculty: [
             {
                 name: 'Dr. S. Nagaraj',
-                designation: 'Professor & Head',
-                specialization: 'Power Systems & Smart Grid Technologies',
+                designation: 'Professor and Head',
+                specialization: 'Power Systems and Smart Grid Technologies',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. M. Lakshmi Prasad',
                 designation: 'Professor',
-                specialization: 'Control Systems & Automation',
+                specialization: 'Control Systems and Automation',
                 qualification: 'Ph.D.',
             },
             {
@@ -1023,13 +1023,13 @@ export const departments: DepartmentData[] = [
             {
                 name: 'Mr. K. Ravi',
                 designation: 'Associate Professor',
-                specialization: 'Power Electronics & Industrial Drives',
+                specialization: 'Power Electronics and Industrial Drives',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Ms. B. Aruna',
                 designation: 'Assistant Professor',
-                specialization: 'Electrical Machines & Transformers',
+                specialization: 'Electrical Machines and Transformers',
                 qualification: 'M.Tech',
             },
             {
@@ -1040,7 +1040,7 @@ export const departments: DepartmentData[] = [
             },
         ],
         overview: [
-            { title: 'Vision & Mission', content: '<p>Content coming soon.</p>' },
+            { title: 'Vision and Mission', content: '<p>Content coming soon.</p>' },
             { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
             { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
             { title: 'Program Assessment Committee( PAC)', content: '<p>Content coming soon.</p>' },
@@ -1063,7 +1063,7 @@ export const departments: DepartmentData[] = [
         description: [
             'The department at SRIT provides a comprehensive education covering thermodynamics, fluid mechanics, manufacturing processes, machine design, and automobile engineering. Students develop both theoretical knowledge and practical skills through well-equipped workshops and laboratories.',
             'The B.Tech Mechanical Engineering programme (4 years / 8 semesters) is affiliated to JNTU Anantapur and approved by AICTE. The programme covers a broad spectrum of mechanical engineering disciplines, preparing students for careers in manufacturing, design, automotive, aerospace, and energy sectors.',
-            'Core subjects include Engineering Mechanics, Thermodynamics, Fluid Mechanics & Hydraulic Machinery, Manufacturing Technology, Theory of Machines, Machine Design, Heat Transfer, Metrology & Instrumentation, CAD/CAM, and Industrial Engineering.',
+            'Core subjects include Engineering Mechanics, Thermodynamics, Fluid Mechanics and Hydraulic Machinery, Manufacturing Technology, Theory of Machines, Machine Design, Heat Transfer, Metrology and Instrumentation, CAD/CAM, and Industrial Engineering.',
         ],
         highlights: [
             'AICTE-approved B.Tech Mechanical Engineering programme',
@@ -1076,7 +1076,7 @@ export const departments: DepartmentData[] = [
         researchAreas: [
             'Thermal Sciences',
             'Advanced Manufacturing',
-            'Robotics & Kinematics',
+            'Robotics and Kinematics',
             'Materials Engineering',
         ],
         stats: {
@@ -1087,7 +1087,7 @@ export const departments: DepartmentData[] = [
         },
         intake: 60,
         accreditation: 'AICTE Approved',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
         vision: 'To become a quality department in Mechanical Engineering that makes its students well qualified, innovative contributors to their profession and society.',
         mission: [
             {
@@ -1107,7 +1107,7 @@ export const departments: DepartmentData[] = [
                 text: 'To motivate quality research by both faculty and students addressing the core issues in Mechanical Engineering.',
             },
         ],
-        goals: 'MEC graduates will work as practicing Mechanical Engineers in public & private sectors, pursue higher education with lifelong learning skills, and participate as leaders accepting professional & social responsibilities with value addition to the nation.',
+        goals: 'MEC graduates will work as practicing Mechanical Engineers in public and private sectors, pursue higher education with lifelong learning skills, and participate as leaders accepting professional and social responsibilities with value addition to the nation.',
         hodMessage: {
             name: 'Dr. V. Krishna Reddy',
             designation: 'Head of the Department, MEC',
@@ -1117,49 +1117,49 @@ export const departments: DepartmentData[] = [
         faculty: [
             {
                 name: 'Dr. V. Krishna Reddy',
-                designation: 'Professor & Head',
-                specialization: 'Manufacturing Technology & CAD/CAM',
+                designation: 'Professor and Head',
+                specialization: 'Manufacturing Technology and CAD/CAM',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. S. Narasimha Rao',
                 designation: 'Professor',
-                specialization: 'Thermal Engineering & Heat Transfer',
+                specialization: 'Thermal Engineering and Heat Transfer',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. P. Ravi Shankar',
                 designation: 'Associate Professor',
-                specialization: 'Machine Design & FEA',
+                specialization: 'Machine Design and FEA',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Mr. G. Durga Prasad',
                 designation: 'Associate Professor',
-                specialization: 'Fluid Mechanics & Hydraulic Machinery',
+                specialization: 'Fluid Mechanics and Hydraulic Machinery',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Ms. A. Sridevi',
                 designation: 'Assistant Professor',
-                specialization: 'Materials Science & Metallurgy',
+                specialization: 'Materials Science and Metallurgy',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Mr. K. Satish Kumar',
                 designation: 'Assistant Professor',
-                specialization: 'Robotics & Industrial Automation',
+                specialization: 'Robotics and Industrial Automation',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Mr. M. Suresh',
                 designation: 'Assistant Professor',
-                specialization: 'Automobile Engineering & Dynamics',
+                specialization: 'Automobile Engineering and Dynamics',
                 qualification: 'M.Tech',
             },
         ],
         overview: [
-            { title: 'Vision & Mission', content: '<p>Content coming soon.</p>' },
+            { title: 'Vision and Mission', content: '<p>Content coming soon.</p>' },
             { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
             { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
             { title: 'Program Assessment Committee( PAC)', content: '<p>Content coming soon.</p>' },
@@ -1176,8 +1176,8 @@ export const departments: DepartmentData[] = [
     {
         slug: 'cad',
         code: 'CAD',
-        name: 'CSE — AI & Data Science',
-        fullName: 'Department of CSE (Artificial Intelligence & Data Science)',
+        name: 'CSE — AI and Data Science',
+        fullName: 'Department of CSE (Artificial Intelligence and Data Science)',
         tagline: 'Big data analytics, statistical inference, and AI-driven decision systems.',
         description: [
             'The B.Tech program in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science is being introduced from the academic year 2025 at SRIT with an intake of 180 students. This program is designed to equip engineering graduates with the skills required to become proficient AI and Data Science professionals. It places strong emphasis on foundational and advanced topics in Artificial Intelligence, Machine Learning, Data Science, and related areas of computational mathematics, statistics, and core computer science.',
@@ -1185,7 +1185,7 @@ export const departments: DepartmentData[] = [
             'With SRIT’s legacy of excellence in engineering education, the new program is supported by state-of-the-art laboratories, experienced faculty, and robust academic infrastructure. These resources will empower students to gain hands-on experience and emerge as competent professionals in the ever-evolving fields of Artificial Intelligence and Data Science.',
         ],
         highlights: [
-            'AICTE-approved B.Tech CSE (AI & Data Science) specialization',
+            'AICTE-approved B.Tech CSE (AI and Data Science) specialization',
             'Cloud computing and data engineering skills (AWS, GCP, Azure)',
             'Industry collaboration and project-based learning',
             'Preparation for data science and ML engineering careers',
@@ -1206,12 +1206,12 @@ export const departments: DepartmentData[] = [
         },
         intake: 180,
         accreditation: 'AICTE Approved',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
         vision: 'To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.',
         mission: [
             {
                 id: 'DM 1',
-                text: 'Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical & practical aspects of computer science applications.',
+                text: 'Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical and practical aspects of computer science applications.',
             },
             {
                 id: 'DM 2',
@@ -1226,45 +1226,45 @@ export const departments: DepartmentData[] = [
         hodMessage: {
             name: 'Dr. A. Srinivas',
             designation: 'Head of the Department, CAD',
-            message: 'The AI & Data Science department is focused on building a new generation of data professionals who can drive innovation through intelligent data analysis. With industry-aligned curriculum, cloud computing labs, and real-world project exposure, we ensure our graduates are equipped with the skills demanded by top employers in AI and data analytics.',
+            message: 'The AI and Data Science department is focused on building a new generation of data professionals who can drive innovation through intelligent data analysis. With industry-aligned curriculum, cloud computing labs, and real-world project exposure, we ensure our graduates are equipped with the skills demanded by top employers in AI and data analytics.',
             image: '/optimized/culturalevent.jpg.webp',
         },
         faculty: [
             {
                 name: 'Dr. A. Srinivas',
-                designation: 'Professor & Head',
-                specialization: 'Data Science & Statistical Learning',
+                designation: 'Professor and Head',
+                specialization: 'Data Science and Statistical Learning',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. K. Ravindra',
                 designation: 'Associate Professor',
-                specialization: 'Big Data Analytics & Cloud Engineering',
+                specialization: 'Big Data Analytics and Cloud Engineering',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Ms. P. Tejaswi',
                 designation: 'Assistant Professor',
-                specialization: 'Statistical Modeling & Data Visualization',
+                specialization: 'Statistical Modeling and Data Visualization',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Mr. G. Naresh',
                 designation: 'Assistant Professor',
-                specialization: 'Machine Learning & Predictive Modeling',
+                specialization: 'Machine Learning and Predictive Modeling',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Ms. T. Lakshmi Devi',
                 designation: 'Assistant Professor',
-                specialization: 'Business Intelligence & Data Warehousing',
+                specialization: 'Business Intelligence and Data Warehousing',
                 qualification: 'M.Tech',
             },
         ],
         overview: [
             {
-                title: 'Vision & Mission',
-                content: `<h4>VISION:</h4><p>To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.</p><h4>MISSION:</h4><p><strong>DM 1:</strong> Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical &amp; practical aspects of computer science applications.</p><p><strong>DM 2: </strong>Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.</p><p><strong>DM 3:</strong> Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.</p>`
+                title: 'Vision and Mission',
+                content: `<h4>VISION:</h4><p>To evolve as a leading department by offering best comprehensive teaching and learning practices for students to be self-competent technocrats with professional ethics and social responsibilities.</p><h4>MISSION:</h4><p><strong>DM 1:</strong> Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical and practical aspects of computer science applications.</p><p><strong>DM 2: </strong>Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.</p><p><strong>DM 3:</strong> Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.</p>`
             },
             { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
             { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
@@ -1312,7 +1312,7 @@ export const departments: DepartmentData[] = [
         },
         intake: 60,
         accreditation: 'AICTE Approved',
-        eligibility: '10+2 with Physics, Chemistry & Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
+        eligibility: '10+2 with Physics, Chemistry and Mathematics (min. 45% marks; 40% for reserved categories). Admission through AP EAPCET / EAMCET. Lateral entry (20% seats) via AP ECET for Diploma holders.',
         vision: 'To become a premier department of learning in Civil Engineering that empowers its students to be technically sound, ethical and sensitive to environmental sustainability.',
         mission: [
             {
@@ -1338,43 +1338,43 @@ export const departments: DepartmentData[] = [
         faculty: [
             {
                 name: 'Dr. R. Suresh Kumar',
-                designation: 'Professor & Head',
-                specialization: 'Structural Engineering & Concrete Technology',
+                designation: 'Professor and Head',
+                specialization: 'Structural Engineering and Concrete Technology',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. P. Venkata Ramana',
                 designation: 'Professor',
-                specialization: 'Geotechnical Engineering & Foundation Design',
+                specialization: 'Geotechnical Engineering and Foundation Design',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Dr. M. Narayana Rao',
                 designation: 'Associate Professor',
-                specialization: 'Transportation Engineering & Highway Design',
+                specialization: 'Transportation Engineering and Highway Design',
                 qualification: 'Ph.D.',
             },
             {
                 name: 'Mr. K. Srinivasa Rao',
                 designation: 'Associate Professor',
-                specialization: 'Construction Management & Project Planning',
+                specialization: 'Construction Management and Project Planning',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Ms. V. Lalitha',
                 designation: 'Assistant Professor',
-                specialization: 'Environmental Engineering & Water Resources',
+                specialization: 'Environmental Engineering and Water Resources',
                 qualification: 'M.Tech',
             },
             {
                 name: 'Mr. S. Ramana Reddy',
                 designation: 'Assistant Professor',
-                specialization: 'Surveying & Remote Sensing',
+                specialization: 'Surveying and Remote Sensing',
                 qualification: 'M.Tech',
             },
         ],
         overview: [
-            { title: 'Vision & Mission', content: '<p>Content coming soon.</p>' },
+            { title: 'Vision and Mission', content: '<p>Content coming soon.</p>' },
             { title: 'Course Expert Team', content: '<p>Content coming soon.</p>' },
             { title: 'Department Academic Committee(DAC)', content: '<p>Content coming soon.</p>' },
             { title: 'Program Assessment Committee( PAC)', content: '<p>Content coming soon.</p>' },

@@ -34,7 +34,7 @@ const MECStudents: React.FC<MECStudentsProps> = ({ dept }) => {
             content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQgcMnhQgmxVIzuXoWECUv-LptQpFB_QKkim63oikSRrinUqkrV46-sSNC4Sjo2WQ/pubhtml?widget=true&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
         },
     ];
-    return <DepartmentAccordion title="STUDENTS" items={items} defaultOpenIndex={-1} />;
+    return <DepartmentAccordion title="STUDENTS" items={items} defaultOpenIndex={-1} variant="mec" />;
 };
 
 export default MECStudents;
