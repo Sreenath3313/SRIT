@@ -33,7 +33,7 @@ export default function Hero() {
         <div className="w-full">
             <div className="grid min-h-0 grid-cols-1 items-stretch border-b border-neutral-200 lg:h-[calc(100svh-56px)] lg:min-h-[560px] lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-[1.12fr_.88fr]">
                 <div
-                    className="group relative h-[min(58vw,280px)] min-h-0 overflow-hidden bg-neutral-100 sm:h-[min(58vw,440px)] lg:h-auto lg:min-h-0"
+                    className="group relative h-[min(78vw,420px)] min-h-[300px] overflow-hidden bg-neutral-100 sm:h-[min(66vw,500px)] sm:min-h-[400px] lg:h-auto lg:min-h-0"
                     onMouseEnter={() => setIsImageHovered(true)}
                     onMouseLeave={() => setIsImageHovered(false)}
                 >

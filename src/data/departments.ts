@@ -563,7 +563,7 @@ export const departments: DepartmentData[] = [
     {
         slug: 'csm',
         code: 'CSM',
-        name: 'CSE — AI and Machine Learning',
+        name: 'AI and Machine Learning',
         fullName: 'Department of CSE (Artificial Intelligence and Machine Learning)',
         tagline: 'Preparing students for the future of intelligent computing and automation.',
         description: [
