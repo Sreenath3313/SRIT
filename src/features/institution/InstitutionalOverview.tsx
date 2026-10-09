@@ -18,7 +18,7 @@ const InstitutionalOverview: React.FC = () => {
                         <div className="space-y-5 text-neutral-700 leading-relaxed font-sans text-justify">
                             <p className="text-lg">
                                 Srinivasa Ramanujan Institute of Technology was established by
-                                Founder-cum-Secretary Sri Aluru Sambasiva Reddy in November 2007,
+                                Founder-cum-Secretary Sri Aluru Sambasiva Reddy in November 2008,
                                 under the Smt. Aluru Narayanamma Memorial Educational Society, in
                                 memory of his mother Late Smt. Aluru Narayanamma — to give shape
                                 to his firm belief that "Education is a Key Enabler for Progress."
@@ -67,7 +67,7 @@ const InstitutionalOverview: React.FC = () => {
                         {/* Accent Block */}
                         <div className="absolute -bottom-6 -left-6 bg-primary-dark text-white p-8 rounded-sm hidden lg:block">
                             <div className="font-serif text-4xl font-bold">Since</div>
-                            <div className="text-sm text-white/80 mt-1 font-sans">2007 — Ananthapuramu</div>
+                            <div className="text-sm text-white/80 mt-1 font-sans">2008 — Ananthapuramu</div>
                         </div>
                     </div>
                 </div>

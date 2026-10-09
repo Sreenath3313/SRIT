@@ -60,7 +60,7 @@ export default function Hero() {
                     </div>
 
                     <div className="mt-6 grid max-w-lg grid-cols-3 border-t border-neutral-200 pt-4 sm:mt-10 sm:pt-5 lg:mt-10">
-                        <div className="pr-3"><span className="block font-serif text-2xl font-semibold text-[#171b24] sm:text-3xl">2007</span><span className="mt-1 block text-[10px] uppercase tracking-[.12em] text-neutral-500 sm:text-xs">Established</span></div>
+                    <div className="pr-3"><span className="block font-serif text-2xl font-semibold text-[#171b24] sm:text-3xl">2008</span><span className="mt-1 block text-[10px] uppercase tracking-[.12em] text-neutral-500 sm:text-xs">Established</span></div>
                         <div className="border-l border-neutral-200 px-3 sm:px-5"><span className="block font-serif text-2xl font-semibold text-[#171b24] sm:text-3xl">7</span><span className="mt-1 block text-[10px] uppercase tracking-[.12em] text-neutral-500 sm:text-xs">Engineering streams</span></div>
                         <a href="#home-recognition" className="border-l border-neutral-200 pl-3 sm:pl-5"><span className="block font-serif text-2xl font-semibold text-[#171b24] sm:text-3xl">SRIT</span><span className="mt-1 block text-[10px] uppercase tracking-[.12em] text-neutral-500 sm:text-xs">Anantapur</span></a>
                     </div>

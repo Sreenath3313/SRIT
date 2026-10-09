@@ -6,7 +6,7 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-    { value: '2007', label: 'Year Established' },
+    { value: '2008', label: 'Year Established' },
     { value: '7', label: 'Departments' },
     { value: '51,477+', label: 'Library Volumes' },
     { value: '36+', label: 'Journals & Magazines' },
