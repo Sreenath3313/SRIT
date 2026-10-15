@@ -18,7 +18,7 @@ const CSEEContent: React.FC<CSEEContentProps> = () => {
         { title: 'CSE- 2020-24 Batch', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSd3r_CarJXDvnGW8YaweYn8SAeNyYBvTymn-31rzdE5Wodr9mxjjEsyUIDwdkdVA/pubhtml?widget=true&chrome=false&headers=false" style={iframeStyle} /> },
         { title: 'CSE- 2019-23 Batch', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSccrb4aEkQ3BnWfuRB5FgsvTYgklhk4qSer6X1Nu9tJ8M81y4KUxi165_A_lonmw/pubhtml?widget=true&chrome=false&headers=false" style={iframeStyle} /> },
     ];
-    return <DepartmentAccordion title="E-CONTENT" items={items} variant="numbered" />;
+    return <DepartmentAccordion title="E-CONTENT" items={items} variant="cse" />;
 };
 
 export default CSEEContent;

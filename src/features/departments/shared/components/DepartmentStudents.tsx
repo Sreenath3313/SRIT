@@ -216,7 +216,7 @@ const sections: SectionData[] = [
 
 /* ── Component ─────────────────────────────────────────── */
 
-import DepartmentAccordion from '../../../../components/common/DepartmentAccordion';
+import DepartmentAccordion, { DepartmentAccordionRow } from '../../../../components/common/DepartmentAccordion';
 import ContentRenderer from '../../../../components/common/ContentRenderer';
 import type { DepartmentData } from '../../index';
 
@@ -288,7 +288,7 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
     }, [openSection, activeYears, fetchedData, loadingStates]);
 
     return (
-        <div className="space-y-3">
+        <div className="overflow-hidden rounded-xl border border-[#FFD9C4] bg-[#FFFAF6] shadow-[0_2px_5px_rgba(119,66,32,0.08)]">
             {sections.map((section) => {
                 const isOpen = openSection === section.key;
                 const currentYear = activeYears[section.key];
@@ -310,35 +310,15 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                 const hasData = isDynamic ? dynamicRows.length > 0 : staticRows.length > 0;
 
                 return (
-                    <div
-                        key={section.key}
-                        className="rounded-xl overflow-hidden transition-all duration-300"
-                        style={{
-                            border: isOpen ? '1px solid rgba(255, 84, 34, 0.25)' : '1px solid rgba(10, 9, 3, 0.06)',
-                            boxShadow: isOpen ? '0 4px 20px rgba(255, 84, 34, 0.12)' : '0 1px 4px rgba(0,0,0,0.06)',
-                        }}
-                    >
-                        {/* ── Accordion Header ─────────────────────── */}
-                        <button
-                            onClick={() => toggleSection(section.key)}
-                            className="w-full flex items-center justify-between px-6 py-4 lg:px-8 lg:py-5 transition-colors duration-300"
-                            style={{ background: '#0A0903' }}
-                            onMouseEnter={(e) => { if (!isOpen) e.currentTarget.style.background = '#1a1812'; }}
-                            onMouseLeave={(e) => { e.currentTarget.style.background = '#0A0903'; }}
-                        >
-                            <h3 className="font-serif text-lg lg:text-xl font-bold text-[#FF5422]">
-                                {section.title}
-                            </h3>
-                            <motion.span
-                                animate={{ rotate: isOpen ? 180 : 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="shrink-0 ml-4"
-                            >
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M5 8L10 13L15 8" stroke="#FF5422" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </motion.span>
-                        </button>
+                    <div key={section.key} className="overflow-hidden">
+                        <DepartmentAccordionRow
+                            index={sections.indexOf(section)}
+                            title={section.title}
+                            id="student-records"
+                            isOpen={isOpen}
+                            onToggle={() => toggleSection(section.key)}
+                            headerOnly
+                        />
 
                         {/* ── Accordion Content ────────────────────── */}
                         <AnimatePresence initial={false}>
@@ -350,8 +330,8 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                                     transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                                     className="overflow-hidden bg-white"
                                 >
-                                    <div className="px-6 pt-4 pb-2 lg:px-8 flex justify-between items-center">
-                                        <p className="text-sm text-neutral-400">
+                                    <div className="flex flex-col items-start justify-between gap-2 px-3 pb-2 pt-4 sm:flex-row sm:items-center sm:px-5 lg:px-8">
+                                        <p className="text-xs text-neutral-500 sm:text-sm">
                                             {section.subtitle}
                                         </p>
                                         <div className="flex items-center gap-4">
@@ -365,7 +345,7 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                                     </div>
 
                                     {/* ── Data Table ────────────────────── */}
-                                    <div className="px-4 lg:px-6 overflow-x-auto custom-scrollbar relative min-h-[100px]">
+                                    <div className="relative min-h-[100px] overflow-x-auto px-2 custom-scrollbar sm:px-4 lg:px-6">
 
                                         {isLoading && (
                                             <div className="absolute inset-0 bg-white/80 z-10 flex items-center justify-center">
@@ -373,13 +353,13 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                                             </div>
                                         )}
 
-                                        <table className="w-full text-left border-collapse min-w-[500px] sm:min-w-full">
+                                        <table className="w-full min-w-[500px] border-collapse text-left sm:min-w-full">
                                             <thead>
                                                 <tr>
                                                     {section.columns.map((col, ci) => (
                                                         <th
                                                             key={ci}
-                                                            className="px-4 py-3.5 text-[15px] font-bold uppercase tracking-wider whitespace-nowrap bg-primary text-white"
+                                                            className="whitespace-nowrap bg-primary px-3 py-3 text-xs font-bold uppercase tracking-wider text-white sm:px-4 sm:py-3.5 sm:text-sm md:text-[15px]"
                                                             style={{ borderRight: ci < section.columns.length - 1 ? '1px solid rgba(255,255,255,0.15)' : 'none' }}
                                                         >
                                                             {col}
@@ -437,12 +417,12 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                                     </div>
 
                                     {/* ── Year Tabs ─────────────────────── */}
-                                    <div className="px-6 py-4 lg:px-8 flex items-center gap-1 overflow-x-auto border-t border-primary/5">
+                                    <div className="flex items-center gap-1 overflow-x-auto border-t border-primary/5 px-3 py-3 sm:px-5 sm:py-4 lg:px-8">
                                         {years.map((year) => (
                                             <button
                                                 key={year}
                                                 onClick={() => setYearForSection(section.key, year)}
-                                                className={`px-4 py-2 text-[14px] font-medium rounded-md transition-all duration-200 shrink-0 border ${currentYear === year
+                                                className={`shrink-0 rounded-md border px-3 py-2 text-xs font-medium transition-all duration-200 sm:px-4 sm:text-sm ${currentYear === year
                                                         ? 'bg-primary text-white border-primary opacity-100'
                                                         : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF5422] hover:opacity-100'
                                                     }`}

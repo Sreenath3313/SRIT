@@ -13,7 +13,7 @@ const CSEStudentChapters: React.FC<CSEStudentChaptersProps> = () => {
         { title: 'IEI', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRojfO2VW7WHTIp9bY3qPHjYjUcDmjhxq_j_ewflVvFC1pxClhIw3KjptARqApWtQ/pubhtml?widget=true&chrome=false&headers=false" style={iframeStyle} /> },
         { title: 'Internet Society', content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR2zBcMc36_LW32ZiyfnjCAEfV_uRkx6GNaeHfL0UQzzjLVtwfMyZoe1EMHrXjLPNsV4Zoab8WJeTlU/pubhtml?widget=true&chrome=false&headers=false" style={iframeStyle} /> },
     ];
-    return <DepartmentAccordion title="STUDENTS CHAPTERS" items={items} variant="numbered" />;
+    return <DepartmentAccordion title="STUDENTS CHAPTERS" items={items} variant="cse" />;
 };
 
 export default CSEStudentChapters;

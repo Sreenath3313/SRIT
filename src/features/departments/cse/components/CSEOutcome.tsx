@@ -7,11 +7,11 @@ interface CSEOutcomeProps {
     dept: DepartmentData;
 }
 
-const CSEOutcome: React.FC<CSEOutcomeProps> = () => {
+const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
     return (
         <DepartmentAccordion
             title="OUTCOME BASED EDUCATION"
-            variant="numbered"
+            variant={dept.slug === 'cse' ? 'cse' : 'numbered'}
             items={[
                 { 
                     title: 'Program Educational Objectives (PEOs)',

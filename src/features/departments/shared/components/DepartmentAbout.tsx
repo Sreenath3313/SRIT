@@ -18,8 +18,8 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                         ABOUT THE DEPARTMENT
                     </h2>
 
-                    <div className="mt-6 mb-8 bg-white rounded-xl shadow-md border border-neutral-100 overflow-hidden flex flex-col lg:flex-row">
-                        <div className="relative h-[260px] sm:h-[320px] lg:h-[360px] lg:w-4/12 lg:shrink-0 self-center overflow-hidden">
+                    <div className={`mt-6 mb-8 flex flex-col lg:flex-row ${dept.slug === 'mec' ? 'items-start gap-6' : 'overflow-hidden rounded-xl border border-neutral-100 bg-white shadow-md'}`}>
+                        <div className={`relative h-[260px] sm:h-[320px] lg:h-[360px] lg:w-4/12 lg:shrink-0 overflow-hidden ${dept.slug === 'mec' ? 'self-start rounded-xl shadow-md' : 'self-center'}`}>
                             <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" loading="lazy" />
                             <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase rounded shadow-sm">
                                 Featured Program
@@ -28,7 +28,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                                 {dept.code}
                             </span>
                         </div>
-                        <div className="lg:w-7/12 p-6 lg:p-10 flex flex-col justify-center">
+                        <div className={`flex flex-col justify-center lg:w-7/12 p-6 lg:p-10 ${dept.slug === 'mec' ? 'rounded-xl border border-neutral-100 bg-white shadow-md' : ''}`}>
                             <h3 className="font-serif text-xl lg:text-2xl font-bold text-neutral-dark mb-3">{dept.name}</h3>
                             <p className="text-neutral-600 text-[14px] leading-[1.8] mb-6 text-justify">{dept.description[0]}</p>
 

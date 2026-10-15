@@ -41,7 +41,7 @@ const CSEFaculty: React.FC<CSEFacultyProps> = ({ dept }) => {
             content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS1mWSiAkQW9suPebGpK73m5sm0Be8-tnAiYUYcWZoLL42g41UpWnxwf0ggyUlGrA/pubhtml?widget=true&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
         },
     ];
-    return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} variant="numbered" />;
+    return <DepartmentAccordion title="FACULTY" items={items} defaultOpenIndex={0} variant="cse" />;
 };
 
 export default CSEFaculty;
