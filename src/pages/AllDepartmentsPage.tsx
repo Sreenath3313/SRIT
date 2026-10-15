@@ -5,7 +5,7 @@ import Footer from '../components/layout/Footer';
 
 const AllDepartmentsPage: React.FC = () => {
     return (
-        <div className="min-h-screen flex flex-col pt-[114px] bg-warm-50">
+        <div className="flex min-h-screen flex-col bg-warm-50" style={{ paddingTop: 'var(--site-navbar-height, 130px)' }}>
             <Navbar />
             <main className="flex-1 py-8 sm:py-12">
                 <Departments />

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { departments } from '../../data/departments';
 
 const departmentImages: Record<string, string> = {
-    cse: '/CSEDept.jpg', csm: '/CSMDept.JPG', cad: '/CSDDept.JPG', ece: '/ECE Dept.JPG',
-    eee: '/EEE Dept.JPG', mec: '/MechDept.JPG', civil: '/CIVILDept.JPG', has: '/CollegeMain.jpg',
+    cse: '/optimized/CSEDept.jpg.webp', csm: '/CSMDept.JPG', cad: '/optimized/CSDDept.JPG.webp', ece: '/optimized/ECE Dept.JPG.webp',
+    eee: '/optimized/EEE Dept.JPG.webp', mec: '/optimized/MechDept.JPG.webp', civil: '/optimized/CIVILDept.JPG.webp', has: '/CollegeMain.jpg',
 };
 
 const programs = departments.filter((dept) => ['cse', 'csm', 'cad', 'ece', 'eee', 'mec', 'civil'].includes(dept.slug));

@@ -13,9 +13,9 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
             {/* Left Column */}
             <div className="space-y-10">
                 <div>
-                    <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold uppercase mb-6 text-neutral-dark flex flex-wrap items-center gap-3 sm:gap-4 tracking-tight">
-                        <span className="w-10 h-[3px] bg-primary rounded-full"></span>
-                        ABOUT THE DEPARTMENT
+                    <h2 className="mb-6 flex flex-wrap items-center gap-3 font-serif text-2xl font-bold uppercase tracking-tight text-neutral-dark sm:gap-4 sm:text-3xl lg:text-4xl">
+                        <span aria-hidden="true" className="h-[3px] w-10 rounded-full bg-primary" />
+                        ABOUT US
                     </h2>
 
                     <div className={`mt-6 mb-8 flex flex-col lg:flex-row ${dept.slug === 'mec' ? 'items-start gap-6' : 'overflow-hidden rounded-xl border border-neutral-100 bg-white shadow-md'}`}>
@@ -32,35 +32,19 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                             <h3 className="font-serif text-xl lg:text-2xl font-bold text-neutral-dark mb-3">{dept.name}</h3>
                             <p className="text-neutral-600 text-[14px] leading-[1.8] mb-6 text-justify">{dept.description[0]}</p>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 pb-6 border-b border-neutral-100">
-                                <div>
-                                    <div className="flex items-center gap-1.5 text-primary mb-1.5">
-                                        <Users className="w-3.5 h-3.5" />
-                                        <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-neutral-500">Faculty</span>
+                            <div className="mb-6 grid grid-cols-2 gap-2.5 border-b border-neutral-100 pb-6 sm:gap-3 lg:grid-cols-4">
+                                {[
+                                    { label: 'Faculty', value: dept.stats.faculty, Icon: Users },
+                                    { label: 'Labs', value: dept.stats.labs, Icon: Microscope },
+                                    { label: 'Students', value: dept.stats.students, Icon: GraduationCap },
+                                    { label: 'Placed', value: dept.stats.placement, Icon: Briefcase },
+                                ].map(({ label, value, Icon }) => (
+                                    <div key={label} className="flex min-w-0 flex-col items-center justify-center rounded-xl border border-neutral-100 bg-[#FFFAF6] px-2 py-3 text-center sm:px-3 sm:py-4">
+                                        <Icon aria-hidden="true" className="mb-1.5 h-4 w-4 text-primary sm:h-[18px] sm:w-[18px]" />
+                                        <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-neutral-500 sm:text-[10px] sm:tracking-[0.1em]">{label}</span>
+                                        <span className="mt-1 break-words text-base font-bold leading-tight text-neutral-dark sm:text-lg">{value}</span>
                                     </div>
-                                    <div className="text-lg font-bold text-neutral-dark">{dept.stats.faculty}</div>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 text-primary mb-1.5">
-                                        <Microscope className="w-3.5 h-3.5" />
-                                        <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-neutral-500">Labs</span>
-                                    </div>
-                                    <div className="text-lg font-bold text-neutral-dark">{dept.stats.labs}</div>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 text-primary mb-1.5">
-                                        <GraduationCap className="w-3.5 h-3.5" />
-                                        <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-neutral-500">Students</span>
-                                    </div>
-                                    <div className="text-lg font-bold text-neutral-dark">{dept.stats.students}</div>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 text-primary mb-1.5">
-                                        <Briefcase className="w-3.5 h-3.5" />
-                                        <span className="text-[10px] font-bold tracking-[0.1em] uppercase text-neutral-500">Placed</span>
-                                    </div>
-                                    <div className="text-lg font-bold text-neutral-dark">{dept.stats.placement}</div>
-                                </div>
+                                ))}
                             </div>
 
                             <div>

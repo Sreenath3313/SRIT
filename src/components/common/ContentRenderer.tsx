@@ -18,13 +18,13 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
     while ((match = iframeRegex.exec(content)) !== null) {
         if (match.index > lastIndex) {
             parts.push(
-                <div key={`html-${lastIndex}`} dangerouslySetInnerHTML={{ __html: content.substring(lastIndex, match.index) }} />
+                <div key={`html-${lastIndex}`} className="min-w-0 max-w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: content.substring(lastIndex, match.index) }} />
             );
         }
         
         const styleMatch = match[0].match(/style="([^"]+)"/);
         const attrHeightMatch = match[0].match(/height="([^"]+)"/);
-        let customStyle: React.CSSProperties = { width: '100%', minHeight: '500px' };
+        const customStyle: React.CSSProperties = { width: '100%', minHeight: '500px' };
         
         if (styleMatch) {
             const heightMatch = styleMatch[1].match(/height:\s*([^;]+)/);
@@ -38,7 +38,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
         }
 
         parts.push(
-            <IframeWithLoader key={`iframe-${match.index}`} src={match[1]} style={customStyle} />
+            <IframeWithLoader key={`iframe-${match.index}`} src={match[1].replace(/&amp;|&#0*38;|&#x26;/gi, '&')} title="Department spreadsheet" style={customStyle} />
         );
 
         const closingTagIndex = content.indexOf('</iframe>', match.index);
@@ -47,16 +47,16 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
 
     if (lastIndex < content.length) {
         parts.push(
-            <div key={`html-${lastIndex}`} dangerouslySetInnerHTML={{ __html: content.substring(lastIndex) }} />
+            <div key={`html-${lastIndex}`} className="min-w-0 max-w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: content.substring(lastIndex) }} />
         );
     }
 
     // If no iframes were found, just render the whole string
     if (parts.length === 1 && lastIndex === 0) {
-        return <div dangerouslySetInnerHTML={{ __html: content }} />;
+        return <div className="min-w-0 max-w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: content }} />;
     }
 
-    return <div className="w-full flex flex-col gap-4">{parts}</div>;
+    return <div className="flex w-full min-w-0 max-w-full flex-col gap-4">{parts}</div>;
 };
 
 export default ContentRenderer;

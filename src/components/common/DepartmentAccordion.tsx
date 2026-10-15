@@ -90,7 +90,7 @@ const DepartmentAccordion: React.FC<DepartmentAccordionProps> = ({ title, items,
 
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {title && <h2 className="mb-6 text-2xl font-bold uppercase text-neutral-900">{title}</h2>}
+            {title && <h2 className="mb-6 font-serif text-xl font-bold uppercase tracking-tight text-neutral-900 sm:text-2xl">{title}</h2>}
             <div className="overflow-hidden rounded-xl border border-[#FFD9C4] bg-[#FFFAF6] shadow-[0_2px_5px_rgba(119,66,32,0.08)]">
                 {items.map((item, index) => (
                     <DepartmentAccordionRow
@@ -101,7 +101,7 @@ const DepartmentAccordion: React.FC<DepartmentAccordionProps> = ({ title, items,
                         isOpen={openIndex === index}
                         onToggle={() => setOpenIndex(openIndex === index ? null : index)}
                     >
-                        {item.content || <p className="italic text-neutral-500">Content for {item.title} will be updated soon.</p>}
+                        {item.content || <p className="text-sm text-neutral-500">No information is currently available for this section.</p>}
                     </DepartmentAccordionRow>
                 ))}
             </div>

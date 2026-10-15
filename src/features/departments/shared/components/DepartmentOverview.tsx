@@ -34,7 +34,15 @@ const DepartmentOverview: React.FC<DepartmentOverviewProps> = ({ dept }) => {
         ),
     }));
 
-    return <DepartmentAccordion title="Program Overview" items={items} />;
+    return (
+        <div className="space-y-6">
+            <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="h-[3px] w-8 shrink-0 rounded-full bg-[#FF5422] sm:w-10" />
+                <h2 className="font-serif text-2xl font-bold tracking-tight text-[#171b24] sm:text-3xl">Program Overview</h2>
+            </div>
+            <DepartmentAccordion title="" items={items} />
+        </div>
+    );
 };
 
 export default DepartmentOverview;

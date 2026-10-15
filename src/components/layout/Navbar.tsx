@@ -124,7 +124,9 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         if (!header) return;
 
         const updateNavbarHeight = () => {
-            document.documentElement.style.setProperty('--site-navbar-height', `${header.getBoundingClientRect().height}px`);
+            // `getBoundingClientRect()` is affected by the site's html zoom and
+            // would apply that scale twice when this value is reused in CSS.
+            document.documentElement.style.setProperty('--site-navbar-height', `${header.offsetHeight}px`);
         };
         updateNavbarHeight();
         const observer = new ResizeObserver(updateNavbarHeight);

@@ -39,7 +39,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
     };
 
     return (
-        <header className="sticky z-50 w-full border-b border-[#F0E5DE]" style={{ top: 'var(--site-navbar-height, 0px)', background: 'linear-gradient(90deg, #FFF7F1 0%, #FFFCFA 30%, #FFFFFF 62%)' }}>
+        <header className="sticky z-50 w-full border-b border-[#F0E5DE]" style={{ top: 'calc(var(--site-navbar-height, 0px) + 8px)', background: 'linear-gradient(90deg, #FFF7F1 0%, #FFFCFA 30%, #FFFFFF 62%)' }}>
 
             {/* =====================================================
                 DEPARTMENT HEADER
@@ -59,7 +59,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 <div className="mx-auto flex max-w-[1680px] items-center px-3 sm:px-5 lg:px-10">
                     <div
                         title={dept.fullName || dept.name}
-                        className="flex h-[54px] w-[42%] min-w-0 shrink-0 items-center border-r border-[#F0E5DE] pr-2 sm:pr-4 md:h-[60px] md:w-[360px] md:pr-6"
+                        className="flex h-[54px] w-[min(140px,38vw)] min-w-0 shrink-0 items-center border-r border-[#F0E5DE] pr-2 sm:w-[clamp(140px,24vw,360px)] sm:pr-4 md:h-[60px] md:w-[360px] md:pr-6"
                     >
                         <span className="inline-flex min-w-0 max-w-full items-center gap-2 overflow-hidden rounded-lg border border-[#F5D8C8] bg-white/85 px-2.5 py-1.5 text-[10px] font-semibold tracking-[0.035em] text-[#F15A24] shadow-[0_2px_8px_rgba(164,76,31,0.09)] md:px-3 md:text-[12px] lg:text-[13px]">
                             <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6600]" />
@@ -68,16 +68,16 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                     </div>
 
                     {/* MOBILE DROPDOWN TABS */}
-                    <div className="min-w-0 flex-1 xl:hidden">
+                    <div className="min-w-0 flex-1 2xl:hidden">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="w-full h-[54px] flex items-center justify-between px-2 text-[#F15A24] font-semibold"
+                            className="flex h-[54px] w-full items-center justify-between px-2 font-bold text-[#111827]"
                         >
-                            <div className="flex items-center gap-2">
-                                <span className="bg-[#FFF0E6] p-1.5 rounded-full">{items.find(i => isActive(i.key))?.icon}</span>
-                                <span>{items.find(i => isActive(i.key))?.label}</span>
+                            <div className="flex min-w-0 flex-1 items-center gap-2">
+                                <span className="shrink-0 rounded-full bg-[#FFF0E6] p-1.5">{items.find(i => isActive(i.key))?.icon}</span>
+                                <span className="min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">{items.find(i => isActive(i.key))?.label}</span>
                             </div>
-                            <ChevronDown className={`w-5 h-5 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+                            <ChevronDown className={`h-5 w-5 shrink-0 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
                         </button>
                         
                         <AnimatePresence>
@@ -98,9 +98,9 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                                         onTabChange(item.key);
                                                         setIsMenuOpen(false);
                                                     }}
-                                                    className={`flex items-center gap-3 px-5 py-3.5 border-t border-[#F5EAE3] transition-colors ${active ? 'bg-[#FFF3EA] text-[#F15A24]' : 'text-[#475569] hover:bg-[#FFFAF7]'}`}
+                                                    className={`flex items-center gap-3 border-t border-[#F5EAE3] px-5 py-3.5 font-bold transition-colors ${active ? 'bg-[#FFF3EA] text-[#111827]' : 'text-[#111827] hover:bg-[#FFFAF7]'}`}
                                                 >
-                                                    <span className={`${active ? 'text-[#F15A24]' : 'text-[#9AAAC0]'}`}>{item.icon}</span>
+                                                    <span className={`${active ? 'text-[#F15A24]' : 'text-[#8192AA]'}`}>{item.icon}</span>
                                                     <span className="font-medium text-[14px]">{item.label}</span>
                                                 </button>
                                             )
@@ -114,7 +114,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                     {/* DESKTOP TABS */}
                     <nav
                         className={`
-                            hidden xl:flex
+                            hidden 2xl:flex
                             items-center overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar
                             flex-1 justify-start
                             gap-1
@@ -137,9 +137,9 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                     className={`
                                         relative h-[54px] sm:h-[60px] px-2 sm:px-3
                                         flex items-center justify-center gap-1.5 sm:gap-2
-                                        whitespace-nowrap shrink-0 text-[12px] sm:text-[13px] font-medium
+                                        whitespace-nowrap shrink-0 text-[12px] sm:text-[13px] font-bold
                                         transition-colors duration-200 group
-                                        ${active ? "text-[#F15A24]" : "text-[#475569] hover:text-[#F15A24]"}
+                                        ${active ? "text-[#111827]" : "text-[#111827] hover:text-[#F15A24]"}
                                     `}
                                 >
                                     <span

@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Hero from '../features/home/Hero';
 import About from '../features/home/About';
 import Placements from '../features/placements/Placements';
+import AlumniSuccess from '../features/placements/AlumniSuccess';
 import Footer from '../components/layout/Footer';
 import Accreditations from '../features/home/Accreditations';
 import GlobalTieUps from '../features/institution/GlobalTieUps';
@@ -62,6 +63,7 @@ const HomePage: React.FC = () => {
                 <ProgramsDepartments />
                 <GlobalTieUps />
                 <Placements />
+                <AlumniSuccess />
                 <ResearchFeature />
                 <FacilitiesFeature />
                 <StudentAchievements />

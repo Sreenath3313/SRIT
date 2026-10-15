@@ -25,6 +25,7 @@ const DepartmentCourseStructure: React.FC<DepartmentCourseStructureProps> = ({ d
                 {section.iframeSrc && (
                     <IframeWithLoader
                         src={section.iframeSrc}
+                        title={section.title}
                         style={{ width: '100%', minHeight: '600px', border: 'none', borderRadius: '8px' }}
                     />
                 )}
