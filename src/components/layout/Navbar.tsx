@@ -23,27 +23,27 @@ const placementTickerText = placementStats.map((stat) => `${stat.value} ${stat.l
 // Authentic FontAwesome-style icons matching the exact original reference (with responsive/custom sizing)
 const PhoneIcon = ({ className = "h-4 w-4 fill-black text-black shrink-0" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 512 512" fill="currentColor">
-        <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+        <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
     </svg>
 );
 
 const MailIcon = ({ className = "h-4 w-4 fill-black text-black shrink-0" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 512 512" fill="currentColor">
-        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
     </svg>
 );
 
 // Faculty Login: Person standing in front of screen/presentation board (chalkboard-teacher / user-presentation)
 const FacultyLoginIcon = ({ className = "h-4 w-4 fill-black text-black shrink-0" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 640 512" fill="currentColor">
-        <path d="M208 352c-2.6 0-5.2 .2-7.8 .7C189.6 331 165.7 320 139.1 320H69c-38.1 0-69 30.9-69 69v27c0 17.7 14.3 32 32 32H208c17.7 0 32-14.3 32-32V384c0-17.7-14.3-32-32-32zm-104-64A64 64 0 1 0 40 224a64 64 0 0 0 64 64zm432-192H240c-26.5 0-48 21.5-48 48v80.8c15.2 6.5 28.7 16.5 39.2 29.2H528c8.8 0 16 7.2 16 16v160c0 8.8-7.2 16-16 16H306.9c7.3 10.3 12.3 22.3 14.1 35.3c.7 4.8 1 9.8 1 14.7c0 7.8-.8 15.3-2.3 22.7l.3-.7H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48z"/>
+        <path d="M208 352c-2.6 0-5.2 .2-7.8 .7C189.6 331 165.7 320 139.1 320H69c-38.1 0-69 30.9-69 69v27c0 17.7 14.3 32 32 32H208c17.7 0 32-14.3 32-32V384c0-17.7-14.3-32-32-32zm-104-64A64 64 0 1 0 40 224a64 64 0 0 0 64 64zm432-192H240c-26.5 0-48 21.5-48 48v80.8c15.2 6.5 28.7 16.5 39.2 29.2H528c8.8 0 16 7.2 16 16v160c0 8.8-7.2 16-16 16H306.9c7.3 10.3 12.3 22.3 14.1 35.3c.7 4.8 1 9.8 1 14.7c0 7.8-.8 15.3-2.3 22.7l.3-.7H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48z" />
     </svg>
 );
 
 // Classic user-graduate icon
 const UserGraduateIcon = ({ className = "h-4 w-4 fill-black text-black shrink-0" }: { className?: string }) => (
     <svg className={className} viewBox="0 0 448 512" fill="currentColor">
-        <path d="M224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zM224 0L10.3 75.8a16 16 0 0 0 0 30.4L224 182l213.7-75.8a16 16 0 0 0 0-30.4L224 0zM32 144v72c0 8.8 7.2 16 16 16s16-7.2 16-16v-60.6l-32-11.4z"/>
+        <path d="M224 256A128 128 0 1 0 96 128a128 128 0 0 0 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zM224 0L10.3 75.8a16 16 0 0 0 0 30.4L224 182l213.7-75.8a16 16 0 0 0 0-30.4L224 0zM32 144v72c0 8.8 7.2 16 16 16s16-7.2 16-16v-60.6l-32-11.4z" />
     </svg>
 );
 
@@ -234,7 +234,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         <AnimatePresence>
             {searchOpen && <motion.div initial={{ opacity: 0, y: -10, scaleY: .985 }} animate={{ opacity: 1, y: 0, scaleY: 1 }} exit={{ opacity: 0, y: -6, scaleY: .99 }} transition={{ duration: .24, ease: [.22, 1, .36, 1] }} style={{ transformOrigin: 'top' }} className="absolute left-0 right-0 top-full z-[60] border-t border-[#FF6600]/15 bg-white shadow-[0_16px_36px_rgba(255,102,0,.12)]">
                 <div className="mx-auto max-w-4xl px-4 py-6 sm:px-8"><label htmlFor="srit-site-search" className="mb-2 block text-[10px] font-bold uppercase tracking-[.18em] text-[#FF6600]">Search SRIT</label><div className="flex items-center gap-3 border-b-2 border-[#FF6600]/20 pb-3 focus-within:border-[#FF6600]"><Search className="h-5 w-5 text-[#FF6600]" /><input id="srit-site-search" autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search departments, admissions, facilities…" className="min-w-0 flex-1 bg-transparent text-lg outline-none placeholder:text-neutral-500" /><button type="button" onClick={() => { setSearchOpen(false); setQuery(''); }} aria-label="Close search"><X className="h-5 w-5 text-[#FF6600]" /></button></div>
-                {query.trim().length >= 2 && <div className="mt-3 grid sm:grid-cols-2">{results.length ? results.map((item) => <Link key={`${item.href}-${item.label}`} to={item.href} className="flex items-center justify-between border-b border-[#FF6600]/10 px-2 py-3 text-sm text-black hover:text-[#FF6600]">{item.label}<ArrowRight className="h-4 w-4" /></Link>) : <p className="py-3 text-sm text-neutral-600">No matching pages. Try another search.</p>}</div>}
+                    {query.trim().length >= 2 && <div className="mt-3 grid sm:grid-cols-2">{results.length ? results.map((item) => <Link key={`${item.href}-${item.label}`} to={item.href} className="flex items-center justify-between border-b border-[#FF6600]/10 px-2 py-3 text-sm text-black hover:text-[#FF6600]">{item.label}<ArrowRight className="h-4 w-4" /></Link>) : <p className="py-3 text-sm text-neutral-600">No matching pages. Try another search.</p>}</div>}
                 </div>
             </motion.div>}
         </AnimatePresence>

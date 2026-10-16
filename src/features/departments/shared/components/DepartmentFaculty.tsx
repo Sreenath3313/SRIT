@@ -52,6 +52,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
                         faculty={dept.faculty}
                         title="Faculty Profiles"
                         subtitle="Department of Computer Science and Engineering"
+                        variant="cse"
                     />
                 ),
             },

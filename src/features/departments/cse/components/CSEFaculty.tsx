@@ -17,6 +17,7 @@ const CSEFaculty: React.FC<CSEFacultyProps> = ({ dept }) => {
                     faculty={dept.faculty}
                     title="Faculty Profiles"
                     subtitle="Department of Computer Science and Engineering"
+                    variant="cse"
                 />
             ),
         },
