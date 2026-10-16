@@ -5,11 +5,20 @@ import { Link } from 'react-router-dom';
 import { departments } from '../../data/departments';
 
 const departmentImages: Record<string, string> = {
-    cse: '/optimized/CSEDept.jpg.webp', csm: '/CSMDept.JPG', cad: '/optimized/CSDDept.JPG.webp', ece: '/optimized/ECE Dept.JPG.webp',
-    eee: '/optimized/EEE Dept.JPG.webp', mec: '/optimized/MechDept.JPG.webp', civil: '/optimized/CIVILDept.JPG.webp', has: '/CollegeMain.jpg',
+    cse: '/optimized/CSEDept.jpg.webp', csm: '/optimized/csm-ai-lab-cover.png', cad: '/optimized/CSDDept.JPG.webp', ece: '/optimized/ECE Dept.JPG.webp',
+    eee: '/optimized/eee-department-cover-ai.png', mec: '/optimized/MechDept.JPG.webp', civil: '/optimized/CIVILDept.JPG.webp', has: '/optimized/has-department-cover-ai.png',
 };
 
-const programs = departments.filter((dept) => ['cse', 'csm', 'cad', 'ece', 'eee', 'mec', 'civil'].includes(dept.slug));
+const programs = [
+    ...departments.filter((dept) => ['cse', 'csm', 'cad', 'ece', 'eee', 'mec', 'civil'].includes(dept.slug)),
+    {
+        slug: 'has',
+        code: 'H&S',
+        name: 'Humanities and Sciences',
+        fullName: 'Department of Humanities and Sciences',
+        image: '/optimized/has-department-cover-ai.png',
+    },
+];
 
 const features = [
     { id: 'learning', label: 'Learning', title: 'A strong foundation for what comes next.', text: 'Explore engineering disciplines grounded in core concepts, practical learning and the evolving needs of technology.', image: '/optimized/ComputerLab.webp.webp', link: '/departments', linkText: 'Explore departments', icon: BookOpen },
@@ -40,16 +49,16 @@ export function ProgramsDepartments() {
                         whileHover={{ y: -8, scale: 1.012, transition: { duration: .28, delay: 0, ease: 'easeOut' } }}
                         viewport={{ once: true, amount: .2 }}
                         transition={{ duration: .55, delay: Math.min(i * .07, .42), ease: [0.22, 1, 0.36, 1] }}
-                        className="group relative isolate min-h-[280px] overflow-hidden bg-[#101722] shadow-[0_12px_32px_rgba(16,23,34,.12)] ring-1 ring-black/10 sm:min-h-[320px] xl:min-h-[340px] hover:shadow-[0_24px_55px_rgba(16,23,34,.28)]"
+                        className="group relative isolate min-h-[340px] overflow-hidden bg-[#101722] shadow-[0_12px_32px_rgba(16,23,34,.12)] ring-1 ring-black/10 sm:min-h-[380px] xl:min-h-[410px] hover:shadow-[0_24px_55px_rgba(16,23,34,.28)]"
                     >
                         <img src={departmentImages[dept.slug] ?? dept.image} alt={`${dept.name} at SRIT`} loading="lazy" decoding="async" className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110" />
                         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-black/15" />
                         <div className="absolute left-5 right-5 top-5 z-10 flex items-center justify-between sm:left-6 sm:right-6 sm:top-6">
-                            <span className="inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[.2em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"><span className="h-px w-5 bg-[#FF5421] transition-all duration-500 group-hover:w-9" />Engineering · {dept.code}</span>
+                            <span className="inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[.2em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]"><span className="h-px w-5 bg-[#FF5421] transition-all duration-500 group-hover:w-9" />Department · {dept.code}</span>
                             <span className="font-mono text-[11px] tracking-[.12em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{String(i + 1).padStart(2, '0')}</span>
                         </div>
                         <div className="absolute inset-x-0 bottom-0 z-10 p-5 text-white sm:p-7">
-                            <h3 className="max-w-md font-serif text-2xl leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] transition-transform duration-500 group-hover:-translate-y-1 sm:text-[28px]">{dept.name}</h3>
+                            <h3 className="max-w-md font-serif text-xl leading-tight drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] transition-transform duration-500 group-hover:-translate-y-1 sm:text-2xl">{dept.fullName}</h3>
                             <Link to={`/department/${dept.slug}`} className="mt-5 inline-flex items-center gap-2 border-t border-white/70 pt-3 text-sm font-semibold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)] transition-colors duration-300 group-hover:text-white">
                                 Explore department
                                 <span className="flex h-7 w-7 items-center justify-center border border-white/35 transition-all duration-500 group-hover:border-[#FF5421] group-hover:bg-[#FF5421]"><ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></span>
