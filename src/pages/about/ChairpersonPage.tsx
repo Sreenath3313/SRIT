@@ -8,7 +8,7 @@ const ProfilePage: React.FC<{
     role: string;
     imageSrc: string;
     email?: string;
-    paragraphs: string[];
+    paragraphs: (string | React.ReactNode)[];
 }> = ({ name, role, imageSrc, email, paragraphs }) => (
     <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col lg:flex-row gap-10 items-start">
         {/* Image */}
@@ -154,10 +154,18 @@ const ChairpersonPage: React.FC = () => (
             imageSrc="https://www.srit.ac.in/wp-content/uploads/2021/07/cp-srit-768x1154.jpeg"
             email="chairperson@srit.ac.in"
             paragraphs={[
-                "Smt. Jonnalagadda Padmavathy, the Chairperson of SRIT, is the youngest daughter of Sri. Jonnalagadda Chennakesavulu, born and brought up in Nellore. She completed her schooling, and intermediate education in Nellore. Being from engineering background (her father too was an engineer), she pursued Engineering at the JNTU Anantapur University campus, obtaining a graduate degree in Mechanical Engineering from the prestigious JNTUCE, Ananthapuramu, in the year 2000. She pursued M. Tech In Computer Science from JNTUA in 2012. She has worked as Assistant Professor in Sri Kottam Thulasi Reddy Memorial College of Engineering in the Department of Mechanical Engineering. She joined as Associate Professor in the CSE Department.",
-                "Her skills at managing a society and her charitable nature, along with her vision of educating youth across the country has seen her become one of the foremost educationists in Andhra Pradesh. Smt. Aluru Narayanamma Memorial Educational Society recognized her vision. She, as the Chairperson of the society, constantly pushing the boundaries of what the society aims to achieve.",
-                "She is an elected Member of the Legislative Assembly representing Singanamala Constituency of Andhra Pradesh, championing the cause of women, children and education with all her considerable might.",
-                "As she expands her field of influence, her vision too is expanding to see a society where education and technical knowhow, bring parity and equality to all. We are proud and honored to be guided by a mind that is constantly searching for ways to create an equitable society.",
+                <>
+                    <strong className="text-[#FF5422] font-semibold">Smt. Jonnalagadda Padmavathy</strong>, the Chairperson of SRIT, is the youngest daughter of <strong className="text-[#FF5422] font-semibold">Sri. Jonnalagadda Chennakesavulu</strong>, born and brought up in Nellore. She completed her schooling, and intermediate education in Nellore. Being from engineering background (her father too was an engineer), she pursued Engineering at the JNTU Anantapur University campus, obtaining a graduate degree in Mechanical Engineering from the prestigious JNTUCE, Ananthapuramu, in the year 2000. She pursued M. Tech In Computer Science from JNTUA in 2012. She has worked as <strong className="text-[#FF5422] font-semibold">Assistant Professor</strong> in Sri Kottam Thulasi Reddy Memorial College of Engineering in the <strong className="text-[#FF5422] font-semibold">Department of Mechanical Engineering</strong>. She joined as <strong className="text-[#FF5422] font-semibold">Associate Professor</strong> in the CSE Department.
+                </>,
+                <>
+                    Her skills at managing a society and her charitable nature, along with her vision of educating youth across the country has seen her become one of the foremost educationists in Andhra Pradesh. <strong className="text-[#FF5422] font-semibold">Smt. Aluru Narayanamma Memorial Educational Society</strong> recognized her vision. She, as the Chairperson of the society, constantly pushing the boundaries of what the society aims to achieve.
+                </>,
+                <>
+                    She is an elected <strong className="text-[#FF5422] font-semibold">Member of the Legislative Assembly</strong> representing Singanamala Constituency of Andhra Pradesh, championing the cause of women, children and education with all her considerable might.
+                </>,
+                <>
+                    As she expands her field of influence, her vision too is expanding to see a society where education and technical knowhow, bring parity and equality to all. We are proud and honored to be guided by a mind that is constantly searching for ways to create an equitable society.
+                </>,
             ]}
         />
     </AboutUsLayout>

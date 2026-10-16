@@ -112,6 +112,8 @@ import TPTeamMembersPage from './pages/placements/TPTeamMembersPage'
 import TPTrainingProgramsPage from './pages/placements/TPTrainingProgramsPage'
 
 
+import SdcDirectorPage from './pages/about/SdcDirectorPage'
+
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
   const navigationType = useNavigationType()
@@ -158,6 +160,8 @@ function App() {
           <Route path="/about/milestones" element={<MilestonesPage />} />
           <Route path="/about/standard-operating-procedures" element={<SopPage />} />
           <Route path="/about/institutional-strategic-plan" element={<StrategicPlanPage />} />
+          <Route path="/sdc-director" element={<SdcDirectorPage />} />
+          <Route path="/about/sdc-director" element={<SdcDirectorPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/departments" element={<AllDepartmentsPage />} />
           <Route path="/department/:slug/*" element={<DepartmentPage />} />

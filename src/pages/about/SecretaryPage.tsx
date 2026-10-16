@@ -109,10 +109,21 @@ const SecretaryPage: React.FC = () => {
                         className="space-y-6 text-neutral-600 leading-loose text-[15px] sm:text-base"
                     >
                         {[
-                            "Aluru Sambasiva Reddy, the Founder Secretary of SRIT, is the youngest son of Sri. Aluru Sunki Reddy and Late Smt. Aluru Narayanamma. He completed his schooling at the local Govt. High School. His dream was to pursue an engineering degree at the university campus.",
-                            "With that goal in mind, he obtained a graduate's degree in Mechanical Engineering from the prestigious JNTUCE, Anantapuramu, in the year 2000. He also completed his M. Tech in Refrigeration and Air Conditioning from JNTUA in 2004.",
-                            "In his 7 years at the college, with his administrative and enormous organizing abilities, he managed admissions and later served as Training and Placement Officer.",
-                            "It was at about this time that he began to firm up his beliefs in education into an actual service credo — to educate youth and help them stand on their own feet.",
+                            <React.Fragment key="p1">
+                                <strong className="text-[#FF5422] font-semibold">Aluru Sambasiva Reddy</strong>, the Founder Secretary of SRIT, is the youngest son of <strong className="text-[#FF5422] font-semibold">Sri Aluru Sunki Reddy</strong> and <strong className="text-[#FF5422] font-semibold">Late Smt Aluru Narayanamma</strong> with six brothers and two sisters in an ordinary middle-class family in East Narasapuram, a village in Singanamala Mandal of Ananthapuramu District. Samba, as his parents fondly called him saying that he was a very enthusiastic kid, always interested in learning new things. Though his parents were uneducated, his mother observed her son&apos;s interest in studies and encouraged him to study. He completed his schooling at the local Govt. High School. With the support of his family, he joined the Intermediate course at SSN Junior College, Ongole. His dream was to pursue an engineering degree at the university campus.
+                            </React.Fragment>,
+                            <React.Fragment key="p2">
+                                With that goal in mind, he studied hard and obtained a graduate&apos;s degree in Mechanical Engineering from the prestigious <strong className="text-[#FF5422] font-semibold">JNTUCE</strong>, Anantapuramu, in the year 2000. He also completed his M. Tech in Refrigeration and Air Conditioning from <strong className="text-[#FF5422] font-semibold">JNTUA</strong> in 2004.
+                            </React.Fragment>,
+                            <React.Fragment key="p3">
+                                With the advice of his tutor, guide, mentor and patron <strong className="text-[#FF5422] font-semibold">Sri Y. Venkata Rami Reddy</strong>, Ex Vice-chancellor of JNTU Anantapur and Ex-Chairman, APPSC, he joined as an Assistant Professor in Sri Kottam Thulasi Reddy Memorial College of Engineering in the Department of Mechanical Engineering and later became an Associate Professor.
+                            </React.Fragment>,
+                            <React.Fragment key="p4">
+                                In his 7 years stay at the college, with his administrative and enormous organizing abilities, he was handed over to manage the administrative duties of the college. He worked as the Officer In-Charge for admissions and later as Training and Placement Officer.
+                            </React.Fragment>,
+                            <React.Fragment key="p5">
+                                It was at about this time that he began to firm up his beliefs in education into an actual service credo. He realized that the purpose of human life is to serve and to show compassion to the people around us. He felt that it was better to educate youth and help them stand on their own feet, rather than simply providing food and shelter to the needy.
+                            </React.Fragment>,
                         ].map((para, i) => (
                             <motion.p
                                 key={i}

@@ -103,7 +103,7 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                                         justify-between
                                         gap-3
                                         px-4
-                                        py-2.5
+                                        py-3
                                         bg-[#0A0903]
                                         text-[#FF5422]
                                         hover:bg-[#15130D]
@@ -111,23 +111,17 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                                         duration-200
                                     "
                                 >
-                                    <div className="flex items-center gap-3 min-w-0">
-                                        <span
-                                            className="
-                                                w-0.5
-                                                h-5
-                                                rounded-full
-                                                bg-[#FF5422]
-                                                shrink-0
-                                            "
-                                        />
+                                    <div className="flex items-center gap-2.5 min-w-0">
+                                        <span className="text-[#FF5422] font-bold text-base w-4 text-center">
+                                            {isOpen ? '−' : '+'}
+                                        </span>
 
                                         <div className="text-left min-w-0">
-                                            <h3 className="text-sm font-semibold leading-tight">
+                                            <h3 className="text-sm sm:text-base font-bold tracking-wide">
                                                 {item.title}
                                             </h3>
 
-                                            <p className="text-[10px] text-neutral-400 mt-0.5 truncate leading-tight">
+                                            <p className="text-[11px] text-neutral-400 mt-0.5 truncate leading-tight">
                                                 {item.description}
                                             </p>
                                         </div>

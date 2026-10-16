@@ -46,10 +46,11 @@ const FinanceCommitteePage: React.FC = () => {
                             type="button"
                             onClick={() => toggleSheet(0)}
                             aria-expanded={openSheet === 0}
-                            className="w-full flex items-center justify-between px-5 py-5 bg-[#0A0903] text-[#FF5422] hover:bg-[#15130D] transition-colors duration-200"
+                            className="w-full flex items-center justify-between px-5 py-4 bg-[#0A0903] text-[#FF5422] hover:bg-[#15130D] transition-colors duration-200"
                         >
-                            <span className="text-base font-medium">
-                                Finance Committee Members
+                            <span className="text-base font-semibold flex items-center gap-2">
+                                <span className="text-[#FF5422] font-bold text-lg">{openSheet === 0 ? '−' : '+'}</span>
+                                Members of Finance Committee
                             </span>
 
                             <ChevronDown
@@ -73,7 +74,7 @@ const FinanceCommitteePage: React.FC = () => {
                                     <div className="border border-t-0 border-neutral-200">
                                         <IframeWithLoader
                                             src={FINANCE_COMMITTEE_SHEET_1}
-                                            title="Finance Committee Members"
+                                            title="Members of Finance Committee"
                                             style={{ height: 'clamp(300px, 50vh, 600px)' }}
                                         />
                                     </div>
@@ -82,16 +83,17 @@ const FinanceCommitteePage: React.FC = () => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Additional Details */}
+                    {/* Audited Statements */}
                     <div className="overflow-hidden rounded-xl">
                         <button
                             type="button"
                             onClick={() => toggleSheet(1)}
                             aria-expanded={openSheet === 1}
-                            className="w-full flex items-center justify-between px-5 py-5 bg-[#0A0903] text-[#FF5422] hover:bg-[#15130D] transition-colors duration-200"
+                            className="w-full flex items-center justify-between px-5 py-4 bg-[#0A0903] text-[#FF5422] hover:bg-[#15130D] transition-colors duration-200"
                         >
-                            <span className="text-base font-medium">
-                                Finance Committee — Additional Details
+                            <span className="text-base font-semibold flex items-center gap-2">
+                                <span className="text-[#FF5422] font-bold text-lg">{openSheet === 1 ? '−' : '+'}</span>
+                                Audited Statements
                             </span>
 
                             <ChevronDown

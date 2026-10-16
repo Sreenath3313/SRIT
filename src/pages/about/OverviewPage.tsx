@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
 import { ArrowRight } from 'lucide-react';
@@ -168,22 +169,20 @@ const OverviewPage: React.FC = () => {
                         </motion.ul>
 
                         {/* View More button */}
-                        <motion.button
+                        <motion.div
                             variants={fadeUp}
-                            whileHover={{ scale: 1.04 }}
-                            whileTap={{ scale: 0.97 }}
-                            transition={{
-                                type: 'spring',
-                                stiffness: 300,
-                            }}
-                            className="flex items-center gap-3 bg-[#FF5422] text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors shadow-md"
+                            className="inline-block"
                         >
-                            View More
-
-                            <span className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
-                                <ArrowRight className="w-3.5 h-3.5" />
-                            </span>
-                        </motion.button>
+                            <Link
+                                to="/about/governing-body"
+                                className="inline-flex items-center gap-3 bg-[#FF5422] text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                            >
+                                <span>View More</span>
+                                <span className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center shrink-0">
+                                    <ArrowRight className="w-3.5 h-3.5" />
+                                </span>
+                            </Link>
+                        </motion.div>
                     </div>
 
                     {/* Srinivasa Ramanujan Portrait */}
@@ -194,7 +193,7 @@ const OverviewPage: React.FC = () => {
                             type: 'spring',
                             stiffness: 200,
                         }}
-                        className="w-full lg:w-[300px] shrink-0 rounded-xl overflow-hidden shadow-lg border border-neutral-200"
+                        className="w-full sm:w-[320px] lg:w-[340px] xl:w-[360px] mx-auto lg:mx-0 shrink-0 rounded-xl overflow-hidden shadow-lg border border-neutral-200"
                     >
                         {/* Name banner */}
                         <div className="bg-neutral-100 text-[#0A0903] text-center py-2.5 font-bold tracking-[0.12em] text-sm border-b border-neutral-200">
