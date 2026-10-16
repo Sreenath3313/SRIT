@@ -184,22 +184,22 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                     <img src="/optimized/SRIT_logo_HD_8x.png" alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade" width="10240" height="1920" fetchPriority="high" className="h-[48px] w-[220px] max-w-[58vw] shrink-0 object-contain sm:h-[56px] sm:w-[280px] sm:max-w-[52vw] lg:h-[64px] lg:w-[360px] lg:max-w-none 2xl:h-[72px] 2xl:w-[440px]" />
                 </Link>
 
-                <nav aria-label="Primary navigation" className="ml-auto hidden h-full items-center gap-0.5 xl:flex">
+                <nav aria-label="Primary navigation" className="ml-auto hidden h-full items-center gap-0.5 lg:flex">
                     {desktopLinks.map((item) => <div key={item.label} className="relative flex h-full items-center" onMouseEnter={() => { setMobileOpen(false); setMobileSubmenu(null); onMenuEnter(item.label); }}>
-                        <Link to={item.href} onFocus={() => onMenuEnter(item.label)} className={`relative inline-flex h-full items-center gap-1 px-1.5 text-[15px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] xl:px-2 xl:text-[15px] 2xl:px-3 2xl:text-[17px] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'}`}>
+                        <Link to={item.href} onFocus={() => onMenuEnter(item.label)} className={`relative inline-flex h-full items-center gap-0.5 px-1 text-[13px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] lg:px-1.5 lg:text-[14px] xl:px-2 xl:text-[15px] 2xl:px-3 2xl:text-[17px] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'}`}>
                             {item.label}{item.hasDropdown && <ChevronDown className={`h-3 w-3 transition-transform duration-300 ease-out ${openMenu === item.label ? 'rotate-180' : ''}`} />}
-                            <span className={`absolute inset-x-2 bottom-4 h-[2px] origin-center bg-[#FF6600] transition-transform duration-300 ease-out ${isActive(item) || openMenu === item.label ? 'scale-x-100' : 'scale-x-0'}`} />
+                            <span className={`absolute inset-x-1 bottom-4 h-[2px] origin-center bg-[#FF6600] transition-transform duration-300 ease-out ${isActive(item) || openMenu === item.label ? 'scale-x-100' : 'scale-x-0'}`} />
                         </Link>
                     </div>)}
                 </nav>
 
-                <div className="ml-auto flex shrink-0 items-center gap-2 xl:ml-4">
-                    <button type="button" onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }} aria-label={searchOpen ? 'Close search' : 'Search this site'} aria-expanded={searchOpen} className="inline-flex h-11 w-11 items-center justify-center text-black transition-colors hover:text-[#FF6600]"><Search className="h-5 w-5" /></button>
-                    <button type="button" onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-controls="site-navigation-drawer" aria-expanded={mobileOpen} className="group inline-flex h-11 w-11 items-center justify-center text-[#171b24] transition-colors hover:text-[#FF6600]">
-                        <span className="flex w-6 flex-col gap-[6px]" aria-hidden="true">
-                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[6.5px] rotate-45' : 'w-5 group-hover:w-4'}`} />
+                <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-2 lg:ml-3 xl:ml-4">
+                    <button type="button" onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }} aria-label={searchOpen ? 'Close search' : 'Search this site'} aria-expanded={searchOpen} className="inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center text-black transition-colors hover:text-[#FF6600]"><Search className="h-4 w-4 sm:h-5 sm:w-5" /></button>
+                    <button type="button" onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-controls="site-navigation-drawer" aria-expanded={mobileOpen} className="group inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center text-[#171b24] transition-colors hover:text-[#FF6600] lg:hidden">
+                        <span className="flex w-5 sm:w-6 flex-col gap-[5px] sm:gap-[6px]" aria-hidden="true">
+                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[6px] rotate-45' : 'w-5 group-hover:w-4'}`} />
                             <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : 'w-3.5 group-hover:w-5'}`} />
-                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[6.5px] -rotate-45' : 'w-5 group-hover:w-4'}`} />
+                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[6px] -rotate-45' : 'w-5 group-hover:w-4'}`} />
                         </span>
                     </button>
                 </div>
@@ -253,7 +253,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                 <AnimatePresence>{item.hasDropdown && mobileSubmenu === item.label && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: .3, ease: [.22, 1, .36, 1] }} className="grid grid-cols-1 gap-x-5 gap-y-1 overflow-hidden pb-3 pl-4 sm:grid-cols-2 xl:grid-cols-3">{item.subItems?.map((sub, index) => <motion.div key={`${sub.label}-${sub.href}`} initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .2, delay: index * .018, ease: 'easeOut' }}><Link to={sub.href} onClick={() => setMobileOpen(false)} className={`flex min-h-12 items-center border-b border-[#FF6600]/10 px-3 py-3 text-base leading-6 transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${isSubItemActive(sub.href) ? 'font-semibold text-[#FF6600]' : 'text-black'}`}>{sub.label}</Link></motion.div>)}</motion.div>}</AnimatePresence>
                             </div>)}
                         </div>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-1 border-t border-[#FF6600]/15 pt-3 xl:hidden">{utilityLinks.map(({ label, href, external }) => external ? <a key={label} href={href} target="_blank" rel="noreferrer" className="py-2 text-xs font-semibold text-[#FF6600]">{label}</a> : <Link key={label} to={href} onClick={() => setMobileOpen(false)} className="py-2 text-xs font-semibold text-[#FF6600]">{label}</Link>)}</div>
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-1 border-t border-[#FF6600]/15 pt-3 lg:hidden">{utilityLinks.map(({ label, href, external }) => external ? <a key={label} href={href} target="_blank" rel="noreferrer" className="py-2 text-xs font-semibold text-[#FF6600]">{label}</a> : <Link key={label} to={href} onClick={() => setMobileOpen(false)} className="py-2 text-xs font-semibold text-[#FF6600]">{label}</Link>)}</div>
                         <Link to="/admissions/admission-procedure" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex h-11 w-full items-center justify-center gap-2 bg-[#FF6600] text-sm font-bold text-white transition-colors hover:bg-[#FF6600]/90 sm:hidden">Apply to SRIT <ArrowRight className="h-4 w-4" /></Link>
                     </nav>
                 </motion.div>
