@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import {
-    ChevronUp, ChevronDown, ChevronRight
-} from 'lucide-react';
+import { ChevronRight, Award, ExternalLink, FileText } from 'lucide-react';
 import CampusLifeLayout from './CampusLifeLayout';
 import { campusLifeSections } from './types';
 import IframeWithLoader from '../../../components/common/IframeWithLoader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../../components/common/DepartmentAccordion';
 
 export const MathematicsDayPage: React.FC = () => {
     const [isMathPosterOpen, setIsMathPosterOpen] = useState(false);
@@ -13,119 +12,129 @@ export const MathematicsDayPage: React.FC = () => {
 
     return (
         <CampusLifeLayout activeSectionId="mathematics-day">
-            <div className="space-y-6 w-full">
-
-                                {/* === Detailed Overview: Exact Text from Official SRIT Mathematics Day Page === */}
-                                <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                                        {/* Left text */}
-                                        <div className="lg:col-span-8 space-y-4">
-                                            <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                                <h2 className="font-serif text-2xl sm:text-3xl lg:text-[26px] font-black text-neutral-900 tracking-tight">
-                                                    MATHEMATICS DAY
-                                                </h2>
-                                            </div>
-
-                                            <div className="space-y-3.5 text-[14px] leading-relaxed text-neutral-700">
-                                                <p className="text-left sm:text-justify font-medium text-neutral-900">
-                                                    We are thrilled to announce the upcoming <span className="text-[#FF5422] font-bold">Srinivasa Ramanujan Intelligence Test</span> at Srinivasa Ramanujan Institute of Technology. This annual event is a tribute to the legendary mathematician Srinivasa Ramanujan and is open to all Intermediate 2nd year students.
-                                                </p>
-
-                                                <div className="p-4 rounded-xl border border-neutral-200/80 bg-neutral-50/70 space-y-1.5">
-                                                    <h4 className="font-serif font-bold text-sm text-neutral-900 flex items-center gap-2">
-                                                        <span className="w-1.5 h-3.5 rounded-full bg-[#FF5422]" />
-                                                        About the Test:
-                                                    </h4>
-                                                    <p className="text-xs sm:text-[13px] text-neutral-700 leading-relaxed pl-3.5">
-                                                        The Srinivasa Ramanujan Intelligence Test is a platform for young minds to showcase their mathematical prowess and problem-solving skills. The test is designed to inspire and identify the brightest minds among the intermediate students.
-                                                    </p>
-                                                </div>
-
-                                                <div className="p-4 rounded-xl border border-orange-200/80 bg-orange-50/50 space-y-1.5">
-                                                    <h4 className="font-serif font-bold text-sm text-neutral-900 flex items-center gap-2">
-                                                        <span className="w-1.5 h-3.5 rounded-full bg-[#FF5422]" />
-                                                        Join us in Celebrating Mathematics:
-                                                    </h4>
-                                                    <p className="text-xs sm:text-[13px] text-neutral-800 leading-relaxed pl-3.5">
-                                                        Let's celebrate the spirit of Srinivasa Ramanujan's legacy together. Join us in promoting and encouraging the pursuit of mathematical excellence. We look forward to witnessing the brilliance and innovation that our young mathematicians will bring to the Srinivasa Ramanujan Intelligence Test!
-                                                    </p>
-                                                </div>
-
-                                                <p className="p-3.5 rounded-xl border border-neutral-200 bg-white text-xs sm:text-[13px] text-neutral-600 italic">
-                                                    SRIT has a long tradition of conducting "Srinivasa Ramanujan Intelligence Test" every year to commemorate the great Mathematician of all times! Please find below the details on how to register for the competition.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        {/* Right Image */}
-                                        <div className="lg:col-span-4 self-stretch flex flex-col justify-center">
-                                            <div className="rounded-xl overflow-hidden border-2 border-orange-200/90 shadow-md bg-orange-50/20 group relative w-full aspect-[3/4] flex items-center justify-center p-2">
-                                                <img
-                                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Srinivasa_Ramanujan_-_OPC_-_1.jpg/220px-Srinivasa_Ramanujan_-_OPC_-_1.jpg"
-                                                    alt="Srinivasa Ramanujan"
-                                                    className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+            <div className="space-y-8 sm:space-y-10 w-full">
+                {/* === 1. DETAILED OVERVIEW & RAMANUJAN TRIBUTE === */}
+                <section aria-label="Mathematics Day Overview">
+                    <div className="rounded-xl border border-[#FFD9C4] bg-white p-6 sm:p-8 lg:p-10 shadow-[0_4px_16px_rgba(255,102,0,0.05)] relative overflow-hidden">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            {/* Left text */}
+                            <div className="lg:col-span-8 space-y-4">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#FF6600] text-xs font-bold tracking-wide uppercase">
+                                    <Award size={14} />
+                                    <span>National Mathematics Day</span>
                                 </div>
 
-                                {/* === Official Notification & Registration Poster Viewer === */}
-                                <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
-                                    <button
-                                        onClick={() => setIsMathPosterOpen(!isMathPosterOpen)}
-                                        className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
-                                    >
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-[#FF5422] font-bold text-xl leading-none">
-                                                {isMathPosterOpen ? '−' : '+'}
-                                            </span>
-                                            <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-[#FF5422]">
-                                                Srinivasa Ramanujan Intelligence Test – Details &amp; Registration Poster
-                                            </span>
-                                        </div>
-                                        <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                            {isMathPosterOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                        </div>
-                                    </button>
+                                <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight">
+                                    MATHEMATICS DAY &amp; <span className="text-[#FF6600]">Intelligence Test</span>
+                                </h2>
 
-                                    {/* Inside Accordion: Full-Width Embedded Poster / Preview Document */}
-                                    {isMathPosterOpen && (
-                                        <div className="p-4 sm:p-6 bg-white w-full space-y-4">
-                                            {/* Top Banner */}
-                                            <div className="rounded-lg bg-orange-50/80 border border-orange-200/80 p-3.5 flex flex-wrap items-center justify-between gap-3">
-                                                <div>
-                                                    <h4 className="font-serif font-bold text-sm sm:text-base text-neutral-900">
-                                                        Intelligence Test Notification &amp; Registration Guidelines
-                                                    </h4>
-                                                    <p className="text-xs text-neutral-600 mt-0.5">
-                                                        Official event brochure, registration procedure, and competitive guidelines.
-                                                    </p>
-                                                </div>
-                                                <a
-                                                    href="https://drive.google.com/file/d/1k2BeTed_4LFiazGL_BE3cXoCq_1aQtDz/view?usp=sharing"
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg bg-[#FF5422] text-white hover:bg-[#e04515] transition-colors shadow-sm"
-                                                >
-                                                    <span>Open in Google Drive</span>
-                                                    <ChevronRight size={14} />
-                                                </a>
-                                            </div>
+                                <p className="text-sm sm:text-base leading-relaxed text-[#334155]">
+                                    We are thrilled to announce the upcoming <strong className="text-[#FF6600] font-bold">Srinivasa Ramanujan Intelligence Test</strong> at Srinivasa Ramanujan Institute of Technology. This annual event is a prestigious tribute to the legendary mathematician Srinivasa Ramanujan and is open to all Intermediate 2nd year students across the region.
+                                </p>
 
-                                            {/* Live Google Drive Document Iframe Embed */}
-                                            <div className="w-full h-[800px] rounded-lg overflow-hidden border border-neutral-200 bg-neutral-900 shadow-inner">
-                                                <IframeWithLoader
-                                                    title="Srinivasa Ramanujan Intelligence Test Poster"
-                                                    src="https://drive.google.com/file/d/1k2BeTed_4LFiazGL_BE3cXoCq_1aQtDz/preview"
-                                                    className="w-full h-full border-0"
-                                                />
-                                            </div>
-                                        </div>
-                                    )}
+                                <div className="p-4 sm:p-5 rounded-xl border border-[#FFD9C4] bg-[#FFFAF6] space-y-1.5">
+                                    <h4 className="font-serif font-bold text-sm sm:text-base text-[#0f172a] flex items-center gap-2">
+                                        <span className="w-1.5 h-3.5 rounded-full bg-[#FF6600]" />
+                                        About the Test:
+                                    </h4>
+                                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed pl-3.5">
+                                        The Srinivasa Ramanujan Intelligence Test is a dedicated platform for young minds to showcase their mathematical prowess and problem-solving abilities, engineered to identify and nurture the brightest mathematical talents.
+                                    </p>
+                                </div>
+
+                                <div className="p-4 sm:p-5 rounded-xl border border-[#FFD9C4] bg-[#FFFAF6] space-y-1.5">
+                                    <h4 className="font-serif font-bold text-sm sm:text-base text-[#0f172a] flex items-center gap-2">
+                                        <span className="w-1.5 h-3.5 rounded-full bg-[#FF6600]" />
+                                        Join Us in Celebrating Mathematics:
+                                    </h4>
+                                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed pl-3.5">
+                                        Let's celebrate the spirit of Srinivasa Ramanujan's timeless legacy together. We look forward to witnessing the brilliance and innovation that young mathematicians bring to our campus!
+                                    </p>
                                 </div>
                             </div>
+
+                            {/* Right Image: Srinivasa Ramanujan */}
+                            <div className="lg:col-span-4 self-stretch flex flex-col justify-center">
+                                <div className="rounded-xl overflow-hidden border border-[#FFD9C4] shadow-md bg-[#FFFAF6] group relative w-full aspect-[3/4] flex flex-col items-center justify-center p-2.5">
+                                    <img
+                                        src="/images/campus-life/ramanujan.jpg"
+                                        alt="Srinivasa Ramanujan"
+                                        className="w-full h-full object-cover object-top rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
+                                        onError={(e) => {
+                                            (e.target as HTMLImageElement).src = '/Sunlit Srinivasa Ramanujan Campus Garden.png';
+                                        }}
+                                    />
+                                    <div className="absolute bottom-2.5 inset-x-2.5 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-3.5 rounded-b-lg text-center">
+                                        <span className="text-sm font-bold text-white block">
+                                            Srinivasa Ramanujan
+                                        </span>
+                                        <span className="text-xs text-orange-300 block font-medium">
+                                            1887 – 1920 • Legendary Mathematician
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* === 2. OFFICIAL ACCORDION: NOTIFICATION & POSTER === */}
+                <section aria-label="Official Registration & Details Poster">
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3 px-1">
+                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
+                            <h2 className="font-serif text-xl sm:text-2xl font-extrabold text-[#0f172a] tracking-tight">
+                                Official Notifications &amp; Registration Materials
+                            </h2>
+                        </div>
+
+                        <AccordionContainer className="w-full">
+                            <DepartmentAccordionRow
+                                id="math-poster"
+                                index={0}
+                                title={
+                                    <span className="flex items-center gap-2">
+                                        <FileText className="h-4 w-4 text-[#FF6600] shrink-0" />
+                                        <span>Srinivasa Ramanujan Intelligence Test – Details &amp; Registration Poster</span>
+                                    </span>
+                                }
+                                isOpen={isMathPosterOpen}
+                                onToggle={() => setIsMathPosterOpen(!isMathPosterOpen)}
+                            >
+                                <div className="p-3 sm:p-5 bg-white space-y-4">
+                                    <div className="rounded-xl bg-[#FFFAF6] border border-[#FFD9C4] p-4 flex flex-wrap items-center justify-between gap-3">
+                                        <div>
+                                            <h4 className="font-serif font-bold text-sm sm:text-base text-[#0f172a]">
+                                                Intelligence Test Notification &amp; Registration Guidelines
+                                            </h4>
+                                            <p className="text-xs text-neutral-500 mt-0.5">
+                                                Official event brochure, registration procedure, and competitive guidelines.
+                                            </p>
+                                        </div>
+                                        <a
+                                            href="https://drive.google.com/file/d/1k2BeTed_4LFiazGL_BE3cXoCq_1aQtDz/view?usp=sharing"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded-lg bg-[#FF6600] text-white hover:bg-[#e04515] transition-colors shadow-sm"
+                                        >
+                                            <span>Open in Google Drive</span>
+                                            <ExternalLink size={14} />
+                                        </a>
+                                    </div>
+
+                                    <div className="w-full h-[800px] rounded-xl overflow-hidden border border-[#FFD9C4] bg-neutral-900 shadow-inner">
+                                        <IframeWithLoader
+                                            title="Srinivasa Ramanujan Intelligence Test Poster"
+                                            src="https://drive.google.com/file/d/1k2BeTed_4LFiazGL_BE3cXoCq_1aQtDz/preview"
+                                            className="w-full h-full border-0"
+                                        />
+                                    </div>
+                                </div>
+                            </DepartmentAccordionRow>
+                        </AccordionContainer>
+                    </div>
+                </section>
+            </div>
         </CampusLifeLayout>
     );
 };

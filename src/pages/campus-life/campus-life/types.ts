@@ -243,7 +243,48 @@ export const campusLifeSections: SubSection[] = [
             'Students and faculty who participated, competed, and won prizes in State, National, and International Level competitions are appreciated during this special event.',
             'A committee headed by the principal has been appointed to finalize the list of achievers for the academic year 2023-24.'
         ],
-
+        galleryImages: [
+            {
+                src: '/images/achievers-day/Chief-Guest-Felicitation_Abhigyaan-2024.jpg',
+                caption: 'Chief Guest Felicitation — Abhigyaan 2024',
+            },
+            {
+                src: '/images/achievers-day/Abhigyaan-2024.jpg',
+                caption: 'Abhigyaan 2024 Inaugural Ceremony',
+            },
+            {
+                src: '/images/achievers-day/Student-Achievers-1.jpg',
+                caption: 'Student Achievers Felicitation — Set 1',
+            },
+            {
+                src: '/images/achievers-day/Student-Achievers-2.jpg',
+                caption: 'Student Achievers Felicitation — Set 2',
+            },
+            {
+                src: '/images/achievers-day/Student-Achievers-3.jpg',
+                caption: 'Student Achievers Felicitation — Set 3',
+            },
+            {
+                src: '/images/achievers-day/Student-Achievers-4.jpg',
+                caption: 'Student Achievers Felicitation — Set 4',
+            },
+            {
+                src: '/images/achievers-day/Student-Achievers-5.jpg',
+                caption: 'Student Achievers Felicitation — Set 5',
+            },
+            {
+                src: '/images/achievers-day/Faculty-Achievers-1.jpg',
+                caption: 'Faculty Achievers Award Ceremony — Set 1',
+            },
+            {
+                src: '/images/achievers-day/Faculty-Achievers-2.jpg',
+                caption: 'Faculty Achievers Award Ceremony — Set 2',
+            },
+            {
+                src: '/images/achievers-day/Faculty-Achievers-3.jpg',
+                caption: 'Faculty Achievers Award Ceremony — Set 3',
+            },
+        ],
     },
     {
         id: 'mathematics-day',

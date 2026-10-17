@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
-    BookOpen, FileText, Globe, Users, ChevronRight, ChevronLeft,
-    Monitor, Printer, Shield, Clock, Phone
+    ChevronRight, ChevronLeft, Phone, Quote, BookOpen
 } from 'lucide-react';
 import CampusLifeLayout from './CampusLifeLayout';
 import { campusLifeSections } from './types';
@@ -13,90 +12,58 @@ export const CentralLibraryPage: React.FC = () => {
 
     const activeSection = campusLifeSections.find((s) => s.id === 'library')!;
 
+    const galleryImages = [
+        { url: '/optimized/library.webp.webp', caption: 'Central Reading & Reference Section' },
+        { url: '/optimized/Library 1.JPG.webp', caption: 'Study Cubicles & Stack Area' },
+        { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
+    ];
+
     return (
         <CampusLifeLayout activeSectionId="library">
-            {/* === 1. KEY STATISTICS CARDS === */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-                {[
-                    {
-                        value: '50,000+',
-                        label: 'Volumes Available',
-                        desc: 'Extensive print collection',
-                        icon: BookOpen,
-                    },
-                    {
-                        value: '267',
-                        label: 'Journals Subscribed',
-                        desc: 'National & International',
-                        icon: FileText,
-                    },
-                    {
-                        value: 'Digital Hub',
-                        label: 'IEEE & DELNET Access',
-                        desc: 'Global digital repositories',
-                        icon: Globe,
-                    },
-                    {
-                        value: '400 Seats',
-                        label: 'Reading Hall Capacity',
-                        desc: 'Spacious air-conditioned halls',
-                        icon: Users,
-                    },
-                ].map((stat, idx) => {
-                    const StatIcon = stat.icon;
-                    return (
-                        <div
-                            key={idx}
-                            className="relative group rounded-xl border border-orange-200/90 bg-gradient-to-br from-white via-orange-50/40 to-orange-100/30 p-4 sm:p-5 shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-                        >
-                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF5422] via-orange-400 to-[#FF5422] opacity-70 group-hover:opacity-100 transition-opacity" />
-
-                            <div className="flex items-center gap-3.5">
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF5422] to-[#FF7A45] text-white shadow-md shadow-orange-500/25 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                    <StatIcon size={22} />
-                                </div>
-                                <div>
-                                    <div className="font-serif text-2xl sm:text-3xl font-black text-[#FF5422] group-hover:text-[#e04515] leading-none transition-colors">
-                                        {stat.value}
-                                    </div>
-                                    <div className="mt-1 text-xs sm:text-sm font-bold text-neutral-900">
-                                        {stat.label}
-                                    </div>
-                                    <div className="text-[11px] text-neutral-500 line-clamp-1 mt-0.5">
-                                        {stat.desc}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-
             {/* === 2. ABOUT LIBRARY (Side-by-Side: Text Left + Explore Button, Image Right) === */}
             <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm relative overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                     {/* Left Column */}
-                    <div className="lg:col-span-7 space-y-3.5">
-                        <div className="flex items-center gap-2.5 pb-1">
-                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
+                    <div className="lg:col-span-7 space-y-4">
+                        <div>
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/80 text-[#FF5422] text-[11px] font-bold uppercase tracking-wider mb-2">
+                                <BookOpen size={13} />
+                                <span>Library &amp; Information Center</span>
+                            </div>
+                            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-900 tracking-tight">
                                 About <span className="text-[#FF5422]">Central Library</span>
                             </h2>
                         </div>
 
-                        <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                            The Central Library of <strong className="text-[#FF5422] font-bold">Srinivasa Ramanujan Institute of Technology</strong> is a modern knowledge hub with a vast collection of textbooks, reference volumes, research journals, and extensive digital repositories.
-                        </p>
+                        {/* Highlighted Quote Callout */}
+                        <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-orange-500/10 via-orange-500/5 to-transparent border-l-4 border-[#FF5422] p-4 sm:p-4.5 shadow-2xs">
+                            <div className="flex items-start gap-3">
+                                <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF5422] shrink-0 mt-0.5 opacity-90" />
+                                <div>
+                                    <p className="font-serif italic font-bold text-neutral-900 text-base sm:text-lg lg:text-xl leading-snug">
+                                        “Without libraries what have we? We have no past and no future.”
+                                    </p>
+                                    <span className="text-[11px] font-semibold tracking-wider uppercase text-neutral-500 mt-1 block">
+                                        Institutional Philosophy &amp; Academic Vision
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
 
-                        <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                            Spanning an expansive area with a comfortable seating capacity of <strong className="text-[#FF5422] font-bold">400+ readers</strong>, the library is fully automated using <span className="text-[#FF5422] font-semibold">Integrated Library Management Software (ILMS)</span> with barcode scanning for rapid circulation.
-                        </p>
+                        {/* Institutional Paragraphs from Official Image */}
+                        <div className="space-y-3.5 text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p>
+                                The main aim of the Library is to provide necessary support for teaching, learning, and research activities of the Institute by creating state-of-the-art facilities and offering innovative services to the academic community. The library manages knowledge, both in print and digital formats. Knowledge resources play a key role for the growth of any educational institution.
+                            </p>
 
-                        <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                            Students and faculty enjoy high-speed digital connectivity with remote access to <span className="text-[#FF5422] font-semibold">IEEE Xplore, DELNET, NDLI, and NPTEL</span> local servers.
-                        </p>
+                            <p>
+                                The library consists the collection of <strong className="text-[#FF5422] font-bold">51,477 Volumes</strong>, <strong className="text-[#FF5422] font-bold">36+ National &amp; International Journals/Magazines</strong> as on August, 2018. Digital library constitutes <strong className="text-[#FF5422] font-bold">12 computer systems</strong> in order to access E-journals, E-books and E-learning and so on.
+                            </p>
 
-                        
+                            <p>
+                                Library &amp; Information Center provides uncompromising information and intellectual requirements to students and faculty with user-friendly approach. It facilitates a fully integrated and dynamic environment for all academic studies. The Library is <strong className="text-neutral-900 font-bold">Fully Computerized</strong> using an <span className="text-[#FF5422] font-semibold">Integrated Library Management Software</span>. <span className="text-[#FF5422] font-semibold">On-line Public Access Catalogue (OPAC)</span> facility is available in the Library and it can be accessed through intranet.
+                            </p>
+                        </div>
                     </div>
 
                     {/* Right Column: Library Reading Hall Image */}
@@ -115,97 +82,7 @@ export const CentralLibraryPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* === 3. KEY HIGHLIGHTS & FACILITIES (6 Cards in 3 Columns × 2 Rows) === */}
-            <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                    <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                        Key Highlights &amp; Facilities
-                    </h2>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {[
-                        {
-                            title: 'Fully Computerized & Digital Facility',
-                            desc: 'Automated using Integrated Library Management Software (ILMS) with barcode technology and remote accessible OPAC.',
-                            icon: Monitor,
-                        },
-                        {
-                            title: 'Extensive Print & Digital Collection',
-                            desc: 'Vast repository of 50,000+ volumes across all engineering disciplines, along with 267 national and international journal subscriptions.',
-                            icon: BookOpen,
-                        },
-                        {
-                            title: 'Air-Conditioned Digital Library',
-                            desc: 'Dedicated digital computing zone with 12 high-end multimedia workstations for accessing online e-journals, NPTEL videos, and research papers.',
-                            icon: Globe,
-                        },
-                        {
-                            title: 'Reprography & Printing Services',
-                            desc: 'In-house high-speed photocopier and laser printing facility available for students and scholars at subsidized charges.',
-                            icon: Printer,
-                        },
-                        {
-                            title: 'Comprehensive CCTV Surveillance',
-                            desc: 'Full security monitoring across stack areas, reference sections, and reading cubicles ensuring high safety and decorum.',
-                            icon: Shield,
-                        },
-                        {
-                            title: 'Extended Operating Hours',
-                            desc: 'Open on all working days from 8:00 AM to 8:00 PM, with dedicated late-evening study permissions during semester examinations.',
-                            icon: Clock,
-                        },
-                    ].map((item, idx) => {
-                        const IconComp = item.icon;
-                        return (
-                            <div
-                                key={idx}
-                                className="group relative rounded-xl border border-orange-200/80 bg-gradient-to-br from-white via-orange-50/30 to-orange-100/20 p-4 sm:p-5 hover:border-[#FF5422] hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden"
-                            >
-                                <div className="absolute top-0 left-0 right-0 h-1 bg-[#FF5422] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <div>
-                                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#FF5422] to-[#FF7A45] text-white shadow-md shadow-orange-500/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 mb-3">
-                                        <IconComp size={20} />
-                                    </div>
-                                    <h4 className="font-bold text-sm sm:text-[14.5px] text-neutral-900 group-hover:text-[#FF5422] transition-colors">
-                                        {item.title}
-                                    </h4>
-                                    <p className="text-xs text-neutral-600 mt-1.5 leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-
-            {/* === 4. OPERATING SCHEDULES & KEY GUIDELINES === */}
-            <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                    <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                        Operating Schedules &amp; Key Guidelines
-                    </h2>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs sm:text-[13px] text-neutral-700">
-                    {[
-                        'Working Days: Monday through Saturday from 8:00 AM to 8:00 PM.',
-                        'Issue Counter Timings: 9:00 AM to 5:00 PM on all instructional days.',
-                        'Digital Library Access: Available throughout library hours with high-speed Internet.',
-                        'Strict silence and institutional dress code must be observed inside the reading halls.',
-                        'Students must carry their valid SRIT ID cards for entry and book transactions.',
-                        'Reference books and current periodicals are strictly meant for in-house consultation.',
-                    ].map((rule, idx) => (
-                        <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-orange-50/40 border border-orange-100/70">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF5422] mt-1.5 shrink-0" />
-                            <span className="leading-relaxed font-medium text-neutral-800">{rule}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
 
             {/* === 5. RESOURCE SPECIFICATIONS TABLE (Collapsible) === */}
             {activeSection.tableData && (
@@ -295,12 +172,8 @@ export const CentralLibraryPage: React.FC = () => {
                 </div>
 
                 {isLibraryViewAll ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {[
-                            { url: '/optimized/library.webp.webp', caption: 'Central Reading & Reference Section' },
-                            { url: '/optimized/Library 1.JPG.webp', caption: 'Study Cubicles & Stack Area' },
-                            { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
-                        ].map((img, gi) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {galleryImages.map((img, gi) => (
                             <div
                                 key={gi}
                                 className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300"
@@ -316,6 +189,9 @@ export const CentralLibraryPage: React.FC = () => {
                                         }}
                                     />
                                 </div>
+                                <div className="px-3 py-2 bg-white border-t border-orange-100 text-center">
+                                    <span className="text-[11.5px] font-bold text-neutral-800 line-clamp-1">{img.caption}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -323,7 +199,7 @@ export const CentralLibraryPage: React.FC = () => {
                     <div className="relative group/libslider px-1">
                         <button
                             type="button"
-                            onClick={() => setLibraryGalleryIndex((prev) => (prev === 0 ? 3 : prev - 1))}
+                            onClick={() => setLibraryGalleryIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1))}
                             className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                             aria-label="Previous image"
                         >
@@ -331,19 +207,11 @@ export const CentralLibraryPage: React.FC = () => {
                         </button>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {[
-                                { url: '/optimized/library.webp.webp', caption: 'Central Reading & Reference Section' },
-                                { url: '/optimized/Library 1.JPG.webp', caption: 'Study Cubicles & Stack Area' },
-                                { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
-                            ]
+                            {galleryImages
                                 .slice(libraryGalleryIndex, libraryGalleryIndex + 3)
                                 .concat(
-                                    libraryGalleryIndex + 3 > 3
-                                        ? [
-                                              { url: '/optimized/library.webp.webp', caption: 'Central Reading & Reference Section' },
-                                              { url: '/optimized/Library 1.JPG.webp', caption: 'Study Cubicles & Stack Area' },
-                                              { url: 'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1588&auto=format&fit=crop', caption: 'Periodicals & Research Hub' },
-                                          ].slice(0, (libraryGalleryIndex + 3) % 3)
+                                    libraryGalleryIndex + 3 > galleryImages.length
+                                        ? galleryImages.slice(0, (libraryGalleryIndex + 3) % galleryImages.length)
                                         : []
                                 )
                                 .map((img, gi) => (
@@ -362,13 +230,16 @@ export const CentralLibraryPage: React.FC = () => {
                                                 }}
                                             />
                                         </div>
+                                        <div className="px-3 py-2 bg-white border-t border-orange-100 text-center">
+                                            <span className="text-[11.5px] font-bold text-neutral-800 line-clamp-1">{img.caption}</span>
+                                        </div>
                                     </div>
                                 ))}
                         </div>
 
                         <button
                             type="button"
-                            onClick={() => setLibraryGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
+                            onClick={() => setLibraryGalleryIndex((prev) => (prev >= galleryImages.length - 1 ? 0 : prev + 1))}
                             className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                             aria-label="Next image"
                         >

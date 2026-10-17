@@ -1,0 +1,4007 @@
+{
+  "Institution": [
+    {
+      "sNo": "1",
+      "year": "2026-27",
+      "category": "Academic Excellence",
+      "name": "Certificate of Appreciation - JAYATU SEASON V",
+      "awardingBody": "VIRTUSA"
+    },
+    {
+      "sNo": "2",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Most Engaged Institutions of the Year 2025",
+      "awardingBody": "ICT Academy"
+    },
+    {
+      "sNo": "3",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Certificate of Appreciation - SRIT",
+      "awardingBody": "Cyient Foundation & ICT Academy"
+    },
+    {
+      "sNo": "4",
+      "year": "2025-26",
+      "category": "Toastmasters",
+      "name": "Best Shining Club - SRIT Eloquent Speakers",
+      "awardingBody": "Toastmasters"
+    },
+    {
+      "sNo": "5",
+      "year": "2025-26",
+      "category": "Toastmasters",
+      "name": "Golden Eagle Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "6",
+      "year": "2025-26",
+      "category": "Toastmasters",
+      "name": "Third Place - Evaluation Contest 2025-26",
+      "awardingBody": "Toastmasters"
+    },
+    {
+      "sNo": "7",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "ALL INDIA 3rd Rank for Completing AICTE-EDUSKILLS Virtual Internships",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "8",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Engineering Institute -2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "9",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Talent Connect Excellence Award - 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "10",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Certificate of Appreciation - SRIT",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "11",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute (Zscaler Internship Domain)",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "12",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute (Juniper Internship Domain)",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "13",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute (Celonis Internship Domain)",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "14",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute (Edu Skills Academy Internship Domain)",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "15",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Civil Engineering Dept. in Internship - 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "16",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Electrical & Electronics Engineering Dept. in Internship - 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "17",
+      "year": "2025-26",
+      "category": "Academic Excellence",
+      "name": "Best Performing Mechanical Engineering Dept. in Internship - 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "18",
+      "year": "2024-25",
+      "category": "Rotaract Club",
+      "name": "Best Installation Award",
+      "awardingBody": "Rotary District 3160"
+    },
+    {
+      "sNo": "19",
+      "year": "2024-25",
+      "category": "Rotaract Club",
+      "name": "Best International Service Award",
+      "awardingBody": "Rotary District 3160"
+    },
+    {
+      "sNo": "20",
+      "year": "2024-25",
+      "category": "Academic Excellence",
+      "name": "ALL INDIA 4th Rank for Completing AICTE-EDUSKILLS Virtual Internships",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "21",
+      "year": "2024-25",
+      "category": "Academic Excellence",
+      "name": "World Book of Records London for Condicting 5 Lakh Internships Through AICTE and EDUSKILLS",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "22",
+      "year": "2024-25",
+      "category": "Academic Excellence",
+      "name": "Best Performing Engineering Institute -2024",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "23",
+      "year": "2024-25",
+      "category": "Academic Excellence",
+      "name": "Talent Visionary Award",
+      "awardingBody": "Salesforce"
+    },
+    {
+      "sNo": "24",
+      "year": "2024-25",
+      "category": "Academic Excellence",
+      "name": "NPTEL Discipline Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "25",
+      "year": "2024-25",
+      "category": "Innovation",
+      "name": "Innovation Award 2025",
+      "awardingBody": "APSCHE, Andhra Pradesh"
+    },
+    {
+      "sNo": "26",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Asia Book of Records",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "27",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute - UiPath",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "28",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute - Celonis",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "29",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute - Google for Developers",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "30",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute - Juniper",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "31",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Best Performing Institute - Microchip",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "32",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Annual Rankings Award",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "33",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Curriculum Integration Award",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "34",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "SKILLFORGE award",
+      "awardingBody": "SmartBridge"
+    },
+    {
+      "sNo": "35",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "consistence club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "36",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Epic club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "37",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Pinnacle Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "38",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Shinning club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "39",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Excellence in education",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "40",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Eloquent club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "41",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Retention Stars",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "42",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Retention champs Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "43",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Leadership Excellence Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "44",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Visionary leader Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "45",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Consistent Club Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "46",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Pinnacle club Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "47",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Excellence In Education Aawrd",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "48",
+      "year": "2023-24",
+      "category": "Toastmasters",
+      "name": "Eloquent club Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "49",
+      "year": "2023-24",
+      "category": "Academic Excellence",
+      "name": "Valuable Local Chapter with A rating",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "50",
+      "year": "2023-24",
+      "category": "Innovation",
+      "name": "Best Startup Eco System Enabler",
+      "awardingBody": "AIC-SKU Anantapur"
+    },
+    {
+      "sNo": "51",
+      "year": "2023-24",
+      "category": "Innovation",
+      "name": "3.5 Star Rating",
+      "awardingBody": "AICTE & MIC, Govt. of India"
+    },
+    {
+      "sNo": "52",
+      "year": "2022-23",
+      "category": "Academic Excellence",
+      "name": "Top 10 institution award - Nation Wide",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "53",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Excellence in Education",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "54",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Golden Eagle Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "55",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Independence Warrior Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "56",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Shining club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "57",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Consistent Club Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "58",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Master Orator Championship",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "59",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Leadership Excellence Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "60",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Excellence In Education Aawrd",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "61",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Golden Eagle Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "62",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Shining Club Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "63",
+      "year": "2022-23",
+      "category": "Toastmasters",
+      "name": "Independence Warrior Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "64",
+      "year": "2022-23",
+      "category": "Innovation",
+      "name": "Best Startup Eco System Enabler",
+      "awardingBody": "AIC SKU, Anantapur"
+    },
+    {
+      "sNo": "65",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "High Five Award",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "66",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "Distinguished Club Ribbon",
+      "awardingBody": "Vibrant Speakers-Toastmasters"
+    },
+    {
+      "sNo": "67",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "First Anniversary Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "68",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "Consistent Club Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "69",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "The Focus Award",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "70",
+      "year": "2021-22",
+      "category": "Toastmasters",
+      "name": "Distinguished Club",
+      "awardingBody": "Eloquent Speakers-Toastmasters"
+    },
+    {
+      "sNo": "71",
+      "year": "2021-22",
+      "category": "Innovation",
+      "name": "one Star Rating for  IIC Activities",
+      "awardingBody": "AICTE & MIC, Govt. of India"
+    },
+    {
+      "sNo": "72",
+      "year": "2019-20",
+      "category": "Innovation",
+      "name": "One Star Rating for  IIC Activities",
+      "awardingBody": "AICTE & MIC, Govt. of India"
+    },
+    {
+      "sNo": "73",
+      "year": "2017-18",
+      "category": "Academic Excellence",
+      "name": "Valuable Local Chapter with A rating",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "74",
+      "year": "2022-23",
+      "category": "Innovation",
+      "name": "Two Star Rating for IIC Activities",
+      "awardingBody": "AICTE & MIC, Govt. of India"
+    },
+    {
+      "sNo": "75",
+      "year": "2020-21",
+      "category": "Innovation",
+      "name": "Three Star Rating for  IIC Activities",
+      "awardingBody": "AICTE & MIC, Govt. of India"
+    }
+  ],
+  "Faculty": [
+    {
+      "sNo": "1",
+      "year": "2025-26",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Coordinator 2025 by ICT Academy",
+      "awardingBody": "ICT Academy"
+    },
+    {
+      "sNo": "2",
+      "year": "2025-26",
+      "facultyName": "Dr. P. Vinatha",
+      "department": "H&S",
+      "category": "Women Empoerment",
+      "name": "Best Women Coordinator Award",
+      "awardingBody": "JNTU Ananthapuramu"
+    },
+    {
+      "sNo": "3",
+      "year": "2025-26",
+      "facultyName": "Dr. M. Ranjit Reddy",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Sadhya Acharya",
+      "awardingBody": "Bharath Education Excellence Awards"
+    },
+    {
+      "sNo": "4",
+      "year": "2025-26",
+      "facultyName": "Mr. G. Chinna Pullaiah",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Jyestha Acharya",
+      "awardingBody": "Bharath Education Excellence Awards"
+    },
+    {
+      "sNo": "5",
+      "year": "2025-26",
+      "facultyName": "Dr. D. Sai Chaitanya Kishore",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Director Excellence Award - 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "6",
+      "year": "2025-26",
+      "facultyName": "Dr. M. Ranjit Reddy",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Certificate of Appreciation - 5 Years",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "7",
+      "year": "2025-26",
+      "facultyName": "B Varun Kumar",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Certificate of Appreciation - 5 Years",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "8",
+      "year": "2025-26",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Performing (CoE) Coordinator 2025",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "9",
+      "year": "2024-25",
+      "facultyName": "Dr. M. Ranjit Reddy",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Talent Connect Ecellence Award -2024",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "10",
+      "year": "2024-25",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Performing Center of Excellence Coordinator Award-2024",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "11",
+      "year": "2024-25",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Educator Excellence Award 2024 - ZSCALER",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "12",
+      "year": "2024-25",
+      "facultyName": "Mr. P. Veera Praksh",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Educator Excellence Award 2024 -CELONIS",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "13",
+      "year": "2024-25",
+      "facultyName": "Dr. P. Chitralingappa",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Educator Excellence Award 2024 - PALOALTO",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "14",
+      "year": "2024-25",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Educator Excellence Award 2024 - UI PATH",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "15",
+      "year": "2024-25",
+      "facultyName": "Mr. L. Suman",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Educator Excellence Award 2024 - BLUEPRISM",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "16",
+      "year": "2024-25",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Contender Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "17",
+      "year": "2024-25",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Contender Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "18",
+      "year": "2024-25",
+      "facultyName": "Dr U Raghu Babu",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Executive Committee Member, IEI Anantapur Local Chapter`",
+      "awardingBody": "Institution of Engineer"
+    },
+    {
+      "sNo": "19",
+      "year": "2024-25",
+      "facultyName": "Dr U Raghu Babu",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "AICTE QIP PG Certification ProgramCourse: Machine LearningInstitute: IISC Bengaluru",
+      "awardingBody": "AICTE QIP"
+    },
+    {
+      "sNo": "20",
+      "year": "2024-25",
+      "facultyName": "Dr U Raghu Babu",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Best Paper Presentation Award",
+      "awardingBody": "ICSMMI 2025, Mallareddy Engineering College Hyderabad"
+    },
+    {
+      "sNo": "21",
+      "year": "2024-25",
+      "facultyName": "Dr U Raghu Babu",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Recognized as Research SupervisorAt Visvesvaraya Technological University, Belagavi",
+      "awardingBody": "Visvesvaraya Technological University, Belagavi"
+    },
+    {
+      "sNo": "22",
+      "year": "2024-25",
+      "facultyName": "Dr U Raghu Babu, A.Surendra, M. Rachel, D.Lakshmi Shireesha",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Best Paper Award",
+      "awardingBody": "ICSMMI 2025, Mallareddy Engineering College Hyderabad"
+    },
+    {
+      "sNo": "23",
+      "year": "2024-25",
+      "facultyName": "Dr. K. Mahaboob Peera",
+      "department": "CIV",
+      "category": "Innovation",
+      "name": "Certified Entrepreneurship Educator",
+      "awardingBody": "Wadhwani Foundation"
+    },
+    {
+      "sNo": "24",
+      "year": "2024-25",
+      "facultyName": "Dr.M.Bhargava Reddy",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Award from ICT Academy – MangoDB Academic Summit Distinguished Mentor 2024",
+      "awardingBody": "ICT Academy"
+    },
+    {
+      "sNo": "25",
+      "year": "2024-25",
+      "facultyName": "Dr.P.Padmavathi",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Best Teacher Award",
+      "awardingBody": "Research Skills Society"
+    },
+    {
+      "sNo": "26",
+      "year": "2024-25",
+      "facultyName": "Mr.T.Aravind Babu",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Best Blood Donor",
+      "awardingBody": "Indian Redcross Society Anantapur"
+    },
+    {
+      "sNo": "27",
+      "year": "2024-25",
+      "facultyName": "Dr. Shaik Sharmas Vali",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Best Researcher Award under Engineering and Technology Category",
+      "awardingBody": "Himachal Pradesh University, Shimla"
+    },
+    {
+      "sNo": "28",
+      "year": "2024-25",
+      "facultyName": "Dr. Shaik Sharmas Vali",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Dr. A.P.J Abdul Kalam Award under Outstanding Research in Mechanical Engineering",
+      "awardingBody": "Association of Researchers & Academicians (India)"
+    },
+    {
+      "sNo": "29",
+      "year": "2024-25",
+      "facultyName": "Dr. Shaik Sharmas Vali",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Aryabhata Lifetime Award",
+      "awardingBody": "Association of Researchers & Academicians (India)"
+    },
+    {
+      "sNo": "30",
+      "year": "2024-25",
+      "facultyName": "Dr. B. Anjaneyulu",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Young Researcher Award",
+      "awardingBody": "InSc, Bangalore"
+    },
+    {
+      "sNo": "31",
+      "year": "2024-25",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "DG NCC space appreciation Plaque",
+      "awardingBody": "DG NCC- New Delhi"
+    },
+    {
+      "sNo": "32",
+      "year": "2024-25",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "NPTEL Top 1 %",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "33",
+      "year": "2024-25",
+      "facultyName": "Mr. G. Chinna Pullaiah",
+      "department": "CSE",
+      "category": "NSS",
+      "name": "National Prerna Doot Award",
+      "awardingBody": "Govt of India"
+    },
+    {
+      "sNo": "34",
+      "year": "2024-25",
+      "facultyName": "Dr. B. Harichandana",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Teachers Award",
+      "awardingBody": "Research Society for Technical skills, Govt of India, MSME registered organization."
+    },
+    {
+      "sNo": "35",
+      "year": "2024-25",
+      "facultyName": "Mrs. G. Nagaleela",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Teachers Award",
+      "awardingBody": "Research Society for Technical skills, Govt of India, MSME registered organization."
+    },
+    {
+      "sNo": "36",
+      "year": "2024-25",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "Conference Technical Review Member",
+      "awardingBody": "SERB Sponsored EAI International Conference on Computational Intelligence and Generative AI (EAI ICCIGAI-2024) held at K L University"
+    },
+    {
+      "sNo": "37",
+      "year": "2024-25",
+      "facultyName": "Mr. K. Kondanna",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Best Paper Presentation Award",
+      "awardingBody": "Padmavathi School of Pharmacy"
+    },
+    {
+      "sNo": "38",
+      "year": "2023-24",
+      "facultyName": "Dr. B. Anjaneyulu",
+      "department": "MEC",
+      "category": "Innovation",
+      "name": "Entrepreneurship Educator",
+      "awardingBody": "Wadhwani Foundation"
+    },
+    {
+      "sNo": "39",
+      "year": "2023-24",
+      "facultyName": "Mr. Praneel Kumar Peruru",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Center of Excellene Coordinator Award",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "40",
+      "year": "2023-24",
+      "facultyName": "Mr. P. Veera Prakash",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Educator Award - Celonis",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "41",
+      "year": "2023-24",
+      "facultyName": "Dr. G. Hemanth Kumar Yadav",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Educator Award - AWS",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "42",
+      "year": "2023-24",
+      "facultyName": "Dr. P. Chitra Lingappa",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Educator Award - Paloalto",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "43",
+      "year": "2023-24",
+      "facultyName": "Mr. L. Suman",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Educator Award - BluePrism",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "44",
+      "year": "2023-24",
+      "facultyName": "Dr. M. Ranjit Reddy",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Active Supporter for Center of Excellence",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "45",
+      "year": "2023-24",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "46",
+      "year": "2023-24",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "47",
+      "year": "2023-24",
+      "facultyName": "Mr M Narasimhulu",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "NPTEL Discipline Star",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "48",
+      "year": "2023-24",
+      "facultyName": "Mr. Anil Kumar.D",
+      "department": "H&S",
+      "category": "Academic Excellence",
+      "name": "Best Teacher Award, Communicative English",
+      "awardingBody": "Research India Foundation,Bhubaneswar,Odhisa,India"
+    },
+    {
+      "sNo": "49",
+      "year": "2023-24",
+      "facultyName": "Mr. Anil Kumar.D",
+      "department": "H&S",
+      "category": "Academic Excellence",
+      "name": "Best Paper Presentation Award,Communicative English",
+      "awardingBody": "National Institute of Technology(NIT),Warangal,India."
+    },
+    {
+      "sNo": "50",
+      "year": "2023-24",
+      "facultyName": "Dr.G.Meerimatha",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "ASIA’S Excellent Research award",
+      "awardingBody": "Asia International Research Awards Congress 2023, Trichy, Tamilnadu, India."
+    },
+    {
+      "sNo": "51",
+      "year": "2023-24",
+      "facultyName": "Dr. D. Sai Chaitanya Kishore",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "International Award for Outstanding Researcher 2023",
+      "awardingBody": "International Institute of organized Research"
+    },
+    {
+      "sNo": "52",
+      "year": "2023-24",
+      "facultyName": "Dr.B.Harichandana",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Women Educationalist Excellence Award",
+      "awardingBody": "Sidvi Foundation Registered as MSME, Government of India"
+    },
+    {
+      "sNo": "53",
+      "year": "2023-24",
+      "facultyName": "Mr. Nazeer Shaik",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Best Researcher Award",
+      "awardingBody": "Sidvi Foundation Registered as MSME, Government of India"
+    },
+    {
+      "sNo": "54",
+      "year": "2023-24",
+      "facultyName": "Mr. Nazeer Shaik",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Best Faculty Excellence Award",
+      "awardingBody": "Sidvi Foundation Registered as MSME, Government of India"
+    },
+    {
+      "sNo": "55",
+      "year": "2023-24",
+      "facultyName": "Dr. P. Chitralingappa",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Young Scientist Award",
+      "awardingBody": "Sidvi Foundation Registered as MSME, Government of India"
+    },
+    {
+      "sNo": "56",
+      "year": "2023-24",
+      "facultyName": "Mr. Kondanna",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Best Academician Award",
+      "awardingBody": "Sidvi Foundation Registered as MSME, Government of India"
+    },
+    {
+      "sNo": "57",
+      "year": "2023-24",
+      "facultyName": "Mr. Nazeer Shaik",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Best Paper Award",
+      "awardingBody": "ICBM – School of Business Excellence, Hyderabad, AICTE Approved Institution"
+    },
+    {
+      "sNo": "58",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Refresher Course for the Promotion in Rank",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "59",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Gold Medal for First in Order of Merit in the Course",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "60",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Map Reading Skills",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "61",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Yoga IP",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "62",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Appreciation for Throw Ball",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "63",
+      "year": "2023-24",
+      "facultyName": "Lt.H.Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Organising and Planning Institutional Training",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "64",
+      "year": "2023-24",
+      "facultyName": "Mr B Varun Kumar",
+      "department": "ECE",
+      "category": "Innovation",
+      "name": "Best Startup Eco System Enabler award under Individual Category",
+      "awardingBody": "AIC-SKU Anantapur"
+    },
+    {
+      "sNo": "65",
+      "year": "2023-24",
+      "facultyName": "Mr B Varun Kumar",
+      "department": "ECE",
+      "category": "Innovation",
+      "name": "Entrepreneurship Educator",
+      "awardingBody": "Wadhwani Foundation, Bangalore"
+    },
+    {
+      "sNo": "66",
+      "year": "2023-24",
+      "facultyName": "Dr.K.Mahaboob Peera",
+      "department": "CIV",
+      "category": "Innovation",
+      "name": "Entrepreneurship Educator",
+      "awardingBody": "Wadhwani Foundation, Bangalore"
+    },
+    {
+      "sNo": "67",
+      "year": "2022-23",
+      "facultyName": "Dr. M. Ranjit Reddy",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Center of Excellene Award",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "68",
+      "year": "2022-23",
+      "facultyName": "Mr. P. Veera Prakash",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Best Educator Award - Celonis",
+      "awardingBody": "Eduskills"
+    },
+    {
+      "sNo": "69",
+      "year": "2022-23",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "70",
+      "year": "2022-23",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "71",
+      "year": "2022-23",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Contingent Commander of AP&T Directorate for All India Thal Sainik Camp 2022",
+      "awardingBody": "DG NCC- New Delhi"
+    },
+    {
+      "sNo": "72",
+      "year": "2022-23",
+      "facultyName": "Lt.R.Amaresh",
+      "department": "H&S",
+      "category": "NCC",
+      "name": "Associate NCC Officer",
+      "awardingBody": "DG NCC-New Delhi, Officers Training Academy, Kamptee"
+    },
+    {
+      "sNo": "73",
+      "year": "2022-23",
+      "facultyName": "Smt. J. Padmavathi",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "India's 20 Programatic Women Leaders (Higher Education)",
+      "awardingBody": "The Academic Insights"
+    },
+    {
+      "sNo": "74",
+      "year": "2021-22",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "75",
+      "year": "2021-22",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "76",
+      "year": "2020-21",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "77",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Best Associate NCC Officer- DG NCC Trophy",
+      "awardingBody": "DG NCC-New Delhi, Officers Training Academy, Gwalior"
+    },
+    {
+      "sNo": "78",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "First in Order of Merit- Gold Medal",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "79",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Drill",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "80",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Book Review",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "81",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in NIAP",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "82",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Certificate of Excellence in Camp Planning",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "83",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Appreciation for Badminton",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "84",
+      "year": "2020-21",
+      "facultyName": "Lt. H Sumitha",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Appreciation for Throw Ball",
+      "awardingBody": "Officers Training Academy-Gwalior"
+    },
+    {
+      "sNo": "85",
+      "year": "2019-20",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "86",
+      "year": "2019-20",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "87",
+      "year": "2018-19",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "88",
+      "year": "2018-19",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "89",
+      "year": "2017-18",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "90",
+      "year": "2017-18",
+      "facultyName": "Mr. C. Sudheer Kumar",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Active SPOC Certificate",
+      "awardingBody": "NPTEL"
+    }
+  ],
+  "Student": [
+    {
+      "sNo": "1",
+      "year": "2026-27",
+      "studentName": "K. Vijay Kumar",
+      "department": "MEC",
+      "category": "Photo Contest",
+      "name": "First Prize",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "2",
+      "year": "2026-27",
+      "studentName": "Kothakota Reddy Teja",
+      "department": "MEC",
+      "category": "Quiz Competition",
+      "name": "Third Prize",
+      "awardingBody": "NSS Cell - JNTUA"
+    },
+    {
+      "sNo": "3",
+      "year": "2026-27",
+      "studentName": "Y. Roopa",
+      "department": "CSE",
+      "category": "Website Development Contest 2026",
+      "name": "First Prize",
+      "awardingBody": "Ashok Womens Engineering College"
+    },
+    {
+      "sNo": "4",
+      "year": "2026-27",
+      "studentName": "D. Karishma",
+      "department": "CSE",
+      "category": "Website Development Contest 2026",
+      "name": "First Prize",
+      "awardingBody": "Ashok Womens Engineering College"
+    },
+    {
+      "sNo": "5",
+      "year": "2026-27",
+      "studentName": "E. Shilpa",
+      "department": "CSE",
+      "category": "Website Development Contest 2026",
+      "name": "First Prize",
+      "awardingBody": "Ashok Womens Engineering College"
+    },
+    {
+      "sNo": "6",
+      "year": "2026-27",
+      "studentName": "K. Chathurya",
+      "department": "CSE",
+      "category": "Geeks for Geeks Camps Mantri",
+      "name": "Appointment as Campus Mantri",
+      "awardingBody": "Geeks for Geeks"
+    },
+    {
+      "sNo": "7",
+      "year": "2025-26",
+      "studentName": "M. Mahalakshmi",
+      "department": "EEE",
+      "category": "Toastmasters",
+      "name": "Participation Certificate",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "8",
+      "year": "2025-26",
+      "studentName": "K. Renuka",
+      "department": "CSE",
+      "category": "International Hackathon Code Atlas 2026",
+      "name": "First Prize",
+      "awardingBody": "BEST Innovation University"
+    },
+    {
+      "sNo": "9",
+      "year": "2025-26",
+      "studentName": "B. G. Preethi Sree",
+      "department": "CSE",
+      "category": "International Hackathon Code Atlas 2026",
+      "name": "First Prize",
+      "awardingBody": "BEST Innovation University"
+    },
+    {
+      "sNo": "10",
+      "year": "2025-26",
+      "studentName": "Y. Roopa",
+      "department": "CSE",
+      "category": "International Hackathon Code Atlas 2026",
+      "name": "First Prize",
+      "awardingBody": "BEST Innovation University"
+    },
+    {
+      "sNo": "11",
+      "year": "2025-26",
+      "studentName": "J. Shaha naaz",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "Special Adventure Ciurse",
+      "awardingBody": "National Institute of Mountaineering and Adventure Sports (NIMAS)"
+    },
+    {
+      "sNo": "12",
+      "year": "2025-26",
+      "studentName": "B. Lasya Charitha",
+      "department": "",
+      "category": "AI Hackathon 2K26",
+      "name": "Second Prize",
+      "awardingBody": "Anantapur Police"
+    },
+    {
+      "sNo": "13",
+      "year": "2025-26",
+      "studentName": "V. Manasa",
+      "department": "",
+      "category": "AI Hackathon 2K26",
+      "name": "Second Prize",
+      "awardingBody": "Anantapur Police"
+    },
+    {
+      "sNo": "14",
+      "year": "2025-26",
+      "studentName": "K. Mani Sai",
+      "department": "",
+      "category": "AI Hackathon 2K26",
+      "name": "Second Prize",
+      "awardingBody": "Anantapur Police"
+    },
+    {
+      "sNo": "15",
+      "year": "2025-26",
+      "studentName": "C Tejdeep",
+      "department": "CIV",
+      "category": "Startup PH CH",
+      "name": "First Prize",
+      "awardingBody": "RJM College of Engineering"
+    },
+    {
+      "sNo": "16",
+      "year": "2025-26",
+      "studentName": "E Kulvanth",
+      "department": "CIV",
+      "category": "Startup PH CH",
+      "name": "First Prize",
+      "awardingBody": "RJM College of Engineering"
+    },
+    {
+      "sNo": "17",
+      "year": "2025-26",
+      "studentName": "U Rajesh",
+      "department": "CIV",
+      "category": "Startup PH CH",
+      "name": "Participation Certificate",
+      "awardingBody": "RJM College of Engineering"
+    },
+    {
+      "sNo": "18",
+      "year": "2025-26",
+      "studentName": "J Rahul Deenraj",
+      "department": "CIV",
+      "category": "Startup PH CH",
+      "name": "Participation Certificate",
+      "awardingBody": "RJM College of Engineering"
+    },
+    {
+      "sNo": "19",
+      "year": "2025-26",
+      "studentName": "D Aaron Joel",
+      "department": "CIV",
+      "category": "Startup PH CH",
+      "name": "Participation Certificate",
+      "awardingBody": "RJM College of Engineering"
+    },
+    {
+      "sNo": "20",
+      "year": "2025-26",
+      "studentName": "G PRUDHVI",
+      "department": "ECE",
+      "category": "Water Sports Adventure",
+      "name": "Spl. Water Sports Adventure Course",
+      "awardingBody": "Govt. of Himachal Pradesh"
+    },
+    {
+      "sNo": "21",
+      "year": "2025-26",
+      "studentName": "K Hrushikesh",
+      "department": "EEE",
+      "category": "Toastmasters",
+      "name": "Evaluation Speech Contest - 3rd Place",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "22",
+      "year": "2025-26",
+      "studentName": "M Lokaditya",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "Humours Speech Contest - 1st Place",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "23",
+      "year": "2025-26",
+      "studentName": "M Nagasai Navya",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "Golden Feather Award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "24",
+      "year": "2025-26",
+      "studentName": "P Harshithodaya",
+      "department": "CSE",
+      "category": "NSS",
+      "name": "Participation Certificate",
+      "awardingBody": "NSS Regional Office, Gujarat"
+    },
+    {
+      "sNo": "25",
+      "year": "2025-26",
+      "studentName": "G Rakshitha - I Year",
+      "department": "CSM",
+      "category": "State Level Essay Writing 2025",
+      "name": "First Prize",
+      "awardingBody": "Sathya Sai Seva Samithi - ATP"
+    },
+    {
+      "sNo": "26",
+      "year": "2025-26",
+      "studentName": "C V Keerthana - I Year",
+      "department": "CSM",
+      "category": "State Level Essay Writing 2025",
+      "name": "First Prize",
+      "awardingBody": "Sathya Sai Seva Samithi - ATP"
+    },
+    {
+      "sNo": "27",
+      "year": "2025-26",
+      "studentName": "M Manasa - I Year",
+      "department": "CSM",
+      "category": "State Level Essay Writing 2025",
+      "name": "Second Prize",
+      "awardingBody": "Sathya Sai Seva Samithi - ATP"
+    },
+    {
+      "sNo": "28",
+      "year": "2025-26",
+      "studentName": "S Arsa Tabassum - I Year",
+      "department": "CSE",
+      "category": "State Level Essay Writing 2025",
+      "name": "Second Prize",
+      "awardingBody": "Sathya Sai Seva Samithi - ATP"
+    },
+    {
+      "sNo": "29",
+      "year": "2025-26",
+      "studentName": "S Sandhya Rani",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "First Performance",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "30",
+      "year": "2025-26",
+      "studentName": "B Sai Balaji",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "First Performance",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "31",
+      "year": "2025-26",
+      "studentName": "B Prathap",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "First Performance",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "32",
+      "year": "2025-26",
+      "studentName": "K Yashaswini",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "Second Performance",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "33",
+      "year": "2025-26",
+      "studentName": "S M Wasif",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "Second Performance",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "34",
+      "year": "2025-26",
+      "studentName": "Yesupogu Deepika",
+      "department": "CSE",
+      "category": "Hackathon",
+      "name": "Participation Certificate",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "35",
+      "year": "2025-26",
+      "studentName": "B Prathap",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "Participation Certificate",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "36",
+      "year": "2025-26",
+      "studentName": "S Sandhya Rani",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "Participation Certificate",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "37",
+      "year": "2025-26",
+      "studentName": "B Sai Balaji",
+      "department": "CSE",
+      "category": "Project Expo",
+      "name": "Participation Certificate",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "38",
+      "year": "2025-26",
+      "studentName": "G Rakshitha - I Year",
+      "department": "CSM",
+      "category": "Essay Writing",
+      "name": "First Prize",
+      "awardingBody": "Sathya Sai Seva Samithi - ATP"
+    },
+    {
+      "sNo": "39",
+      "year": "2025-26",
+      "studentName": "P Pavithra - III Year",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "IGC - IDEA & INNOVATION CAMP",
+      "awardingBody": "17 ANDRA BN NCC, VIJAYAWADA, KAKINADA GROUP"
+    },
+    {
+      "sNo": "40",
+      "year": "2025-26",
+      "studentName": "G Bhavya Sree - III Year",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "IGC - IDEA & INNOVATION CAMP",
+      "awardingBody": "17 ANDRA BN NCC, VIJAYAWADA, KAKINADA GROUP"
+    },
+    {
+      "sNo": "41",
+      "year": "2025-26",
+      "studentName": "K Rohitha - II Year",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "IGC - IDEA & INNOVATION CAMP",
+      "awardingBody": "17 ANDRA BN NCC, VIJAYAWADA, KAKINADA GROUP"
+    },
+    {
+      "sNo": "42",
+      "year": "2025-26",
+      "studentName": "P Roopa Sree - II Year",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "IGC - IDEA & INNOVATION CAMP",
+      "awardingBody": "17 ANDRA BN NCC, VIJAYAWADA, KAKINADA GROUP"
+    },
+    {
+      "sNo": "43",
+      "year": "2025-26",
+      "studentName": "P Pavithra",
+      "department": "CIV",
+      "category": "Debate Competition",
+      "name": "Winner",
+      "awardingBody": "14th Police Battalion, Janthuluru, Ananthapuramu"
+    },
+    {
+      "sNo": "44",
+      "year": "2025-26",
+      "studentName": "G Jayasree",
+      "department": "ECE",
+      "category": "Debate Competition",
+      "name": "Winner",
+      "awardingBody": "14th Police Battalion, Janthuluru, Ananthapuramu"
+    },
+    {
+      "sNo": "45",
+      "year": "2025-26",
+      "studentName": "K Rawoof",
+      "department": "CSE",
+      "category": "Debate Competition",
+      "name": "Winner",
+      "awardingBody": "14th Police Battalion, Janthuluru, Ananthapuramu"
+    },
+    {
+      "sNo": "46",
+      "year": "2025-26",
+      "studentName": "Muhammed Ikram R",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize",
+      "awardingBody": "NHETIS-25 at Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad"
+    },
+    {
+      "sNo": "47",
+      "year": "2025-26",
+      "studentName": "Mohammad A",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize",
+      "awardingBody": "NHETIS-25 at Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad"
+    },
+    {
+      "sNo": "48",
+      "year": "2025-26",
+      "studentName": "Mukesh Chowdary K",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize",
+      "awardingBody": "NHETIS-25 at Gokaraju Rangaraju Institute of Engineering and Technology, Hyderabad"
+    },
+    {
+      "sNo": "49",
+      "year": "2025-26",
+      "studentName": "MOHAMMAD HANIF J",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "BEST IDEA AWARD",
+      "awardingBody": "SRM Univeristy, Chennai"
+    },
+    {
+      "sNo": "50",
+      "year": "2025-26",
+      "studentName": "ABDUL REHAMAN YAHYA S",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "BEST IDEA AWARD",
+      "awardingBody": "SRM Univeristy, Chennai"
+    },
+    {
+      "sNo": "51",
+      "year": "2024-25",
+      "studentName": "M. Mohammad Eliyas",
+      "department": "MEC",
+      "category": "Rotaract Club",
+      "name": "Best President",
+      "awardingBody": "Rotary District 3160"
+    },
+    {
+      "sNo": "52",
+      "year": "2024-25",
+      "studentName": "K. Lalith Kumar",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Best Paper Award",
+      "awardingBody": "ICSMMI 2025, Mallareddy Engineering College Hyderabad"
+    },
+    {
+      "sNo": "53",
+      "year": "2024-25",
+      "studentName": "M. Chakradhar and C. Kushanth",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Third prize at National Level Technical Student's Fest \"JIGNASA 2K24\"",
+      "awardingBody": "G.Pulla Reddy Engineering College (Autonomous), Kurnool"
+    },
+    {
+      "sNo": "54",
+      "year": "2024-25",
+      "studentName": "C. Kushanth",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize in the Paper Presentation on \"Nuclear Batteries for EVs: A New Horizon of Sustainable Mobility\"",
+      "awardingBody": "Ananthalakshmi Institute of Technology & Sciences, Anantapur"
+    },
+    {
+      "sNo": "55",
+      "year": "2024-25",
+      "studentName": "Mr. C. Jaya Krishna",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Best Innovation Model Award at the Innovation Expo",
+      "awardingBody": "Raghavendra Institute of Pharmaceutical Education and Research (RIPER) - Autonomous"
+    },
+    {
+      "sNo": "56",
+      "year": "2024-25",
+      "studentName": "Sushant",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Unstop talent award 2025",
+      "awardingBody": "Unstop organization"
+    },
+    {
+      "sNo": "57",
+      "year": "2024-25",
+      "studentName": "C. Kushanth,                                  K. Hari Priya",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "first prize in Project Expo held at EYE 2K25 Electrify Your Education -A National Level Technical Symposium",
+      "awardingBody": "JNTUA College of Engineering  Ananthapuramu"
+    },
+    {
+      "sNo": "58",
+      "year": "2024-25",
+      "studentName": "C. Kushanth",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "first prize in A National Level Technical Symposium",
+      "awardingBody": "JNTUA College of Engineering , Ananthapuramu."
+    },
+    {
+      "sNo": "59",
+      "year": "2024-25",
+      "studentName": "Tatte Aarya",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Best Paper Award",
+      "awardingBody": "DYNAMECH 2K24, JNTU(A) college of engineering"
+    },
+    {
+      "sNo": "60",
+      "year": "2024-25",
+      "studentName": "B. Rajesh",
+      "department": "MEC",
+      "category": "Academic Excellence",
+      "name": "Best Paper Award",
+      "awardingBody": "YANTRA 2K24, JNTU Pulivendula"
+    },
+    {
+      "sNo": "61",
+      "year": "2024-25",
+      "studentName": "Shiva Kumar C",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Best paper award",
+      "awardingBody": "Velammal Institute of Technology"
+    },
+    {
+      "sNo": "62",
+      "year": "2024-25",
+      "studentName": "P Parmitha",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Best paper award",
+      "awardingBody": "Velammal Institute of Technology"
+    },
+    {
+      "sNo": "63",
+      "year": "2024-25",
+      "studentName": "J Likhitha",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Best paper award",
+      "awardingBody": "Velammal Institute of Technology"
+    },
+    {
+      "sNo": "64",
+      "year": "2024-25",
+      "studentName": "M Ravi Teja",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Best paper award",
+      "awardingBody": "Velammal Institute of Technology"
+    },
+    {
+      "sNo": "65",
+      "year": "2024-25",
+      "studentName": "Pramod Kumar A",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "First Prize",
+      "awardingBody": "GATES, Gooty"
+    },
+    {
+      "sNo": "66",
+      "year": "2024-25",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "67",
+      "year": "2024-25",
+      "studentName": "CDT C.Prasanna Kumar",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "68",
+      "year": "2024-25",
+      "studentName": "JUO N.Sheshadri Naidu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "69",
+      "year": "2024-25",
+      "studentName": "SGT C.Prasanna Kumar",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "70",
+      "year": "2024-25",
+      "studentName": "SGT M.Murali",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "71",
+      "year": "2024-25",
+      "studentName": "SGT P.Praveen Kumar",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "72",
+      "year": "2024-25",
+      "studentName": "SGT R.Chitralingappa",
+      "department": "EEE",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "73",
+      "year": "2024-25",
+      "studentName": "SUO MG Balu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "AAC Certificate 2024",
+      "awardingBody": "61 Medium Regt, 54 Inf Div"
+    },
+    {
+      "sNo": "74",
+      "year": "2024-25",
+      "studentName": "SUO M.Thanu Chandana",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "IGC RDC Cultural Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "75",
+      "year": "2024-25",
+      "studentName": "SUO MG Balu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "IGC RDC Cultural Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "76",
+      "year": "2024-25",
+      "studentName": "CDT N.Himavarshini",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "IGC RDC BC Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "77",
+      "year": "2024-25",
+      "studentName": "CDT SR Shajahan",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "IGC RDC Flag Area Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "78",
+      "year": "2024-25",
+      "studentName": "SGT V.Manogna",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "IGC RDC Drill Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "79",
+      "year": "2024-25",
+      "studentName": "CUO M.Thanu Chandana",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "PRDC Cultural Participation",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "80",
+      "year": "2024-25",
+      "studentName": "SUO V.Sai Ganesh Reddy",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Level Trekking Certificate",
+      "awardingBody": "9 Kerala Bn NCC, Kottarakkara"
+    },
+    {
+      "sNo": "81",
+      "year": "2024-25",
+      "studentName": "JUO M G Balu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Level Trekking Certificate",
+      "awardingBody": "9 Kerala Bn NCC, Kottarakkara"
+    },
+    {
+      "sNo": "82",
+      "year": "2024-25",
+      "studentName": "JUO M Jagadeesh",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "National Level Trekking Certificate",
+      "awardingBody": "9 Kerala Bn NCC, Kottarakkara"
+    },
+    {
+      "sNo": "83",
+      "year": "2024-25",
+      "studentName": "SGT S Mohammad Anees",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Level Trekking Certificate",
+      "awardingBody": "9 Kerala Bn NCC, Kottarakkara"
+    },
+    {
+      "sNo": "84",
+      "year": "2024-25",
+      "studentName": "Cdt Faiza Siddotam",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "85",
+      "year": "2024-25",
+      "studentName": "Cdt Bhargavi",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "86",
+      "year": "2024-25",
+      "studentName": "Cdt Bhavyasree",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "87",
+      "year": "2024-25",
+      "studentName": "Cdt Afreen",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "88",
+      "year": "2024-25",
+      "studentName": "Cdt Sathvika",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "89",
+      "year": "2024-25",
+      "studentName": "Cdt Lakshmi",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "State Level Trekking Camp Certificate",
+      "awardingBody": "AP&T Directorate"
+    },
+    {
+      "sNo": "90",
+      "year": "2024-25",
+      "studentName": "G. Meghana",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "ASHRAY 2k25-JNTUA Pulivendula"
+    },
+    {
+      "sNo": "91",
+      "year": "2024-25",
+      "studentName": "PRAMOD KUMAR A",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "First Prize-Code Catalyst - Hackathon",
+      "awardingBody": "GATES, Gooty"
+    },
+    {
+      "sNo": "92",
+      "year": "2024-25",
+      "studentName": "P. Venkateswarulu",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize Hackathon",
+      "awardingBody": "Tadipatri Engineering college,ATP"
+    },
+    {
+      "sNo": "93",
+      "year": "2024-25",
+      "studentName": "CHIDIGE KUSHANTH",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "3rd Prize-jignasa-2k24(GPREC)",
+      "awardingBody": "G.PULLA REDDY ENGINEERING COLLEGE-KURNOOL"
+    },
+    {
+      "sNo": "94",
+      "year": "2024-25",
+      "studentName": "M.CHAKRADHAR",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "3rd Prize-jignasa-2k24(GPREC)",
+      "awardingBody": "G.PULLA REDDY ENGINEERING COLLEGE-KURNOOL"
+    },
+    {
+      "sNo": "95",
+      "year": "2024-25",
+      "studentName": "B.Geethika",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Jntua"
+    },
+    {
+      "sNo": "96",
+      "year": "2024-25",
+      "studentName": "Singa Reddy Madhuri",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "97",
+      "year": "2024-25",
+      "studentName": "Balaji G",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "JNTU-A"
+    },
+    {
+      "sNo": "98",
+      "year": "2024-25",
+      "studentName": "P. Tejaswini",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "pvkk institution of technology, anantpur"
+    },
+    {
+      "sNo": "99",
+      "year": "2024-25",
+      "studentName": "Mangala Chandana",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University and JNTU Anantapur"
+    },
+    {
+      "sNo": "100",
+      "year": "2024-25",
+      "studentName": "Mohammad Hanif J",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "NYK Meeting Hall, Anantapur"
+    },
+    {
+      "sNo": "101",
+      "year": "2024-25",
+      "studentName": "Mohammad Hanif J",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "GATES Institute of technology Gooty"
+    },
+    {
+      "sNo": "102",
+      "year": "2024-25",
+      "studentName": "Prudhvi Narayana P",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "GATES Institute of Technology"
+    },
+    {
+      "sNo": "103",
+      "year": "2024-25",
+      "studentName": "Prudhvi Narayana P",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Gates Institute of Technology"
+    },
+    {
+      "sNo": "104",
+      "year": "2024-25",
+      "studentName": "B manisharma",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Gooty GATES"
+    },
+    {
+      "sNo": "105",
+      "year": "2024-25",
+      "studentName": "Mohammad Hanif J",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "GATES INSTITUTE OF TECHNOLOGY, GOOTY"
+    },
+    {
+      "sNo": "106",
+      "year": "2024-25",
+      "studentName": "Arshiya Anjum.D",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "PVKK Institute Of Technology"
+    },
+    {
+      "sNo": "107",
+      "year": "2023-24",
+      "studentName": "Team Level(1. Suchithra 2. Sujitha 3. Sumiya Begam)",
+      "department": "ECE",
+      "category": "Innovation",
+      "name": "Best Startup Eco System Enabler Women Entrepreneurship",
+      "awardingBody": "AIC-SKU Anantapur"
+    },
+    {
+      "sNo": "108",
+      "year": "2023-24",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "109",
+      "year": "2023-24",
+      "studentName": "Cdt Sai Ganesh",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2023",
+      "awardingBody": "NCC AP&T Directorate"
+    },
+    {
+      "sNo": "110",
+      "year": "2023-24",
+      "studentName": "Cdt Najmus Sahar",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2023",
+      "awardingBody": "NCC AP&T Directorate"
+    },
+    {
+      "sNo": "111",
+      "year": "2023-24",
+      "studentName": "Cdt Balu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2023",
+      "awardingBody": "NCC AP&T Directorate"
+    },
+    {
+      "sNo": "112",
+      "year": "2023-24",
+      "studentName": "Cdt SG Khalid",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2023",
+      "awardingBody": "NCC AP&T Directorate"
+    },
+    {
+      "sNo": "113",
+      "year": "2023-24",
+      "studentName": "Cdt Veda Ganesh",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2023",
+      "awardingBody": "NCC AP&T Directorate"
+    },
+    {
+      "sNo": "114",
+      "year": "2023-24",
+      "studentName": "Cdt C.Praveen Kumar",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "115",
+      "year": "2023-24",
+      "studentName": "Cdt G.Srimanth",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "116",
+      "year": "2023-24",
+      "studentName": "Cdt M.Lokesh",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "117",
+      "year": "2023-24",
+      "studentName": "Cdt N.Seshadri Naidu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "118",
+      "year": "2023-24",
+      "studentName": "Cdt P.Vijaya Bhaskar Reddy",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "119",
+      "year": "2023-24",
+      "studentName": "Cdt P.Adarsh Babu",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "120",
+      "year": "2023-24",
+      "studentName": "Cdt P.Karthik",
+      "department": "CSD",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "121",
+      "year": "2023-24",
+      "studentName": "Cdt P.Praveen Kumar",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Trekking Camp- Participation",
+      "awardingBody": "NCC KAR&GOA Directorate"
+    },
+    {
+      "sNo": "122",
+      "year": "2023-24",
+      "studentName": "S. Chaitanya",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "2nd prize",
+      "awardingBody": "PVKK ATP"
+    },
+    {
+      "sNo": "123",
+      "year": "2023-24",
+      "studentName": "Tajuddin shaik",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "2nd prize",
+      "awardingBody": "PVKK ATP"
+    },
+    {
+      "sNo": "124",
+      "year": "2023-24",
+      "studentName": "D. Prudhvi",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "2nd prize",
+      "awardingBody": "PVKK ATP"
+    },
+    {
+      "sNo": "125",
+      "year": "2023-24",
+      "studentName": "K. Shivamani",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "2nd prize",
+      "awardingBody": "PVKK ATP"
+    },
+    {
+      "sNo": "126",
+      "year": "2023-24",
+      "studentName": "P. Sai keerthi",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Winner",
+      "awardingBody": "SV University Tirupati"
+    },
+    {
+      "sNo": "127",
+      "year": "2023-24",
+      "studentName": "C. Yashaswi",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "Winner",
+      "awardingBody": "SV University Tirupati"
+    },
+    {
+      "sNo": "128",
+      "year": "2023-24",
+      "studentName": "A. Poojitha",
+      "department": "CIV",
+      "category": "Cocurricular and Extra activities",
+      "name": "30th place (Chess Womens)",
+      "awardingBody": "Dr. Ambedkar law university chennai"
+    },
+    {
+      "sNo": "129",
+      "year": "2023-24",
+      "studentName": "ALURU KIRANMAIK P BHARATA DEEPTHI",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Prize-ACE Techzion 2K24",
+      "awardingBody": "AEC, Madanapalii"
+    },
+    {
+      "sNo": "130",
+      "year": "2023-24",
+      "studentName": "K GREESHMA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Hackfest, Hackthon(48hrs)",
+      "awardingBody": "GITAM University (Deemed to be)"
+    },
+    {
+      "sNo": "131",
+      "year": "2023-24",
+      "studentName": "S ABHINAYA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Hackfest, Hackthon(48hrs)",
+      "awardingBody": "GITAM University (Deemed to be)"
+    },
+    {
+      "sNo": "132",
+      "year": "2023-24",
+      "studentName": "K DEEKSHITHA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Hackfest, Hackthon(48hrs)",
+      "awardingBody": "GITAM University (Deemed to be)"
+    },
+    {
+      "sNo": "133",
+      "year": "2023-24",
+      "studentName": "J JAGADHABIRAM SHARWAN",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Hackfest, Hackthon(48hrs)",
+      "awardingBody": "GITAM University (Deemed to be)"
+    },
+    {
+      "sNo": "134",
+      "year": "2023-24",
+      "studentName": "V JAGAN MOHAN REDDY",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Hackfest, Hackthon(48hrs)",
+      "awardingBody": "GITAM University (Deemed to be)"
+    },
+    {
+      "sNo": "135",
+      "year": "2023-24",
+      "studentName": "SUJITHA MSUMIYA BEGUM",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize-Innovation Expo-2024",
+      "awardingBody": "RIPER"
+    },
+    {
+      "sNo": "136",
+      "year": "2023-24",
+      "studentName": "B SUVARNA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Runner Mohana mantra Paper Presentation",
+      "awardingBody": "MBU University"
+    },
+    {
+      "sNo": "137",
+      "year": "2023-24",
+      "studentName": "D. Shabnam",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Runner Mohana mantra Paper Presentation",
+      "awardingBody": "MBU University"
+    },
+    {
+      "sNo": "138",
+      "year": "2023-24",
+      "studentName": "G. Sri Nithya",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Runner Mohana mantra Paper Presentation",
+      "awardingBody": "MBU University"
+    },
+    {
+      "sNo": "139",
+      "year": "2023-24",
+      "studentName": "P. Loksai",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize Paper Presentation",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "140",
+      "year": "2023-24",
+      "studentName": "D.Charan kumar",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize Paper Presentation",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "141",
+      "year": "2023-24",
+      "studentName": "B.Manikanta",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "2nd HACAKATHON",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "142",
+      "year": "2023-24",
+      "studentName": "B.Swaroopa",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "3rd Paper Presentation",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "143",
+      "year": "2023-24",
+      "studentName": "R. Suraiahkhaisar",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize code thantra",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "144",
+      "year": "2023-24",
+      "studentName": "M. Shagufta fathima",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "3rd Paper Presentation",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "145",
+      "year": "2023-24",
+      "studentName": "N.Lasya",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize HACAKATHON",
+      "awardingBody": "Anantha Lakshmi institute of technology"
+    },
+    {
+      "sNo": "146",
+      "year": "2023-24",
+      "studentName": "G.Keerthana",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "2nd prize Paper Presentation",
+      "awardingBody": "Ashoka Womens Engineering College"
+    },
+    {
+      "sNo": "147",
+      "year": "2023-24",
+      "studentName": "B.Sri Vaishnavi",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "2nd prize Code Debugging",
+      "awardingBody": "Madanapalle Institue of Technology"
+    },
+    {
+      "sNo": "148",
+      "year": "2023-24",
+      "studentName": "C. Samreen",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize Technical Quiz",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "149",
+      "year": "2023-24",
+      "studentName": "SUJITHA MSUMIYA BEGUM",
+      "department": "ECE",
+      "category": "Innovation",
+      "name": "Consolation Prize-Innovation Expo-2024",
+      "awardingBody": "RIPER"
+    },
+    {
+      "sNo": "150",
+      "year": "2023-24",
+      "studentName": "C.Kushanth",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Second Prize-National Level Technical Symposium",
+      "awardingBody": "JNTU PULLIVENDALLA"
+    },
+    {
+      "sNo": "151",
+      "year": "2023-24",
+      "studentName": "C.Kushanth",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-YUVA Poster Presentation",
+      "awardingBody": "Central University Of Andhra Pradesh"
+    },
+    {
+      "sNo": "152",
+      "year": "2023-24",
+      "studentName": "N.SAI HARSHA VARDHAN",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Anantha lakshmi collage"
+    },
+    {
+      "sNo": "153",
+      "year": "2023-24",
+      "studentName": "K. ASHA NIDHI",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University, Anantapur"
+    },
+    {
+      "sNo": "154",
+      "year": "2023-24",
+      "studentName": "Y SUNIL BABU",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Ananta Lakshmi Institute of Technology, Anantapur"
+    },
+    {
+      "sNo": "155",
+      "year": "2023-24",
+      "studentName": "N. HARI KRISHNA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University, Anantapur"
+    },
+    {
+      "sNo": "156",
+      "year": "2023-24",
+      "studentName": "K. HEMANTH REDDY",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University, Anantapur"
+    },
+    {
+      "sNo": "157",
+      "year": "2023-24",
+      "studentName": "PUNE ROSHNI",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Sri krishnadevaraya University Anantapur"
+    },
+    {
+      "sNo": "158",
+      "year": "2023-24",
+      "studentName": "KALLUKURI VYSHNAVI",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Sri Krishnadevaraya university college of engineering and technology, Anantapur."
+    },
+    {
+      "sNo": "159",
+      "year": "2023-24",
+      "studentName": "GUNDAGALA AKSHAYA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Sri Krishnadevaraya University College of Engineering and Technology Anantapuramu."
+    },
+    {
+      "sNo": "160",
+      "year": "2023-24",
+      "studentName": "S.MOHAMMAD FARAZ",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Anantha Lakshmi institute of Technology & Sciences"
+    },
+    {
+      "sNo": "161",
+      "year": "2023-24",
+      "studentName": "R.NITHYA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize",
+      "awardingBody": "Anantha Lakshmi institute of technology and sciences, Anantapur, Andhra Pradesh"
+    },
+    {
+      "sNo": "162",
+      "year": "2023-24",
+      "studentName": "LAKSHMI ABHEEGNA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "JNTU anantapur"
+    },
+    {
+      "sNo": "163",
+      "year": "2023-24",
+      "studentName": "GREESHMA SAI D",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University Anantapur"
+    },
+    {
+      "sNo": "164",
+      "year": "2023-24",
+      "studentName": "MADHURI S",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Anantha Lakshimi Institute of Technology and Sciences, Anantapur"
+    },
+    {
+      "sNo": "165",
+      "year": "2023-24",
+      "studentName": "N. PRASHANTHI",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "3rd Prize",
+      "awardingBody": "Tech college"
+    },
+    {
+      "sNo": "166",
+      "year": "2023-24",
+      "studentName": "K.KUSUMA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Jawaharlal Nehru Technological University Anantapur in online mode"
+    },
+    {
+      "sNo": "167",
+      "year": "2023-24",
+      "studentName": "DEVARAKONDA BINDU",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Sri Krishnadevarayala Universality Anantapur"
+    },
+    {
+      "sNo": "168",
+      "year": "2023-24",
+      "studentName": "DEVARAKONDA BINDU",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize",
+      "awardingBody": "Sri Krishnadevarayala University Anantapur"
+    },
+    {
+      "sNo": "169",
+      "year": "2022-23",
+      "studentName": "N. Md. Soheb",
+      "department": "CIV",
+      "category": "Rotaract",
+      "name": "Best Secretary Award",
+      "awardingBody": "Rotary Club International"
+    },
+    {
+      "sNo": "170",
+      "year": "2022-23",
+      "studentName": "P. Harshavardhan",
+      "department": "EEE",
+      "category": "Rotaract",
+      "name": "Community Services Award",
+      "awardingBody": "Rotary Club International"
+    },
+    {
+      "sNo": "171",
+      "year": "2022-23",
+      "studentName": "Team                                    1. Suchithra 2. Sujitha                        3. Sumiya Begam",
+      "department": "ECE",
+      "category": "Innovation",
+      "name": "Second Prize in Kisan Mela",
+      "awardingBody": "Acharya NG Ranga Agriculture University, Anantapuramu"
+    },
+    {
+      "sNo": "172",
+      "year": "2022-23",
+      "studentName": "Team                                1. Maneesha 2. D.Jayasree 3. Mery Stella 4. G.Muskan",
+      "department": "EEE",
+      "category": "Innovation",
+      "name": "Consolation Prize in Kisan Mela",
+      "awardingBody": "Acharya NG Ranga Agriculture University, Anantapuramu"
+    },
+    {
+      "sNo": "173",
+      "year": "2022-23",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "174",
+      "year": "2022-23",
+      "studentName": "Cdt R.Aasritha",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Lakholi, India"
+    },
+    {
+      "sNo": "175",
+      "year": "2022-23",
+      "studentName": "Cdt P.S.Yasaswini",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Lakholi, India"
+    },
+    {
+      "sNo": "176",
+      "year": "2022-23",
+      "studentName": "CUO B.N.Anantha Krishna",
+      "department": "MEC",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2022",
+      "awardingBody": "District Police Training Center, Chittoor, AP&T Directorate"
+    },
+    {
+      "sNo": "177",
+      "year": "2022-23",
+      "studentName": "CUO S.Basheeruddin",
+      "department": "MEC",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2022",
+      "awardingBody": "District Police Training Center, Chittoor, AP&T Directorate"
+    },
+    {
+      "sNo": "178",
+      "year": "2022-23",
+      "studentName": "Sgt K.Nitheesh",
+      "department": "MEC",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2022",
+      "awardingBody": "District Police Training Center, Chittoor, AP&T Directorate"
+    },
+    {
+      "sNo": "179",
+      "year": "2022-23",
+      "studentName": "Cdt G.Greeshma Teja",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "Selected and Participated in Inter Group Competition for Republic Camp 2022",
+      "awardingBody": "District Police Training Center, Chittoor, AP&T Directorate"
+    },
+    {
+      "sNo": "180",
+      "year": "2022-23",
+      "studentName": "Cdt S.G Khalid",
+      "department": "CIV",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "181",
+      "year": "2022-23",
+      "studentName": "Cdt Nandha Vardhan",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "182",
+      "year": "2022-23",
+      "studentName": "Cdt A.Balaji",
+      "department": "CSM",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "183",
+      "year": "2022-23",
+      "studentName": "Cdt Harshavardhan",
+      "department": "EEE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "184",
+      "year": "2022-23",
+      "studentName": "Cdt Jagadeesh",
+      "department": "ECE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "185",
+      "year": "2022-23",
+      "studentName": "Cdt Sameer",
+      "department": "EEE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "186",
+      "year": "2022-23",
+      "studentName": "Cdt Sri Abhilaash",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "187",
+      "year": "2022-23",
+      "studentName": "Cdt Sai Ganesh Reddy",
+      "department": "CSE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "188",
+      "year": "2022-23",
+      "studentName": "Cdt Yaso Vardhan",
+      "department": "EEE",
+      "category": "NCC",
+      "name": "National Camp-Participation",
+      "awardingBody": "NCC, Guntur, India"
+    },
+    {
+      "sNo": "189",
+      "year": "2022-23",
+      "studentName": "Md. Asif Raza",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "1st prize",
+      "awardingBody": "JNTUA"
+    },
+    {
+      "sNo": "190",
+      "year": "2022-23",
+      "studentName": "A. Poojitha",
+      "department": "CIV",
+      "category": "Cocurricular and Extra activities",
+      "name": "36th place (Chess Womens)",
+      "awardingBody": "Reva university Bangalore"
+    },
+    {
+      "sNo": "191",
+      "year": "2022-23",
+      "studentName": "K. GREESHMA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Symposium - paper Presentation",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "192",
+      "year": "2022-23",
+      "studentName": "P. PAVITHRA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Symposium - paper Presentation",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "193",
+      "year": "2022-23",
+      "studentName": "S. ABHINAYA",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Symposium - paper Presentation",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "194",
+      "year": "2022-23",
+      "studentName": "G. PRANATHI",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "3rd prize, Symposium - paper Presentation",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "195",
+      "year": "2022-23",
+      "studentName": "G. PRANUTHI",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "3rd prize, Symposium - paper Presentation",
+      "awardingBody": "JNTU Anantapur"
+    },
+    {
+      "sNo": "196",
+      "year": "2022-23",
+      "studentName": "N. Laasya",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "1st prize, Symposium - paper Presentation",
+      "awardingBody": "KSRM Kadapa"
+    },
+    {
+      "sNo": "197",
+      "year": "2022-23",
+      "studentName": "N. Laasya",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "2nd prize, Symposium - Bug Tracking",
+      "awardingBody": "KSRM Kadapa"
+    },
+    {
+      "sNo": "198",
+      "year": "2022-23",
+      "studentName": "P. Chinamayee",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize, Hackathon 2K23",
+      "awardingBody": "Nalla Narasimha Group of Institutions, Hyderabad."
+    },
+    {
+      "sNo": "199",
+      "year": "2022-23",
+      "studentName": "K. Greeshma",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize, Hackathon 2K23",
+      "awardingBody": "Nalla Narasimha Group of Institutions, Hyderabad."
+    },
+    {
+      "sNo": "200",
+      "year": "2022-23",
+      "studentName": "Shaik Gouse Peer",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "Consolation Prize, Hackathon 2K23",
+      "awardingBody": "Nalla Narasimha Group of Institutions, Hyderabad."
+    },
+    {
+      "sNo": "201",
+      "year": "2022-23",
+      "studentName": "DIVYA RKARAN KUMAR K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Prize-EMERGE- 2K23",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "202",
+      "year": "2022-23",
+      "studentName": "MEGHANA KMAMATHA T",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Prize-Guru Fest - 2023",
+      "awardingBody": "Gurunanak Dev Engineering College, Bidar, Karnataka"
+    },
+    {
+      "sNo": "203",
+      "year": "2022-23",
+      "studentName": "RAGINI K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second prize-STRIDES EJIVE 2K23",
+      "awardingBody": "Pragati Engineering College, Surampalem"
+    },
+    {
+      "sNo": "204",
+      "year": "2022-23",
+      "studentName": "SHAILAJA B",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Third Prize-Yuva Sangam",
+      "awardingBody": "NIT, Arunachal Pradesh"
+    },
+    {
+      "sNo": "205",
+      "year": "2022-23",
+      "studentName": "K. SUCHITRAM. SUJITHAS. SUMIYA BEGUM",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second prize-Kisan Mela-2023",
+      "awardingBody": "Agriculture Research Station, Anantapur"
+    },
+    {
+      "sNo": "206",
+      "year": "2022-23",
+      "studentName": "SHAILAJA B",
+      "department": "ECE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Third Prize-Yuva Sangam",
+      "awardingBody": "NIT, Arunachal Pradesh"
+    },
+    {
+      "sNo": "207",
+      "year": "2022-23",
+      "studentName": "K. SUCHITRAM. SUJITHAS. SUMIYA BEGUM",
+      "department": "ECE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Second prize-Kisan Mela-2023",
+      "awardingBody": "Agriculture Research Station, Anantapur"
+    },
+    {
+      "sNo": "208",
+      "year": "2022-23",
+      "studentName": "Ms.K. Wajida Sultana",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize-EYE 2K22",
+      "awardingBody": "JNTUA, Anatapur"
+    },
+    {
+      "sNo": "209",
+      "year": "2022-23",
+      "studentName": "Ms.S.Nasreen",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize-EYE 2K22",
+      "awardingBody": "JNTUA, Anatapur"
+    },
+    {
+      "sNo": "210",
+      "year": "2022-23",
+      "studentName": "Ms.P. Jyothisree",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize-SK University Technical Symposium Amp 2K23.",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "211",
+      "year": "2022-23",
+      "studentName": "Ms.G. Kalyani",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize-SK University Technical Symposium Amp 2K23.",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "212",
+      "year": "2022-23",
+      "studentName": "Ms.Y. Kusuma",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize-SK University Technical Symposium Amp 2K23.",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "213",
+      "year": "2022-23",
+      "studentName": "Mr.S. Subhani Suhail",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Silver medal-\"State LevelWrestling Tournament\"",
+      "awardingBody": "Naidupeta, Tirupati"
+    },
+    {
+      "sNo": "214",
+      "year": "2022-23",
+      "studentName": "Ms.P. Gowthami,Mr. Sudheer,Ms. Sania",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Third Prize-Quiz Competition",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "215",
+      "year": "2022-23",
+      "studentName": "Mr.S. Subahani Suhail,Ms.M. Supraja,Ms.T. Swetha",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-Quiz Competition",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "216",
+      "year": "2022-23",
+      "studentName": "P.Jyothisree , G.Kalyani ,Y.Kusuma",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-Paper Presentation",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "217",
+      "year": "2022-23",
+      "studentName": "Y.Laya , V.R.G.Jyothi",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Cosolation Prize-Paper Presentation",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "218",
+      "year": "2022-23",
+      "studentName": "Subhani Suhail,B.Shashank",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First prize- Project expo at Amp2k23",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "219",
+      "year": "2022-23",
+      "studentName": "P.Gowthami ,G.Sudheer,S.Sonia",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "Second Prize- Project expo at Amp2k23",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "220",
+      "year": "2022-23",
+      "studentName": "N HARI KRISHNA,K ASHA NIDHI,K ASHA NIDHI,K HEMANTH REDDY",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "2nd Prize-Hackathon",
+      "awardingBody": "Dept. of CSE JNTUACE"
+    },
+    {
+      "sNo": "221",
+      "year": "2022-23",
+      "studentName": "K VYSHNAVI,P ROSHINI,G AKSHAYA",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "1st Prize-Poster Presentation on Cyber Security",
+      "awardingBody": "S.K University,Ananthapuramu"
+    },
+    {
+      "sNo": "222",
+      "year": "2022-23",
+      "studentName": "K. Gopichand",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "1st prize-Symposium-Paper Presentation",
+      "awardingBody": "JNTU Pulivendula"
+    },
+    {
+      "sNo": "223",
+      "year": "2022-23",
+      "studentName": "K. Mahitha",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "1st prize-Symposium-Debugging",
+      "awardingBody": "JNTUCEA, Ananthapuramu"
+    },
+    {
+      "sNo": "224",
+      "year": "2022-23",
+      "studentName": "G. Vimala",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "2nd  prize-Symposium-Debugging",
+      "awardingBody": "JNTUCEA, Ananthapuramu"
+    },
+    {
+      "sNo": "225",
+      "year": "2022-23",
+      "studentName": "N Poojitha Reddy",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "2nd Prize-Symposium-Quiz",
+      "awardingBody": "JNTUCEA, Ananthapuramu"
+    },
+    {
+      "sNo": "226",
+      "year": "2022-23",
+      "studentName": "N Poojitha Reddy",
+      "department": "CSM",
+      "category": "Academic Excellence",
+      "name": "2nd Prize-Symposium-Quiz",
+      "awardingBody": "JNTUCEA, Ananthapuramu"
+    },
+    {
+      "sNo": "227",
+      "year": "2021-22",
+      "studentName": "M. Upendra Reddy",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "2nd prize",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "228",
+      "year": "2021-22",
+      "studentName": "G.Sresha",
+      "department": "CSD",
+      "category": "Academic Excellence",
+      "name": "3rd prize",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "229",
+      "year": "2021-22",
+      "studentName": "Mohammad Asif Raza",
+      "department": "CIV",
+      "category": "Academic Excellence",
+      "name": "1st prize",
+      "awardingBody": "ALTS"
+    },
+    {
+      "sNo": "230",
+      "year": "2021-22",
+      "studentName": "K.Vijay kumar",
+      "department": "CIV",
+      "category": "Cocurricular and Extra activities",
+      "name": "29th place(Chess)",
+      "awardingBody": "SRM chennai"
+    },
+    {
+      "sNo": "231",
+      "year": "2021-22",
+      "studentName": "SHAGUFTA RABBANI B",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Topper-The Joy of Computing using Python",
+      "awardingBody": "NPTEL(Jan–Apr 2022)"
+    },
+    {
+      "sNo": "232",
+      "year": "2021-22",
+      "studentName": "MEGHANA ULOKESHWAR K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Place-EYE 2K22",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "233",
+      "year": "2021-22",
+      "studentName": "SHAIK SANIA GVINATHI K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "First Place-E-MERGW 2K22",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "234",
+      "year": "2021-22",
+      "studentName": "MARY PRAGNA PSABHIHA TAJ S",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Place-E-MERGW 2K22",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "235",
+      "year": "2021-22",
+      "studentName": "JAGAN DRAJIYA D",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Third Place-E-MERGW 2K22",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "236",
+      "year": "2021-22",
+      "studentName": "MAHENDRA M",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Place-E-MERGW 2K22",
+      "awardingBody": "JNTUA, Anantapur"
+    },
+    {
+      "sNo": "237",
+      "year": "2021-22",
+      "studentName": "G.Sai Deepthi",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "GOLD-Techwondo Championship",
+      "awardingBody": "Rayalaseema Techwondo Championship"
+    },
+    {
+      "sNo": "238",
+      "year": "2021-22",
+      "studentName": "G.Sai Deepthi",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "GOLD-Techwondo Championship",
+      "awardingBody": "Azadi ka amrit mahostav fit India national Taekwando championship"
+    },
+    {
+      "sNo": "239",
+      "year": "2021-22",
+      "studentName": "M. Girija Rani",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "First Prize-Paper Presentation",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "240",
+      "year": "2021-22",
+      "studentName": "R. Raj Kiran",
+      "department": "CSE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-Sherlock Search",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "241",
+      "year": "2021-22",
+      "studentName": "D. Harshith,G. Mounesh,S. Mohammad Faraz",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "First Prize-Technical Quiz",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "242",
+      "year": "2021-22",
+      "studentName": "Sunil Babu",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "First Prize-Code Crackers",
+      "awardingBody": "ALTS, Ananthapuramu"
+    },
+    {
+      "sNo": "243",
+      "year": "2021-22",
+      "studentName": "A. Krishna Sampada",
+      "department": "CSE",
+      "category": "Academic Excellence",
+      "name": "Third Prize-Poster Presentation",
+      "awardingBody": "JNTUCEA, Ananthapuramu"
+    },
+    {
+      "sNo": "244",
+      "year": "2020-21",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "245",
+      "year": "2020-21",
+      "studentName": "LAKSHMI SANKEERTHANA PMYTHRI MMOUNIKA YCHARITHA G",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "First Best Paper-NCATCSIT-2021",
+      "awardingBody": "Geethanjali Institute of Science & Technology, SPSR Nellore"
+    },
+    {
+      "sNo": "246",
+      "year": "2020-21",
+      "studentName": "KAVYA SREE PGOWTHAM DG E ANUSHAJAGADEESHWARA REDDY P",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Best Paper-NCATCSIT-2021",
+      "awardingBody": "Geethanjali Institute of Science & Technology, SPSR Nellore"
+    },
+    {
+      "sNo": "247",
+      "year": "2020-21",
+      "studentName": "SAI SREEVIDHYA NRAGHU PSHRESTA BHARI KRISHNA K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Best Paper-NCATCSIT-2021",
+      "awardingBody": "Geethanjali Institute of Science & Technology, SPSR Nellore"
+    },
+    {
+      "sNo": "248",
+      "year": "2020-21",
+      "studentName": "SHILPA SB ROHITH RAYALPRASANNA KUMAR REDDY VSARASWATI D",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "Second Best Paper",
+      "awardingBody": "Geethanjali Institute of Science & Technology, SPSR Nellore"
+    },
+    {
+      "sNo": "249",
+      "year": "2020-21",
+      "studentName": "P DHANYA SREEA.LIKHITHA             GAYATHRI UANJANA K",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "1st Prize-IES",
+      "awardingBody": "NEC, Narasaraopeta"
+    },
+    {
+      "sNo": "250",
+      "year": "2020-21",
+      "studentName": "SAI SREEVIDHYA N",
+      "department": "ECE",
+      "category": "Academic Excellence",
+      "name": "1st Prize-National Water Mission",
+      "awardingBody": "NYK, Anantapuramu"
+    },
+    {
+      "sNo": "251",
+      "year": "2020-21",
+      "studentName": "SAI SREEVIDHYA N",
+      "department": "ECE",
+      "category": "Cocurricular and Extra activities",
+      "name": "1st Prize-National Water Mission",
+      "awardingBody": "NYK, Anantapuramu"
+    },
+    {
+      "sNo": "252",
+      "year": "2019-20",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "253",
+      "year": "2019-20",
+      "studentName": "E. Sahithi",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "254",
+      "year": "2019-20",
+      "studentName": "Y. Vyshnavi",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "255",
+      "year": "2019-20",
+      "studentName": "S. Pavithra",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Third Prize",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "256",
+      "year": "2019-20",
+      "studentName": "A. Pavithra",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Third Prize",
+      "awardingBody": "SKU"
+    },
+    {
+      "sNo": "257",
+      "year": "2019-20",
+      "studentName": "P. Harini",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize-EYE 2K19- Technical Qui",
+      "awardingBody": "JNTUA, Ananthapuramu."
+    },
+    {
+      "sNo": "258",
+      "year": "2019-20",
+      "studentName": "M. Naga Jyothi",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "First Prize-EYE 2K19- Technical Qui",
+      "awardingBody": "JNTUA, Ananthapuramu."
+    },
+    {
+      "sNo": "259",
+      "year": "2019-20",
+      "studentName": "K. Rakesh",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Second Prize",
+      "awardingBody": "GATES college, Gooty."
+    },
+    {
+      "sNo": "260",
+      "year": "2019-20",
+      "studentName": "M. Sainath Reddy",
+      "department": "EEE",
+      "category": "Academic Excellence",
+      "name": "Second Prize",
+      "awardingBody": "GATES college, Gooty."
+    },
+    {
+      "sNo": "261",
+      "year": "2019-20",
+      "studentName": "T. Nikhil",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-Poster Presentatiion",
+      "awardingBody": "SK University"
+    },
+    {
+      "sNo": "262",
+      "year": "2019-20",
+      "studentName": "K. Rakesh,Sai Krishna",
+      "department": "EEE",
+      "category": "Cocurricular and Extra activities",
+      "name": "First Prize-Poster Presentatiion",
+      "awardingBody": "Sanskrithi School of Engineering, Putttaparthi."
+    },
+    {
+      "sNo": "263",
+      "year": "2018-19",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "264",
+      "year": "2017-18",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "265",
+      "year": "2016-17",
+      "studentName": "Students Category",
+      "department": "ALL BRANCHES",
+      "category": "Academic Excellence",
+      "name": "Gold, Silver, Elite, Topper",
+      "awardingBody": "NPTEL"
+    },
+    {
+      "sNo": "266",
+      "year": "2022-23",
+      "studentName": "TM Deepak",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "Excellence In Education Award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "267",
+      "year": "2022-23",
+      "studentName": "TM Divya Priyanka",
+      "department": "ECE",
+      "category": "Toastmasters",
+      "name": "Excellence in Education Award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "268",
+      "year": "2022-23",
+      "studentName": "TM Deepika",
+      "department": "CSD",
+      "category": "Toastmasters",
+      "name": "Excellence in Education Award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "269",
+      "year": "2022-23",
+      "studentName": "TM Siri Sumana",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "PR of the Month",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "270",
+      "year": "2022-23",
+      "studentName": "TM Nikath Fatima",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "Model G20 Best Delegate",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "271",
+      "year": "2023-24",
+      "studentName": "TM Ambika",
+      "department": "ECE",
+      "category": "Toastmasters",
+      "name": "Excellence In Education Award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "272",
+      "year": "2023-24",
+      "studentName": "TM Asma",
+      "department": "CSD",
+      "category": "Toastmasters",
+      "name": "1 st in area level HSC contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "273",
+      "year": "2023-24",
+      "studentName": "TM Muskan",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "2nd place in HSC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "274",
+      "year": "2023-24",
+      "studentName": "TM mariya",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "3nd place in HSC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "275",
+      "year": "2023-24",
+      "studentName": "TM Nikath",
+      "department": "CSD",
+      "category": "Toastmasters",
+      "name": "1st place in area level contest ESC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "276",
+      "year": "2023-24",
+      "studentName": "TM Muskan",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "2nd place in area level contest ESC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "277",
+      "year": "2023-24",
+      "studentName": "TM Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "3rd place in area level contest ESC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "278",
+      "year": "2023-24",
+      "studentName": "TM Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "1st place in ISC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "279",
+      "year": "2023-24",
+      "studentName": "TM Mariya",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "2nd place in ISC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "280",
+      "year": "2023-24",
+      "studentName": "TM Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "1st place in TTC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "281",
+      "year": "2023-24",
+      "studentName": "TM Mariya",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "2nd place in TTC area level contest",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "282",
+      "year": "2023-24",
+      "studentName": "TM Naga sai navya",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "Excellence in administration award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "283",
+      "year": "2023-24",
+      "studentName": "TM Hrushikesh",
+      "department": "EEE",
+      "category": "Toastmasters",
+      "name": "Excellence in administration award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "284",
+      "year": "2023-24",
+      "studentName": "TM Goutham",
+      "department": "EEE",
+      "category": "Toastmasters",
+      "name": "Leadership Excellence award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "285",
+      "year": "2023-24",
+      "studentName": "TM Sreelatha",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "Leadership Excellence award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "286",
+      "year": "2023-24",
+      "studentName": "TM naga Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "VPM Excellence pin",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "287",
+      "year": "2023-24",
+      "studentName": "TM Muskan",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "VPM Excellence pin",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "288",
+      "year": "2024-25",
+      "studentName": "TM TM Naga Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "1 st place in area level HSC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "289",
+      "year": "2024-25",
+      "studentName": "TM Naga Harshasree",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "1 st place in area level ESC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "290",
+      "year": "2024-25",
+      "studentName": "TM Mariya",
+      "department": "CSM",
+      "category": "Toastmasters",
+      "name": "3 rd place in area level ESC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "291",
+      "year": "2024-25",
+      "studentName": "TM Hrushikesh",
+      "department": "EEE",
+      "category": "Toastmasters",
+      "name": "2nd place in area level ISC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "292",
+      "year": "2024-25",
+      "studentName": "TM Lokaditya",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "3 rd place in area level ISC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "293",
+      "year": "2024-25",
+      "studentName": "TM navya sree",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "2nd place in area level TTC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "294",
+      "year": "2024-25",
+      "studentName": "TM shahenaaz",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "3 rd place in area level TTC",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "295",
+      "year": "2024-25",
+      "studentName": "TM Naga sai navya",
+      "department": "CSE",
+      "category": "Toastmasters",
+      "name": "Golden feather award",
+      "awardingBody": "Toastmasters international district director"
+    },
+    {
+      "sNo": "296",
+      "year": "2025-26",
+      "studentName": "Mohammad Hanif and Abdul Rehaman Yahya",
+      "department": "CSE",
+      "category": "Best Idea: SRIT",
+      "name": "2nd Highest Ranking Award in T-Summit",
+      "awardingBody": "SRM Institute of Technology"
+    }
+  ]
+}

@@ -4,6 +4,8 @@ import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import PageHeader from '../../components/common/PageHeader';
 import { fadeUp, stagger } from '../../features/about/animations';
+import { AccordionContainer, AccordionItem } from '../../components/common/DepartmentAccordion';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const ChairmansClubPage: React.FC = () => {
     return (
@@ -35,13 +37,15 @@ const ChairmansClubPage: React.FC = () => {
 
                         <div className="mt-12">
                             <h3 className="text-xl font-bold text-[#0A0903] mb-6 border-b border-neutral-200 pb-3">MOM's and Members</h3>
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8AJ2nW7q0yT4V78nqHfNpqLchDCFyg3w38WjRLWw_M5DIYWJVBzQFtOCDRClmjQ/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Chairman's Club Data"
-                                />
-                            </div>
+                            <AccordionContainer className="w-full">
+                                <AccordionItem title="MOM's and Members List">
+                                    <IframeWithLoader 
+                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8AJ2nW7q0yT4V78nqHfNpqLchDCFyg3w38WjRLWw_M5DIYWJVBzQFtOCDRClmjQ/pubhtml?widget=true&chrome=false&headers=false"
+                                        title="Chairman's Club Data"
+                                        style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                                    />
+                                </AccordionItem>
+                            </AccordionContainer>
                         </div>
                     </motion.div>
                 </div>

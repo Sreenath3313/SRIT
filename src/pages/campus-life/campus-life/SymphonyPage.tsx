@@ -51,25 +51,6 @@ export const SymphonyPage: React.FC = () => {
                     </div>
                 </div>
             )}
-
-            {/* Symphony Live YouTube Video Embed */}
-            <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                    <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                    <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                        SYMPHONY Annual Celebrations Live Stream
-                    </h2>
-                </div>
-                <div className="w-full aspect-video rounded-xl overflow-hidden shadow-md border border-neutral-200">
-                    <iframe
-                        className="w-full h-full"
-                        src="https://www.youtube-nocookie.com/embed/videoseries?list=PLr_y9Hh-c7X_j9zH1c_9G9L5U4oY-9m3y"
-                        title="SRIT Symphony Annual Day Celebrations"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                    />
-                </div>
-            </div>
         </CampusLifeLayout>
     );
 };

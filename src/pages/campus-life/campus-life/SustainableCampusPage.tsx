@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {
-    Leaf, Zap, Droplet, Shield, Award, ChevronRight, ChevronLeft,
+    ChevronRight, ChevronLeft,
     ChevronUp, ChevronDown
 } from 'lucide-react';
 import IframeWithLoader from '../../../components/common/IframeWithLoader';
 import CampusLifeLayout from './CampusLifeLayout';
+import { AccordionContainer, DepartmentAccordionRow } from '../../../components/common/DepartmentAccordion';
 
 export const SustainableCampusPage: React.FC = () => {
     const [isSolarEnergyOpen, setIsSolarEnergyOpen] = useState(false);
@@ -15,61 +16,6 @@ export const SustainableCampusPage: React.FC = () => {
     return (
         <CampusLifeLayout activeSectionId="sustainable-campus">
             <>
-                                {/* === 1. KEY STATISTICS CARDS (4 Cards with Warm Orange Shades & Hover Animations) === */}
-                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
-                                    {[
-                                        {
-                                            value: '100+ kWp',
-                                            label: 'Solar Clean Energy',
-                                            desc: 'Rooftop 50.40 kWp + 50.24 kWp solar systems',
-                                            icon: Zap,
-                                        },
-                                        {
-                                            value: '100% Green',
-                                            label: 'Landscaped Grounds',
-                                            desc: 'Lush tree canopy, gardens & rich biodiversity',
-                                            icon: Leaf,
-                                        },
-                                        {
-                                            value: 'Rainwater',
-                                            label: 'Water Harvesting',
-                                            desc: 'Recharge pits conserving groundwater levels',
-                                            icon: Droplet,
-                                        },
-                                        {
-                                            value: 'Zero Plastic',
-                                            label: 'Eco Discipline',
-                                            desc: 'Strict single-use plastic ban across campus',
-                                            icon: Shield,
-                                        },
-                                    ].map((stat, idx) => {
-                                        const StatIcon = stat.icon;
-                                        return (
-                                            <div
-                                                key={idx}
-                                                className="relative group rounded-xl border border-orange-200/90 bg-gradient-to-br from-white via-orange-50/40 to-orange-100/30 p-4 sm:p-5 shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-                                            >
-                                                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF5422] via-orange-400 to-[#FF5422] opacity-70 group-hover:opacity-100 transition-opacity" />
-                                                <div className="flex items-center gap-3.5">
-                                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF5422] to-[#FF7A45] text-white shadow-md shadow-orange-500/25 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                                                        <StatIcon size={22} />
-                                                    </div>
-                                                    <div>
-                                                        <div className="font-serif text-2xl sm:text-3xl font-black text-[#FF5422] group-hover:text-[#e04515] leading-none transition-colors">
-                                                            {stat.value}
-                                                        </div>
-                                                        <div className="mt-1 text-xs sm:text-sm font-bold text-neutral-900">
-                                                            {stat.label}
-                                                        </div>
-                                                        <div className="text-[11px] text-neutral-500 line-clamp-1 mt-0.5">
-                                                            {stat.desc}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
 
                                 {/* === 2. ABOUT SUSTAINABLE CAMPUS (Side-by-Side: Text Left + Explore Button, Image Right) === */}
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm relative overflow-hidden">
@@ -124,198 +70,62 @@ export const SustainableCampusPage: React.FC = () => {
                                     </div>
                                 </div>
 
-                                {/* === 3. KEY HIGHLIGHTS (6 Cards in 3 Columns × 2 Rows) === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                        <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                            Key Sustainability &amp; Clean Energy Highlights
-                                        </h2>
-                                    </div>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                        {[
-                                            {
-                                                title: 'Rooftop Solar Photovoltaic Energy',
-                                                desc: 'Capturing abundant solar radiation in Ananthapuramu to generate renewable electricity and feed clean green energy into the campus grid.',
-                                                icon: Zap,
-                                            },
-                                            {
-                                                title: 'Rainwater Harvesting Pits',
-                                                desc: 'Strategically positioned reservoirs capturing monsoon runoff to recharge local aquifers and institutional borewells.',
-                                                icon: Droplet,
-                                            },
-                                            {
-                                                title: 'Green Landscaping & Tree Plantation',
-                                                desc: 'Hundreds of shade-giving trees, flower beds, and medicinal plants nurtured across the 25+ acre serene campus.',
-                                                icon: Leaf,
-                                            },
-                                            {
-                                                title: 'Energy-Efficient LED Illumination',
-                                                desc: 'Widespread deployment of low-power LED fixtures throughout administrative and academic blocks.',
-                                                icon: Zap,
-                                            },
-                                            {
-                                                title: 'Solid & Liquid Waste Segregation',
-                                                desc: 'Systematic disposal and eco-friendly composting of organic waste to maintain pollution-free surroundings.',
-                                                icon: Shield,
-                                            },
-                                            {
-                                                title: 'Environmental & Green Audits',
-                                                desc: 'Regular institutional audits evaluating energy conservation, carbon neutrality, and eco-friendly practices.',
-                                                icon: Award,
-                                            },
-                                        ].map((item, idx) => {
-                                            const IconComp = item.icon;
-                                            return (
-                                                <div
-                                                    key={idx}
-                                                    className="rounded-xl border border-orange-100/90 bg-gradient-to-br from-white via-orange-50/20 to-orange-50/40 p-4 hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
-                                                >
-                                                    <div className="flex items-start gap-3">
-                                                        <div className="w-9 h-9 rounded-lg bg-[#FF5422]/10 text-[#FF5422] flex items-center justify-center shrink-0 group-hover:bg-[#FF5422] group-hover:text-white transition-colors duration-200">
-                                                            <IconComp size={18} />
-                                                        </div>
-                                                        <div className="space-y-1">
-                                                            <h3 className="font-bold text-neutral-900 text-xs sm:text-sm group-hover:text-[#FF5422] transition-colors">
-                                                                {item.title}
-                                                            </h3>
-                                                            <p className="text-[11.5px] text-neutral-600 leading-relaxed">
-                                                                {item.desc}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
 
-                                {/* === 4. PRACTICES & FRAMEWORK GUIDELINES === */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="rounded-xl border border-orange-200/80 bg-gradient-to-br from-white to-orange-50/30 p-5 shadow-sm space-y-3">
-                                        <div className="flex items-center gap-2 text-neutral-900 font-bold text-sm sm:text-base border-b border-orange-100 pb-2">
-                                            <Zap size={18} className="text-[#FF5422]" />
-                                            <span>Clean Energy &amp; Resource Conservation</span>
-                                        </div>
-                                        <div className="space-y-2 text-xs text-neutral-700">
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Solar Grid:</span>
-                                                <span>50.40 kWp on Main Block Terrace + 50.24 kWp on Boys Hostel Terrace.</span>
-                                            </div>
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Water:</span>
-                                                <span>Integrated rooftop and surface rainwater harvesting replenishment pits.</span>
-                                            </div>
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Lighting:</span>
-                                                <span>100% LED deployment reducing institutional electric load significantly.</span>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div className="rounded-xl border border-orange-200/80 bg-gradient-to-br from-white to-orange-50/30 p-5 shadow-sm space-y-3">
-                                        <div className="flex items-center gap-2 text-neutral-900 font-bold text-sm sm:text-base border-b border-orange-100 pb-2">
-                                            <Shield size={18} className="text-[#FF5422]" />
-                                            <span>Environmental Policy &amp; Discipline</span>
-                                        </div>
-                                        <div className="space-y-2 text-xs text-neutral-700">
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Plastic-Free:</span>
-                                                <span>Strict institutional policy prohibiting single-use plastics across campus.</span>
-                                            </div>
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Green Cover:</span>
-                                                <span>Rich botanical diversity with hundreds of shade-giving and fruit trees.</span>
-                                            </div>
-                                            <div className="flex items-start gap-2 p-2 rounded-lg bg-white border border-orange-100/70">
-                                                <span className="font-bold text-[#FF5422] min-w-[75px]">Audits:</span>
-                                                <span>Periodic environmental audits for carbon footprint and energy certification.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 {/* === 5. OFFICIAL ACCORDIONS: SOLAR ENERGY SPREADSHEET & AUDIT REPORTS === */}
-                                <div className="space-y-4">
-                                    <div className="rounded-xl border-2 border-orange-200/90 bg-white overflow-hidden shadow-sm w-full">
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsSolarEnergyOpen(!isSolarEnergyOpen)}
-                                            className="w-full flex items-center justify-between px-5 py-4 bg-[#111827] hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
-                                        >
-                                            <div className="flex items-center gap-3">
-                                                <span className="text-[#FF5422] font-bold text-xl leading-none">
-                                                    {isSolarEnergyOpen ? '−' : '+'}
-                                                </span>
-                                                <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-white">
-                                                    Solar Energy Data
-                                                </span>
+                                <AccordionContainer className="w-full">
+                                    <DepartmentAccordionRow
+                                        id="solar-energy"
+                                        index={0}
+                                        title="Solar Energy Data"
+                                        isOpen={isSolarEnergyOpen}
+                                        onToggle={() => setIsSolarEnergyOpen(!isSolarEnergyOpen)}
+                                    >
+                                        <div className="p-3 sm:p-5 bg-white w-full">
+                                            <div className="w-full h-[750px] sm:h-[820px] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-inner">
+                                                <IframeWithLoader
+                                                    title="SRIT Solar Energy Data Official Sheet"
+                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQuOYiWzEl6jy3tfGJuFG9_BN3gTOgiW-dNCc16_6jyLQk1DMdc9Ld8xSBKzyKSjXayy9JC07PWOCxf/pubhtml?widget=true&headers=false"
+                                                    className="w-full h-full border-0"
+                                                    loading="lazy"
+                                                />
                                             </div>
-                                            <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                                {isSolarEnergyOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                            </div>
-                                        </button>
+                                        </div>
+                                    </DepartmentAccordionRow>
 
-                                        {isSolarEnergyOpen && (
-                                            <div className="p-3 sm:p-5 bg-white w-full">
-                                                <div className="w-full h-[750px] sm:h-[820px] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-inner">
-                                                    <IframeWithLoader
-                                                        title="SRIT Solar Energy Data Official Sheet"
-                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQuOYiWzEl6jy3tfGJuFG9_BN3gTOgiW-dNCc16_6jyLQk1DMdc9Ld8xSBKzyKSjXayy9JC07PWOCxf/pubhtml?widget=true&headers=false"
-                                                        className="w-full h-full border-0"
-                                                        loading="lazy"
-                                                    />
+                                    <DepartmentAccordionRow
+                                        id="institutional-audit-reports"
+                                        index={1}
+                                        title="Institutional Audit Reports"
+                                        isOpen={isSustainabilityReportsOpen}
+                                        onToggle={() => setIsSustainabilityReportsOpen(!isSustainabilityReportsOpen)}
+                                    >
+                                        <div className="p-5 sm:p-6 bg-white space-y-4">
+                                            <div className="grid sm:grid-cols-2 gap-3.5">
+                                                <div className="p-4 rounded-xl border border-orange-200/80 bg-orange-50/40">
+                                                    <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
+                                                        <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
+                                                        Institutional Green &amp; Energy Audit Report
+                                                    </h4>
+                                                    <p className="text-xs text-neutral-600 leading-relaxed">
+                                                        Comprehensive institutional audit records certifying renewable energy generation, energy conservation parameters, and compliance with statutory green campus frameworks.
+                                                    </p>
+                                                </div>
+                                                <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/70">
+                                                    <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
+                                                        <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
+                                                        Environment &amp; Water Conservation Audit
+                                                    </h4>
+                                                    <p className="text-xs text-neutral-600 leading-relaxed">
+                                                        Institutional environmental evaluation confirming 100% surface rainwater recharging, zero hazardous emissions, and strict single-use plastic ban across campus.
+                                                    </p>
                                                 </div>
                                             </div>
-                                        )}
-                                    </div>
-
-                                    <div className="rounded-xl border-2 border-orange-200/90 bg-white overflow-hidden shadow-sm w-full">
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsSustainabilityReportsOpen(!isSustainabilityReportsOpen)}
-                                            className="w-full flex items-center justify-between px-5 py-4 bg-[#111827] hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
-                                        >
-                                            <div className="flex items-center gap-3">
-                                                <span className="text-[#FF5422] font-bold text-xl leading-none">
-                                                    {isSustainabilityReportsOpen ? '−' : '+'}
-                                                </span>
-                                                <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-white">
-                                                    Institutional Audit Reports
-                                                </span>
-                                            </div>
-                                            <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                                {isSustainabilityReportsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                            </div>
-                                        </button>
-
-                                        {isSustainabilityReportsOpen && (
-                                            <div className="p-5 sm:p-6 bg-white space-y-4">
-                                                <div className="grid sm:grid-cols-2 gap-3.5">
-                                                    <div className="p-4 rounded-xl border border-orange-200/80 bg-orange-50/40">
-                                                        <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
-                                                            <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
-                                                            Institutional Green &amp; Energy Audit Report
-                                                        </h4>
-                                                        <p className="text-xs text-neutral-600 leading-relaxed">
-                                                            Comprehensive institutional audit records certifying renewable energy generation, energy conservation parameters, and compliance with statutory green campus frameworks.
-                                                        </p>
-                                                    </div>
-                                                    <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/70">
-                                                        <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
-                                                            <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
-                                                            Environment &amp; Water Conservation Audit
-                                                        </h4>
-                                                        <p className="text-xs text-neutral-600 leading-relaxed">
-                                                            Institutional environmental evaluation confirming 100% surface rainwater recharging, zero hazardous emissions, and strict single-use plastic ban across campus.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
+                                        </div>
+                                    </DepartmentAccordionRow>
+                                </AccordionContainer>
 
                                 {/* === 6. PHOTO GALLERY === */}
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">

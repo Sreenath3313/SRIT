@@ -32,35 +32,7 @@ const minutesOfMeeting = [
     { num: 'XX', date: '07/09/2019' },
 ];
 
-const AccordionPanel: React.FC<{ title: string; isOpen: boolean; onToggle: () => void; children: React.ReactNode }> =
-    ({ title, isOpen, onToggle, children }) => (
-        <div className="border border-neutral-200 rounded-xl overflow-hidden shadow-sm">
-            <button
-                onClick={onToggle}
-                className="w-full flex items-center justify-between p-5 bg-white hover:bg-orange-50/40 transition-colors text-left group"
-            >
-                <h3 className="text-lg font-bold text-[#0A0903] group-hover:text-[#FF5422] transition-colors">{title}</h3>
-                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                    <ChevronDown className="w-5 h-5 text-[#FF5422]" />
-                </motion.div>
-            </button>
-            <AnimatePresence initial={false}>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                        className="overflow-hidden"
-                    >
-                        <div className="p-5 border-t border-neutral-200 bg-neutral-50/40 overflow-x-auto">
-                            {children}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const GoverningBodyPage: React.FC = () => {
     const [openTab, setOpenTab] = useState<'members' | 'minutes' | null>('members');
@@ -69,16 +41,19 @@ const GoverningBodyPage: React.FC = () => {
         <AboutUsLayout title="Governing Body">
             <motion.div variants={stagger} initial="hidden" animate="visible" className="space-y-6">
                 <motion.h2 variants={fadeUp} className="text-3xl font-serif font-bold text-[#0A0903] flex items-center gap-3">
-                    <span className="w-1 h-8 rounded-full bg-[#FF5422] inline-block" />
+                    <span className="w-1 h-8 rounded-full bg-[#FF6600] inline-block" />
                     Governing Body
                 </motion.h2>
 
                 <motion.div variants={fadeUp} className="space-y-4">
-                    <AccordionPanel
-                        title="Governing Body Members"
-                        isOpen={openTab === 'members'}
-                        onToggle={() => setOpenTab(openTab === 'members' ? null : 'members')}
-                    >
+                    <AccordionContainer className="w-full">
+                        <DepartmentAccordionRow
+                            id="governing-body"
+                            index={0}
+                            title="Governing Body Members"
+                            isOpen={openTab === 'members'}
+                            onToggle={() => setOpenTab(openTab === 'members' ? null : 'members')}
+                        >
                         <h4 className="font-semibold text-neutral-700 mb-3 text-left text-sm">Members of Governing Body: <span className="text-neutral-500 font-normal">Sheet1</span></h4>
                         <div className="w-full overflow-x-auto custom-scrollbar border border-neutral-200">
                             <table className="w-full min-w-[600px] border-collapse text-sm">
@@ -118,9 +93,11 @@ const GoverningBodyPage: React.FC = () => {
                                 </tbody>
                             </table>
                         </div>
-                    </AccordionPanel>
+                    </DepartmentAccordionRow>
 
-                    <AccordionPanel
+                    <DepartmentAccordionRow
+                        id="governing-body"
+                        index={1}
                         title="Minutes of Meeting"
                         isOpen={openTab === 'minutes'}
                         onToggle={() => setOpenTab(openTab === 'minutes' ? null : 'minutes')}
@@ -128,7 +105,7 @@ const GoverningBodyPage: React.FC = () => {
                         <h4 className="font-semibold text-neutral-700 mb-4 text-center text-sm uppercase tracking-wide">Minutes of Meeting of Governing Body</h4>
                         <table className="w-full min-w-[400px] sm:min-w-full border-collapse text-sm max-w-2xl mx-auto">
                             <thead>
-                                <tr className="bg-[#0A0903] text-white">
+                                <tr className="bg-[#FF6600] text-white">
                                     <th className="p-3 border border-neutral-700 font-semibold text-center">Meeting Number</th>
                                     <th className="p-3 border border-neutral-700 font-semibold text-center">Date</th>
                                     <th className="p-3 border border-neutral-700 font-semibold text-center">Minutes</th>
@@ -146,7 +123,7 @@ const GoverningBodyPage: React.FC = () => {
                                         <td className="p-3 border border-neutral-200 text-center font-bold text-neutral-800">{m.num}</td>
                                         <td className="p-3 border border-neutral-200 text-center text-neutral-600">{m.date}</td>
                                         <td className="p-3 border border-neutral-200 text-center">
-                                            <span className="px-4 py-1.5 text-xs font-semibold text-[#FF5422] bg-orange-50 border border-orange-200 rounded-full">
+                                            <span className="px-4 py-1.5 text-xs font-semibold text-[#FF6600] bg-orange-50 border border-orange-200 rounded-full">
                                                 View
                                             </span>
                                         </td>
@@ -154,8 +131,9 @@ const GoverningBodyPage: React.FC = () => {
                                 ))}
                             </tbody>
                         </table>
-                    </AccordionPanel>
-                </motion.div>
+                    </DepartmentAccordionRow>
+                </AccordionContainer>
+            </motion.div>
             </motion.div>
         </AboutUsLayout>
     );

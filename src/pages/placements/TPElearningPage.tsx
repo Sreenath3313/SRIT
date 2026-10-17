@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { BookOpen, ChevronDown, MonitorPlay } from 'lucide-react'
+import { BookOpen, MonitorPlay } from 'lucide-react'
 import Navbar from '../../components/layout/Navbar'
 import PageHeader from '../../components/common/PageHeader'
 import Footer from '../../components/layout/Footer'
 import IframeWithLoader from '../../components/common/IframeWithLoader'
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion'
 
 export default function TPElearningPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -54,7 +54,7 @@ export default function TPElearningPage() {
       {/* Main Content Area */}
       <main className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 py-10 lg:py-16 flex-1">
         <div className="w-full space-y-6">
-          <div className="bg-white rounded-xl border border-neutral-200 p-6 sm:p-8 shadow-sm">
+          <div className="bg-white rounded-xl border border-neutral-200/80 p-6 sm:p-8 shadow-sm">
             <h2 className="font-serif text-2xl font-bold text-neutral-900 mb-2">
               Digital Learning &amp; Training Resources
             </h2>
@@ -63,56 +63,41 @@ export default function TPElearningPage() {
             </p>
           </div>
 
-          {/* Accordions List */}
-          <div className="space-y-4">
+          {/* Accordions List with Unified Department Theme */}
+          <AccordionContainer className="w-full">
             {elearningItems.map((item, index) => {
               const isExpanded = openIndex === index
               const Icon = item.icon
               return (
-                <div
+                <DepartmentAccordionRow
                   key={item.id}
-                  className="bg-white rounded-xl border border-neutral-200 shadow-2xs overflow-hidden transition-all duration-200"
-                >
-                  <button
-                    type="button"
-                    onClick={() => toggleAccordion(index)}
-                    className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 bg-neutral-50/50 hover:bg-orange-50/30 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="p-2.5 rounded-xl bg-primary/10 text-primary font-bold shrink-0">
-                        <Icon size={22} />
-                      </span>
-                      <h3 className="font-serif text-xl font-bold text-neutral-900">
-                        {item.title}
-                      </h3>
-                    </div>
-                    <span
-                      className={`p-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-600 transition-transform duration-200 ${
-                        isExpanded ? 'rotate-180 text-primary border-primary' : ''
-                      }`}
-                    >
-                      <ChevronDown size={18} />
+                  id={`elearning-${item.id}`}
+                  index={index}
+                  title={
+                    <span className="flex items-center gap-2">
+                      <Icon className="h-4 w-4 text-[#FF6600] shrink-0" />
+                      <span>{item.title}</span>
                     </span>
-                  </button>
-
-                  {isExpanded && (
-                    <div className="p-5 sm:p-6 border-t border-neutral-200 bg-white">
-                      <div
-                        className="w-full rounded-xl overflow-hidden border border-neutral-200 shadow-2xs"
-                        style={{ height: `${item.height}px` }}
-                      >
-                        <IframeWithLoader
-                          src={item.sheetUrl}
-                          title={`SRIT e-Learning ${item.title}`}
-                          style={{ width: '100%', height: '100%' }}
-                        />
-                      </div>
+                  }
+                  isOpen={isExpanded}
+                  onToggle={() => toggleAccordion(index)}
+                >
+                  <div className="p-3 sm:p-5 bg-white">
+                    <div
+                      className="w-full rounded-xl overflow-hidden border border-[#FFD9C4] bg-white shadow-inner"
+                      style={{ height: `${item.height}px` }}
+                    >
+                      <IframeWithLoader
+                        src={item.sheetUrl}
+                        title={`SRIT e-Learning ${item.title}`}
+                        style={{ width: '100%', height: '100%' }}
+                      />
                     </div>
-                  )}
-                </div>
+                  </div>
+                </DepartmentAccordionRow>
               )
             })}
-          </div>
+          </AccordionContainer>
         </div>
       </main>
 

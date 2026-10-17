@@ -29,6 +29,8 @@ import {
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import PageHeader from '../components/common/PageHeader';
+import { AccordionContainer, DepartmentAccordionRow } from '../components/common/DepartmentAccordion';
+import IframeWithLoader from '../components/common/IframeWithLoader';
 
 // === TypeScript Interfaces ===
 export interface KeyStat {
@@ -1286,8 +1288,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 15 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === 15 Collapsible Accordions (UNIFIED THEME) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'aim', label: 'Aim of NCC' },
                                         { id: 'pledge', label: 'Pledge' },
@@ -1304,27 +1306,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'career', label: 'Career Opportunities' },
                                         { id: 'downloads', label: 'Downloads' },
                                         { id: 'contact', label: 'Contact' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openNccAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleNccAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="ncc"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleNccAccordion(item.id)}
+                                            >
                                                         {/* 1. Aim of NCC */}
                                                         {item.id === 'aim' && (
                                                             <div className="space-y-4">
@@ -1395,24 +1387,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NCC Team Members & Faculty In-Charges (NCC-Team Members.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbUWtbzg_7ZYbbbmkoa97uw1PEvp0gDYW4iTH7fjatcvntWupQJjtWQfLP59moYA/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC-Team Members"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbUWtbzg_7ZYbbbmkoa97uw1PEvp0gDYW4iTH7fjatcvntWupQJjtWQfLP59moYA/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[450px] sm:h-[520px] lg:h-[600px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC-Team Members"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbUWtbzg_7ZYbbbmkoa97uw1PEvp0gDYW4iTH7fjatcvntWupQJjtWQfLP59moYA/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(450px, 60vh, 600px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1423,24 +1404,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NCC Cadets Enrolment & Master Strength
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBm6g7J-sxtNLVJHf4ge2dWIHy60jjF3PNh10ZndY8f-vZfSyVsVauOSE-WyZ2BHS5bRKC8zYjvtKQ/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC Cadets List"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBm6g7J-sxtNLVJHf4ge2dWIHy60jjF3PNh10ZndY8f-vZfSyVsVauOSE-WyZ2BHS5bRKC8zYjvtKQ/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC Cadets List"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBm6g7J-sxtNLVJHf4ge2dWIHy60jjF3PNh10ZndY8f-vZfSyVsVauOSE-WyZ2BHS5bRKC8zYjvtKQ/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1451,24 +1421,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NCC Cadet Appointments & Rank Holders
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDwHVP5zB-bRDAXxfJuwaCcOY7s3qP2B8pNIVzqSQW6Lz6PR9Twz8xlJHMnXwoUSWsDQVAzApaahHm/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC Appointments"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDwHVP5zB-bRDAXxfJuwaCcOY7s3qP2B8pNIVzqSQW6Lz6PR9Twz8xlJHMnXwoUSWsDQVAzApaahHm/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC Appointments"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDwHVP5zB-bRDAXxfJuwaCcOY7s3qP2B8pNIVzqSQW6Lz6PR9Twz8xlJHMnXwoUSWsDQVAzApaahHm/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1479,24 +1438,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Institutional Training Modules & Drill Routine
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcNiG3aolCdEpc3Uv9vd79Q-LZUT0SZ4mi-FSSR_2iusDpVe-D_8g7K5JiLdFql_dly3G6UJYVTRcG/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Institutional Training Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcNiG3aolCdEpc3Uv9vd79Q-LZUT0SZ4mi-FSSR_2iusDpVe-D_8g7K5JiLdFql_dly3G6UJYVTRcG/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Institutional Training Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRcNiG3aolCdEpc3Uv9vd79Q-LZUT0SZ4mi-FSSR_2iusDpVe-D_8g7K5JiLdFql_dly3G6UJYVTRcG/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1507,24 +1455,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Annual Training Camps (ATC) & Combined Annual Training (CATC)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRW9sSKOl_oWBy_RHNXCzohZeexmO76x9LWPSwn9_Gng5dIUSeHRt519JRCfTfWvkUinmEkq4HZDtvs/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Camp Training Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRW9sSKOl_oWBy_RHNXCzohZeexmO76x9LWPSwn9_Gng5dIUSeHRt519JRCfTfWvkUinmEkq4HZDtvs/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Camp Training Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRW9sSKOl_oWBy_RHNXCzohZeexmO76x9LWPSwn9_Gng5dIUSeHRt519JRCfTfWvkUinmEkq4HZDtvs/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1535,24 +1472,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NCC ‘B’ & ‘C’ Certificate Examinations & Grading
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2bkbv0azViJlotJZ6btgNtwgcLESengLCHVbjAV8Xx6-VKB0qbQgNIUrw_AeZelbdViYV4_djerHO/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC Examination Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2bkbv0azViJlotJZ6btgNtwgcLESengLCHVbjAV8Xx6-VKB0qbQgNIUrw_AeZelbdViYV4_djerHO/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC Examination Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2bkbv0azViJlotJZ6btgNtwgcLESengLCHVbjAV8Xx6-VKB0qbQgNIUrw_AeZelbdViYV4_djerHO/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1563,24 +1489,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Community Drives, Rallies & Cleanliness Campaigns
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0K4wqJWrzxT3IdDQyjQJsON9mpHdYTH5nHeFUldii-_bWWqL0mhXD03KAI2_ChQ/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC Activities Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0K4wqJWrzxT3IdDQyjQJsON9mpHdYTH5nHeFUldii-_bWWqL0mhXD03KAI2_ChQ/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC Activities Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0K4wqJWrzxT3IdDQyjQJsON9mpHdYTH5nHeFUldii-_bWWqL0mhXD03KAI2_ChQ/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1642,24 +1557,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Merit Awards, Guard of Honour & Competition Victories
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjigY1-FnB4-DBWhnRsz2ghqeAU9Et5Jstyce14IPWwG0QMIVnKcvWMyS7o3qK2pNTiSHdqNKkmSHy/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Achievements Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjigY1-FnB4-DBWhnRsz2ghqeAU9Et5Jstyce14IPWwG0QMIVnKcvWMyS7o3qK2pNTiSHdqNKkmSHy/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Achievements Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjigY1-FnB4-DBWhnRsz2ghqeAU9Et5Jstyce14IPWwG0QMIVnKcvWMyS7o3qK2pNTiSHdqNKkmSHy/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1670,24 +1574,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Defence Forces, CAPF & PSU Recruitment Perks for NCC ‘C’ Holders
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR-m8nb8kTGVA183fOVVVOwAiPVV0Jh6A5y7L1TN1-DHTSVMkuTVXmNsgvHAmrJWbGfit-a_duiLqvA/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Career Opportunities Spreadsheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR-m8nb8kTGVA183fOVVVOwAiPVV0Jh6A5y7L1TN1-DHTSVMkuTVXmNsgvHAmrJWbGfit-a_duiLqvA/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Career Opportunities Spreadsheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR-m8nb8kTGVA183fOVVVOwAiPVV0Jh6A5y7L1TN1-DHTSVMkuTVXmNsgvHAmrJWbGfit-a_duiLqvA/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1698,24 +1591,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NCC Enrolment Forms, Handbook & Circular Downloads
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQmEnVT7o8H-M9VKNL170uSGjZ0TundirbS9Mu8NSeDYI_Mk88oqPeZHkyUnVAsrdAIKMjOCp4RDMzh/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NCC Downloads Sheet"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQmEnVT7o8H-M9VKNL170uSGjZ0TundirbS9Mu8NSeDYI_Mk88oqPeZHkyUnVAsrdAIKMjOCp4RDMzh/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[650px] sm:h-[720px] lg:h-[780px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NCC Downloads Sheet"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQmEnVT7o8H-M9VKNL170uSGjZ0TundirbS9Mu8NSeDYI_Mk88oqPeZHkyUnVAsrdAIKMjOCp4RDMzh/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(550px, 75vh, 780px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -1754,12 +1636,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
 
                                 {/* === Bottom NCC Visual Carousel Slider (3 Wide Cards on Desktop, Fully Contained) === */}
                                 <div className="pt-4 pb-2 space-y-3 w-full max-w-full overflow-hidden">
@@ -1924,8 +1804,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 8 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === 8 Collapsible Accordions (UNIFIED THEME) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Our Vision' },
                                         { id: 'mission', label: 'Our Mission' },
@@ -1935,27 +1815,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'activities', label: 'Activities' },
                                         { id: 'expenditure', label: 'NSS Expenditure Reports' },
                                         { id: 'contact', label: 'Contact Us' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openNssAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleNssAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="nss"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleNssAccordion(item.id)}
+                                            >
                                                         {/* 1. Our Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4">
@@ -2033,24 +1903,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NSS Team Members & Faculty In-Charges (Team.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vREWsKRpcDvIOVTe_afyMyitprCQoemULazBhdWPrFETBuxcKHCCeFUT6G-vIqRfA/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NSS-Team Members"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREWsKRpcDvIOVTe_afyMyitprCQoemULazBhdWPrFETBuxcKHCCeFUT6G-vIqRfA/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[450px] sm:h-[520px] lg:h-[600px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NSS-Team Members"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREWsKRpcDvIOVTe_afyMyitprCQoemULazBhdWPrFETBuxcKHCCeFUT6G-vIqRfA/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(450px, 60vh, 600px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2061,24 +1920,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NSS Enrolled Volunteers Register (Volunteers.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTank5SpJkVjrsc63JcqLlgU6PNoLFbBiIF4_P2Pz0M13ERsn7coBqF1z51Nc1D-cvtFkxPIjR7lg9c/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NSS Volunteers"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTank5SpJkVjrsc63JcqLlgU6PNoLFbBiIF4_P2Pz0M13ERsn7coBqF1z51Nc1D-cvtFkxPIjR7lg9c/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[500px] sm:h-[600px] lg:h-[700px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NSS Volunteers"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTank5SpJkVjrsc63JcqLlgU6PNoLFbBiIF4_P2Pz0M13ERsn7coBqF1z51Nc1D-cvtFkxPIjR7lg9c/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(500px, 70vh, 700px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2089,24 +1937,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NSS Regular & Special Camp Activities (Activities.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwSx9hXGvxsT0Mo0oVuZCqvg616WS0AHOHlExjlGs8Q6XruodiaiEfFfoyuNgaTw/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NSS Activities"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwSx9hXGvxsT0Mo0oVuZCqvg616WS0AHOHlExjlGs8Q6XruodiaiEfFfoyuNgaTw/pubhtml?widget=true&headers=false"
-                                                                        className="w-full min-w-full h-[450px] sm:h-[520px] lg:h-[600px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NSS Activities"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQwSx9hXGvxsT0Mo0oVuZCqvg616WS0AHOHlExjlGs8Q6XruodiaiEfFfoyuNgaTw/pubhtml?widget=true&headers=false"
+                                                                    style={{ height: 'clamp(450px, 60vh, 600px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2117,24 +1954,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         NSS Expenditure & Financial Audit Reports (Expenditure.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTbKhXYZ2v7aAKsVxArWp_dqa6RvZJprI-NN8pVPj6DC5LmYgbA-NeGS6CrjYemCRsyvG7jUMF6SiTP/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="NSS Expenditure Reports"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTbKhXYZ2v7aAKsVxArWp_dqa6RvZJprI-NN8pVPj6DC5LmYgbA-NeGS6CrjYemCRsyvG7jUMF6SiTP/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[500px] sm:h-[600px] lg:h-[700px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="NSS Expenditure Reports"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTbKhXYZ2v7aAKsVxArWp_dqa6RvZJprI-NN8pVPj6DC5LmYgbA-NeGS6CrjYemCRsyvG7jUMF6SiTP/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(500px, 70vh, 700px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2173,12 +1999,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
                             </div>
                         ) : activeSection.id === 'rotaract-club' ? (
                             <div className="space-y-4 sm:space-y-5 w-full min-w-0 max-w-full overflow-hidden">
@@ -2199,8 +2023,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 6 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === 6 Collapsible Accordions (UNIFIED THEME) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Our Vision' },
                                         { id: 'mission', label: 'Our Mission' },
@@ -2208,27 +2032,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'team', label: 'Team' },
                                         { id: 'activities', label: 'Activities' },
                                         { id: 'contact', label: 'Contact Us' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openRotaractAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleRotaractAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="rotaract"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleRotaractAccordion(item.id)}
+                                            >
                                                         {/* 1. Our Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4">
@@ -2379,24 +2193,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                             Rotaract Club Executive Board & Team Members (Team.xlsx)
                                                                         </h4>
-                                                                        <a
-                                                                            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOD56Tpg9Tlk7XU_e-0F1CAvY6ohcktSoMTnTaOSHF-YVTwUP1BUxEjq7aRqFEAQ_4eXlYY7APsjVw/pubhtml"
-                                                                            target="_blank"
-                                                                            rel="noopener noreferrer"
-                                                                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                        >
-                                                                            <ExternalLink size={13} />
-                                                                            <span>Open Full Sheet</span>
-                                                                        </a>
+                                                                        
                                                                     </div>
-                                                                    <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                        <iframe
-                                                                            title="Rotaract Team Members"
-                                                                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOD56Tpg9Tlk7XU_e-0F1CAvY6ohcktSoMTnTaOSHF-YVTwUP1BUxEjq7aRqFEAQ_4eXlYY7APsjVw/pubhtml?widget=true&headers=false"
-                                                                            className="w-full min-w-full h-[400px] sm:h-[480px] lg:h-[550px] border-0 bg-white block"
-                                                                            loading="lazy"
-                                                                        />
-                                                                    </div>
+                                                                    <IframeWithLoader
+                                                                        title="Rotaract Team Members"
+                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOD56Tpg9Tlk7XU_e-0F1CAvY6ohcktSoMTnTaOSHF-YVTwUP1BUxEjq7aRqFEAQ_4eXlYY7APsjVw/pubhtml?widget=true&headers=false"
+                                                                        style={{ height: 'clamp(400px, 60vh, 550px)' }}
+                                                                    />
                                                                 </div>
                                                             </div>
                                                         )}
@@ -2450,24 +2253,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                             Rotaract Club Annual Activities & Project Records (Activities.xlsx)
                                                                         </h4>
-                                                                        <a
-                                                                            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJruzfGdjBseLB9K7tbACYpy4na6yCSMjt_7wV780B1bS90ML0WfULJIa504FxtrrSNEd7QO9z-UW4/pubhtml"
-                                                                            target="_blank"
-                                                                            rel="noopener noreferrer"
-                                                                            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                        >
-                                                                            <ExternalLink size={13} />
-                                                                            <span>Open Full Sheet</span>
-                                                                        </a>
+                                                                        
                                                                     </div>
-                                                                    <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                        <iframe
-                                                                            title="Rotaract Activities"
-                                                                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJruzfGdjBseLB9K7tbACYpy4na6yCSMjt_7wV780B1bS90ML0WfULJIa504FxtrrSNEd7QO9z-UW4/pubhtml?widget=true&headers=false"
-                                                                            className="w-full min-w-full h-[400px] sm:h-[480px] lg:h-[550px] border-0 bg-white block"
-                                                                            loading="lazy"
-                                                                        />
-                                                                    </div>
+                                                                    <IframeWithLoader
+                                                                        title="Rotaract Activities"
+                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRJruzfGdjBseLB9K7tbACYpy4na6yCSMjt_7wV780B1bS90ML0WfULJIa504FxtrrSNEd7QO9z-UW4/pubhtml?widget=true&headers=false"
+                                                                        style={{ height: 'clamp(400px, 60vh, 550px)' }}
+                                                                    />
                                                                 </div>
                                                             </div>
                                                         )}
@@ -2514,12 +2306,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
                             </div>
                         ) : activeSection.id === 'indian-redcross-society' ? (
                             <div className="space-y-4 sm:space-y-5 w-full min-w-0 max-w-full overflow-hidden">
@@ -2540,8 +2330,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 7 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === 7 Collapsible Accordions (UNIFIED THEME) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Our Vision' },
                                         { id: 'mission', label: 'Our Mission' },
@@ -2550,27 +2340,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'volunteers', label: 'Student Volunteers' },
                                         { id: 'reports', label: 'Event Reports' },
                                         { id: 'contact', label: 'Contact' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openIrcsAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleIrcsAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="ircs"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleIrcsAccordion(item.id)}
+                                            >
                                                         {/* 1. Our Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4">
@@ -2728,24 +2508,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Youth Red Cross Committee & Team Members (Team.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_M97ail37t1n8_VpbsmI_6J87GlMxQkTdnDW6zBxdYtdJzADlvIwuklbLXw5AhA/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Youth Red Cross Team Members"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_M97ail37t1n8_VpbsmI_6J87GlMxQkTdnDW6zBxdYtdJzADlvIwuklbLXw5AhA/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[400px] sm:h-[480px] lg:h-[550px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Youth Red Cross Team Members"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_M97ail37t1n8_VpbsmI_6J87GlMxQkTdnDW6zBxdYtdJzADlvIwuklbLXw5AhA/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(400px, 60vh, 550px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2756,24 +2525,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         Youth Red Cross Registered Student Volunteers (Volunteers.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzL0s0CVER0OP8RI1QoipeyA2MUePCipWXPPze88jKAN-1FA8DfdRRyQk0_EBQbQ/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Youth Red Cross Volunteers"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzL0s0CVER0OP8RI1QoipeyA2MUePCipWXPPze88jKAN-1FA8DfdRRyQk0_EBQbQ/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[400px] sm:h-[480px] lg:h-[550px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Youth Red Cross Volunteers"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRzL0s0CVER0OP8RI1QoipeyA2MUePCipWXPPze88jKAN-1FA8DfdRRyQk0_EBQbQ/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(400px, 60vh, 550px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2784,24 +2542,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900">
                                                                         IRCS Health, Blood Donation & Disaster Relief Activities (Events.xlsx)
                                                                     </h4>
-                                                                    <a
-                                                                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRietrKW8242B4O_oCmgp44rYbr_Oq3aLFBRM3gAQdDkp5SjGDJZVeJV3Tb2nd_jg/pubhtml"
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-50 text-[#ea580c] hover:bg-orange-100 text-xs font-bold transition-colors"
-                                                                    >
-                                                                        <ExternalLink size={13} />
-                                                                        <span>Open Full Sheet</span>
-                                                                    </a>
+                                                                    
                                                                 </div>
-                                                                <div className="w-full min-w-full rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
-                                                                    <iframe
-                                                                        title="Youth Red Cross Event Reports"
-                                                                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRietrKW8242B4O_oCmgp44rYbr_Oq3aLFBRM3gAQdDkp5SjGDJZVeJV3Tb2nd_jg/pubhtml?widget=true&chrome=false&headers=false"
-                                                                        className="w-full min-w-full h-[400px] sm:h-[480px] lg:h-[550px] border-0 bg-white block"
-                                                                        loading="lazy"
-                                                                    />
-                                                                </div>
+                                                                <IframeWithLoader
+                                                                    title="Youth Red Cross Event Reports"
+                                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRietrKW8242B4O_oCmgp44rYbr_Oq3aLFBRM3gAQdDkp5SjGDJZVeJV3Tb2nd_jg/pubhtml?widget=true&chrome=false&headers=false"
+                                                                    style={{ height: 'clamp(400px, 60vh, 550px)' }}
+                                                                />
                                                             </div>
                                                         )}
 
@@ -2847,12 +2594,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
                             </div>
                         ) : activeSection.id === 'unnath-bharth-abhiyan' || activeSection.id === 'unnat-bharat-abhiyan' ? (
                             <div className="space-y-4 sm:space-y-5 w-full min-w-0 max-w-full overflow-hidden">
@@ -2873,8 +2618,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 6 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === 6 Collapsible Accordions (UNIFIED THEME) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Our Vision' },
                                         { id: 'mission', label: 'Our Mission' },
@@ -2882,27 +2627,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'team', label: 'Team' },
                                         { id: 'activities', label: 'Activities' },
                                         { id: 'contact', label: 'Contact' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openUbaAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleUbaAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="uba"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleUbaAccordion(item.id)}
+                                            >
                                                         {/* 1. Our Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4">
@@ -3178,12 +2913,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
 
                                 {/* === Bottom UBA Visual Carousel Slider === */}
                                 <div className="pt-4 pb-2 space-y-3 w-full max-w-full overflow-hidden">
@@ -3349,8 +3082,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 6 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === Collapsible Accordions (DepartmentAccordion Theme) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Our Vision' },
                                         { id: 'mission', label: 'Our Mission' },
@@ -3358,27 +3091,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'team', label: 'Team' },
                                         { id: 'events', label: 'Events Report' },
                                         { id: 'contact', label: 'Contact' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openEbsbAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleEbsbAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="ebsb"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleEbsbAccordion(item.id)}
+                                            >
                                                         {/* 1. Our Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4">
@@ -3622,12 +3345,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
                             </div>
                         ) : (activeSection.id === 'viksit-bharat-2047' || activeSection.id === 'viksit-bharat') ? (
                             <div className="space-y-4 sm:space-y-5 w-full min-w-0 max-w-full overflow-hidden">
@@ -3648,8 +3369,8 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     </div>
                                 </div>
 
-                                {/* === 7 Dark Collapsible Accordions (Matching Official Website Layout) === */}
-                                <div className="w-full max-w-full rounded-xl sm:rounded-xl border border-[#1e2c3f] bg-[#121c2d] overflow-hidden shadow-xs divide-y divide-[#1e2c3f]">
+                                {/* === Collapsible Accordions (DepartmentAccordion Theme) === */}
+                                <AccordionContainer className="w-full max-w-full">
                                     {[
                                         { id: 'vision', label: 'Vision' },
                                         { id: 'mission', label: 'Mission' },
@@ -3658,27 +3379,17 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         { id: 'registration', label: 'Registration' },
                                         { id: 'team', label: 'Team' },
                                         { id: 'contact', label: 'Contact' },
-                                    ].map((item) => {
+                                    ].map((item, idx) => {
                                         const isOpen = !!openViksitAccordions[item.id];
                                         return (
-                                            <div key={item.id} className="w-full max-w-full">
-                                                {/* Accordion Row Header */}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => toggleViksitAccordion(item.id)}
-                                                    className="w-full bg-[#121c2d] hover:bg-[#18253a] text-[#f05a22] hover:text-[#ff7a45] px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between text-xs sm:text-sm md:text-base font-bold transition-colors cursor-pointer select-none text-left tracking-wide"
-                                                >
-                                                    <span>{item.label}</span>
-                                                    <ChevronDown
-                                                        size={18}
-                                                        className={`text-[#f05a22] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                                            }`}
-                                                    />
-                                                </button>
-
-                                                {/* Accordion Content Body */}
-                                                {isOpen && (
-                                                    <div className="p-3 sm:p-5 md:p-6 bg-white text-neutral-800 animate-fadeIn border-t border-neutral-200 w-full max-w-full overflow-hidden">
+                                            <DepartmentAccordionRow
+                                                key={item.id}
+                                                id="viksit"
+                                                index={idx}
+                                                title={item.label}
+                                                isOpen={isOpen}
+                                                onToggle={() => toggleViksitAccordion(item.id)}
+                                            >
                                                         {/* 1. Vision */}
                                                         {item.id === 'vision' && (
                                                             <div className="space-y-4 text-xs sm:text-sm text-neutral-700 leading-relaxed text-justify">
@@ -3932,12 +3643,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             </div>
                                                         )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                            </DepartmentAccordionRow>
                                         );
                                     })}
-                                </div>
+                                </AccordionContainer>
                             </div>
                         ) : (
                             <>
@@ -4244,32 +3953,20 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             </h2>
                                         </div>
 
-                                        {activeSection.spreadsheets.map((sheet, sIdx) => {
-                                            const isOpen = !!openSpreadsheets[sIdx];
-                                            return (
-                                                <div
-                                                    key={sIdx}
-                                                    className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full"
-                                                >
-                                                    <button
-                                                        onClick={() => toggleSpreadsheet(sIdx)}
-                                                        className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
+                                        <AccordionContainer className="w-full max-w-full">
+                                            {activeSection.spreadsheets.map((sheet, sIdx) => {
+                                                const isOpen = !!openSpreadsheets[sIdx];
+                                                return (
+                                                    <DepartmentAccordionRow
+                                                        key={sIdx}
+                                                        id="records"
+                                                        index={sIdx}
+                                                        title={sheet.title}
+                                                        isOpen={isOpen}
+                                                        onToggle={() => toggleSpreadsheet(sIdx)}
                                                     >
-                                                        <div className="flex items-center gap-3">
-                                                            <span className="text-[#FF5422] font-black text-xl leading-none">
-                                                                {isOpen ? '−' : '+'}
-                                                            </span>
-                                                            <span className="font-serif font-black text-base sm:text-lg tracking-wide text-[#FF5422]">
-                                                                {sheet.title}
-                                                            </span>
-                                                        </div>
-                                                        <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                                            {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                                        </div>
-                                                    </button>
 
-                                                    {isOpen && (
-                                                        <div className="p-3 sm:p-5 bg-white space-y-3">
+                                                        <div className="space-y-3">
                                                             {sheet.description && (
                                                                 <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-lg bg-orange-50/70 border border-orange-200/70 text-xs">
                                                                     <span className="text-neutral-700 font-medium">
@@ -4279,7 +3976,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         href={sheet.sheetUrl.replace('&amp;', '&')}
                                                                         target="_blank"
                                                                         rel="noreferrer"
-                                                                        className="inline-flex items-center gap-1.5 font-bold text-white bg-[#FF5422] hover:bg-[#e04515] px-3 py-1 rounded-md transition-colors"
+                                                                        className="inline-flex items-center gap-1.5 font-bold text-white bg-[#FF6600] hover:bg-[#e04515] px-3 py-1 rounded-md transition-colors"
                                                                     >
                                                                         <span>Open Full Screen</span>
                                                                         <ExternalLink size={12} />
@@ -4287,19 +3984,18 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 </div>
                                                             )}
 
-                                                            <div className="w-full h-[540px] sm:h-[620px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
-                                                                <iframe
+                                                            <div className="w-full">
+                                                                <IframeWithLoader
                                                                     title={sheet.title}
                                                                     src={sheet.sheetUrl.replace('&amp;', '&')}
-                                                                    className="w-full h-full border-0"
-                                                                    loading="lazy"
+                                                                    style={{ height: 'clamp(500px, 75vh, 800px)' }}
                                                                 />
                                                             </div>
                                                         </div>
-                                                    )}
-                                                </div>
-                                            );
-                                        })}
+                                                    </DepartmentAccordionRow>
+                                                );
+                                            })}
+                                        </AccordionContainer>
                                     </div>
                                 )}
 

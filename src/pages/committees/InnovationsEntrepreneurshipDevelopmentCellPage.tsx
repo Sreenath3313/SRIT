@@ -8,6 +8,7 @@ import Footer from '../../components/layout/Footer'
 import { navLinks } from '../../data/navigation'
 import IframeWithLoader from '../../components/common/IframeWithLoader'
 import PageHeader from '../../components/common/PageHeader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const accordions = [
   {
@@ -159,63 +160,46 @@ export default function InnovationsEntrepreneurshipDevelopmentCellPage() {
             <motion.article variants={itemVariants} className="rounded-xl border border-neutral-200/60 bg-white p-6 sm:p-9 shadow-sm">
               <h2 className="font-serif text-2xl font-bold text-neutral-900 mb-6">Documents & Records</h2>
               
-              <div className="flex flex-col gap-4">
-                {accordions.map((tab) => {
+              <AccordionContainer className="w-full">
+                {accordions.map((tab, idx) => {
                   const isOpen = activeTab === tab.title
                   return (
-                    <div 
-                      key={tab.title} 
-                      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                        isOpen 
-                          ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                          : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                      }`}
+                    <DepartmentAccordionRow
+                      key={tab.title}
+                      id="iedc"
+                      index={idx}
+                      title={tab.title}
+                      isOpen={isOpen}
+                      onToggle={() => setActiveTab(isOpen ? '' : tab.title)}
                     >
-                      <button
-                        onClick={() => setActiveTab(isOpen ? '' : tab.title)}
-                        className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                      >
-                        <span className={`font-bold transition-colors ${isOpen ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                          {tab.title}
-                        </span>
-                        <div className={`p-1.5 rounded-full transition-colors ${isOpen ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                          <ChevronDown className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} size={18} />
-                        </div>
-                      </button>
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      {tab.iframeUrl ? (
+                        <IframeWithLoader 
+                          src={tab.iframeUrl} 
+                          title={tab.title} 
+                          style={{ height: 'clamp(500px, 75vh, 1200px)' }} 
+                        />
+                      ) : tab.externalLink ? (
+                        <div className="p-4 bg-orange-50/50 rounded-xl border border-orange-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                          <p className="text-neutral-700 font-medium">{tab.content}</p>
+                          <a 
+                            href={tab.externalLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF6600] text-white hover:bg-[#e65c00] rounded-lg transition-colors font-semibold text-sm shadow-sm shrink-0"
                           >
-                            <div className="p-4 pt-0">
-                              {tab.iframeUrl ? (
-                                <div className="h-[600px] rounded-xl overflow-hidden border border-neutral-100 shadow-inner bg-neutral-50">
-                                  <IframeWithLoader src={tab.iframeUrl} title={tab.title} className="h-full" />
-                                </div>
-                              ) : tab.externalLink ? (
-                                <div className="p-4">
-                                  <p className="text-neutral-600 font-medium mb-3">{tab.content}</p>
-                                  <a href={tab.externalLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary hover:bg-primary hover:text-white rounded-lg transition-colors font-medium text-sm">
-                                    <ExternalLink size={16} />
-                                    Download Document
-                                  </a>
-                                </div>
-                              ) : (
-                                <div className="p-2 px-4 text-neutral-600 leading-relaxed font-medium">
-                                  {tab.content}
-                                </div>
-                              )}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                            <ExternalLink size={16} />
+                            Download Document
+                          </a>
+                        </div>
+                      ) : (
+                        <div className="p-2 text-neutral-600 leading-relaxed font-medium">
+                          {tab.content}
+                        </div>
+                      )}
+                    </DepartmentAccordionRow>
                   )
                 })}
-              </div>
+              </AccordionContainer>
             </motion.article>
 
           </motion.div>

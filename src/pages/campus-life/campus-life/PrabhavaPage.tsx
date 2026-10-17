@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import {
-    ChevronUp, ChevronDown, ChevronRight
-} from 'lucide-react';
+import { Sparkles, FileSpreadsheet } from 'lucide-react';
 import CampusLifeLayout from './CampusLifeLayout';
 import { campusLifeSections } from './types';
 import IframeWithLoader from '../../../components/common/IframeWithLoader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../../components/common/DepartmentAccordion';
 
 export const PrabhavaPage: React.FC = () => {
     const [isPrabhavaReportsOpen, setIsPrabhavaReportsOpen] = useState(false);
@@ -13,72 +12,84 @@ export const PrabhavaPage: React.FC = () => {
 
     return (
         <CampusLifeLayout activeSectionId="prabhava">
-            <div className="space-y-6 w-full">
-
-                                {/* === Detailed Overview: Exact Text from Official SRIT Prabhava Page === */}
-                                <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
-                                        <h2 className="font-serif text-2xl sm:text-3xl lg:text-[26px] font-black text-neutral-900 tracking-tight">
-                                            PRABHAVA (Freshers Day)
-                                        </h2>
-                                    </div>
-
-                                    <div className="space-y-3.5 text-[14px] leading-relaxed text-neutral-700">
-                                        {activeSection.overview && activeSection.overview.map((para, i) => (
-                                            <p
-                                                key={i}
-                                                className={`text-left sm:text-justify ${
-                                                    i === (activeSection.overview?.length || 1) - 1
-                                                        ? 'p-4 rounded-xl border border-orange-200/80 bg-orange-50/50 text-neutral-900 font-medium'
-                                                        : ''
-                                                }`}
-                                            >
-                                                {para}
-                                            </p>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* === Official Accordion: Year Wise Event Reports (Live Google Spreadsheet Embed) === */}
-                                <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-sm w-full">
-                                    <button
-                                        onClick={() => setIsPrabhavaReportsOpen(!isPrabhavaReportsOpen)}
-                                        className="w-full flex items-center justify-between px-5 py-4 bg-black hover:bg-neutral-900 text-white transition-colors text-left select-none cursor-pointer"
-                                    >
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-[#FF5422] font-bold text-xl leading-none">
-                                                {isPrabhavaReportsOpen ? '−' : '+'}
-                                            </span>
-                                            <span className="font-serif font-bold text-base sm:text-lg tracking-wide text-[#FF5422]">
-                                                Year Wise Event Reports
-                                            </span>
-                                        </div>
-                                        <div className="text-neutral-400 hover:text-white p-1 transition-transform duration-200">
-                                            {isPrabhavaReportsOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                        </div>
-                                    </button>
-
-                                    {/* Inside Accordion: Full-Width Embedded Excel / Google Spreadsheet */}
-                                    {isPrabhavaReportsOpen && (
-                                        <div className="p-4 sm:p-6 bg-white w-full space-y-4">
-
-
-                                            {/* Live Google Sheets Embed */}
-                                            <div className="w-full h-[800px] rounded-lg overflow-hidden border border-neutral-200 bg-white shadow-inner">
-                                                <IframeWithLoader
-                                                    title="PRABHAVA Year Wise Event Reports Sheet"
-                                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSE33k0xRqXtvcdZErGoYQUN1taILxPEYXKVXvQEoUDUS08UaytBYucijczFkYYjKCTixtgnRtkzGdg/pubhtml?widget=true&headers=false"
-                                                    className="w-full h-full border-0"
-                                                />
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
+            <div className="space-y-8 sm:space-y-10 w-full">
+                {/* === 1. DETAILED OVERVIEW === */}
+                <section aria-label="Prabhava Overview">
+                    <div className="rounded-xl border border-[#FFD9C4] bg-white p-6 sm:p-8 lg:p-10 shadow-[0_4px_16px_rgba(255,102,0,0.05)] space-y-6">
+                        <div className="flex items-center gap-3 pb-3 border-b border-[#FFD9C4]/60">
+                            <span className="h-6 w-1.5 rounded-full bg-[#FF6600]" />
+                            <div>
+                                <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
+                                    PRABHAVA <span className="text-[#FF6600]">(Freshers Day Celebrations)</span>
+                                </h2>
+                                <p className="text-xs sm:text-sm text-neutral-500 mt-0.5">
+                                    Annual cultural extravaganza welcoming newly enrolled students into the campus community
+                                </p>
                             </div>
+                        </div>
+
+                        <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[#334155]">
+                            {activeSection.overview && activeSection.overview.map((para, i) => (
+                                <p
+                                    key={i}
+                                    className={`text-left sm:text-justify ${
+                                        i === (activeSection.overview?.length || 1) - 1
+                                            ? 'p-4 sm:p-5 rounded-xl border border-[#FFD9C4] bg-[#FFFAF6] text-[#0f172a] font-medium'
+                                            : ''
+                                    }`}
+                                >
+                                    {para}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* === 2. OFFICIAL ACCORDION: YEAR WISE EVENT REPORTS === */}
+                <section aria-label="Year Wise Event Reports">
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3 px-1">
+                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
+                            <h2 className="font-serif text-xl sm:text-2xl font-extrabold text-[#0f172a] tracking-tight">
+                                Event Documentation &amp; Archival Reports
+                            </h2>
+                        </div>
+
+                        <AccordionContainer className="w-full">
+                            <DepartmentAccordionRow
+                                id="prabhava-reports"
+                                index={0}
+                                title={
+                                    <span className="flex items-center gap-2">
+                                        <FileSpreadsheet className="h-4 w-4 text-[#FF6600] shrink-0" />
+                                        <span>Year Wise Event Reports</span>
+                                    </span>
+                                }
+                                isOpen={isPrabhavaReportsOpen}
+                                onToggle={() => setIsPrabhavaReportsOpen(!isPrabhavaReportsOpen)}
+                            >
+                                <div className="p-3 sm:p-5 bg-white">
+                                    <div className="mb-3 flex items-center justify-between text-xs text-neutral-500 px-1">
+                                        <span>Official event proceedings, cultural highlights, and archival records.</span>
+                                        <span className="hidden sm:inline-flex items-center gap-1 text-[#FF6600] font-semibold">
+                                            Institutional Records
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-[800px] rounded-xl overflow-hidden border border-[#FFD9C4] bg-white shadow-inner">
+                                        <IframeWithLoader
+                                            title="PRABHAVA Year Wise Event Reports Sheet"
+                                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSE33k0xRqXtvcdZErGoYQUN1taILxPEYXKVXvQEoUDUS08UaytBYucijczFkYYjKCTixtgnRtkzGdg/pubhtml?widget=true&headers=false"
+                                            className="w-full h-full border-0"
+                                        />
+                                    </div>
+                                </div>
+                            </DepartmentAccordionRow>
+                        </AccordionContainer>
+                    </div>
+                </section>
+            </div>
         </CampusLifeLayout>
     );
 };
 
 export default PrabhavaPage;
-// EOF

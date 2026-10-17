@@ -8,6 +8,7 @@ import Footer from '../../components/layout/Footer'
 import { navLinks } from '../../data/navigation'
 import IframeWithLoader from '../../components/common/IframeWithLoader'
 import PageHeader from '../../components/common/PageHeader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const accordions = [
   {
@@ -167,206 +168,117 @@ export default function LibraryCommitteePage() {
             <motion.article variants={itemVariants} className="rounded-xl border border-neutral-200/60 bg-white p-6 sm:p-9 shadow-sm">
               <h2 className="font-serif text-2xl font-bold text-neutral-900 mb-6">Library Information & Records</h2>
               
-              <div className="flex flex-col gap-4">
-                
+              <AccordionContainer className="w-full">
                 {/* Rules & Regulations Accordion */}
-                <div 
-                  className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                    activeTab === 'Rules & Regulations' 
-                      ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                      : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                  }`}
+                <DepartmentAccordionRow
+                  id="library"
+                  index={0}
+                  title="Rules & Regulations"
+                  isOpen={activeTab === 'Rules & Regulations'}
+                  onToggle={() => setActiveTab(activeTab === 'Rules & Regulations' ? '' : 'Rules & Regulations')}
                 >
-                  <button
-                    onClick={() => setActiveTab(activeTab === 'Rules & Regulations' ? '' : 'Rules & Regulations')}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                  >
-                    <span className={`font-bold transition-colors ${activeTab === 'Rules & Regulations' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                      Rules & Regulations
-                    </span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Rules & Regulations' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                      <ChevronDown className={`transition-transform duration-300 ${activeTab === 'Rules & Regulations' ? 'rotate-180' : ''}`} size={18} />
+                  <div className="p-2 space-y-6">
+                    <div>
+                      <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Library General Rules</h4>
+                      <ul className="list-disc pl-5 space-y-2 text-neutral-700 text-sm">
+                        <li>Faculty members and students of SRIT are allowed to use the library services.</li>
+                        <li>Members should always produce their Identity cards while entering the library.</li>
+                        <li>Readers should observe strict “silence” inside the library.</li>
+                        <li>Use of mobile phones are not permitted inside the library.</li>
+                        <li>Members are responsible for books issued against their membership.</li>
+                        <li>Readers are not allowed to bring their personal books inside the library.</li>
+                        <li>Readers should not write in, mark, scratches, and disfigure, damage, tearing library books.</li>
+                        <li>are not allowed to carry eatables and drinks inside the library.</li>
+                        <li>The library works from 9.00 a.m to 6.00 p.m in all working days.</li>
+                        <li>One section of one branch shall be allowed to borrow / return of books in one period. (As per the library time table)</li>
+                      </ul>
                     </div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {activeTab === 'Rules & Regulations' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="p-6 pt-0 space-y-6">
-                          <div>
-                            <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Library General Rules</h4>
-                            <ul className="list-disc pl-5 space-y-2 text-neutral-700 text-sm">
-                              <li>Faculty members and students of SRIT are allowed to use the library services.</li>
-                              <li>Members should always produce their Identity cards while entering the library.</li>
-                              <li>Readers should observe strict “silence” inside the library.</li>
-                              <li>Use of mobile phones are not permitted inside the library.</li>
-                              <li>Members are responsible for books issued against their membership.</li>
-                              <li>Readers are not allowed to bring their personal books inside the library.</li>
-                              <li>Readers should not write in, mark, scratches, and disfigure, damage, tearing library books.</li>
-                              <li>are not allowed to carry eatables and drinks inside the library.</li>
-                              <li>The library works from 9.00 a.m to 6.00 p.m in all working days.</li>
-                              <li>One section of one branch shall be allowed to borrow / return of books in one period. (As per the library time table)</li>
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Circulation Rules</h4>
-                            <ul className="list-disc pl-5 space-y-2 text-neutral-700 text-sm">
-                              <li>Book borrowers must satisfy themselves with the physical condition of the book before going out.</li>
-                              <li>Books are normally issued for a period of 14 days (2 Weeks) except reference books.</li>
-                              <li>The renewal of any book will be done based on the demand of that book. It is not a right to claim the same book again.</li>
-                              <li>Those text books which have single copies shall not be issued.</li>
-                              <li>Reference books, Theses, project reports shall not be issued to students.</li>
-                              <li>Library has right to recall any issued book even before the due date.</li>
-                              <li>No sub lending of books is permitted.</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                    <div>
+                      <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Circulation Rules</h4>
+                      <ul className="list-disc pl-5 space-y-2 text-neutral-700 text-sm">
+                        <li>Book borrowers must satisfy themselves with the physical condition of the book before going out.</li>
+                        <li>Books are normally issued for a period of 14 days (2 Weeks) except reference books.</li>
+                        <li>The renewal of any book will be done based on the demand of that book. It is not a right to claim the same book again.</li>
+                        <li>Those text books which have single copies shall not be issued.</li>
+                        <li>Reference books, Theses, project reports shall not be issued to students.</li>
+                        <li>Library has right to recall any issued book even before the due date.</li>
+                        <li>No sub lending of books is permitted.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </DepartmentAccordionRow>
 
                 {/* Library Automation Accordion */}
-                <div 
-                  className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                    activeTab === 'Library Automation' 
-                      ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                      : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                  }`}
+                <DepartmentAccordionRow
+                  id="library"
+                  index={1}
+                  title="Library Automation"
+                  isOpen={activeTab === 'Library Automation'}
+                  onToggle={() => setActiveTab(activeTab === 'Library Automation' ? '' : 'Library Automation')}
                 >
-                  <button
-                    onClick={() => setActiveTab(activeTab === 'Library Automation' ? '' : 'Library Automation')}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                  >
-                    <span className={`font-bold transition-colors ${activeTab === 'Library Automation' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                      Library Automation
-                    </span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Library Automation' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                      <ChevronDown className={`transition-transform duration-300 ${activeTab === 'Library Automation' ? 'rotate-180' : ''}`} size={18} />
-                    </div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {activeTab === 'Library Automation' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="p-6 pt-0">
-                          <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Library Automation & Bar-Coding System</h4>
-                          <p className="text-neutral-700 leading-relaxed text-sm">
-                            Library is automated using ECAP (Engineering College Automation Package). ECAP is user friendly, multi user and multi tasking library management software. This software has been developed by Web pros solutions Pvt, Ltd, Visakhapatnam, India. SRIT is using ECAP to develop the automation in different sections in the college. So the SRIT Library is also using the same package for its operations. Bar code technology is using in data entry process. The use of barcode technology increases efficiency and eliminates human errors as in case of manual data entry. The bar code reader/scanner is the input device for data entry. In SRIT Library, each book is having unique barcode, the accession number itself is its barcode. Each book is having two barcodes. ECAP provides a module to generate barcode labels. So, all barcodes for library books are generating in SRIT library with the help of ECAP in the form of stickers. The software provides number of modules mainly Book Status, Book Reserved, Circulation, Cross check, Departmental Library, OPAC, Dues, Daily report, fines, receipts, stock verification, barcodes etc. SRIT Library is using ECAP since 2013 for its operations.
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                  <div className="p-2">
+                    <h4 className="font-bold text-neutral-900 mb-3 text-sm uppercase tracking-wide">Library Automation & Bar-Coding System</h4>
+                    <p className="text-neutral-700 leading-relaxed text-sm">
+                      Library is automated using ECAP (Engineering College Automation Package). ECAP is user friendly, multi user and multi tasking library management software. This software has been developed by Web pros solutions Pvt, Ltd, Visakhapatnam, India. SRIT is using ECAP to develop the automation in different sections in the college. So the SRIT Library is also using the same package for its operations. Bar code technology is using in data entry process. The use of barcode technology increases efficiency and eliminates human errors as in case of manual data entry. The bar code reader/scanner is the input device for data entry. In SRIT Library, each book is having unique barcode, the accession number itself is its barcode. Each book is having two barcodes. ECAP provides a module to generate barcode labels. So, all barcodes for library books are generating in SRIT library with the help of ECAP in the form of stickers. The software provides number of modules mainly Book Status, Book Reserved, Circulation, Cross check, Departmental Library, OPAC, Dues, Daily report, fines, receipts, stock verification, barcodes etc. SRIT Library is using ECAP since 2013 for its operations.
+                    </p>
+                  </div>
+                </DepartmentAccordionRow>
 
                 {/* Team Accordion */}
-                <div 
-                  className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                    activeTab === 'Library Team' 
-                      ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                      : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                  }`}
+                <DepartmentAccordionRow
+                  id="library"
+                  index={2}
+                  title="Library Team"
+                  isOpen={activeTab === 'Library Team'}
+                  onToggle={() => setActiveTab(activeTab === 'Library Team' ? '' : 'Library Team')}
                 >
-                  <button
-                    onClick={() => setActiveTab(activeTab === 'Library Team' ? '' : 'Library Team')}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                  >
-                    <span className={`font-bold transition-colors ${activeTab === 'Library Team' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                      Library Team
-                    </span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Library Team' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                      <ChevronDown className={`transition-transform duration-300 ${activeTab === 'Library Team' ? 'rotate-180' : ''}`} size={18} />
+                  <div className="p-2">
+                    <div className="overflow-x-auto rounded-xl border border-orange-100 shadow-inner bg-neutral-50 p-2">
+                      <table className="w-full text-sm text-left border-collapse">
+                        <thead>
+                          <tr className="bg-[#FF6600] text-white">
+                            <th className="px-4 py-3 font-bold">S.No.</th>
+                            <th className="px-4 py-3 font-bold">Name of the Staff Member</th>
+                            <th className="px-4 py-3 font-bold">Designation</th>
+                            <th className="px-4 py-3 font-bold">Qualification</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-neutral-200 bg-white">
+                          {libraryTeam.map((member, idx) => (
+                            <tr key={idx} className="hover:bg-orange-50/40 transition-colors">
+                              <td className="px-4 py-3 font-medium text-neutral-900">{idx + 1}</td>
+                              <td className="px-4 py-3 font-bold text-neutral-800">{member.name}</td>
+                              <td className="px-4 py-3 text-neutral-600">{member.designation}</td>
+                              <td className="px-4 py-3 text-neutral-600">{member.qualification}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {activeTab === 'Library Team' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="p-6 pt-0">
-                          <div className="overflow-x-auto">
-                            <table className="w-full text-sm text-left border-collapse">
-                              <thead>
-                                <tr className="bg-orange-50 text-primary border-b-2 border-orange-200">
-                                  <th className="px-4 py-3 font-bold">S.No.</th>
-                                  <th className="px-4 py-3 font-bold">Name of the Staff Member</th>
-                                  <th className="px-4 py-3 font-bold">Designation</th>
-                                  <th className="px-4 py-3 font-bold">Qualification</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {libraryTeam.map((member, idx) => (
-                                  <tr key={idx} className="border-b border-neutral-100 hover:bg-neutral-50">
-                                    <td className="px-4 py-3 font-medium text-neutral-900">{idx + 1}</td>
-                                    <td className="px-4 py-3 font-bold text-neutral-800">{member.name}</td>
-                                    <td className="px-4 py-3 text-neutral-600">{member.designation}</td>
-                                    <td className="px-4 py-3 text-neutral-600">{member.qualification}</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                  </div>
+                </DepartmentAccordionRow>
 
                 {/* Other Accordions */}
-                {accordions.map((tab) => {
+                {accordions.map((tab, idx) => {
                   const isOpen = activeTab === tab.title
                   return (
-                    <div 
-                      key={tab.title} 
-                      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                        isOpen 
-                          ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                          : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                      }`}
+                    <DepartmentAccordionRow
+                      key={tab.title}
+                      id="library"
+                      index={idx + 3}
+                      title={tab.title}
+                      isOpen={isOpen}
+                      onToggle={() => setActiveTab(isOpen ? '' : tab.title)}
                     >
-                      <button
-                        onClick={() => setActiveTab(isOpen ? '' : tab.title)}
-                        className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                      >
-                        <span className={`font-bold transition-colors ${isOpen ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                          {tab.title}
-                        </span>
-                        <div className={`p-1.5 rounded-full transition-colors ${isOpen ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                          <ChevronDown className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} size={18} />
-                        </div>
-                      </button>
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          >
-                            <div className="p-4 pt-0">
-                              <div className="h-[600px] rounded-xl overflow-hidden border border-neutral-100 shadow-inner bg-neutral-50">
-                                <IframeWithLoader src={tab.iframeUrl} title={tab.title} className="h-full" />
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                      <IframeWithLoader 
+                        src={tab.iframeUrl} 
+                        title={tab.title} 
+                        style={{ height: 'clamp(500px, 75vh, 1200px)' }} 
+                      />
+                    </DepartmentAccordionRow>
                   )
                 })}
-              </div>
+              </AccordionContainer>
             </motion.article>
 
           </motion.div>

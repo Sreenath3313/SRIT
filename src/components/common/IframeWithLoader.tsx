@@ -29,7 +29,7 @@ const IframeWithLoader: React.FC<IframeWithLoaderProps> = ({ className, style, t
         <div className={`relative w-full min-w-0 max-w-full overflow-hidden rounded-xl border border-neutral-200 bg-white ${className || ''}`} style={responsiveFrameStyle}>
             {isLoading && (
                 <div className="absolute inset-0 z-10 flex items-center justify-center bg-white" role="status" aria-label="Loading embedded content">
-                    <Loader2 className="h-8 w-8 animate-spin text-[#FF5422]" />
+                    <Loader2 className="h-8 w-8 animate-spin text-[#FF6600]" />
                 </div>
             )}
             <iframe

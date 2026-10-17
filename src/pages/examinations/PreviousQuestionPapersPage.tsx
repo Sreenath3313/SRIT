@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/layout/Navbar'
 import Footer from '../../components/layout/Footer'
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion'
 import { navLinks } from '../../data/navigation'
 import IframeWithLoader from '../../components/common/IframeWithLoader'
 import previousPapersData from '../../data/previousPapers.json'
@@ -39,46 +40,30 @@ export default function PreviousQuestionPapersPage() {
             <p className="text-primary text-xs font-bold tracking-[.16em] uppercase">{categoryTitle}</p>
             <h2 className="mt-3 font-serif text-2xl font-bold text-neutral-900 mb-6">{title}</h2>
             
-            <div className="flex flex-col border-x border-t border-[#f27441]">
-              {previousPapersData.map((tab) => {
+            <AccordionContainer>
+              {previousPapersData.map((tab, index) => {
                 const isOpen = activeTab === tab.department;
                 return (
-                  <div key={tab.department} className="border-b border-[#f27441] bg-[#171e2e]">
-                    <button
-                      onClick={() => setActiveTab(isOpen ? '' : tab.department)}
-                      className="w-full flex items-center justify-between px-5 py-4 text-left transition-colors hover:bg-neutral-800"
-                    >
-                      <span className="font-bold text-[#f27441]">{tab.department}</span>
-                      <ChevronDown 
-                        className={`text-[#f27441] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-                        size={20} 
+                  <DepartmentAccordionRow
+                    key={tab.department}
+                    id="previous-papers"
+                    index={index}
+                    title={tab.department}
+                    isOpen={isOpen}
+                    onToggle={() => setActiveTab(isOpen ? '' : tab.department)}
+                    contentClassName="p-4 sm:p-5"
+                  >
+                    <div className="w-full overflow-hidden rounded-xl border border-neutral-200 shadow-sm bg-white">
+                      <IframeWithLoader 
+                        src={tab.iframeSrc}
+                        title={`${tab.department} Question Papers`}
+                        style={{ height: '600px', width: '100%' }}
                       />
-                    </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0 }}
-                          animate={{ height: 'auto' }}
-                          exit={{ height: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          className="overflow-hidden bg-neutral-50"
-                        >
-                          <div className="p-4 sm:p-5">
-                            <div className="w-full overflow-hidden rounded-xl border border-neutral-200 shadow-sm bg-white">
-                              <IframeWithLoader 
-                                src={tab.iframeSrc}
-                                title={`${tab.department} Question Papers`}
-                                style={{ height: '600px', width: '100%' }}
-                              />
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                )
+                    </div>
+                  </DepartmentAccordionRow>
+                );
               })}
-            </div>
+            </AccordionContainer>
             
           </article>
           

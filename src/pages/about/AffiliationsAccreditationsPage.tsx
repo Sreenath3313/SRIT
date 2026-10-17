@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
 import { fadeUp, stagger } from '../../features/about/animations';
 import IframeWithLoader from '../../components/common/IframeWithLoader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const AFFILIATIONS = [
     {
@@ -78,103 +79,36 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                 </motion.div>
 
                 {/* Affiliation Dropdowns */}
-                <motion.div
-                    variants={stagger}
-                    className="space-y-1.5"
-                >
-                    {AFFILIATIONS.map((item, index) => {
-                        const isOpen = openIndex === index;
+                <motion.div variants={stagger}>
+                    <AccordionContainer className="w-full">
+                        {AFFILIATIONS.map((item, index) => {
+                            const isOpen = openIndex === index;
 
-                        return (
-                            <motion.div
-                                key={item.title}
-                                variants={fadeUp}
-                                className="overflow-hidden rounded-lg"
-                            >
-                                {/* Compact Dropdown Header */}
-                                <button
-                                    type="button"
-                                    onClick={() => toggleDropdown(index)}
-                                    aria-expanded={isOpen}
-                                    className="
-                                        w-full
-                                        flex
-                                        items-center
-                                        justify-between
-                                        gap-3
-                                        px-4
-                                        py-3
-                                        bg-[#0A0903]
-                                        text-[#FF5422]
-                                        hover:bg-[#15130D]
-                                        transition-colors
-                                        duration-200
-                                    "
-                                >
-                                    <div className="flex items-center gap-2.5 min-w-0">
-                                        <span className="text-[#FF5422] font-bold text-base w-4 text-center">
-                                            {isOpen ? '−' : '+'}
-                                        </span>
-
-                                        <div className="text-left min-w-0">
-                                            <h3 className="text-sm sm:text-base font-bold tracking-wide">
-                                                {item.title}
-                                            </h3>
-
-                                            <p className="text-[11px] text-neutral-400 mt-0.5 truncate leading-tight">
-                                                {item.description}
-                                            </p>
+                            return (
+                                <DepartmentAccordionRow
+                                    key={item.title}
+                                    id="affiliation"
+                                    index={index}
+                                    title={
+                                        <div>
+                                            <span className="font-bold">{item.title}</span>
+                                            <span className="text-xs text-neutral-500 font-normal ml-2">({item.description})</span>
                                         </div>
+                                    }
+                                    isOpen={isOpen}
+                                    onToggle={() => toggleDropdown(index)}
+                                >
+                                    <div className="border border-neutral-200 rounded-lg overflow-hidden">
+                                        <IframeWithLoader
+                                            src={item.url}
+                                            title={`${item.title} - Affiliations and Accreditations`}
+                                            style={{ height: 'clamp(280px, 45vh, 600px)' }}
+                                        />
                                     </div>
-
-                                    <ChevronDown
-                                        className={`
-                                            w-4
-                                            h-4
-                                            text-[#FF5422]
-                                            shrink-0
-                                            transition-transform
-                                            duration-300
-                                            ${isOpen ? 'rotate-180' : ''}
-                                        `}
-                                    />
-                                </button>
-
-                                {/* Google Sheet Content */}
-                                <AnimatePresence initial={false}>
-                                    {isOpen && (
-                                        <motion.div
-                                            initial={{
-                                                height: 0,
-                                                opacity: 0,
-                                            }}
-                                            animate={{
-                                                height: 'auto',
-                                                opacity: 1,
-                                            }}
-                                            exit={{
-                                                height: 0,
-                                                opacity: 0,
-                                            }}
-                                            transition={{
-                                                duration: 0.3,
-                                                ease: 'easeInOut',
-                                            }}
-                                            className="overflow-hidden bg-white"
-                                        >
-                                            <div className="border border-t-0 border-neutral-200">
-                                                <IframeWithLoader
-                                                    src={item.url}
-                                                    title={`${item.title} - Affiliations and Accreditations`}
-                                                    style={{ height: 'clamp(280px, 45vh, 600px)' }}
-                                                />
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.div>
-                        );
-                    })}
+                                </DepartmentAccordionRow>
+                            );
+                        })}
+                    </AccordionContainer>
                 </motion.div>
 
                 {/* Autonomous Status */}

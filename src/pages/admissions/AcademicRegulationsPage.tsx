@@ -51,14 +51,6 @@ export default function AcademicRegulationsPage() {
                   {title}
                 </h2>
               </div>
-              <a
-                href="https://docs.google.com/spreadsheets/d/1F3Z45kK6PpV0i4KThs-YwAbWTAQwyfqJ/pubhtml"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#F67437] hover:underline font-semibold text-xs sm:text-sm"
-              >
-                Open Google Sheet in New Tab <ExternalLink size={14} />
-              </a>
             </div>
 
             {/* Embedded Academic Regulations Spreadsheet - Full Width */}

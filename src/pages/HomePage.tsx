@@ -10,7 +10,6 @@ import Accreditations from '../features/home/Accreditations';
 import GlobalTieUps from '../features/institution/GlobalTieUps';
 import SocialMediaFeeds from '../features/home/SocialMediaFeeds';
 import CSRActivities from '../features/institution/CSRActivities';
-import StudentAchievements from '../features/campus/StudentAchievements';
 import { AnnouncementBand, FacilitiesFeature, ProgramsDepartments, ResearchFeature } from '../features/home/HomeEditorial';
 
 
@@ -67,7 +66,6 @@ const HomePage: React.FC = () => {
                 <AlumniSuccess />
                 <ResearchFeature />
                 <FacilitiesFeature />
-                <StudentAchievements />
                 <CSRActivities />
                 <SocialMediaFeeds />
 

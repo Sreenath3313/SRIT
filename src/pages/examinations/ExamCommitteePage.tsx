@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { FileText, ChevronDown } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { FileText } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/layout/Navbar'
 import Footer from '../../components/layout/Footer'
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion'
 import { navLinks } from '../../data/navigation'
 import examCommitteeData from '../../data/examCommittee.json'
 import PageHeader from '../../components/common/PageHeader';
@@ -38,59 +38,43 @@ export default function ExamCommitteePage() {
             <p className="text-primary text-xs font-bold tracking-[.16em] uppercase">{categoryTitle}</p>
             <h2 className="mt-3 font-serif text-2xl font-bold text-neutral-900 mb-6">{title}</h2>
             
-            <div className="flex flex-col border-x border-t border-[#f27441]">
-              {examCommitteeData.map((tab) => {
+            <AccordionContainer>
+              {examCommitteeData.map((tab, index) => {
                 const isOpen = activeTab === tab.academicYear;
                 return (
-                  <div key={tab.academicYear} className="border-b border-[#f27441] bg-[#171e2e]">
-                    <button
-                      onClick={() => setActiveTab(isOpen ? '' : tab.academicYear)}
-                      className="w-full flex items-center justify-between px-5 py-4 text-left transition-colors hover:bg-neutral-800"
-                    >
-                      <span className="font-bold text-[#f27441]">{tab.academicYear}</span>
-                      <ChevronDown 
-                        className={`text-[#f27441] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-                        size={20} 
-                      />
-                    </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0 }}
-                          animate={{ height: 'auto' }}
-                          exit={{ height: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          className="overflow-hidden bg-white"
-                        >
-                          <div className="p-0 sm:p-0">
-                            <div className="w-full overflow-x-auto">
-                              <table className="w-full text-left text-sm text-neutral-700">
-                                <thead className="text-white border-b border-neutral-200">
-                                  <tr className="bg-[#f27441]">
-                                    <th scope="col" className="px-4 py-4 font-bold text-center border-r border-white/20 w-20">S. No</th>
-                                    <th scope="col" className="px-4 py-4 font-bold text-center border-r border-white/20">Name & Designation</th>
-                                    <th scope="col" className="px-4 py-4 font-bold text-center">Role</th>
-                                  </tr>
-                                </thead>
-                                <tbody className="divide-y divide-neutral-200 bg-white">
-                                  {tab.members.map((member, index) => (
-                                    <tr key={index} className="hover:bg-neutral-50/50 transition-colors">
-                                      <td className="px-4 py-4 font-semibold align-top text-center border-r border-neutral-200">{member.sno}</td>
-                                      <td className="px-4 py-4 align-top leading-relaxed border-r border-neutral-200">{member.details}</td>
-                                      <td className="px-4 py-4 align-top leading-relaxed text-center font-medium">{member.role}</td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                )
+                  <DepartmentAccordionRow
+                    key={tab.academicYear}
+                    id="exam-committee"
+                    index={index}
+                    title={tab.academicYear}
+                    isOpen={isOpen}
+                    onToggle={() => setActiveTab(isOpen ? '' : tab.academicYear)}
+                    contentClassName="p-0 sm:p-0"
+                  >
+                    <div className="w-full overflow-x-auto">
+                      <table className="w-full text-left text-sm text-neutral-700">
+                        <thead className="text-white border-b border-neutral-200">
+                          <tr className="bg-[#f27441]">
+                            <th scope="col" className="px-4 py-4 font-bold text-center border-r border-white/20 w-20">S. No</th>
+                            <th scope="col" className="px-4 py-4 font-bold text-center border-r border-white/20">Name & Designation</th>
+                            <th scope="col" className="px-4 py-4 font-bold text-center">Role</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-neutral-200 bg-white">
+                          {tab.members.map((member, memberIdx) => (
+                            <tr key={memberIdx} className="hover:bg-neutral-50/50 transition-colors">
+                              <td className="px-4 py-4 font-semibold align-top text-center border-r border-neutral-200">{member.sno}</td>
+                              <td className="px-4 py-4 align-top leading-relaxed border-r border-neutral-200">{member.details}</td>
+                              <td className="px-4 py-4 align-top leading-relaxed text-center font-medium">{member.role}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </DepartmentAccordionRow>
+                );
               })}
-            </div>
+            </AccordionContainer>
             
           </article>
           

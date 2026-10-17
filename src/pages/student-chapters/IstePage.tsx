@@ -1,42 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import PageHeader from '../../components/common/PageHeader';
 import { fadeUp, stagger } from '../../features/about/animations';
-
-const AccordionItem: React.FC<{ title: string, children: React.ReactNode }> = ({ title, children }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <div className="border-b border-[#2b3a4a]/20 bg-[#1e293b] overflow-hidden mb-1">
-            <button 
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-[#1e293b] hover:bg-[#2b3a4a] transition-colors"
-            >
-                <h3 className="text-[#f67437] text-lg sm:text-xl font-bold m-0">{title}</h3>
-                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                    <ChevronDown className="w-5 h-6 text-[#f67437]" />
-                </motion.div>
-            </button>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden bg-white"
-                    >
-                        <div className="p-5 sm:p-6 text-neutral-800">
-                            {children}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
-};
+import { AccordionContainer, AccordionItem } from '../../components/common/DepartmentAccordion';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const IstePage: React.FC = () => {
     return (
@@ -62,7 +31,7 @@ const IstePage: React.FC = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={fadeUp} className="w-full shadow-lg border border-[#1e293b] rounded-md overflow-hidden">
+                    <AccordionContainer className="w-full">
                         
                         <AccordionItem title="About ISTE">
                             <p className="text-neutral-700 leading-relaxed m-0 text-base text-justify">
@@ -79,53 +48,43 @@ const IstePage: React.FC = () => {
                         </AccordionItem>
 
                         <AccordionItem title="Team Members">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSSgRMsVwdICQUNx_wPBGV2hKrSVb6f2Ol7cnltJtujHPynMHIqSl1FA9y8828dbA/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Team Members"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSSgRMsVwdICQUNx_wPBGV2hKrSVb6f2Ol7cnltJtujHPynMHIqSl1FA9y8828dbA/pubhtml?widget=true&chrome=false&headers=false"
+                                title="Team Members"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="ISTE Faculty Memberships List">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKCmHBwJDYozvbpFcaQR_NQg1LelVt9fLYKCWKHB92YS9_6nKklS4U40Dv6n-xIQ/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="ISTE Faculty Memberships List"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKCmHBwJDYozvbpFcaQR_NQg1LelVt9fLYKCWKHB92YS9_6nKklS4U40Dv6n-xIQ/pubhtml?widget=true&chrome=false&headers=false"
+                                title="ISTE Faculty Memberships List"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="ISTE Student Memberships List">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5x4LPoWvT8xVQ_vwOFSRUauJefGYuCy8Mvk3nUXXb5JhPGCctnGdodSr4PUsFgQ/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="ISTE Student Memberships List"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5x4LPoWvT8xVQ_vwOFSRUauJefGYuCy8Mvk3nUXXb5JhPGCctnGdodSr4PUsFgQ/pubhtml?widget=true&chrome=false&headers=false"
+                                title="ISTE Student Memberships List"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="Minutes of Meeting & Action Taken Report">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5WucDPXU20ponbV93P7k2-Mun3Bwn1B4nDWNIbhshHhYux84TKjKcO2iA6NGPlQ/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Minutes of Meeting"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5WucDPXU20ponbV93P7k2-Mun3Bwn1B4nDWNIbhshHhYux84TKjKcO2iA6NGPlQ/pubhtml?widget=true&chrome=false&headers=false"
+                                title="Minutes of Meeting"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="Activities">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRm0zs3YKXT-1l54m55su5WXvXJMqYuTBk-n2ia7Gjf7Sf_8iwjCcvYh5SuMvwAqg/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Activities"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRm0zs3YKXT-1l54m55su5WXvXJMqYuTBk-n2ia7Gjf7Sf_8iwjCcvYh5SuMvwAqg/pubhtml?widget=true&chrome=false&headers=false"
+                                title="Activities"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="Contact">
@@ -139,7 +98,7 @@ const IstePage: React.FC = () => {
                             </div>
                         </AccordionItem>
                         
-                    </motion.div>
+                    </AccordionContainer>
                 </div>
             </motion.div>
 

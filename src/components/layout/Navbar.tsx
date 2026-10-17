@@ -223,13 +223,13 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
             </AnimatePresence>
         </div>
 
-        {showPlacementTicker && <div className="overflow-hidden bg-[#FF6600] text-white">
-            <div className="flex h-[36px] w-full items-center overflow-hidden px-3 sm:px-5 md:px-6 lg:px-8">
-                <Link to="/placements/about-t-and-p" className="z-10 inline-flex shrink-0 items-center gap-2 bg-[#FF6600] pr-4 text-[11px] font-extrabold uppercase tracking-[.16em] sm:text-[12px]">
-                    <GraduationCap className="h-3.5 w-3.5" />Placements @ SRIT
+        {showPlacementTicker && <div className="overflow-hidden bg-[#FF6600] text-white shadow-xs">
+            <div className="flex h-[42px] sm:h-[44px] w-full items-center overflow-hidden px-3 sm:px-5 md:px-6 lg:px-8">
+                <Link to="/placements/about-t-and-p" className="z-10 inline-flex shrink-0 items-center gap-2 bg-[#FF6600] pr-4 text-[13px] sm:text-[14px] md:text-[15px] font-black uppercase tracking-[.18em] drop-shadow-xs">
+                    <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />Placements @ SRIT
                 </Link>
-                <div className="relative min-w-0 flex-1 overflow-hidden border-l border-white/30 pl-4" aria-label="Placement highlights">
-                    <div className="animate-marquee flex min-w-max items-center gap-8 whitespace-nowrap text-[12px] font-bold sm:text-[13px]">
+                <div className="relative min-w-0 flex-1 overflow-hidden border-l-2 border-white/40 pl-4" aria-label="Placement highlights">
+                    <div className="animate-marquee flex min-w-max items-center gap-10 whitespace-nowrap text-[13px] sm:text-[14px] md:text-[15px] font-extrabold tracking-wide">
                         <span>{placementTickerText}</span>
                         <span aria-hidden="true">{placementTickerText}</span>
                     </div>

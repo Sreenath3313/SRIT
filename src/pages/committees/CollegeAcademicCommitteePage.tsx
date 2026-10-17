@@ -8,6 +8,7 @@ import Footer from '../../components/layout/Footer'
 import { navLinks } from '../../data/navigation'
 import IframeWithLoader from '../../components/common/IframeWithLoader'
 import PageHeader from '../../components/common/PageHeader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const cacIframes = [
   {
@@ -102,111 +103,71 @@ export default function CollegeAcademicCommitteePage() {
             <motion.article variants={itemVariants} className="rounded-xl border border-neutral-200/60 bg-white p-6 sm:p-9 shadow-sm">
               <h2 className="font-serif text-2xl font-bold text-neutral-900 mb-6">Documents & Records</h2>
               
-              <div className="flex flex-col gap-4">
-                {/* Our Mission */}
-                <div className={`overflow-hidden rounded-xl border transition-all duration-300 ${activeTab === 'Our Mission' ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'}`}>
-                  <button onClick={() => setActiveTab(activeTab === 'Our Mission' ? '' : 'Our Mission')} className="w-full flex items-center justify-between px-6 py-5 text-left group">
-                    <span className={`font-bold transition-colors ${activeTab === 'Our Mission' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>Our Mission</span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Our Mission' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}><ChevronDown className={`transition-transform duration-300 ${activeTab === 'Our Mission' ? 'rotate-180' : ''}`} size={18} /></div>
-                  </button>
-                  <AnimatePresence initial={false}>{activeTab === 'Our Mission' && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: 'easeInOut' }}><div className="p-6 pt-0"><p className="text-neutral-600 font-medium leading-relaxed">MISSION: The National Service Scheme has been functioning with the motto "NOT ME BUT YOU" in view of making the youth inspired in service of the people and hence NSS Aims Education through Community Service and Community Service through Education.</p></div></motion.div>)}</AnimatePresence>
-                </div>
-
-                {/* Objectives */}
-                <div className={`overflow-hidden rounded-xl border transition-all duration-300 ${activeTab === 'Objectives' ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'}`}>
-                  <button onClick={() => setActiveTab(activeTab === 'Objectives' ? '' : 'Objectives')} className="w-full flex items-center justify-between px-6 py-5 text-left group">
-                    <span className={`font-bold transition-colors ${activeTab === 'Objectives' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>Objectives</span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Objectives' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}><ChevronDown className={`transition-transform duration-300 ${activeTab === 'Objectives' ? 'rotate-180' : ''}`} size={18} /></div>
-                  </button>
-                  <AnimatePresence initial={false}>{activeTab === 'Objectives' && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: 'easeInOut' }}><div className="p-6 pt-0"><ul className="text-neutral-600 font-medium leading-relaxed list-disc pl-5 space-y-2"><li>Understand the community in which they work</li><li>Understand themselves in relation to their community</li><li>Identify the needs and problems of the community and involve them in problem solving process</li><li>Develop among themselves a sense of social and civic responsibility</li><li>Utilize their knowledge in finding practical solution to individual and community problems</li><li>Develop competence required for group living and sharing of responsibilities</li><li>Gain skills in mobilizing community participation</li></ul></div></motion.div>)}</AnimatePresence>
-                </div>
-                {/* Team Card (Text) */}
-                <div 
-                  className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                    activeTab === 'Team' 
-                      ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                      : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                  }`}
+              <AccordionContainer className="w-full">
+                <DepartmentAccordionRow
+                  id="cac"
+                  index={0}
+                  title="Our Mission"
+                  isOpen={activeTab === 'Our Mission'}
+                  onToggle={() => setActiveTab(activeTab === 'Our Mission' ? '' : 'Our Mission')}
                 >
-                  <button
-                    onClick={() => setActiveTab(activeTab === 'Team' ? '' : 'Team')}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                  >
-                    <span className={`font-bold transition-colors ${activeTab === 'Team' ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                      Team
-                    </span>
-                    <div className={`p-1.5 rounded-full transition-colors ${activeTab === 'Team' ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                      <ChevronDown 
-                        className={`transition-transform duration-300 ${activeTab === 'Team' ? 'rotate-180' : ''}`} 
-                        size={18} 
-                      />
-                    </div>
-                  </button>
-                  <AnimatePresence initial={false}>
-                    {activeTab === 'Team' && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="p-6 pt-0">
-                          <p className="text-neutral-600 font-medium">Coming Soon.</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                  <div className="p-2 text-neutral-600 font-medium leading-relaxed">
+                    <p>MISSION: The National Service Scheme has been functioning with the motto "NOT ME BUT YOU" in view of making the youth inspired in service of the people and hence NSS Aims Education through Community Service and Community Service through Education.</p>
+                  </div>
+                </DepartmentAccordionRow>
 
-                {cacIframes.map((tab) => {
+                <DepartmentAccordionRow
+                  id="cac"
+                  index={1}
+                  title="Objectives"
+                  isOpen={activeTab === 'Objectives'}
+                  onToggle={() => setActiveTab(activeTab === 'Objectives' ? '' : 'Objectives')}
+                >
+                  <div className="p-2 text-neutral-600 font-medium leading-relaxed">
+                    <ul className="list-disc pl-5 space-y-2">
+                      <li>Understand the community in which they work</li>
+                      <li>Understand themselves in relation to their community</li>
+                      <li>Identify the needs and problems of the community and involve them in problem solving process</li>
+                      <li>Develop among themselves a sense of social and civic responsibility</li>
+                      <li>Utilize their knowledge in finding practical solution to individual and community problems</li>
+                      <li>Develop competence required for group living and sharing of responsibilities</li>
+                      <li>Gain skills in mobilizing community participation</li>
+                    </ul>
+                  </div>
+                </DepartmentAccordionRow>
+
+                <DepartmentAccordionRow
+                  id="cac"
+                  index={2}
+                  title="Team"
+                  isOpen={activeTab === 'Team'}
+                  onToggle={() => setActiveTab(activeTab === 'Team' ? '' : 'Team')}
+                >
+                  <div className="p-2 text-neutral-600 font-medium">
+                    Coming Soon.
+                  </div>
+                </DepartmentAccordionRow>
+
+                {cacIframes.map((tab, idx) => {
                   const isOpen = activeTab === tab.title
                   return (
-                    <div 
-                      key={tab.title} 
-                      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                        isOpen 
-                          ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                          : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                      }`}
+                    <DepartmentAccordionRow
+                      key={tab.title}
+                      id="cac"
+                      index={idx + 3}
+                      title={tab.title}
+                      isOpen={isOpen}
+                      onToggle={() => setActiveTab(isOpen ? '' : tab.title)}
                     >
-                      <button
-                        onClick={() => setActiveTab(isOpen ? '' : tab.title)}
-                        className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                      >
-                        <span className={`font-bold transition-colors ${isOpen ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                          {tab.title}
-                        </span>
-                        <div className={`p-1.5 rounded-full transition-colors ${isOpen ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                          <ChevronDown 
-                            className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-                            size={18} 
-                          />
-                        </div>
-                      </button>
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          >
-                            <div className="p-4 pt-0">
-                              <div className="h-[600px] rounded-xl overflow-hidden border border-neutral-100 shadow-inner bg-neutral-50">
-                                <IframeWithLoader 
-                                  src={tab.iframeUrl}
-                                  title={tab.title}
-                                  className="h-full"
-                                />
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                      <IframeWithLoader 
+                        src={tab.iframeUrl}
+                        title={tab.title}
+                        style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                      />
+                    </DepartmentAccordionRow>
                   )
                 })}
-              </div>
+              </AccordionContainer>
             </motion.article>
 
           </motion.div>

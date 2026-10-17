@@ -1,42 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import PageHeader from '../../components/common/PageHeader';
 import { fadeUp, stagger } from '../../features/about/animations';
-
-const AccordionItem: React.FC<{ title: string, children: React.ReactNode }> = ({ title, children }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <div className="border-b border-[#2b3a4a]/20 bg-[#1e293b] overflow-hidden mb-1">
-            <button 
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-[#1e293b] hover:bg-[#2b3a4a] transition-colors"
-            >
-                <h3 className="text-[#f67437] text-lg sm:text-xl font-bold m-0">{title}</h3>
-                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                    <ChevronDown className="w-5 h-6 text-[#f67437]" />
-                </motion.div>
-            </button>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden bg-white"
-                    >
-                        <div className="p-5 sm:p-6 text-neutral-800">
-                            {children}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
-};
+import { AccordionContainer, AccordionItem } from '../../components/common/DepartmentAccordion';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
 
 const ProgrammersClubPage: React.FC = () => {
     return (
@@ -62,7 +31,7 @@ const ProgrammersClubPage: React.FC = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div variants={fadeUp} className="w-full shadow-lg border border-[#1e293b] rounded-md overflow-hidden">
+                    <AccordionContainer className="w-full">
                         
                         <AccordionItem title="About Programmers Club">
                             <div className="text-neutral-700 leading-relaxed m-0 text-base space-y-4 text-justify">
@@ -97,23 +66,19 @@ const ProgrammersClubPage: React.FC = () => {
                         </AccordionItem>
 
                         <AccordionItem title="Team">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XvOaklMYaZuNZB4E73UBMgt9s_WwoN0JMA5qx8XqM9_ltnLIQ3JnwFArGd4yrTNJwupfhACCSEW2/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Team"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XvOaklMYaZuNZB4E73UBMgt9s_WwoN0JMA5qx8XqM9_ltnLIQ3JnwFArGd4yrTNJwupfhACCSEW2/pubhtml?widget=true&chrome=false&headers=false"
+                                title="Team"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="Activities">
-                            <div className="w-full h-[800px] sm:h-[1200px] rounded-xl overflow-hidden shadow-sm border border-neutral-200 bg-white">
-                                <iframe 
-                                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTE1Lw3jFq2kaF3D6ZOWhSTtyCbO9Jajoi5j_WNM2oadiqEsXwHPJyTNuu1AZW2bGKihs-kRQJBYxyG/pubhtml?widget=true&chrome=false&headers=false"
-                                    className="w-full h-full border-0"
-                                    title="Activities"
-                                />
-                            </div>
+                            <IframeWithLoader 
+                                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTE1Lw3jFq2kaF3D6ZOWhSTtyCbO9Jajoi5j_WNM2oadiqEsXwHPJyTNuu1AZW2bGKihs-kRQJBYxyG/pubhtml?widget=true&chrome=false&headers=false"
+                                title="Activities"
+                                style={{ height: 'clamp(500px, 75vh, 1200px)' }}
+                            />
                         </AccordionItem>
 
                         <AccordionItem title="Contact">
@@ -123,7 +88,7 @@ const ProgrammersClubPage: React.FC = () => {
                             </div>
                         </AccordionItem>
                         
-                    </motion.div>
+                    </AccordionContainer>
                 </div>
             </motion.div>
 

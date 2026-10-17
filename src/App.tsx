@@ -23,6 +23,7 @@ import LibraryCommitteePage from './pages/committees/LibraryCommitteePage'
 import StudentWelfareCommitteePage from './pages/committees/StudentWelfareCommitteePage'
 import CareerGuidanceHigherEducationCellPage from './pages/committees/CareerGuidanceHigherEducationCellPage'
 import GamesSportsCellPage from './pages/committees/GamesSportsCellPage'
+import ExtraCurricularActivitiesCellPage from './pages/committees/ExtraCurricularActivitiesCellPage'
 import { useReveal } from './hooks/useReveal'
 import OverviewPage from './pages/about/OverviewPage';
 import VisionMissionPage from './pages/about/VisionMissionPage';
@@ -210,6 +211,8 @@ function App() {
           <Route path="/committees/student-welfare-committee" element={<StudentWelfareCommitteePage />} />
           <Route path="/committees/career-guidance-and-higher-education-cell" element={<CareerGuidanceHigherEducationCellPage />} />
           <Route path="/committees/games-and-sports-cell" element={<GamesSportsCellPage />} />
+          <Route path="/committees/extra-curricular-activities-cell" element={<ExtraCurricularActivitiesCellPage />} />
+          <Route path="/extra-curricular-activities" element={<Navigate to="/committees/extra-curricular-activities-cell" replace />} />
 
           <Route path="/admissions/academic-calendars" element={<AcademicCalendarsPage />} />
           <Route path="/admissions/academic-regulations" element={<AcademicRegulationsPage />} />

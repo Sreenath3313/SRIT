@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import AboutUsLayout from '../../features/about/components/AboutUsLayout';
-import { fadeUp, stagger } from '../../features/about/animations';
+import IframeWithLoader from '../../components/common/IframeWithLoader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 interface PolicyRecord {
     sNo: number;
     title: string;
-    url?: string;
 }
 
 const policiesData: PolicyRecord[] = [
@@ -34,98 +33,109 @@ const policiesData: PolicyRecord[] = [
     { sNo: 21, title: 'Industry Institute Interaction Policy' },
     { sNo: 22, title: 'Internship Policy' },
     { sNo: 23, title: 'Plagiarism Policy' },
+    { sNo: 24, title: 'Malpractice Rules' },
+    { sNo: 25, title: 'Women Empowerment Cell - Policy Document' },
+    { sNo: 26, title: 'Process Manual for Student Satisfaction Survey' },
 ];
 
+const OFFICIAL_SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRExq8g1wD7bhigayAwuZ4mtiMzONTZ5B7JWHIffaq5Fxhdio3f0mJ8WOLEWGdkmf-kKRzBXdt6xSQ4/pubhtml";
+const EMBED_SHEET_URL = `${OFFICIAL_SHEET_URL}?widget=true&chrome=false&headers=false`;
+
 const PoliciesDocumentsPage: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isAccordionOpen, setIsAccordionOpen] = useState(true);
 
     return (
         <AboutUsLayout title="Policies and Documents">
-            <motion.div variants={stagger} initial="hidden" animate="visible" className="space-y-6">
-                <motion.div variants={fadeUp}>
-                    <h2 className="text-3xl font-serif font-bold text-[#0A0903] mb-1 flex items-center gap-3">
-                        <span className="w-1 h-8 rounded-full bg-[#FF5422] inline-block" />
-                        SRIT Policies and Documents
-                    </h2>
-                    <p className="text-neutral-500 mt-3 leading-relaxed text-left sm:text-justify text-sm sm:text-base">
-                        SRIT operates with transparency and adheres strictly to its established policies and guidelines. Below are the key policy documents governing academic, administrative, and statutory functions.
+            <div className="space-y-6">
+                {/* Section Header */}
+                <div className="rounded-xl border border-neutral-200/80 bg-white p-6 sm:p-8 shadow-sm space-y-3">
+                    <div className="flex items-center gap-2.5 pb-1">
+                        <span className="h-6 w-1.5 rounded-full bg-[#FF6600]" />
+                        <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
+                            SRIT Policies and Documents
+                        </h2>
+                    </div>
+                    <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed text-justify">
+                        Srinivasa Ramanujan Institute of Technology operates with total institutional governance, compliance, and procedural transparency. Below are the statutory rules, codes of conduct, manuals, and official policy records formulated and periodically reviewed by the Governing Body, Academic Council, and Internal Quality Assurance Cell (IQAC).
                     </p>
-                </motion.div>
+                    <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-semibold">
+                        <span className="px-3 py-1 rounded-full bg-orange-50 text-[#FF6600] border border-orange-200/80">
+                            26 Institutional Policies &amp; Documents
+                        </span>
+                        <span className="px-3 py-1 rounded-full bg-neutral-100 text-neutral-800 border border-neutral-200">
+                            IQAC Statutory Framework
+                        </span>
+                        <span className="px-3 py-1 rounded-full bg-neutral-100 text-neutral-800 border border-neutral-200">
+                            Autonomous Governance
+                        </span>
+                    </div>
+                </div>
 
-                {/* Collapsible Accordion Table matching original site */}
-                <motion.div variants={fadeUp} className="border border-neutral-200 rounded-xl overflow-hidden shadow-xs">
-                    <button
-                        type="button"
-                        onClick={() => setIsOpen(!isOpen)}
-                        aria-expanded={isOpen}
-                        className="w-full flex items-center justify-between p-4 sm:p-5 bg-[#FF6600] text-white hover:bg-[#e65c00] transition-colors text-left"
+                {/* Main Department-Themed Accordion with Live Google Sheet */}
+                <AccordionContainer className="w-full">
+                    <DepartmentAccordionRow
+                        id="srit-policies-documents"
+                        index={0}
+                        title="SRIT Policies and Documents Official Register"
+                        isOpen={isAccordionOpen}
+                        onToggle={() => setIsAccordionOpen(!isAccordionOpen)}
                     >
-                        <h3 className="text-base sm:text-lg font-bold">SRIT Policies and Documents</h3>
-                        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                            <ChevronDown className="w-5 h-5 text-white" />
-                        </motion.div>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                        {isOpen && (
-                            <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                                className="overflow-hidden bg-white"
-                            >
-                                <div className="p-3 sm:p-6 overflow-x-auto custom-scrollbar">
-                                    <table className="w-full min-w-[500px] border-collapse text-sm">
-                                        <thead>
-                                            <tr className="bg-[#FF6600] text-white">
-                                                <th className="p-2.5 sm:p-3 border border-white/20 font-bold w-16 text-center text-xs sm:text-sm">S. No.</th>
-                                                <th className="p-2.5 sm:p-3 border border-white/20 font-bold text-center text-xs sm:text-sm">Policy/Rules/Guidelines/Document</th>
-                                                <th className="p-2.5 sm:p-3 border border-white/20 font-bold w-24 text-center text-xs sm:text-sm">View</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {policiesData.map((item, index) => (
-                                                <tr
-                                                    key={item.sNo}
-                                                    className={`${index % 2 === 0 ? 'bg-white' : 'bg-[#fffaf6]'} hover:bg-orange-50/50 transition-colors`}
-                                                >
-                                                    <td className="p-2.5 sm:p-3 border border-neutral-300 text-center font-medium text-neutral-800">
-                                                        {item.sNo}
-                                                    </td>
-                                                    <td className="p-2.5 sm:p-3 border border-neutral-300 font-medium text-neutral-800">
-                                                        {item.title}
-                                                    </td>
-                                                    <td className="p-2.5 sm:p-3 border border-neutral-300 text-center">
-                                                        {item.url ? (
-                                                            <a
-                                                                href={item.url}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF5422] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors"
-                                                            >
-                                                                View
-                                                            </a>
-                                                        ) : (
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => alert(`${item.title} document is maintained in the IQAC repository.`)}
-                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF5422] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors cursor-pointer"
-                                                            >
-                                                                View
-                                                            </button>
-                                                        )}
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
+                        <div className="bg-white p-3 sm:p-5 space-y-4">
+                            {/* Action Bar */}
+                            <div className="flex flex-wrap items-center justify-between gap-3 px-1">
+                                <div className="text-xs text-neutral-500 font-medium">
+                                    Official Live Records Repository (26 Statutory Policies)
                                 </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </motion.div>
-            </motion.div>
+                                <a
+                                    href={OFFICIAL_SHEET_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FF6600] hover:text-[#e04515] hover:underline"
+                                >
+                                    <span>Open Official Sheet in New Tab</span>
+                                    <ExternalLink size={13} />
+                                </a>
+                            </div>
+
+                            {/* Google Sheet Embed */}
+                            <div className="w-full h-[750px] sm:h-[820px] rounded-xl overflow-hidden border border-neutral-200 shadow-inner bg-white">
+                                <IframeWithLoader
+                                    title="SRIT Policies and Documents Official Spreadsheet"
+                                    src={EMBED_SHEET_URL}
+                                    className="w-full h-full border-0"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+                    </DepartmentAccordionRow>
+                </AccordionContainer>
+
+                {/* Directory Table Grid for Quick Reference */}
+                <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-sm space-y-4">
+                    <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
+                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
+                        <h3 className="font-serif text-lg font-bold text-neutral-900">
+                            Statutory Policies Directory Index
+                        </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                        {policiesData.map((policy) => (
+                            <div
+                                key={policy.sNo}
+                                className="flex items-center gap-2.5 p-3 rounded-lg border border-[#FFD9C4]/70 bg-[#FFFAF6] hover:border-[#FF6600] hover:bg-orange-50/60 transition-all text-xs"
+                            >
+                                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6600] text-white text-[11px] font-bold shrink-0">
+                                    {policy.sNo}
+                                </span>
+                                <span className="font-medium text-neutral-800 truncate" title={policy.title}>
+                                    {policy.title}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </AboutUsLayout>
     );
 };

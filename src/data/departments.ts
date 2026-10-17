@@ -441,120 +441,56 @@ export const departments: DepartmentData[] = [
             {
                 title: 'Course Expert Team',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTd4THt-4X8lQQOHCsYDfWwEqHnQprnlWObI0es7f_BB8dN4u8HBqJ3oZlfI8okNQ/pubhtml?widget=true&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE Course Expert Team
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTd4THt-4X8lQQOHCsYDfWwEqHnQprnlWObI0es7f_BB8dN4u8HBqJ3oZlfI8okNQ/pubhtml?widget=true&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Department Academic Committee (DAC)',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9vFpYZrBacVzn03s8YQXd5R3H9Fwe-zJhbvb7eadRAqP5SBZG_bJS4aIhoCvW5A/pubhtml?widget=true&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE DAC
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9vFpYZrBacVzn03s8YQXd5R3H9Fwe-zJhbvb7eadRAqP5SBZG_bJS4aIhoCvW5A/pubhtml?widget=true&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Program Assessment Committee (PAC)',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6pFHH0H0hnlusqpmVmLq5Wxus_9NcdDGw-awBax7A4Momus12uVzEBZ8Kfes29VCIAnkHfn9mc9SP/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE PAC
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6pFHH0H0hnlusqpmVmLq5Wxus_9NcdDGw-awBax7A4Momus12uVzEBZ8Kfes29VCIAnkHfn9mc9SP/pubhtml?widget=true&amp;chrome=false&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Academic Audit',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHPLZtZvyqQ6jvr_D8KrmLd4ZG81HJktdzwNt4okRPnT6gtmlg_aRrHmNPvYBKIw/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE Academic Audit
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQHPLZtZvyqQ6jvr_D8KrmLd4ZG81HJktdzwNt4okRPnT6gtmlg_aRrHmNPvYBKIw/pubhtml?widget=true&amp;chrome=false&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Board Of Studies',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIeJOA8XXpWY8ZzFF-lq2tu1vp_OPyLUrvqsqfhqsgZDBXm55qof3MeW2swITNA/pubhtml?widget=true&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE Board of Studies
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBIeJOA8XXpWY8ZzFF-lq2tu1vp_OPyLUrvqsqfhqsgZDBXm55qof3MeW2swITNA/pubhtml?widget=true&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Achievements',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&amp;chrome=false&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE Achievements
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&amp;chrome=false&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'News Letters',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTM8jIMbscJj8GZZrdzmXbA7WsUo4a_I0KfUjsV8ZRlg7jB-mxl8FigXaO4FPpWSQ/pubhtml?widget=true&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE News Letters
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTM8jIMbscJj8GZZrdzmXbA7WsUo4a_I0KfUjsV8ZRlg7jB-mxl8FigXaO4FPpWSQ/pubhtml?widget=true&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 
             {
                 title: 'Technical Magazine',
                 content: `
-                <p>
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqeJceBjIc-OBRJOGPRxtztNhfWMqwPQIwjlsQgaxnP9C7R-H1HpAydVQmng5Suw/pubhtml?widget=true&amp;headers=false"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Official CSE Technical Magazine
-                    </a>
-                </p>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqeJceBjIc-OBRJOGPRxtztNhfWMqwPQIwjlsQgaxnP9C7R-H1HpAydVQmng5Suw/pubhtml?widget=true&amp;headers=false" class="w-full h-[500px] border border-neutral-200 rounded-lg" loading="lazy"></iframe>
             `,
             },
 

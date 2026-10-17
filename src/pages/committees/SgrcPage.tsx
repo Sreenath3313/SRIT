@@ -7,6 +7,7 @@ import Navbar from '../../components/layout/Navbar'
 import Footer from '../../components/layout/Footer'
 import { navLinks } from '../../data/navigation'
 import PageHeader from '../../components/common/PageHeader';
+import { AccordionContainer, DepartmentAccordionRow } from '../../components/common/DepartmentAccordion';
 
 const committeeMembers = [
   { sNo: 1, name: "Dr. G. Balakrishna", designation: "Principal", role: "Chairman", contact: "7893005520" },
@@ -102,77 +103,48 @@ export default function SgrcPage() {
                 Committee Details
               </h2>
               
-              <div className="flex flex-col gap-4">
+              <AccordionContainer className="w-full">
                 {[
                   { title: 'Committee Members', type: 'table' }
-                ].map((tab) => {
+                ].map((tab, idx) => {
                   const isOpen = activeTab === tab.title
                   return (
-                    <div 
-                      key={tab.title} 
-                      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-                        isOpen 
-                          ? 'border-orange-200 shadow-lg shadow-orange-100/50 bg-white' 
-                          : 'border-neutral-200/60 bg-neutral-50/50 hover:border-orange-200 hover:bg-white'
-                      }`}
+                    <DepartmentAccordionRow
+                      key={tab.title}
+                      id="sgrc"
+                      index={idx}
+                      title={tab.title}
+                      isOpen={isOpen}
+                      onToggle={() => setActiveTab(isOpen ? '' : tab.title)}
                     >
-                      <button
-                        onClick={() => setActiveTab(isOpen ? '' : tab.title)}
-                        className="w-full flex items-center justify-between px-6 py-5 text-left group"
-                      >
-                        <span className={`font-bold transition-colors ${isOpen ? 'text-primary' : 'text-neutral-800 group-hover:text-primary'}`}>
-                          {tab.title}
-                        </span>
-                        <div className={`p-1.5 rounded-full transition-colors ${isOpen ? 'bg-orange-100 text-primary' : 'bg-white text-neutral-400 group-hover:bg-orange-50 group-hover:text-primary shadow-sm border border-neutral-100'}`}>
-                          <ChevronDown 
-                            className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-                            size={18} 
-                          />
-                        </div>
-                      </button>
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          >
-                            <div className="p-4 pt-0">
-                              <div className="rounded-xl overflow-hidden border border-neutral-100 shadow-inner bg-neutral-50">
-                                <div className="overflow-x-auto">
-                                  <table className="w-full text-left text-sm text-neutral-600">
-                                    <thead className="bg-primary text-white">
-                                      <tr>
-                                        <th className="px-4 py-3 font-semibold whitespace-nowrap">S. No</th>
-                                        <th className="px-4 py-3 font-semibold whitespace-nowrap">Name</th>
-                                        <th className="px-4 py-3 font-semibold whitespace-nowrap">Designation</th>
-                                        <th className="px-4 py-3 font-semibold whitespace-nowrap">Role</th>
-                                        <th className="px-4 py-3 font-semibold whitespace-nowrap">Contact No.</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-neutral-200 bg-white">
-                                      {committeeMembers.map((member) => (
-                                        <tr key={member.sNo} className="hover:bg-orange-50/30 transition-colors">
-                                          <td className="px-4 py-3 font-medium text-neutral-900">{member.sNo}</td>
-                                          <td className="px-4 py-3 font-medium text-neutral-900">{member.name}</td>
-                                          <td className="px-4 py-3">{member.designation}</td>
-                                          <td className="px-4 py-3">{member.role}</td>
-                                          <td className="px-4 py-3">{member.contact}</td>
-                                        </tr>
-                                      ))}
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                      <div className="overflow-x-auto rounded-xl border border-orange-100 shadow-inner bg-neutral-50 p-2">
+                        <table className="w-full text-left text-sm text-neutral-600">
+                          <thead className="bg-[#FF6600] text-white">
+                            <tr>
+                              <th className="px-4 py-3 font-semibold whitespace-nowrap">S. No</th>
+                              <th className="px-4 py-3 font-semibold whitespace-nowrap">Name</th>
+                              <th className="px-4 py-3 font-semibold whitespace-nowrap">Designation</th>
+                              <th className="px-4 py-3 font-semibold whitespace-nowrap">Role</th>
+                              <th className="px-4 py-3 font-semibold whitespace-nowrap">Contact No.</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-neutral-200 bg-white">
+                            {committeeMembers.map((member) => (
+                              <tr key={member.sNo} className="hover:bg-orange-50/40 transition-colors">
+                                <td className="px-4 py-3 font-medium text-neutral-900">{member.sNo}</td>
+                                <td className="px-4 py-3 font-medium text-neutral-900">{member.name}</td>
+                                <td className="px-4 py-3">{member.designation}</td>
+                                <td className="px-4 py-3">{member.role}</td>
+                                <td className="px-4 py-3">{member.contact}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </DepartmentAccordionRow>
                   )
                 })}
-              </div>
+              </AccordionContainer>
             </motion.article>
 
           </motion.div>
