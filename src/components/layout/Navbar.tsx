@@ -103,6 +103,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow = true }) => {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
+    const [topUtilityOpen, setTopUtilityOpen] = useState(false);
     const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
     const [searchOpen, setSearchOpen] = useState(false);
     const [query, setQuery] = useState('');
@@ -113,6 +114,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
     useEffect(() => {
         setOpenMenu(null);
         setMobileOpen(false);
+        setTopUtilityOpen(false);
         setMobileSubmenu(null);
         setSearchOpen(false);
     }, [location.pathname]);
@@ -160,28 +162,130 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
     const isSubItemActive = (href: string) => location.pathname === href;
 
     return <header ref={headerRef} className={`fixed inset-x-0 top-0 z-[100] bg-white ${showShadow ? 'shadow-[0_10px_32px_rgba(255,102,0,.12)]' : 'shadow-none'}`}>
-        <div className="bg-[#ff6600] text-white">
-            <div className="flex w-full flex-col items-stretch gap-1 px-3 py-1.5 text-white sm:px-5 md:px-6 lg:px-8 min-[960px]:min-h-[38px] min-[960px]:flex-row min-[960px]:items-center min-[960px]:justify-between min-[960px]:gap-2 min-[960px]:py-0">
-                <div aria-label="Contact information" className="flex min-h-7 flex-wrap items-center justify-center text-[11px] font-semibold sm:text-[12px] md:justify-start min-[960px]:shrink-0 min-[960px]:text-[11.5px] lg:text-[12px] xl:text-[13px] 2xl:text-[14px]">
-                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 whitespace-nowrap border-r border-white/80 px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3 min-[960px]:px-2 xl:px-3">
-                        <PhoneIcon className="h-3.5 w-3.5 fill-black text-black shrink-0 xl:h-4 xl:w-4" />
-                        <span>91-951 561 1111</span>
+        <div className="bg-[#FF6600] text-white shadow-xs">
+            <div className="flex w-full items-center justify-between px-3 sm:px-5 md:px-6 lg:px-8 py-1.5 lg:py-0 min-h-[38px] lg:min-h-[42px]">
+                {/* Contact information (Phone & Email) */}
+                <div aria-label="Contact information" className="flex items-center gap-2.5 sm:gap-4 shrink-0 text-[11.5px] sm:text-[13px] md:text-[13.5px] font-extrabold tracking-wide">
+                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <PhoneIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                        <span className="font-extrabold tracking-wider">91-951 561 1111</span>
                     </a>
-                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 whitespace-nowrap px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3 min-[960px]:px-2 xl:px-3">
-                        <MailIcon className="h-3.5 w-3.5 fill-black text-black shrink-0 xl:h-4 xl:w-4" />
-                        <span>hr@srit.ac.in</span>
+                    <span className="h-3.5 w-[1px] bg-white/40" aria-hidden="true" />
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <MailIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                        <span className="font-extrabold tracking-wider">hr@srit.ac.in</span>
                     </a>
                 </div>
-                <nav aria-label="Contact and quick links" className="grid w-full grid-cols-2 text-[10px] font-semibold min-[360px]:grid-cols-3 sm:grid-cols-4 sm:text-[11px] min-[960px]:flex min-[960px]:w-auto min-[960px]:flex-1 min-[960px]:items-center min-[960px]:justify-end min-[960px]:text-[10px] lg:text-[10.5px] xl:text-[11.5px] 2xl:text-[12px]">
+
+                {/* Mobile-only section: Faculty Login, Student Login and hamburger for other links */}
+                <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+                    {/* Faculty Login & Student Login taken out of hamburger */}
+                    {utilityLinks.slice(0, 2).map(({ label, href, external, icon: Icon, fillIcon }) => {
+                        const itemClass = "inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-2 py-1 rounded transition-colors whitespace-nowrap";
+                        const shortLabel = label.replace(' Login', '');
+                        const content = (
+                            <>
+                                <Icon className={`h-3 w-3 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
+                                <span>{shortLabel}</span>
+                            </>
+                        );
+                        return external ? (
+                            <a key={label} href={href} target="_blank" rel="noreferrer" className={itemClass}>
+                                {content}
+                            </a>
+                        ) : (
+                            <Link key={label} to={href} className={itemClass}>
+                                {content}
+                            </Link>
+                        );
+                    })}
+
+                    {/* Dedicated hamburger button for remaining links */}
+                    <button
+                        type="button"
+                        onClick={() => {
+                            setTopUtilityOpen((open) => !open);
+                            setMobileOpen(false);
+                            setSearchOpen(false);
+                        }}
+                        aria-label={topUtilityOpen ? 'Close more links' : 'Open more links'}
+                        aria-expanded={topUtilityOpen}
+                        className="inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-2 py-1 rounded transition-colors"
+                    >
+                        <span className="flex w-3 flex-col gap-[2.5px]" aria-hidden="true">
+                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'translate-y-[4px] rotate-45' : ''}`} />
+                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'scale-x-0 opacity-0' : ''}`} />
+                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? '-translate-y-[4px] -rotate-45' : ''}`} />
+                        </span>
+                        <span>More</span>
+                    </button>
+                </div>
+
+                {/* Desktop-only utility links (exactly untouched on desktop) */}
+                <nav
+                    aria-label="Contact and quick links"
+                    className="hidden lg:flex items-center justify-end text-[11px] xl:text-[11.5px] 2xl:text-[12px] font-bold tracking-tight"
+                >
                     {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = 'inline-flex min-h-8 min-w-0 items-center justify-center gap-1 border-t border-white/35 px-1 py-1 text-center leading-tight text-white transition-colors hover:bg-black/10 hover:opacity-90 sm:px-2 min-[960px]:min-h-0 min-[960px]:whitespace-nowrap min-[960px]:border-l min-[960px]:border-t-0 min-[960px]:border-white/80 min-[960px]:px-1.5 lg:px-2 2xl:px-2.5 min-[960px]:py-1';
-                        const content = <><Icon className={`h-3.5 w-3.5 shrink-0 text-black xl:h-4 xl:w-4 ${fillIcon ? 'fill-black' : ''}`} /><span className="min-w-0">{label}</span></>;
+                        const itemClass = 'inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 border-l border-white/40 px-2 lg:px-2.5 2xl:px-3 py-1.5 text-white hover:bg-black/15 hover:text-white transition-all font-bold';
+                        const content = (
+                            <>
+                                <Icon className={`h-3.5 w-3.5 xl:h-4 xl:w-4 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
+                                <span className="font-bold">{label}</span>
+                            </>
+                        );
                         return external
                             ? <a key={label} href={href} target="_blank" rel="noreferrer" className={itemClass}>{content}</a>
                             : <Link key={label} to={href} className={itemClass}>{content}</Link>;
                     })}
                 </nav>
             </div>
+
+            {/* Mobile Dropdown Menu for Other Utility Links */}
+            <AnimatePresence>
+                {topUtilityOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                        className="lg:hidden border-t border-white/20 bg-[#E65C00] px-3 py-3 overflow-hidden shadow-inner"
+                    >
+                        <div className="grid grid-cols-2 gap-2">
+                            {utilityLinks.slice(2).map(({ label, href, external, icon: Icon, fillIcon }) => {
+                                const btnClass = "flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors";
+                                const itemInner = (
+                                    <>
+                                        <Icon className={`h-3.5 w-3.5 shrink-0 text-white ${fillIcon ? 'fill-white' : ''}`} />
+                                        <span className="truncate">{label}</span>
+                                    </>
+                                );
+                                return external ? (
+                                    <a
+                                        key={label}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        onClick={() => setTopUtilityOpen(false)}
+                                        className={btnClass}
+                                    >
+                                        {itemInner}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        key={label}
+                                        to={href}
+                                        onClick={() => setTopUtilityOpen(false)}
+                                        className={btnClass}
+                                    >
+                                        {itemInner}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
 
         <div className="relative border-t-4 border-[#FF6600] bg-white" onMouseLeave={onMenuLeave}>
@@ -259,7 +363,26 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                 <AnimatePresence>{item.hasDropdown && mobileSubmenu === item.label && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: .3, ease: [.22, 1, .36, 1] }} className="grid grid-cols-1 gap-x-5 gap-y-1 overflow-hidden pb-3 pl-4 sm:grid-cols-2 xl:grid-cols-3">{item.subItems?.map((sub, index) => <motion.div key={`${sub.label}-${sub.href}`} initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .2, delay: index * .018, ease: 'easeOut' }}><Link to={sub.href} onClick={() => setMobileOpen(false)} className={`flex min-h-12 items-center border-b border-[#FF6600]/10 px-3 py-3 text-base leading-6 transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${isSubItemActive(sub.href) ? 'font-semibold text-[#FF6600]' : 'text-black'}`}>{sub.label}</Link></motion.div>)}</motion.div>}</AnimatePresence>
                             </div>)}
                         </div>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-1 border-t border-[#FF6600]/15 pt-3 lg:hidden">{utilityLinks.map(({ label, href, external }) => external ? <a key={label} href={href} target="_blank" rel="noreferrer" className="py-2 text-xs font-semibold text-[#FF6600]">{label}</a> : <Link key={label} to={href} onClick={() => setMobileOpen(false)} className="py-2 text-xs font-semibold text-[#FF6600]">{label}</Link>)}</div>
+                        <div className="grid grid-cols-2 gap-2 border-t border-[#FF6600]/15 pt-4 lg:hidden">
+                            {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
+                                const btnClass = "flex items-center gap-2 px-3 py-2.5 rounded-lg bg-[#FFF3EA] text-[#FF6600] hover:bg-[#FFE6D5] text-xs font-bold transition-colors";
+                                const itemInner = (
+                                    <>
+                                        <Icon className={`h-3.5 w-3.5 shrink-0 text-[#FF6600] ${fillIcon ? 'fill-[#FF6600]' : ''}`} />
+                                        <span className="truncate">{label}</span>
+                                    </>
+                                );
+                                return external ? (
+                                    <a key={label} href={href} target="_blank" rel="noreferrer" className={btnClass}>
+                                        {itemInner}
+                                    </a>
+                                ) : (
+                                    <Link key={label} to={href} onClick={() => setMobileOpen(false)} className={btnClass}>
+                                        {itemInner}
+                                    </Link>
+                                );
+                            })}
+                        </div>
                         <Link to="/admissions/admission-procedure" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex h-11 w-full items-center justify-center gap-2 bg-[#FF6600] text-sm font-bold text-white transition-colors hover:bg-[#FF6600]/90 sm:hidden">Apply to SRIT <ArrowRight className="h-4 w-4" /></Link>
                     </nav>
                 </motion.div>
