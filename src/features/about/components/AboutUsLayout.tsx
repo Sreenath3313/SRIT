@@ -23,7 +23,7 @@ const AboutUsLayout: React.FC<AboutUsLayoutProps> = ({ children, title }) => {
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 className="max-w-[1100px] w-full mx-auto px-3 sm:px-5 md:px-6 py-6 sm:py-8 lg:py-12 xl:py-16 flex-grow"
             >
-                <div className="bg-white rounded-xl shadow-sm border border-neutral-200/60 p-4 sm:p-8 lg:p-12 prose prose-neutral max-w-none prose-headings:text-[#0A0903] prose-a:text-[#FF5422] hover:prose-a:text-[#FF5422]/80 prose-img:rounded-xl">
+                <div className="bg-white rounded-xl shadow-sm border border-neutral-200/60 p-4 sm:p-8 lg:p-12 prose prose-neutral max-w-none prose-headings:text-[#0A0903] prose-a:text-[#FF6600] hover:prose-a:text-[#FF6600]/80 prose-img:rounded-xl">
                     {children}
                 </div>
             </motion.div>

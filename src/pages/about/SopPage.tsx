@@ -32,7 +32,7 @@ const SopPage: React.FC = () => {
             <motion.div variants={stagger} initial="hidden" animate="visible" className="space-y-6">
                 <motion.div variants={fadeUp}>
                     <h2 className="text-3xl font-serif font-bold text-[#0A0903] mb-1 flex items-center gap-3">
-                        <span className="w-1 h-8 rounded-full bg-[#FF5422] inline-block" />
+                        <span className="w-1 h-8 rounded-full bg-[#FF6600] inline-block" />
                         SRIT Standard Operating Procedures
                     </h2>
                     <p className="text-neutral-500 mt-3 leading-relaxed text-left sm:text-justify text-sm sm:text-base">
@@ -90,7 +90,7 @@ const SopPage: React.FC = () => {
                                                                 href={item.url}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF5422] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors"
+                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF6600] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors"
                                                             >
                                                                 View
                                                             </a>
@@ -98,7 +98,7 @@ const SopPage: React.FC = () => {
                                                             <button
                                                                 type="button"
                                                                 onClick={() => alert(`${item.title} SOP document is available with the IQAC coordinator.`)}
-                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF5422] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors cursor-pointer"
+                                                                className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold text-[#FF6600] bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded transition-colors cursor-pointer"
                                                             >
                                                                 View
                                                             </button>

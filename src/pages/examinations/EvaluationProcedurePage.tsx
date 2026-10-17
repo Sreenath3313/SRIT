@@ -73,8 +73,8 @@ export default function EvaluationProcedurePage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${
                     activeTab === tab.id 
-                      ? 'bg-[#FF5422] text-white shadow-sm' 
-                      : 'bg-neutral-50 text-neutral-600 hover:bg-orange-50 hover:text-[#FF5422]'
+                      ? 'bg-[#FF6600] text-white shadow-sm' 
+                      : 'bg-neutral-50 text-neutral-600 hover:bg-orange-50 hover:text-[#FF6600]'
                   }`}
                 >
                   {tab.title}

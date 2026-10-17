@@ -26,7 +26,7 @@ export default function PageHeader({ title, categoryTitle, variant = 'default' }
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#111722]/75 via-[#111722]/30 to-transparent" />
           <div className="section-container absolute inset-x-0 bottom-0 pb-8 sm:pb-10 lg:pb-12">
-            {categoryTitle && <p className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[.2em] text-white/80"><span className="h-px w-8 bg-[#FF5422]" />{categoryTitle}</p>}
+            {categoryTitle && <p className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[.2em] text-white/80"><span className="h-px w-8 bg-[#FF6600]" />{categoryTitle}</p>}
             <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight tracking-[-.025em] text-white sm:text-5xl lg:text-6xl">{title}</h1>
           </div>
         </div>

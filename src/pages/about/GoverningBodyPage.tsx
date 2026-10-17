@@ -77,7 +77,7 @@ const GoverningBodyPage: React.FC = () => {
                                             <td className="p-2.5 border border-neutral-300">
                                                 {m.link ? (
                                                     <Link to={m.link} className="hover:underline group">
-                                                        <span className="font-bold text-[#d03a10] group-hover:text-[#FF5422]">{m.name}</span>
+                                                        <span className="font-bold text-[#d03a10] group-hover:text-[#FF6600]">{m.name}</span>
                                                         <span className="text-neutral-600 block text-xs mt-0.5 group-hover:text-neutral-800">{m.affiliation}</span>
                                                     </Link>
                                                 ) : (

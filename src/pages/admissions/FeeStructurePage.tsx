@@ -35,7 +35,7 @@ export default function FeeStructurePage() {
           <div className="rounded-xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-sm overflow-hidden space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-100 pb-5">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-[#F67437] border border-orange-200">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-[#FF6600] border border-orange-200">
                   Undergraduate Program
                 </span>
                 <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-bold text-neutral-900">B.Tech Fee Structure</h2>
@@ -49,7 +49,7 @@ export default function FeeStructurePage() {
             <div className="overflow-x-auto rounded-xl border border-neutral-200">
               <table className="w-full text-left text-sm border-collapse min-w-[700px]">
                 <thead>
-                  <tr className="bg-[#F67437] text-white font-serif">
+                  <tr className="bg-[#FF6600] text-white font-serif">
                     <th className="py-4 px-5 font-semibold w-1/5 text-base">Program</th>
                     <th className="py-4 px-5 font-semibold w-2/5 border-l border-white/20 text-base">
                       For seats Through Counseling <br />
@@ -68,15 +68,15 @@ export default function FeeStructurePage() {
                     </td>
                     <td className="py-4 px-5 align-top border-l border-neutral-200">
                       <div className="font-medium text-neutral-900">
-                        * Qualifying at <span className="text-[#F67437] font-bold">AP EAPCET / ECET</span>
+                        * Qualifying at <span className="text-[#FF6600] font-bold">AP EAPCET / ECET</span>
                       </div>
-                      <div className="mt-1 text-sm font-bold text-[#F67437]">
+                      <div className="mt-1 text-sm font-bold text-[#FF6600]">
                         (Counseling Code : SRIT)
                       </div>
                     </td>
                     <td className="py-4 px-5 align-top border-l border-neutral-200 text-xs sm:text-sm leading-relaxed">
                       <p>
-                        <span className="font-bold text-neutral-900">**</span> Qualifying at (<span className="text-[#F67437] font-bold">AP EAPCET / ECET</span>) and a pass in Intermediate (M.P.C.) / Diploma with at least 45% marks for OC and 40% marks for BC, SC and ST either in aggregate or in group subjects.
+                        <span className="font-bold text-neutral-900">**</span> Qualifying at (<span className="text-[#FF6600] font-bold">AP EAPCET / ECET</span>) and a pass in Intermediate (M.P.C.) / Diploma with at least 45% marks for OC and 40% marks for BC, SC and ST either in aggregate or in group subjects.
                       </p>
                       <p className="my-2 font-bold text-center text-neutral-500 uppercase tracking-wider text-[11px]">(or)</p>
                       <p>
@@ -90,7 +90,7 @@ export default function FeeStructurePage() {
                     <td className="py-4 px-5 font-semibold text-neutral-800 bg-neutral-50/40">
                       Counseling seats
                     </td>
-                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#F67437] text-base sm:text-lg">
+                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#FF6600] text-base sm:text-lg">
                       Rs. 49,100/- <span className="text-xs sm:text-sm font-normal text-neutral-600">Per Year for Academic Year - 2026-27</span>
                     </td>
                   </tr>
@@ -100,7 +100,7 @@ export default function FeeStructurePage() {
                     <td className="py-4 px-5 font-semibold text-neutral-800 bg-neutral-50/40">
                       NRI
                     </td>
-                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#F67437] text-base sm:text-lg">
+                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#FF6600] text-base sm:text-lg">
                       $ 5,000/- <span className="text-xs sm:text-sm font-normal text-neutral-600">Per Year for Academic Year - 2026-27</span>
                     </td>
                   </tr>
@@ -110,7 +110,7 @@ export default function FeeStructurePage() {
                     <td className="py-4 px-5 font-semibold text-neutral-800 bg-neutral-50/40">
                       Non-NRI
                     </td>
-                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#F67437] text-base sm:text-lg">
+                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#FF6600] text-base sm:text-lg">
                       Rs. 1,47,300/- <span className="text-xs sm:text-sm font-normal text-neutral-600">Per Year for Academic Year - 2026-27</span>
                     </td>
                   </tr>
@@ -120,14 +120,14 @@ export default function FeeStructurePage() {
           </div>
 
           {/* Scholarship Scheme Section matching exact website wording */}
-          <div className="rounded-xl border-2 border-[#F67437]/30 bg-gradient-to-br from-orange-50/40 via-white to-neutral-50 p-6 sm:p-9 shadow-sm space-y-6">
+          <div className="rounded-xl border-2 border-[#FF6600]/30 bg-gradient-to-br from-orange-50/40 via-white to-neutral-50 p-6 sm:p-9 shadow-sm space-y-6">
             <div className="flex items-center gap-3 border-b border-orange-100 pb-4">
-              <span className="p-3 rounded-xl bg-[#F67437] text-white shadow-md shadow-[#F67437]/20">
+              <span className="p-3 rounded-xl bg-[#FF6600] text-white shadow-md shadow-[#FF6600]/20">
                 <Award size={26} />
               </span>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#F67437] bg-orange-100 px-3 py-0.5 rounded-full">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600] bg-orange-100 px-3 py-0.5 rounded-full">
                     Scholarship Scheme
                   </span>
                   
@@ -141,16 +141,16 @@ export default function FeeStructurePage() {
             {/* Exact website paragraphs */}
             <div className="space-y-4 text-sm sm:text-base leading-relaxed text-neutral-800">
               <div className="p-4 rounded-xl bg-white border border-orange-200/80 shadow-xs flex items-start gap-3">
-                <span className="text-[#F67437] font-bold text-lg shrink-0 mt-0.5">***</span>
+                <span className="text-[#FF6600] font-bold text-lg shrink-0 mt-0.5">***</span>
                 <p>
-                  <strong className="text-neutral-900">The ₹50,000 Scholarship is awarded to eligible students</strong> who secured the <strong className="text-[#F67437]">AP EAPCET</strong> Rank <strong className="text-neutral-900">below 10,000</strong> and get admitted in <strong className="text-[#F67437]">CSE, CSM, CAD &amp; ECE</strong>.
+                  <strong className="text-neutral-900">The ₹50,000 Scholarship is awarded to eligible students</strong> who secured the <strong className="text-[#FF6600]">AP EAPCET</strong> Rank <strong className="text-neutral-900">below 10,000</strong> and get admitted in <strong className="text-[#FF6600]">CSE, CSM, CAD &amp; ECE</strong>.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-white border border-orange-200/80 shadow-xs flex items-start gap-3">
-                <span className="text-[#F67437] font-bold text-lg shrink-0 mt-0.5">***</span>
+                <span className="text-[#FF6600] font-bold text-lg shrink-0 mt-0.5">***</span>
                 <p>
-                  <strong className="text-neutral-900">The ₹50,000 Scholarship is awarded to eligible students</strong> who secured the <strong className="text-[#F67437]">AP EAPCET</strong> Rank <strong className="text-neutral-900">below 20,000</strong> and get admitted in <strong className="text-[#F67437]">CIV, MEC, &amp; EEE</strong>.
+                  <strong className="text-neutral-900">The ₹50,000 Scholarship is awarded to eligible students</strong> who secured the <strong className="text-[#FF6600]">AP EAPCET</strong> Rank <strong className="text-neutral-900">below 20,000</strong> and get admitted in <strong className="text-[#FF6600]">CIV, MEC, &amp; EEE</strong>.
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function FeeStructurePage() {
             {/* Scholarship Continuation Conditions */}
             <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-xs space-y-4">
               <h4 className="font-serif font-bold text-neutral-900 text-base sm:text-lg flex items-center gap-2">
-                <ShieldCheck size={20} className="text-[#F67437]" />
+                <ShieldCheck size={20} className="text-[#FF6600]" />
                 To continue receiving the scholarship in the subsequent academic years, the student must:
               </h4>
 
@@ -178,7 +178,7 @@ export default function FeeStructurePage() {
               </ul>
 
               <div className="pt-4 border-t border-neutral-100 flex items-start gap-2 text-xs sm:text-sm text-neutral-600">
-                <AlertCircle size={16} className="text-[#F67437] shrink-0 mt-0.5" />
+                <AlertCircle size={16} className="text-[#FF6600] shrink-0 mt-0.5" />
                 <span>
                   <strong className="text-neutral-900">Note:</strong> The scholarship will be reviewed annually. Failure to satisfy any of the above conditions may result in discontinuation of the scholarship.
                 </span>
@@ -190,7 +190,7 @@ export default function FeeStructurePage() {
           <div className="rounded-xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-sm overflow-hidden space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-100 pb-5">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-[#F67437] border border-orange-200">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-[#FF6600] border border-orange-200">
                   Postgraduate Program
                 </span>
                 <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-bold text-neutral-900">M.Tech Fee Structure</h2>
@@ -204,7 +204,7 @@ export default function FeeStructurePage() {
             <div className="overflow-x-auto rounded-xl border border-neutral-200">
               <table className="w-full text-left text-sm border-collapse min-w-[700px]">
                 <thead>
-                  <tr className="bg-[#F67437] text-white font-serif">
+                  <tr className="bg-[#FF6600] text-white font-serif">
                     <th className="py-4 px-5 font-semibold w-1/5 text-base">Program</th>
                     <th className="py-4 px-5 font-semibold w-2/5 border-l border-white/20 text-base">
                       For seats Through Counseling <br />
@@ -223,15 +223,15 @@ export default function FeeStructurePage() {
                     </td>
                     <td className="py-4 px-5 align-top border-l border-neutral-200">
                       <div className="font-medium text-neutral-900">
-                        * Qualifying at <span className="text-[#F67437] font-bold">GATE / PGECET</span>
+                        * Qualifying at <span className="text-[#FF6600] font-bold">GATE / PGECET</span>
                       </div>
-                      <div className="mt-1 text-sm font-bold text-[#F67437]">
+                      <div className="mt-1 text-sm font-bold text-[#FF6600]">
                         (Counseling Code : SRIT)
                       </div>
                     </td>
                     <td className="py-4 px-5 align-top border-l border-neutral-200 text-xs sm:text-sm leading-relaxed">
                       <p>
-                        <span className="font-bold text-neutral-900">**</span> A pass in graduation degree with at least 50% either in aggregate or in group subjects or qualifying at <span className="text-[#F67437] font-bold">GATE / PGECET</span>.
+                        <span className="font-bold text-neutral-900">**</span> A pass in graduation degree with at least 50% either in aggregate or in group subjects or qualifying at <span className="text-[#FF6600] font-bold">GATE / PGECET</span>.
                       </p>
                     </td>
                   </tr>
@@ -241,7 +241,7 @@ export default function FeeStructurePage() {
                     <td className="py-4 px-5 font-semibold text-neutral-800 bg-neutral-50/40">
                       Counseling seats
                     </td>
-                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#F67437] text-base sm:text-lg">
+                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#FF6600] text-base sm:text-lg">
                       Rs. 50,000 /- <span className="text-xs sm:text-sm font-normal text-neutral-600">Per Year for Academic Year - 2026-27</span>
                     </td>
                   </tr>
@@ -251,7 +251,7 @@ export default function FeeStructurePage() {
                     <td className="py-4 px-5 font-semibold text-neutral-800 bg-neutral-50/40">
                       NRI's / Management
                     </td>
-                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#F67437] text-base sm:text-lg">
+                    <td colSpan={2} className="py-4 px-5 border-l border-neutral-200 font-bold text-[#FF6600] text-base sm:text-lg">
                       As per government latest norms.
                     </td>
                   </tr>
@@ -273,7 +273,7 @@ export default function FeeStructurePage() {
             </h4>
 
             <h4
-              className="font-serif font-bold text-[#F67437]"
+              className="font-serif font-bold text-[#FF6600]"
               style={{
                 fontSize: 'clamp(24px, 2vw, 24px)',
                 lineHeight: '1.3',
@@ -299,7 +299,7 @@ export default function FeeStructurePage() {
             </div>
             <Link
               to="/admissions/online-fee-payment"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#F67437] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#F67437]/30 transition hover:bg-orange-600"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#FF6600] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#FF6600]/30 transition hover:bg-orange-600"
             >
               Online Fee Payment <ExternalLink size={16} />
             </Link>

@@ -17,7 +17,7 @@ const PrincipalPage: React.FC = () => {
                 {/* Image & stats */}
                 <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0 space-y-4">
                     <div className="relative">
-                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF6600] to-orange-300 blur-sm opacity-40" />
                         <img
                             src="/optimized/principal.jpg.webp"
                             alt="Dr. G. Balakrishna"
@@ -26,7 +26,7 @@ const PrincipalPage: React.FC = () => {
                     </div>
                     <div className="bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-4 text-center shadow">
                         <p className="text-white font-bold text-lg">Dr. G. Balakrishna</p>
-                        <p className="text-[#FF5422] text-sm font-semibold mt-1">Principal, SRIT</p>
+                        <p className="text-[#FF6600] text-sm font-semibold mt-1">Principal, SRIT</p>
                     </div>
                     {/* Quick stats */}
                     <div className="grid grid-cols-2 gap-2">
@@ -37,7 +37,7 @@ const PrincipalPage: React.FC = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-orange-50 border border-orange-100 rounded-xl p-3 text-center"
                             >
-                                <div className="text-xl font-bold text-[#FF5422]">{s.value}</div>
+                                <div className="text-xl font-bold text-[#FF6600]">{s.value}</div>
                                 <div className="text-[10px] text-neutral-500 mt-0.5 font-medium leading-tight">{s.label}</div>
                             </motion.div>
                         ))}
@@ -106,10 +106,10 @@ const PrincipalPage: React.FC = () => {
                                 delay: 0.6,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="h-0.5 bg-[#FF5422] rounded-full"
+                            className="h-0.5 bg-[#FF6600] rounded-full"
                         />
 
-                        <span className="text-[#FF5422] font-semibold">
+                        <span className="text-[#FF6600] font-semibold">
                             Principal
                         </span>
                     </motion.div>

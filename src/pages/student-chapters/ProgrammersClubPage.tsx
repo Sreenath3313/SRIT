@@ -36,7 +36,7 @@ const ProgrammersClubPage: React.FC = () => {
                         <AccordionItem title="About Programmers Club">
                             <div className="text-neutral-700 leading-relaxed m-0 text-base space-y-4 text-justify">
                                 <p className="font-semibold text-lg text-[#0A0903]">Welcome to the Programmers Club of SRIT!</p>
-                                <h4 className="font-bold text-[#f67437] text-lg mt-4 mb-2">Our Journey</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mt-4 mb-2">Our Journey</h4>
                                 <p>
                                     Established in the year 2012, the Programmers Club has been at the forefront of promoting coding excellence, fostering innovation, and nurturing the technical talents of students from diverse branches. Over the years, we have evolved into a vibrant and dynamic community dedicated to empowering students with the skills they need to thrive in the world of technology.
                                 </p>
@@ -45,7 +45,7 @@ const ProgrammersClubPage: React.FC = () => {
 
                         <AccordionItem title="Objectives">
                             <div className="text-neutral-700 leading-relaxed text-base">
-                                <h4 className="font-bold text-[#f67437] text-lg mb-4">Objectives:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mb-4">Objectives:</h4>
                                 <ul className="list-disc pl-5 space-y-3">
                                     <li><span className="font-semibold text-[#0A0903]">Promote Coding Excellence:</span> We believe that coding is both an art and a science. We provide a platform for students to hone their coding skills, explore programming languages, and tackle real-world challenges.</li>
                                     <li><span className="font-semibold text-[#0A0903]">Encourage Innovation:</span> Innovation is at the heart of technology. We inspire students to think outside the box, develop innovative solutions, and contribute to the ever-evolving tech landscape.</li>
@@ -83,8 +83,8 @@ const ProgrammersClubPage: React.FC = () => {
 
                         <AccordionItem title="Contact">
                             <div className="text-neutral-700 space-y-2 m-0">
-                                <h4 className="font-bold text-[#f67437] text-xl mb-4">Contact Us:</h4>
-                                <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:programmerclub@srit.ac.in" className="text-[#f67437] hover:underline font-medium">programmerclub@srit.ac.in</a></p>
+                                <h4 className="font-bold text-[#FF6600] text-xl mb-4">Contact Us:</h4>
+                                <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:programmerclub@srit.ac.in" className="text-[#FF6600] hover:underline font-medium">programmerclub@srit.ac.in</a></p>
                             </div>
                         </AccordionItem>
                         

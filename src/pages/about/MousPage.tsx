@@ -77,7 +77,7 @@ const MousPage: React.FC = () => {
             <motion.div variants={stagger} initial="hidden" animate="visible" className="space-y-6">
                 <motion.div variants={fadeUp}>
                     <h2 className="text-3xl font-serif font-bold text-[#0A0903] mb-1 flex items-center gap-3">
-                        <span className="w-1 h-8 rounded-full bg-[#FF5422] inline-block" />
+                        <span className="w-1 h-8 rounded-full bg-[#FF6600] inline-block" />
                         MOU&apos;s with Industry
                     </h2>
                     <p className="text-neutral-600 mt-3 leading-relaxed text-left sm:text-justify text-sm sm:text-base">
@@ -108,7 +108,7 @@ const MousPage: React.FC = () => {
                                         transition={{ duration: 0.25 }}
                                         className="shrink-0"
                                     >
-                                        <ChevronDown className="w-4 h-4 text-[#FF5422]" />
+                                        <ChevronDown className="w-4 h-4 text-[#FF6600]" />
                                     </motion.div>
                                 </button>
 

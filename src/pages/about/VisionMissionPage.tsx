@@ -26,7 +26,7 @@ const VisionMissionPage: React.FC = () => {
 
                         <div className="relative z-10">
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="w-10 h-10 rounded-full bg-[#FF5422] flex items-center justify-center shrink-0">
+                                <div className="w-10 h-10 rounded-full bg-[#FF6600] flex items-center justify-center shrink-0">
                                     <svg
                                         className="w-5 h-5 text-white"
                                         fill="none"
@@ -52,7 +52,7 @@ const VisionMissionPage: React.FC = () => {
                                 </h2>
                             </div>
 
-                            <p className="text-neutral-300 leading-relaxed text-lg italic border-l-4 border-[#FF5422] pl-5 text-left sm:text-justify">
+                            <p className="text-neutral-300 leading-relaxed text-lg italic border-l-4 border-[#FF6600] pl-5 text-left sm:text-justify">
                                 "To become a premier Educational Institution in
                                 India offering the best teaching and learning
                                 environment for our students that will enable
@@ -69,9 +69,9 @@ const VisionMissionPage: React.FC = () => {
                 {/* Mission */}
                 <motion.div variants={fadeUp}>
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 rounded-full bg-[#FF5422]/10 border-2 border-[#FF5422] flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 rounded-full bg-[#FF6600]/10 border-2 border-[#FF6600] flex items-center justify-center shrink-0">
                             <svg
-                                className="w-5 h-5 text-[#FF5422]"
+                                className="w-5 h-5 text-[#FF6600]"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -105,9 +105,9 @@ const VisionMissionPage: React.FC = () => {
                                     type: 'spring',
                                     stiffness: 300,
                                 }}
-                                className="flex gap-4 p-5 bg-white border border-neutral-200 rounded-xl hover:border-[#FF5422]/40 hover:shadow-md transition-all"
+                                className="flex gap-4 p-5 bg-white border border-neutral-200 rounded-xl hover:border-[#FF6600]/40 hover:shadow-md transition-all"
                             >
-                                <span className="w-8 h-8 rounded-full bg-[#FF5422] text-white font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">
+                                <span className="w-8 h-8 rounded-full bg-[#FF6600] text-white font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">
                                     {i + 1}
                                 </span>
 

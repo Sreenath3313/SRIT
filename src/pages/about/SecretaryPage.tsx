@@ -17,7 +17,7 @@ const SecretaryPage: React.FC = () => {
                 {/* Image */}
                 <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0">
                     <div className="relative">
-                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                        <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF6600] to-orange-300 blur-sm opacity-40" />
                         <img
                             src="https://www.srit.ac.in/wp-content/uploads/2021/07/samba-siva.jpeg"
                             alt="Aluru Sambasiva Reddy"
@@ -26,8 +26,8 @@ const SecretaryPage: React.FC = () => {
                     </div>
                     <motion.div variants={fadeUp} className="mt-4 bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-4 text-center shadow">
                         <p className="text-white font-bold text-lg">Aluru Sambasiva Reddy</p>
-                        <p className="text-[#FF5422] text-sm font-semibold mt-1">Founder & Secretary</p>
-                        <a href="mailto:correspondent@srit.ac.in" className="mt-3 inline-block text-xs text-neutral-400 hover:text-[#FF5422] transition-colors">
+                        <p className="text-[#FF6600] text-sm font-semibold mt-1">Founder & Secretary</p>
+                        <a href="mailto:correspondent@srit.ac.in" className="mt-3 inline-block text-xs text-neutral-400 hover:text-[#FF6600] transition-colors">
                             correspondent@srit.ac.in
                         </a>
                     </motion.div>
@@ -88,10 +88,10 @@ const SecretaryPage: React.FC = () => {
                                 delay: 0.6,
                                 ease: [0.22, 1, 0.36, 1],
                             }}
-                            className="h-0.5 bg-[#FF5422] rounded-full"
+                            className="h-0.5 bg-[#FF6600] rounded-full"
                         />
 
-                        <span className="text-[#FF5422] font-semibold">
+                        <span className="text-[#FF6600] font-semibold">
                             Founder & Secretary
                         </span>
                     </motion.div>
@@ -110,13 +110,13 @@ const SecretaryPage: React.FC = () => {
                     >
                         {[
                             <React.Fragment key="p1">
-                                <strong className="text-[#FF5422] font-semibold">Aluru Sambasiva Reddy</strong>, the Founder Secretary of SRIT, is the youngest son of <strong className="text-[#FF5422] font-semibold">Sri Aluru Sunki Reddy</strong> and <strong className="text-[#FF5422] font-semibold">Late Smt Aluru Narayanamma</strong> with six brothers and two sisters in an ordinary middle-class family in East Narasapuram, a village in Singanamala Mandal of Ananthapuramu District. Samba, as his parents fondly called him saying that he was a very enthusiastic kid, always interested in learning new things. Though his parents were uneducated, his mother observed her son&apos;s interest in studies and encouraged him to study. He completed his schooling at the local Govt. High School. With the support of his family, he joined the Intermediate course at SSN Junior College, Ongole. His dream was to pursue an engineering degree at the university campus.
+                                <strong className="text-[#FF6600] font-semibold">Aluru Sambasiva Reddy</strong>, the Founder Secretary of SRIT, is the youngest son of <strong className="text-[#FF6600] font-semibold">Sri Aluru Sunki Reddy</strong> and <strong className="text-[#FF6600] font-semibold">Late Smt Aluru Narayanamma</strong> with six brothers and two sisters in an ordinary middle-class family in East Narasapuram, a village in Singanamala Mandal of Ananthapuramu District. Samba, as his parents fondly called him saying that he was a very enthusiastic kid, always interested in learning new things. Though his parents were uneducated, his mother observed her son&apos;s interest in studies and encouraged him to study. He completed his schooling at the local Govt. High School. With the support of his family, he joined the Intermediate course at SSN Junior College, Ongole. His dream was to pursue an engineering degree at the university campus.
                             </React.Fragment>,
                             <React.Fragment key="p2">
-                                With that goal in mind, he studied hard and obtained a graduate&apos;s degree in Mechanical Engineering from the prestigious <strong className="text-[#FF5422] font-semibold">JNTUCE</strong>, Anantapuramu, in the year 2000. He also completed his M. Tech in Refrigeration and Air Conditioning from <strong className="text-[#FF5422] font-semibold">JNTUA</strong> in 2004.
+                                With that goal in mind, he studied hard and obtained a graduate&apos;s degree in Mechanical Engineering from the prestigious <strong className="text-[#FF6600] font-semibold">JNTUCE</strong>, Anantapuramu, in the year 2000. He also completed his M. Tech in Refrigeration and Air Conditioning from <strong className="text-[#FF6600] font-semibold">JNTUA</strong> in 2004.
                             </React.Fragment>,
                             <React.Fragment key="p3">
-                                With the advice of his tutor, guide, mentor and patron <strong className="text-[#FF5422] font-semibold">Sri Y. Venkata Rami Reddy</strong>, Ex Vice-chancellor of JNTU Anantapur and Ex-Chairman, APPSC, he joined as an Assistant Professor in Sri Kottam Thulasi Reddy Memorial College of Engineering in the Department of Mechanical Engineering and later became an Associate Professor.
+                                With the advice of his tutor, guide, mentor and patron <strong className="text-[#FF6600] font-semibold">Sri Y. Venkata Rami Reddy</strong>, Ex Vice-chancellor of JNTU Anantapur and Ex-Chairman, APPSC, he joined as an Assistant Professor in Sri Kottam Thulasi Reddy Memorial College of Engineering in the Department of Mechanical Engineering and later became an Associate Professor.
                             </React.Fragment>,
                             <React.Fragment key="p4">
                                 In his 7 years stay at the college, with his administrative and enormous organizing abilities, he was handed over to manage the administrative duties of the college. He worked as the Officer In-Charge for admissions and later as Training and Placement Officer.
@@ -158,9 +158,9 @@ const SecretaryPage: React.FC = () => {
                                     key={i}
                                     whileHover={{ x: 4 }}
                                     transition={{ type: 'spring', stiffness: 300 }}
-                                    className="flex gap-3 p-4 bg-neutral-50 border border-neutral-200 rounded-xl hover:border-[#FF5422]/40 transition-all"
+                                    className="flex gap-3 p-4 bg-neutral-50 border border-neutral-200 rounded-xl hover:border-[#FF6600]/40 transition-all"
                                 >
-                                    <span className="w-5 h-5 rounded-full bg-[#FF5422] text-white text-xs flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                                    <span className="w-5 h-5 rounded-full bg-[#FF6600] text-white text-xs flex items-center justify-center shrink-0 mt-0.5 font-bold">
                                         {i + 1}
                                     </span>
                                     <p className="text-sm leading-relaxed">{b}</p>

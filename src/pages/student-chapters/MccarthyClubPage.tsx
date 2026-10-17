@@ -47,12 +47,12 @@ const MccarthyClubPage: React.FC = () => {
                         <AccordionItem title="Vision and Mission">
                             <div className="text-neutral-700 leading-relaxed text-base space-y-4">
                                 <div>
-                                    <h4 className="font-bold text-[#f67437] text-lg mb-2">VISION:</h4>
+                                    <h4 className="font-bold text-[#FF6600] text-lg mb-2">VISION:</h4>
                                     <p>• To build a community where every student feels inspired to learn, create, lead and grow together.</p>
                                     <p className="italic">"Learn together. Grow together. Lead together."</p>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-[#f67437] text-lg mb-2 mt-4">MISSION:</h4>
+                                    <h4 className="font-bold text-[#FF6600] text-lg mb-2 mt-4">MISSION:</h4>
                                     <ul className="list-disc pl-5 space-y-2">
                                         <li>Create opportunities for students to develop communication, leadership, technical, and entrepreneurial skills.</li>
                                         <li>Encourage curiosity and innovation through engaging activities and real-world experiences.</li>
@@ -65,7 +65,7 @@ const MccarthyClubPage: React.FC = () => {
 
                         <AccordionItem title="Objectives">
                             <div className="text-neutral-700 leading-relaxed text-base">
-                                <h4 className="font-bold text-[#f67437] text-lg mb-4">Objectives:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mb-4">Objectives:</h4>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li>Promote AI, technology, and innovation.</li>
                                     <li>Develop industry-relevant skills.</li>
@@ -81,26 +81,26 @@ const MccarthyClubPage: React.FC = () => {
 
                         <AccordionItem title="What We Do">
                             <div className="text-neutral-700 leading-relaxed text-base space-y-4">
-                                <h4 className="font-bold text-[#f67437] text-lg mb-4">Activities:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mb-4">Activities:</h4>
                                 <ul className="space-y-4 list-none p-0">
                                     <li className="flex gap-2">
-                                        <span className="text-[#f67437] font-bold">»</span> 
+                                        <span className="text-[#FF6600] font-bold">»</span> 
                                         <span><span className="font-semibold">McCarthy Labs</span> — AI & Tech Projects</span>
                                     </li>
                                     <li className="flex gap-2">
-                                        <span className="text-[#f67437] font-bold">»</span> 
+                                        <span className="text-[#FF6600] font-bold">»</span> 
                                         <span><span className="font-semibold">McCarthy Talks</span> — TED-style Speaker Sessions (group discussions, healthy debates etc)</span>
                                     </li>
                                     <li className="flex gap-2">
-                                        <span className="text-[#f67437] font-bold">»</span> 
+                                        <span className="text-[#FF6600] font-bold">»</span> 
                                         <span><span className="font-semibold">McCarthy Connect</span> — Networking & Alumni Interactions</span>
                                     </li>
                                     <li className="flex gap-2">
-                                        <span className="text-[#f67437] font-bold">»</span> 
+                                        <span className="text-[#FF6600] font-bold">»</span> 
                                         <span><span className="font-semibold">McCarthy Spotlight</span> — Student Talent & Project Showcases (presentations on a topic given etc..,)</span>
                                     </li>
                                     <li className="flex gap-2">
-                                        <span className="text-[#f67437] font-bold">»</span> 
+                                        <span className="text-[#FF6600] font-bold">»</span> 
                                         <span><span className="font-semibold">McCarthy Challenge</span> — Monthly Competitions & Problem Solving(quizzes, rapid fire questions etc..,)</span>
                                     </li>
                                 </ul>
@@ -131,8 +131,8 @@ const MccarthyClubPage: React.FC = () => {
 
                         <AccordionItem title="Contact">
                             <div className="text-neutral-700 space-y-2 m-0">
-                                <h4 className="font-bold text-[#f67437] text-xl mb-4">Contact Us:</h4>
-                                <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:mccarthyclub.csm@srit.ac.in" className="text-[#f67437] hover:underline font-medium">mccarthyclub.csm@srit.ac.in</a></p>
+                                <h4 className="font-bold text-[#FF6600] text-xl mb-4">Contact Us:</h4>
+                                <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:mccarthyclub.csm@srit.ac.in" className="text-[#FF6600] hover:underline font-medium">mccarthyclub.csm@srit.ac.in</a></p>
                             </div>
                         </AccordionItem>
                         

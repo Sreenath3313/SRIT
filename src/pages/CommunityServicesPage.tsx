@@ -132,10 +132,10 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    The term <strong className="text-[#FF5422] font-bold">College Social Responsibility (CSR)</strong> at Srinivasa Ramanujan Institute of Technology represents the proactive capacity of our higher education institution to disseminate and implement core ethical principles, human values, and practical initiatives aimed at addressing real-world educational, economic, and social challenges.
+                    The term <strong className="text-[#FF6600] font-bold">College Social Responsibility (CSR)</strong> at Srinivasa Ramanujan Institute of Technology represents the proactive capacity of our higher education institution to disseminate and implement core ethical principles, human values, and practical initiatives aimed at addressing real-world educational, economic, and social challenges.
                 </p>
                 <p>
-                    SRIT instills in every budding engineer a profound sense of civic duty, environmental stewardship, and compassionate social empathy. Through localized community interventions around <span className="text-[#FF5422] font-semibold">Rotarypuram, B.K. Samudram Mandal, and Ananthapuramu district</span>, our students transform technical knowledge into compassionate action.
+                    SRIT instills in every budding engineer a profound sense of civic duty, environmental stewardship, and compassionate social empathy. Through localized community interventions around <span className="text-[#FF6600] font-semibold">Rotarypuram, B.K. Samudram Mandal, and Ananthapuramu district</span>, our students transform technical knowledge into compassionate action.
                 </p>
             </div>
         ),
@@ -207,7 +207,7 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    The <strong className="text-[#FF5422] font-bold">‘Aims’ of the NCC</strong> laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country.
+                    The <strong className="text-[#FF6600] font-bold">‘Aims’ of the NCC</strong> laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country.
                 </p>
                 <p>
                     The NCC aims at developing character, comradeship, discipline, a secular outlook, the spirit of adventure and ideals of selfless service amongst young citizens. Further, it aims at creating a pool of organized, trained and motivated youth with leadership qualities in all walks of life, who will serve the Nation regardless of which career they choose. Needless to say, the NCC also provides an environment conducive to motivating young Indians to join the armed forces.
@@ -334,10 +334,10 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    The <strong className="text-[#FF5422] font-bold">National Service Scheme (NSS)</strong> at SRIT operates under the aegis of the <span className="text-[#FF5422] font-semibold">Ministry of Youth Affairs & Sports, Government of India</span>, and NSS Cell, JNTUA. The primary objective is personality development through community engagement.
+                    The <strong className="text-[#FF6600] font-bold">National Service Scheme (NSS)</strong> at SRIT operates under the aegis of the <span className="text-[#FF6600] font-semibold">Ministry of Youth Affairs & Sports, Government of India</span>, and NSS Cell, JNTUA. The primary objective is personality development through community engagement.
                 </p>
                 <p>
-                    NSS volunteers participate in year-round regular activities and a dedicated <strong className="text-[#FF5422] font-bold">7-day Special Rural Camping Program</strong> in adopted villages, addressing issues like rural health, hygiene, literacy, environmental conservation, and social welfare.
+                    NSS volunteers participate in year-round regular activities and a dedicated <strong className="text-[#FF6600] font-bold">7-day Special Rural Camping Program</strong> in adopted villages, addressing issues like rural health, hygiene, literacy, environmental conservation, and social welfare.
                 </p>
             </div>
         ),
@@ -422,7 +422,7 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    The <strong className="text-[#FF5422] font-bold">Rotaract Club of SRIT</strong> (sponsored by Rotary Club of Anantapur Central, RID 3160) provides an international platform for university students to enhance knowledge and skills that assist them in personal development, address the physical and social needs of their communities, and promote better relations between all people worldwide through a framework of friendship and service.
+                    The <strong className="text-[#FF6600] font-bold">Rotaract Club of SRIT</strong> (sponsored by Rotary Club of Anantapur Central, RID 3160) provides an international platform for university students to enhance knowledge and skills that assist them in personal development, address the physical and social needs of their communities, and promote better relations between all people worldwide through a framework of friendship and service.
                 </p>
             </div>
         ),
@@ -497,10 +497,10 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    The <strong className="text-[#FF5422] font-bold">Indian Red Cross Society</strong> aims to inspire, encourage and initiate at all times, all forms of humanitarian activities so that human suffering can be minimized, alleviated and even prevented, thus contribute to creating a more congenial climate for peace.
+                    The <strong className="text-[#FF6600] font-bold">Indian Red Cross Society</strong> aims to inspire, encourage and initiate at all times, all forms of humanitarian activities so that human suffering can be minimized, alleviated and even prevented, thus contribute to creating a more congenial climate for peace.
                 </p>
                 <p>
-                    Youth Red Cross (YRC) at Srinivasa Ramanujan Institute of Technology provides structured training in <span className="text-[#FF5422] font-semibold">First Aid, Emergency Life Support, Disaster Relief Management</span>, and voluntary non-remunerated blood donation to serve the marginalized during medical emergencies.
+                    Youth Red Cross (YRC) at Srinivasa Ramanujan Institute of Technology provides structured training in <span className="text-[#FF6600] font-semibold">First Aid, Emergency Life Support, Disaster Relief Management</span>, and voluntary non-remunerated blood donation to serve the marginalized during medical emergencies.
                 </p>
             </div>
         ),
@@ -582,7 +582,7 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    <strong className="text-[#FF5422] font-bold">Unnat Bharat Abhiyan (UBA)</strong> is a flagship national program of the <span className="text-[#FF5422] font-semibold">Ministry of Education (MoE), Government of India</span>, with Indian Institute of Technology (IIT) Delhi as the National Coordinating Institute.
+                    <strong className="text-[#FF6600] font-bold">Unnat Bharat Abhiyan (UBA)</strong> is a flagship national program of the <span className="text-[#FF6600] font-semibold">Ministry of Education (MoE), Government of India</span>, with Indian Institute of Technology (IIT) Delhi as the National Coordinating Institute.
                 </p>
                 <p>
                     The initiative conceptualizes higher educational institutions working directly with rural communities to identify local development challenges and evolve appropriate, eco-friendly technological solutions for accelerating sustainable socioeconomic growth.
@@ -650,7 +650,7 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    <strong className="text-[#FF5422] font-bold">Ek Bharat Shreshtha Bharat (EBSB)</strong> was announced by the Hon’ble Prime Minister on the occasion of the 140th birth anniversary of Sardar Vallabhbhai Patel. At SRIT, the EBSB Club organizes structured cultural and linguistic engagement between Andhra Pradesh and partner states across India.
+                    <strong className="text-[#FF6600] font-bold">Ek Bharat Shreshtha Bharat (EBSB)</strong> was announced by the Hon’ble Prime Minister on the occasion of the 140th birth anniversary of Sardar Vallabhbhai Patel. At SRIT, the EBSB Club organizes structured cultural and linguistic engagement between Andhra Pradesh and partner states across India.
                 </p>
                 <p>
                     The cell aims to enhance interaction and mutual understanding between people of diverse cultures, showcasing the rich heritage, languages, cuisine, handicrafts, and traditions of our country.
@@ -719,10 +719,10 @@ export const communityServicesData: CommunityServiceSection[] = [
         aim: (
             <div className="space-y-3">
                 <p>
-                    <strong className="text-[#FF5422] font-bold">Viksit Bharat @2047</strong> is the vision of the Government of India to transform the nation into a fully developed country by the year 2047, marking the centenary of its independence.
+                    <strong className="text-[#FF6600] font-bold">Viksit Bharat @2047</strong> is the vision of the Government of India to transform the nation into a fully developed country by the year 2047, marking the centenary of its independence.
                 </p>
                 <p>
-                    At SRIT, students and faculty actively engage in the <span className="text-[#FF5422] font-semibold">"Ideas for the Vision of Viksit Bharat @2047"</span> national consultation, contributing groundbreaking ideas in technological innovation, economic growth, social progress, and environmental sustainability.
+                    At SRIT, students and faculty actively engage in the <span className="text-[#FF6600] font-semibold">"Ideas for the Vision of Viksit Bharat @2047"</span> national consultation, contributing groundbreaking ideas in technological innovation, economic growth, social progress, and environmental sustainability.
                 </p>
             </div>
         ),
@@ -917,7 +917,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
     const IconComponent = activeSection.icon;
 
     return (
-        <div className="min-h-screen bg-neutral-50 flex flex-col font-sans selection:bg-[#FF5422] selection:text-white">
+        <div className="min-h-screen bg-neutral-50 flex flex-col font-sans selection:bg-[#FF6600] selection:text-white">
             <Navbar />
 
             <PageHeader title={activeSection.title} categoryTitle="Community Services" />
@@ -950,10 +950,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('vision')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'vision'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            : 'bg-white text-[#FF6600] border-2 border-[#FF6600] hover:bg-orange-50/60'
                                             }`}
                                     >
-                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'vision' ? 'text-white' : 'text-[#f67437]'}`}>
+                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'vision' ? 'text-white' : 'text-[#FF6600]'}`}>
                                             <Eye size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide">Our Vision</span>
@@ -968,10 +968,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('mission')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'mission'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            : 'bg-white text-[#FF6600] border-2 border-[#FF6600] hover:bg-orange-50/60'
                                             }`}
                                     >
-                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'mission' ? 'text-white' : 'text-[#f67437]'}`}>
+                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'mission' ? 'text-white' : 'text-[#FF6600]'}`}>
                                             <Target size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide">Our Mission</span>
@@ -986,10 +986,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('objectives')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'objectives'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            : 'bg-white text-[#FF6600] border-2 border-[#FF6600] hover:bg-orange-50/60'
                                             }`}
                                     >
-                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'objectives' ? 'text-white' : 'text-[#f67437]'}`}>
+                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'objectives' ? 'text-white' : 'text-[#FF6600]'}`}>
                                             <Flag size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide">Objectives</span>
@@ -1004,10 +1004,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('team')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'team'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            : 'bg-white text-[#FF6600] border-2 border-[#FF6600] hover:bg-orange-50/60'
                                             }`}
                                     >
-                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'team' ? 'text-white' : 'text-[#f67437]'}`}>
+                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'team' ? 'text-white' : 'text-[#FF6600]'}`}>
                                             <Users size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide">Team</span>
@@ -1022,10 +1022,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('activities')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'activities'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-white text-[#f67437] border-2 border-[#f67437] hover:bg-orange-50/60'
+                                            : 'bg-white text-[#FF6600] border-2 border-[#FF6600] hover:bg-orange-50/60'
                                             }`}
                                     >
-                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'activities' ? 'text-white' : 'text-[#f67437]'}`}>
+                                        <div className={`mb-1.5 transition-transform group-hover:scale-110 ${activeMainTab === 'activities' ? 'text-white' : 'text-[#FF6600]'}`}>
                                             <Calendar size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide">Activities</span>
@@ -1040,10 +1040,10 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         onClick={() => setActiveMainTab('contact')}
                                         className={`group relative flex flex-col items-center justify-center px-5 py-3 sm:px-7 sm:py-4 rounded-xl font-bold text-xs sm:text-sm min-w-[110px] sm:min-w-[130px] transition-all duration-200 cursor-pointer shadow-xs ${activeMainTab === 'contact'
                                             ? 'bg-[#1e293b] text-white shadow-md'
-                                            : 'bg-[#1e293b] text-[#f67437] hover:text-white hover:bg-slate-900'
+                                            : 'bg-[#1e293b] text-[#FF6600] hover:text-white hover:bg-slate-900'
                                             }`}
                                     >
-                                        <div className="mb-1.5 transition-transform group-hover:scale-110 text-[#f67437]">
+                                        <div className="mb-1.5 transition-transform group-hover:scale-110 text-[#FF6600]">
                                             <Phone size={22} className="stroke-[2.5]" />
                                         </div>
                                         <span className="tracking-wide text-white">Contact Us</span>
@@ -1059,7 +1059,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {activeMainTab === 'vision' && (
                                         <div className="space-y-6 text-neutral-700 leading-relaxed animate-fadeIn">
                                             <div>
-                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-2 tracking-wide">
+                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-2 tracking-wide">
                                                     AIM:
                                                 </h3>
                                                 <p className="text-[15px] sm:text-base leading-relaxed text-neutral-800">
@@ -1068,7 +1068,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             </div>
 
                                             <div>
-                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-2 tracking-wide">
+                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-2 tracking-wide">
                                                     Vision:
                                                 </h3>
                                                 <p className="text-[15px] sm:text-base leading-relaxed text-neutral-800">
@@ -1081,7 +1081,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {/* --- 2. Our Mission Tab --- */}
                                     {activeMainTab === 'mission' && (
                                         <div className="space-y-4 text-neutral-700 leading-relaxed animate-fadeIn">
-                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-2 tracking-wide uppercase">
+                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-2 tracking-wide uppercase">
                                                 OUR MISSION:
                                             </h3>
                                             <p className="text-[15px] sm:text-base leading-relaxed text-neutral-800">
@@ -1093,7 +1093,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {/* --- 3. Objectives Tab --- */}
                                     {activeMainTab === 'objectives' && (
                                         <div className="space-y-4 text-neutral-700 leading-relaxed animate-fadeIn">
-                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-3 tracking-wide uppercase">
+                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-3 tracking-wide uppercase">
                                                 Objectives:
                                             </h3>
                                             <ol className="list-decimal pl-6 space-y-3 text-[14.5px] sm:text-[15px] text-neutral-800 leading-relaxed font-normal">
@@ -1113,7 +1113,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {activeMainTab === 'team' && (
                                         <div className="space-y-8 animate-fadeIn">
                                             <div>
-                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-3 tracking-wide uppercase">
+                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-3 tracking-wide uppercase">
                                                     Team:
                                                 </h3>
                                                 <div className="overflow-x-auto rounded-xl border border-neutral-200 shadow-2xs">
@@ -1122,19 +1122,19 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             <tr className="hover:bg-orange-50/30 transition-colors">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">1</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437] font-bold">Dr. G. BalaKrishna</strong>, Principal, SRIT College, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600] font-bold">Dr. G. BalaKrishna</strong>, Principal, SRIT College, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors bg-neutral-50/30">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">2</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437] font-bold">All HOD’s of SRIT College</strong>, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600] font-bold">All HOD’s of SRIT College</strong>, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">3</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437] font-bold">Mr. G.Chinna Pullaiah</strong>, <strong>Assistant Professor in CSE &amp; Convener for Community Service Cell, SRIT College, Ananthapuramu.</strong>
+                                                                    <strong className="text-[#FF6600] font-bold">Mr. G.Chinna Pullaiah</strong>, <strong>Assistant Professor in CSE &amp; Convener for Community Service Cell, SRIT College, Ananthapuramu.</strong>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -1143,7 +1143,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             </div>
 
                                             <div>
-                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-3 tracking-wide">
+                                                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-3 tracking-wide">
                                                     Department In-Charges:
                                                 </h3>
                                                 <div className="overflow-x-auto rounded-xl border border-neutral-200 shadow-2xs">
@@ -1152,37 +1152,37 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             <tr className="hover:bg-orange-50/30 transition-colors">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">1</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <span className="text-[#f67437] font-bold">Mr. Raj Kullay Reddy</span>, <strong>Coordinator, Social Responsibility Cell, SRIT, Anantapuramu.</strong>
+                                                                    <span className="text-[#FF6600] font-bold">Mr. Raj Kullay Reddy</span>, <strong>Coordinator, Social Responsibility Cell, SRIT, Anantapuramu.</strong>
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors bg-neutral-50/30">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">2</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <span className="text-[#f67437] font-bold">Mr. K. Satish Kumar</span>, <strong>Co- coordinator, Social Responsibility Cell, SRIT, Anantapuramu.</strong>
+                                                                    <span className="text-[#FF6600] font-bold">Mr. K. Satish Kumar</span>, <strong>Co- coordinator, Social Responsibility Cell, SRIT, Anantapuramu.</strong>
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">3</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437]">Mr. B.Subba Reddy</strong>, Assistant Professor in MEC, SRIT College, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600]">Mr. B.Subba Reddy</strong>, Assistant Professor in MEC, SRIT College, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors bg-neutral-50/30">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">4</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437]">Mr. T.Aravind Babu</strong>, Assistant Professor in EEE, SRIT College, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600]">Mr. T.Aravind Babu</strong>, Assistant Professor in EEE, SRIT College, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">5</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437]">Mrs. M. Soumya</strong>, Assistant Professor in CSE, SRIT College, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600]">Mrs. M. Soumya</strong>, Assistant Professor in CSE, SRIT College, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                             <tr className="hover:bg-orange-50/30 transition-colors bg-neutral-50/30">
                                                                 <td className="w-14 px-4 py-3.5 font-bold text-neutral-900 border-r border-neutral-200 text-center bg-neutral-50/50">6</td>
                                                                 <td className="px-5 py-3.5 text-neutral-800">
-                                                                    <strong className="text-[#f67437]">Mr. P.Venkata Suneel</strong>, Assistant Professor in CE, SRIT College, Ananthapuramu.
+                                                                    <strong className="text-[#FF6600]">Mr. P.Venkata Suneel</strong>, Assistant Professor in CE, SRIT College, Ananthapuramu.
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -1195,12 +1195,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {/* --- 5. Activities Tab --- */}
                                     {activeMainTab === 'activities' && (
                                         <div className="space-y-5 animate-fadeIn">
-                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-2 tracking-wide uppercase">
+                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-2 tracking-wide uppercase">
                                                 Activities:
                                             </h3>
                                             <div className="p-4 sm:p-5 rounded-xl border border-neutral-200 bg-neutral-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                                 <div className="space-y-1">
-                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#f67437]">
+                                                    <span className="text-xs font-bold uppercase tracking-wider text-[#FF6600]">
                                                         Official Cell Records
                                                     </span>
                                                     <h4 className="text-base font-bold text-neutral-900">
@@ -1211,7 +1211,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     href="https://docs.google.com/document/d/1cAatLeUmtuJxlDXpGb877SA9132UR6uj/edit?usp=sharing&ouid=117112998805419292302&rtpof=true&sd=true"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#f67437] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-xs transition-colors shrink-0"
+                                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF6600] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-xs transition-colors shrink-0"
                                                 >
                                                     <FileText size={16} />
                                                     <span>Open 2021 – 2022 Report</span>
@@ -1224,11 +1224,11 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     {/* --- 6. Contact Us Tab --- */}
                                     {activeMainTab === 'contact' && (
                                         <div className="space-y-6 animate-fadeIn text-neutral-800">
-                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#f67437] mb-3 tracking-wide uppercase">
+                                            <h3 className="font-serif text-lg sm:text-xl font-bold text-[#FF6600] mb-3 tracking-wide uppercase">
                                                 CONTACT US:
                                             </h3>
                                             <div className="grid sm:grid-cols-2 gap-4">
-                                                <div className="p-5 rounded-xl border border-neutral-200 bg-neutral-50/60 space-y-2 hover:border-[#f67437]/50 transition-colors">
+                                                <div className="p-5 rounded-xl border border-neutral-200 bg-neutral-50/60 space-y-2 hover:border-[#FF6600]/50 transition-colors">
                                                     <h4 className="font-bold text-base text-neutral-900">
                                                         Mr. Raj KullayReddy
                                                     </h4>
@@ -1238,7 +1238,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <div className="pt-2">
                                                         <a
                                                             href="tel:9182877497"
-                                                            className="inline-flex items-center gap-2 text-sm font-bold text-[#f67437] hover:underline"
+                                                            className="inline-flex items-center gap-2 text-sm font-bold text-[#FF6600] hover:underline"
                                                         >
                                                             <Phone size={14} />
                                                             <span>9182877497</span>
@@ -1246,7 +1246,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     </div>
                                                 </div>
 
-                                                <div className="p-5 rounded-xl border border-neutral-200 bg-neutral-50/60 space-y-2 hover:border-[#f67437]/50 transition-colors">
+                                                <div className="p-5 rounded-xl border border-neutral-200 bg-neutral-50/60 space-y-2 hover:border-[#FF6600]/50 transition-colors">
                                                     <h4 className="font-bold text-base text-neutral-900">
                                                         Mr. K. Satish Kumar
                                                     </h4>
@@ -1256,7 +1256,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     <div className="pt-2">
                                                         <a
                                                             href="tel:9908658920"
-                                                            className="inline-flex items-center gap-2 text-sm font-bold text-[#f67437] hover:underline"
+                                                            className="inline-flex items-center gap-2 text-sm font-bold text-[#FF6600] hover:underline"
                                                         >
                                                             <Phone size={14} />
                                                             <span>9908658920</span>
@@ -1322,7 +1322,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             <div className="space-y-4">
                                                                 <div className="text-neutral-700 text-xs sm:text-sm leading-relaxed space-y-3 text-justify">
                                                                     <p>
-                                                                        The <strong className="text-[#FF5422] font-bold">‘Aims’ of the NCC</strong> laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country.
+                                                                        The <strong className="text-[#FF6600] font-bold">‘Aims’ of the NCC</strong> laid out in 1988 have stood the test of time and continue to meet the requirements expected of it in the current socio–economic scenario of the country.
                                                                     </p>
                                                                     <p>
                                                                         The NCC aims at developing character, comradeship, discipline, a secular outlook, the spirit of adventure and ideals of selfless service amongst young citizens. Further, it aims at creating a pool of organized, trained and motivated youth with leadership qualities in all walks of life, who will serve the Nation regardless of which career they choose. Needless to say, the NCC also provides an environment conducive to motivating young Indians to join the armed forces.
@@ -1355,7 +1355,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
 
                                                         {/* 2. Pledge */}
                                                         {item.id === 'pledge' && (
-                                                            <div className="border-l-4 border-[#FF5422] bg-orange-50/50 p-4 sm:p-5 rounded-r-2xl italic text-neutral-800 font-serif text-sm sm:text-base leading-relaxed">
+                                                            <div className="border-l-4 border-[#FF6600] bg-orange-50/50 p-4 sm:p-5 rounded-r-2xl italic text-neutral-800 font-serif text-sm sm:text-base leading-relaxed">
                                                                 “We the cadets of the National Cadet Corps, do solemnly pledge that we shall always uphold the unity of India. We resolve to be disciplined and responsible citizens of our nation. We shall undertake positive community service in the spirit of selflessness and concern for our fellow beings.”
                                                             </div>
                                                         )}
@@ -1370,7 +1370,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     { num: '04', title: 'Selfless National Service', desc: 'To develop character, discipline, secular outlook, and spirit of adventure.' }
                                                                 ].map((obj, i) => (
                                                                     <div key={i} className="p-4 rounded-xl bg-neutral-50/80 border border-neutral-200/80 flex items-start gap-3 hover:border-orange-200 transition-colors">
-                                                                        <span className="text-sm font-black text-[#FF5422] bg-orange-100 px-2 py-1 rounded-md shrink-0">{obj.num}</span>
+                                                                        <span className="text-sm font-black text-[#FF6600] bg-orange-100 px-2 py-1 rounded-md shrink-0">{obj.num}</span>
                                                                         <div className="space-y-0.5">
                                                                             <h4 className="text-xs sm:text-sm font-bold text-neutral-900">{obj.title}</h4>
                                                                             <p className="text-xs text-neutral-600 leading-relaxed">{obj.desc}</p>
@@ -1526,7 +1526,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         <div
                                                                             key={idx}
                                                                             onClick={() => setSelectedNccImage(gPhoto)}
-                                                                            className="group rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-lg hover:border-[#FF5422]/60 transition-all duration-300 flex flex-col cursor-pointer w-full"
+                                                                            className="group rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-lg hover:border-[#FF6600]/60 transition-all duration-300 flex flex-col cursor-pointer w-full"
                                                                         >
                                                                             <div className="relative h-56 sm:h-64 md:h-72 w-full overflow-hidden bg-neutral-100">
                                                                                 <img
@@ -1664,12 +1664,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             <div className="space-y-3 w-full max-w-full overflow-hidden">
                                                 <div className="flex items-center justify-between px-1">
                                                     <div className="flex items-center gap-2">
-                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
                                                         <h3 className="font-serif text-base sm:text-lg lg:text-xl font-black text-neutral-900">
                                                             NCC Visual Gallery & Field Highlights
                                                         </h3>
                                                     </div>
-                                                    <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
+                                                    <span className="text-xs font-bold text-[#FF6600] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
                                                         {galleryList.length} Photographs
                                                     </span>
                                                 </div>
@@ -1686,7 +1686,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             <div
                                                                 key={gIdx}
                                                                 onClick={() => setSelectedNccImage(item)}
-                                                                className="shrink-0 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300 group/img flex flex-col cursor-pointer"
+                                                                className="shrink-0 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300 group/img flex flex-col cursor-pointer"
                                                             >
                                                                 <div className="relative h-52 sm:h-56 md:h-60 w-full overflow-hidden bg-neutral-100">
                                                                     <img
@@ -1713,7 +1713,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         type="button"
                                                         onClick={() => setNccSliderIndex((prev) => Math.max(0, prev - 1))}
                                                         disabled={nccSliderIndex === 0}
-                                                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF5422] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
+                                                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF6600] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
                                                         aria-label="Previous Slide"
                                                     >
                                                         <ChevronLeft size={18} />
@@ -1724,7 +1724,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         type="button"
                                                         onClick={() => setNccSliderIndex((prev) => Math.min(totalSlides - 1, prev + 1))}
                                                         disabled={nccSliderIndex >= totalSlides - 1}
-                                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF5422] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF6600] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
                                                         aria-label="Next Slide"
                                                     >
                                                         <ChevronRight size={18} />
@@ -1739,7 +1739,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             type="button"
                                                             onClick={() => setNccSliderIndex(dotIdx)}
                                                             className={`h-2 rounded-full transition-all cursor-pointer ${nccSliderIndex === dotIdx
-                                                                ? 'w-6 bg-[#FF5422]'
+                                                                ? 'w-6 bg-[#FF6600]'
                                                                 : 'w-2 bg-neutral-300 hover:bg-neutral-400'
                                                                 }`}
                                                             aria-label={`Go to slide ${dotIdx + 1}`}
@@ -1768,7 +1768,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                 <button
                                                     type="button"
                                                     onClick={() => setSelectedNccImage(null)}
-                                                    className="w-8 h-8 grid place-items-center rounded-lg bg-white/10 hover:bg-[#FF5422] text-neutral-300 hover:text-white transition-colors cursor-pointer"
+                                                    className="w-8 h-8 grid place-items-center rounded-lg bg-white/10 hover:bg-[#FF6600] text-neutral-300 hover:text-white transition-colors cursor-pointer"
                                                     aria-label="Close Preview"
                                                 >
                                                     <X size={18} />
@@ -1880,7 +1880,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         'Practice national integration and social harmony'
                                                                     ].map((obj, i) => (
                                                                         <div key={i} className="p-3 rounded-lg bg-neutral-50 border border-neutral-200/80 flex items-start gap-2.5 hover:border-orange-200 transition-colors">
-                                                                            <span className="text-xs font-bold text-[#FF5422] bg-orange-100 px-2 py-0.5 rounded shrink-0">
+                                                                            <span className="text-xs font-bold text-[#FF6600] bg-orange-100 px-2 py-0.5 rounded shrink-0">
                                                                                 {(i + 1).toString().padStart(2, '0')}
                                                                             </span>
                                                                             <p className="text-xs text-neutral-700 leading-relaxed font-medium">{obj}</p>
@@ -2096,7 +2096,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         'To provide opportunities for personal and group activities to serve the community and promote international understanding and goodwill toward all people.'
                                                                     ].map((goal, i) => (
                                                                         <div key={i} className="p-3 rounded-lg bg-neutral-50 border border-neutral-200/80 flex items-start gap-2.5 hover:border-orange-200 transition-colors">
-                                                                            <span className="text-xs font-bold text-[#FF5422] bg-orange-100 px-2 py-0.5 rounded shrink-0">
+                                                                            <span className="text-xs font-bold text-[#FF6600] bg-orange-100 px-2 py-0.5 rounded shrink-0">
                                                                                 {(i + 1).toString().padStart(2, '0')}
                                                                             </span>
                                                                             <p className="text-xs text-neutral-700 leading-relaxed font-medium">{goal}</p>
@@ -2404,7 +2404,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                                 key={oIdx}
                                                                                 className="p-3 rounded-lg bg-orange-50/40 border border-orange-200/70 flex items-center gap-2.5"
                                                                             >
-                                                                                <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
+                                                                                <span className="w-2 h-2 rounded-full bg-[#FF6600] shrink-0" />
                                                                                 <span className="text-xs font-semibold text-neutral-800 leading-tight">
                                                                                     {obj}
                                                                                 </span>
@@ -2415,7 +2415,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
 
                                                                 <div className="pt-2 border-t border-neutral-200">
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wide mb-4 flex items-center gap-2">
-                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF5422]" />
+                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
                                                                         <span>Seven Fundamental Principles of Red Cross:</span>
                                                                     </h4>
 
@@ -2692,7 +2692,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                                 key={gIdx}
                                                                                 className="p-3 rounded-lg bg-orange-50/40 border border-orange-200/70 flex items-start gap-3"
                                                                             >
-                                                                                <span className="text-xs font-bold text-[#FF5422] bg-orange-100 px-2 py-0.5 rounded shrink-0">
+                                                                                <span className="text-xs font-bold text-[#FF6600] bg-orange-100 px-2 py-0.5 rounded shrink-0">
                                                                                     {(gIdx + 1).toString().padStart(2, '0')}
                                                                                 </span>
                                                                                 <span className="text-xs font-medium text-neutral-800 leading-relaxed">
@@ -2705,7 +2705,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
 
                                                                 <div className="pt-3 border-t border-neutral-200 space-y-3">
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wide flex items-center gap-2">
-                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF5422]" />
+                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
                                                                         <span>How You Can Participate in UBA?</span>
                                                                     </h4>
                                                                     <p className="text-xs text-neutral-600 font-medium">
@@ -2726,7 +2726,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                                 key={pIdx}
                                                                                 className="p-2.5 rounded-lg bg-neutral-50 border border-neutral-200 flex items-center gap-2 text-xs font-semibold text-neutral-800"
                                                                             >
-                                                                                <span className="w-1.5 h-1.5 rounded-full bg-[#FF5422] shrink-0" />
+                                                                                <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] shrink-0" />
                                                                                 <span>{part}</span>
                                                                             </div>
                                                                         ))}
@@ -2822,7 +2822,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 {/* Adopted Village Clusters */}
                                                                 <div className="pt-2">
                                                                     <h4 className="text-xs sm:text-sm font-bold text-neutral-900 uppercase tracking-wide mb-3 flex items-center gap-2">
-                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF5422]" />
+                                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
                                                                         <span>Adopted Villages under SRIT UBA Cluster:</span>
                                                                     </h4>
                                                                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -2861,7 +2861,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         <div key={aIdx} className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                                                                             <div className="space-y-1">
                                                                                 <div className="flex items-center gap-2">
-                                                                                    <span className="text-xs font-bold text-[#FF5422] bg-orange-100 px-2.5 py-0.5 rounded-full">
+                                                                                    <span className="text-xs font-bold text-[#FF6600] bg-orange-100 px-2.5 py-0.5 rounded-full">
                                                                                         {act.year}
                                                                                     </span>
                                                                                     <h5 className="font-bold text-xs sm:text-sm text-neutral-900">
@@ -2935,12 +2935,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             <div className="space-y-3 w-full max-w-full overflow-hidden">
                                                 <div className="flex items-center justify-between px-1">
                                                     <div className="flex items-center gap-2">
-                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="h-4 w-1.5 rounded-full bg-[#FF6600]" />
                                                         <h3 className="font-serif text-base sm:text-lg lg:text-xl font-black text-neutral-900">
                                                             Unnat Bharat Abhiyan Visual Highlights & Field Activities
                                                         </h3>
                                                     </div>
-                                                    <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
+                                                    <span className="text-xs font-bold text-[#FF6600] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
                                                         {ubaGalleryList.length} Photographs
                                                     </span>
                                                 </div>
@@ -2957,7 +2957,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                             <div
                                                                 key={gIdx}
                                                                 onClick={() => setSelectedUbaImage(item)}
-                                                                className="shrink-0 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300 group/img flex flex-col cursor-pointer"
+                                                                className="shrink-0 w-full sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)] rounded-xl overflow-hidden border border-neutral-200 bg-white shadow-xs hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300 group/img flex flex-col cursor-pointer"
                                                             >
                                                                 <div className="relative aspect-4/3 w-full overflow-hidden bg-neutral-100">
                                                                     <img
@@ -2976,7 +2976,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                     <p className="text-xs font-bold text-neutral-800 line-clamp-2 leading-snug">
                                                                         {item.title}
                                                                     </p>
-                                                                    <span className="text-[11px] text-[#FF5422] font-semibold mt-2 flex items-center gap-1">
+                                                                    <span className="text-[11px] text-[#FF6600] font-semibold mt-2 flex items-center gap-1">
                                                                         Click to expand <ExternalLink size={11} />
                                                                     </span>
                                                                 </div>
@@ -2989,7 +2989,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         type="button"
                                                         onClick={() => setUbaSliderIndex((prev) => Math.max(0, prev - 1))}
                                                         disabled={ubaSliderIndex === 0}
-                                                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF5422] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
+                                                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF6600] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
                                                         aria-label="Previous Slide"
                                                     >
                                                         <ChevronLeft size={18} />
@@ -3000,7 +3000,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         type="button"
                                                         onClick={() => setUbaSliderIndex((prev) => Math.min(totalSlides - 1, prev + 1))}
                                                         disabled={ubaSliderIndex >= totalSlides - 1}
-                                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF5422] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
+                                                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 grid place-items-center bg-white/95 hover:bg-[#FF6600] text-neutral-800 hover:text-white disabled:opacity-0 disabled:pointer-events-none rounded-full border border-neutral-200 shadow-md transition-all cursor-pointer z-10"
                                                         aria-label="Next Slide"
                                                     >
                                                         <ChevronRight size={18} />
@@ -3016,7 +3016,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                 type="button"
                                                                 onClick={() => setUbaSliderIndex(dotIdx)}
                                                                 className={`h-2 rounded-full transition-all cursor-pointer ${ubaSliderIndex === dotIdx
-                                                                    ? 'w-6 bg-[#FF5422]'
+                                                                    ? 'w-6 bg-[#FF6600]'
                                                                     : 'w-2 bg-neutral-300 hover:bg-neutral-400'
                                                                     }`}
                                                                 aria-label={`Go to slide ${dotIdx + 1}`}
@@ -3046,7 +3046,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                 <button
                                                     type="button"
                                                     onClick={() => setSelectedUbaImage(null)}
-                                                    className="w-8 h-8 grid place-items-center rounded-lg bg-white/10 hover:bg-[#FF5422] text-neutral-300 hover:text-white transition-colors cursor-pointer"
+                                                    className="w-8 h-8 grid place-items-center rounded-lg bg-white/10 hover:bg-[#FF6600] text-neutral-300 hover:text-white transition-colors cursor-pointer"
                                                     aria-label="Close Preview"
                                                 >
                                                     <X size={18} />
@@ -3292,7 +3292,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         <div key={eIdx} className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/50 hover:bg-orange-50/30 transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                                                                             <div className="space-y-1">
                                                                                 <div className="flex items-center gap-2">
-                                                                                    <span className="text-xs font-bold text-[#FF5422] bg-orange-100 px-2.5 py-0.5 rounded-full">
+                                                                                    <span className="text-xs font-bold text-[#FF6600] bg-orange-100 px-2.5 py-0.5 rounded-full">
                                                                                         {evt.year}
                                                                                     </span>
                                                                                     <h5 className="font-bold text-xs sm:text-sm text-neutral-900">
@@ -3656,9 +3656,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                         {activeSection.stats.map((st, idx) => (
                                             <div
                                                 key={idx}
-                                                className="rounded-xl border border-neutral-200/80 bg-white p-4 shadow-xs hover:border-[#FF5422]/40 transition-colors"
+                                                className="rounded-xl border border-neutral-200/80 bg-white p-4 shadow-xs hover:border-[#FF6600]/40 transition-colors"
                                             >
-                                                <div className="font-serif text-2xl font-black text-[#FF5422]">
+                                                <div className="font-serif text-2xl font-black text-[#FF6600]">
                                                     {st.value}
                                                 </div>
                                                 <div className="mt-1 text-xs font-bold text-neutral-900">
@@ -3675,7 +3675,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {/* === Aim / Overview Description Card === */}
                                 <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-3">
                                     <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                        <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                         <h2 className="font-serif text-xl sm:text-2xl lg:text-[26px] font-black text-neutral-900 tracking-tight">
                                             About {activeSection.title}
                                         </h2>
@@ -3684,14 +3684,14 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <div className="text-[14.5px] sm:text-[15.5px] leading-relaxed text-neutral-700 space-y-3">
                                         {activeSection.aim || (
                                             <p className="text-left sm:text-justify">
-                                                The <strong className="text-[#FF5422] font-bold">{activeSection.title}</strong> at Srinivasa Ramanujan Institute of Technology is dedicated to community welfare, active student volunteering, and national development.
+                                                The <strong className="text-[#FF6600] font-bold">{activeSection.title}</strong> at Srinivasa Ramanujan Institute of Technology is dedicated to community welfare, active student volunteering, and national development.
                                             </p>
                                         )}
                                     </div>
 
                                     {activeSection.motto && (
                                         <div className="mt-4 p-3.5 rounded-xl bg-orange-50/80 border border-orange-200 flex items-center gap-3">
-                                            <span className="text-xs font-black uppercase tracking-wider text-[#FF5422]">Motto:</span>
+                                            <span className="text-xs font-black uppercase tracking-wider text-[#FF6600]">Motto:</span>
                                             <span className="font-serif font-black text-sm sm:text-base text-neutral-900">
                                                 "{activeSection.motto}"
                                             </span>
@@ -3715,7 +3715,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {/* Vision Card */}
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
-                                        <div className="flex items-center gap-2 text-[#FF5422]">
+                                        <div className="flex items-center gap-2 text-[#FF6600]">
                                             <Eye size={18} />
                                             <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
                                                 Our Vision
@@ -3728,7 +3728,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
 
                                     {/* Mission Card */}
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 shadow-xs space-y-2.5">
-                                        <div className="flex items-center gap-2 text-[#FF5422]">
+                                        <div className="flex items-center gap-2 text-[#FF6600]">
                                             <Target size={18} />
                                             <h3 className="font-serif text-base sm:text-lg font-black text-neutral-900">
                                                 Our Mission
@@ -3744,9 +3744,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {(activeSection.objectives || activeSection.goals || activeSection.principles) && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <Compass size={20} className="text-[#FF5422]" />
+                                                <Compass size={20} className="text-[#FF6600]" />
                                                 <span>
                                                     {activeSection.principles ? 'Fundamental Principles & Objectives' : activeSection.goals ? 'Strategic Goals & Objectives' : 'Core Objectives'}
                                                 </span>
@@ -3759,7 +3759,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     key={pIdx}
                                                     className="flex items-start gap-3 p-3.5 rounded-lg border border-neutral-100 bg-neutral-50/70 hover:bg-orange-50/30 transition-colors"
                                                 >
-                                                    <CheckCircle2 size={16} className="text-[#FF5422] shrink-0 mt-0.5" />
+                                                    <CheckCircle2 size={16} className="text-[#FF6600] shrink-0 mt-0.5" />
                                                     <span className="text-xs sm:text-[13.5px] text-neutral-800 leading-relaxed font-medium">
                                                         {point}
                                                     </span>
@@ -3773,9 +3773,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.sopPoints && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <FileText size={20} className="text-[#FF5422]" />
+                                                <FileText size={20} className="text-[#FF6600]" />
                                                 <span>Standard Operating Procedure (SOP)</span>
                                             </h2>
                                         </div>
@@ -3786,7 +3786,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     key={sIdx}
                                                     className="p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 flex items-start gap-3"
                                                 >
-                                                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#FF5422] text-white text-xs font-black">
+                                                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#FF6600] text-white text-xs font-black">
                                                         {sIdx + 1}
                                                     </span>
                                                     <p className="text-xs sm:text-sm text-neutral-800 leading-relaxed font-medium">
@@ -3802,7 +3802,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.registrationInfo && (
                                     <div className="rounded-xl border-2 border-orange-200 bg-white p-5 sm:p-7 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
                                         <div className="space-y-2">
-                                            <span className="text-[11px] font-bold text-[#FF5422] uppercase tracking-wider block">
+                                            <span className="text-[11px] font-bold text-[#FF6600] uppercase tracking-wider block">
                                                 Official Portal Registration
                                             </span>
                                             <h3 className="font-serif text-lg sm:text-xl font-black text-neutral-900">
@@ -3816,7 +3816,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             href={activeSection.registrationInfo.linkUrl}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FF5422] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/30 transition-all hover:scale-[1.02]"
+                                            className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FF6600] hover:bg-[#e04515] text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/30 transition-all hover:scale-[1.02]"
                                         >
                                             <span>{activeSection.registrationInfo.linkText}</span>
                                             <ExternalLink size={15} />
@@ -3831,12 +3831,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
                                                 <div className="px-5 py-4 bg-black text-white flex items-center justify-between">
                                                     <div className="flex items-center gap-3">
-                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF6600]" />
                                                         <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
                                                             Advisory Committee & Institutional Leadership
                                                         </span>
                                                     </div>
-                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
+                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF6600]/20 px-2.5 py-0.5 rounded-full border border-[#FF6600]/40">
                                                         {activeSection.advisoryCommittee.length} Members
                                                     </span>
                                                 </div>
@@ -3866,7 +3866,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         {m.sno}
                                                                     </td>
                                                                     <td className="px-4 py-3.5 font-bold text-neutral-900">
-                                                                        <span className="text-[#FF5422]">{m.name}</span>
+                                                                        <span className="text-[#FF6600]">{m.name}</span>
                                                                     </td>
                                                                     <td className="px-4 py-3.5 text-neutral-700 font-medium">
                                                                         {m.designation}
@@ -3888,12 +3888,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             <div className="rounded-xl border border-neutral-900 bg-white overflow-hidden shadow-xs w-full">
                                                 <div className="px-5 py-4 bg-[#111827] text-white flex items-center justify-between">
                                                     <div className="flex items-center gap-3">
-                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422]" />
+                                                        <span className="w-2.5 h-2.5 rounded-full bg-[#FF6600]" />
                                                         <span className="font-serif font-black text-base sm:text-lg tracking-wide text-white">
                                                             Departmental Coordinators & Executive Team
                                                         </span>
                                                     </div>
-                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-2.5 py-0.5 rounded-full border border-[#FF5422]/40">
+                                                    <span className="text-[11px] font-bold text-orange-300 bg-[#FF6600]/20 px-2.5 py-0.5 rounded-full border border-[#FF6600]/40">
                                                         {activeSection.executiveTeam.length} Coordinators
                                                     </span>
                                                 </div>
@@ -3923,13 +3923,13 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                                         {m.sno}
                                                                     </td>
                                                                     <td className="px-4 py-3.5 font-bold text-neutral-900">
-                                                                        <span className="text-[#FF5422]">{m.name}</span>
+                                                                        <span className="text-[#FF6600]">{m.name}</span>
                                                                     </td>
                                                                     <td className="px-4 py-3.5 text-neutral-700 font-medium">
                                                                         {m.designation}
                                                                     </td>
                                                                     <td className="px-4 py-3.5 pr-5 sm:pr-6 font-semibold text-neutral-900">
-                                                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-orange-50 text-[#FF6600] border border-orange-200">
                                                                             {m.dept || m.role}
                                                                         </span>
                                                                     </td>
@@ -3947,7 +3947,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.spreadsheets && activeSection.spreadsheets.length > 0 && (
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
                                                 Official Records & Live Spreadsheets
                                             </h2>
@@ -4003,9 +4003,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.activityList && activeSection.activityList.length > 0 && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <Calendar size={20} className="text-[#FF5422]" />
+                                                <Calendar size={20} className="text-[#FF6600]" />
                                                 <span>Key Community & Field Activities</span>
                                             </h2>
                                         </div>
@@ -4014,15 +4014,15 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             {activeSection.activityList.map((act, aIdx) => (
                                                 <div
                                                     key={aIdx}
-                                                    className="p-4 rounded-xl border border-neutral-100 bg-neutral-50/70 hover:bg-neutral-50 hover:border-[#FF5422]/30 transition-all duration-200 space-y-1.5"
+                                                    className="p-4 rounded-xl border border-neutral-100 bg-neutral-50/70 hover:bg-neutral-50 hover:border-[#FF6600]/30 transition-all duration-200 space-y-1.5"
                                                 >
                                                     <div className="flex items-center justify-between gap-2">
                                                         <h4 className="font-bold text-sm sm:text-[15px] text-neutral-900 flex items-center gap-2">
-                                                            <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
+                                                            <CheckCircle2 size={15} className="text-[#FF6600] shrink-0" />
                                                             <span>{act.title}</span>
                                                         </h4>
                                                         {act.year && (
-                                                            <span className="text-[10px] font-bold text-[#FF5422] bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200 shrink-0">
+                                                            <span className="text-[10px] font-bold text-[#FF6600] bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200 shrink-0">
                                                                 {act.year}
                                                             </span>
                                                         )}
@@ -4040,9 +4040,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.careerBenefits && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <Award size={20} className="text-[#FF5422]" />
+                                                <Award size={20} className="text-[#FF6600]" />
                                                 <span>Career Incentives & Defense Opportunities</span>
                                             </h2>
                                         </div>
@@ -4054,7 +4054,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     className="p-3.5 rounded-xl border border-orange-200/80 bg-orange-50/40 space-y-1"
                                                 >
                                                     <div className="font-bold text-xs sm:text-sm text-neutral-900 flex items-center gap-2">
-                                                        <CheckCircle2 size={15} className="text-[#FF5422] shrink-0" />
+                                                        <CheckCircle2 size={15} className="text-[#FF6600] shrink-0" />
                                                         <span>Incentive #{bIdx + 1}</span>
                                                     </div>
                                                     <p className="text-xs text-neutral-700 leading-relaxed pl-5">
@@ -4071,12 +4071,12 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                             <div className="flex items-center gap-2.5">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                                 <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900">
                                                     Visual Gallery & Photographic Highlights
                                                 </h2>
                                             </div>
-                                            <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200">
+                                            <span className="text-xs font-bold text-[#FF6600] bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200">
                                                 {activeSection.gallery.length} Photographs
                                             </span>
                                         </div>
@@ -4085,7 +4085,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                             {activeSection.gallery.map((img, gi) => (
                                                 <div
                                                     key={gi}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-neutral-100 shadow-xs hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-neutral-100 shadow-xs hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900">
                                                         <img
@@ -4114,9 +4114,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.downloads && activeSection.downloads.length > 0 && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <Download size={20} className="text-[#FF5422]" />
+                                                <Download size={20} className="text-[#FF6600]" />
                                                 <span>Official Documents & Handbooks</span>
                                             </h2>
                                         </div>
@@ -4131,7 +4131,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     className="flex items-center justify-between p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 hover:bg-orange-50/40 hover:border-orange-300 transition-colors"
                                                 >
                                                     <div className="flex items-center gap-3">
-                                                        <FileText size={18} className="text-[#FF5422]" />
+                                                        <FileText size={18} className="text-[#FF6600]" />
                                                         <span className="text-xs sm:text-sm font-bold text-neutral-900">{doc.title}</span>
                                                     </div>
                                                     <span className="text-[10px] font-bold text-neutral-600 bg-white border border-neutral-200 px-2 py-0.5 rounded">
@@ -4147,9 +4147,9 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                 {activeSection.contacts && activeSection.contacts.length > 0 && (
                                     <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-xs space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-xl sm:text-2xl font-black text-neutral-900 flex items-center gap-2">
-                                                <Phone size={20} className="text-[#FF5422]" />
+                                                <Phone size={20} className="text-[#FF6600]" />
                                                 <span>Contact & Coordination Cell</span>
                                             </h2>
                                         </div>
@@ -4161,7 +4161,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                     className="rounded-xl border border-neutral-200 bg-neutral-50 p-4 sm:p-5 space-y-2.5 hover:border-orange-300 transition-colors"
                                                 >
                                                     <div className="flex items-center justify-between">
-                                                        <span className="text-[10px] font-bold text-[#FF5422] uppercase tracking-wider">
+                                                        <span className="text-[10px] font-bold text-[#FF6600] uppercase tracking-wider">
                                                             {c.role}
                                                         </span>
                                                         <span className="text-[11px] font-semibold text-neutral-500">
@@ -4181,7 +4181,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         {c.phone && (
                                                             <a
                                                                 href={`tel:${c.phone}`}
-                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
+                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF6600] hover:text-white transition-colors font-medium shadow-2xs"
                                                             >
                                                                 <Phone size={12} />
                                                                 <span>{c.phone}</span>
@@ -4190,7 +4190,7 @@ export default function CommunityServicesPage({ defaultPage }: { defaultPage?: s
                                                         {c.email && (
                                                             <a
                                                                 href={`mailto:${c.email}`}
-                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF5422] hover:text-white transition-colors font-medium shadow-2xs"
+                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-neutral-200 text-neutral-800 hover:bg-[#FF6600] hover:text-white transition-colors font-medium shadow-2xs"
                                                             >
                                                                 <Mail size={12} />
                                                                 <span>{c.email}</span>

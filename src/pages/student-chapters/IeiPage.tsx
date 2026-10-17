@@ -134,8 +134,8 @@ const IeiPage: React.FC = () => {
                             <p className="font-semibold text-lg">Dr. D Maruthi Kumar <span className="text-sm font-normal text-neutral-500 ml-2">M. Tech., Ph. D.</span></p>
                             <p className="text-neutral-600">Associate Professor in ECE, IEI-faculty Advisor.</p>
                             <div className="mt-4 flex flex-col sm:flex-row sm:gap-6 gap-2">
-                                <p><span className="font-medium">E-mail:</span> <a href="mailto:maruthi.ece@srit.ac.in" className="text-[#FF5422] hover:underline">maruthi.ece@srit.ac.in</a></p>
-                                <p><span className="font-medium">Mobile No:</span> <a href="tel:+919966012141" className="text-[#FF5422] hover:underline">+91-9966012141</a></p>
+                                <p><span className="font-medium">E-mail:</span> <a href="mailto:maruthi.ece@srit.ac.in" className="text-[#FF6600] hover:underline">maruthi.ece@srit.ac.in</a></p>
+                                <p><span className="font-medium">Mobile No:</span> <a href="tel:+919966012141" className="text-[#FF6600] hover:underline">+91-9966012141</a></p>
                             </div>
                         </div>
                     </motion.div>

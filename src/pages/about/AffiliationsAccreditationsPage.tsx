@@ -67,7 +67,7 @@ const AffiliationsAccreditationsPage: React.FC = () => {
                 {/* Page Heading */}
                 <motion.div variants={fadeUp}>
                     <h2 className="text-3xl font-serif font-bold text-[#0A0903] mb-1 flex items-center gap-3">
-                        <span className="w-1 h-8 rounded-full bg-[#FF5422] inline-block" />
+                        <span className="w-1 h-8 rounded-full bg-[#FF6600] inline-block" />
                         Affiliations &amp; Accreditations
                     </h2>
 

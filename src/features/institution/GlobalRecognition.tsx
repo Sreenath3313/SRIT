@@ -15,7 +15,7 @@ const stats: StatItem[] = [
 
 const GlobalRecognition: React.FC = () => {
     return (
-        <section className="py-20 bg-[#FF5422]">
+        <section className="py-20 bg-[#FF6600]">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">

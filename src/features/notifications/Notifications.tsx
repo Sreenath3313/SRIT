@@ -7,7 +7,7 @@ const Notifications: React.FC = () => {
 
             {/* Main Heading */}
             <h2
-                className="text-center font-sans font-black text-[#FF5422] uppercase tracking-wider mb-10"
+                className="text-center font-sans font-black text-[#FF6600] uppercase tracking-wider mb-10"
                 style={{
                     fontSize: 'clamp(1.5rem, 2.2vw, 2.5rem)',
                     lineHeight: '1',

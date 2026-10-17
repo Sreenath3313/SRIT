@@ -96,9 +96,9 @@ export const AbhigyaanPage: React.FC = () => {
                                         {activeSection.keyStats.map((stat, idx) => (
                                             <div
                                                 key={idx}
-                                                className="rounded-xl border border-neutral-200/80 bg-white p-4 shadow-sm hover:border-[#FF5422]/40 transition-colors"
+                                                className="rounded-xl border border-neutral-200/80 bg-white p-4 shadow-sm hover:border-[#FF6600]/40 transition-colors"
                                             >
-                                                <div className="font-serif text-2xl font-black text-[#FF5422]">
+                                                <div className="font-serif text-2xl font-black text-[#FF6600]">
                                                     {stat.value}
                                                 </div>
                                                 <div className="mt-1 text-xs font-bold text-neutral-900">
@@ -115,7 +115,7 @@ export const AbhigyaanPage: React.FC = () => {
                                 {/* === Detailed Overview: Exact Text from Official SRIT Achievers Day Page === */}
                                 <div className="rounded-xl border border-neutral-200/80 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center gap-2.5 pb-2.5 border-b border-neutral-100">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                        <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                         <h2 className="font-serif text-2xl sm:text-3xl lg:text-[26px] font-black text-neutral-900 tracking-tight">
                                             ABHIGYAAN (Achievers Day)
                                         </h2>
@@ -303,11 +303,11 @@ export const AbhigyaanPage: React.FC = () => {
                                         {/* Gallery Header Controls */}
                                         <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-neutral-100">
                                             <div className="flex items-center gap-2.5">
-                                                <span className="w-1.5 h-5 rounded-full bg-[#FF5422]" />
+                                                <span className="w-1.5 h-5 rounded-full bg-[#FF6600]" />
                                                 <h3 className="font-serif text-lg sm:text-xl font-bold text-neutral-900">
                                                     IMAGE GALLERY
                                                 </h3>
-                                                <span className="text-xs font-bold text-[#FF5422] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
+                                                <span className="text-xs font-bold text-[#FF6600] bg-orange-50 px-2.5 py-0.5 rounded-full border border-orange-200">
                                                     {activeSection.galleryImages.length} Photographs
                                                 </span>
                                             </div>
@@ -320,7 +320,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                         onClick={() => setIsAutoPlay((prev) => !prev)}
                                                         className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border transition-colors cursor-pointer ${
                                                             isAutoPlay
-                                                                ? 'bg-orange-50 text-[#FF5422] border-orange-200 hover:bg-orange-100'
+                                                                ? 'bg-orange-50 text-[#FF6600] border-orange-200 hover:bg-orange-100'
                                                                 : 'bg-neutral-100 text-neutral-600 border-neutral-200 hover:bg-neutral-200'
                                                         }`}
                                                         title={isAutoPlay ? 'Click to pause auto-moving' : 'Click to resume auto-moving'}
@@ -337,7 +337,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                         onClick={() => setViewMode('slider')}
                                                         className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                                                             viewMode === 'slider'
-                                                                ? 'bg-white text-[#FF5422] font-bold shadow-xs'
+                                                                ? 'bg-white text-[#FF6600] font-bold shadow-xs'
                                                                 : 'text-neutral-600 hover:text-neutral-900'
                                                         }`}
                                                     >
@@ -349,7 +349,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                         onClick={() => setViewMode('grid')}
                                                         className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                                                             viewMode === 'grid'
-                                                                ? 'bg-white text-[#FF5422] font-bold shadow-xs'
+                                                                ? 'bg-white text-[#FF6600] font-bold shadow-xs'
                                                                 : 'text-neutral-600 hover:text-neutral-900'
                                                         }`}
                                                     >
@@ -431,7 +431,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                             e.stopPropagation();
                                                             paginate(-1);
                                                         }}
-                                                        className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#FF5422] text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl backdrop-blur-xs cursor-pointer group hover:scale-110 active:scale-95"
+                                                        className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#FF6600] text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl backdrop-blur-xs cursor-pointer group hover:scale-110 active:scale-95"
                                                         aria-label="Previous slide"
                                                     >
                                                         <ChevronLeft size={24} className="group-hover:-translate-x-0.5 transition-transform" />
@@ -444,7 +444,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                             e.stopPropagation();
                                                             paginate(1);
                                                         }}
-                                                        className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#FF5422] text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl backdrop-blur-xs cursor-pointer group hover:scale-110 active:scale-95"
+                                                        className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-[#FF6600] text-white flex items-center justify-center transition-all duration-200 border border-white/20 shadow-xl backdrop-blur-xs cursor-pointer group hover:scale-110 active:scale-95"
                                                         aria-label="Next slide"
                                                     >
                                                         <ChevronRight size={24} className="group-hover:translate-x-0.5 transition-transform" />
@@ -453,7 +453,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                     {/* Bottom Caption Overlay */}
                                                     <div className="absolute bottom-0 inset-x-0 z-20 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pointer-events-none">
                                                         <div className="space-y-0.5 pointer-events-auto">
-                                                            <span className="text-[11px] font-bold tracking-wider text-[#FF5422] uppercase">
+                                                            <span className="text-[11px] font-bold tracking-wider text-[#FF6600] uppercase">
                                                                 Abhigyaan 2024 Achievers Day
                                                             </span>
                                                             <p className="text-sm sm:text-base font-semibold text-white line-clamp-1 drop-shadow-sm">
@@ -467,7 +467,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                             <button
                                                                 type="button"
                                                                 onClick={() => setLightboxIndex(page)}
-                                                                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF5422] hover:bg-[#e04415] text-white text-xs font-bold transition-all shadow-md cursor-pointer hover:scale-105 active:scale-95"
+                                                                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF6600] hover:bg-[#e04415] text-white text-xs font-bold transition-all shadow-md cursor-pointer hover:scale-105 active:scale-95"
                                                             >
                                                                 <Maximize2 size={12} />
                                                                 <span>Enlarge</span>
@@ -486,7 +486,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                             aria-label={`Go to slide ${i + 1}`}
                                                             className={`transition-all duration-300 rounded-full cursor-pointer ${
                                                                 i === page
-                                                                    ? 'w-8 h-2.5 bg-[#FF5422]'
+                                                                    ? 'w-8 h-2.5 bg-[#FF6600]'
                                                                     : 'w-2.5 h-2.5 bg-neutral-300 hover:bg-neutral-400'
                                                             }`}
                                                         />
@@ -511,7 +511,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                                 onClick={() => goToSlide(idx)}
                                                                 className={`relative w-20 sm:w-24 h-14 sm:h-16 shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
                                                                     idx === page
-                                                                        ? 'border-[#FF5422] scale-105 shadow-md ring-2 ring-[#FF5422]/30'
+                                                                        ? 'border-[#FF6600] scale-105 shadow-md ring-2 ring-[#FF6600]/30'
                                                                         : 'border-neutral-200 opacity-60 hover:opacity-100 hover:border-neutral-400'
                                                                 }`}
                                                             >
@@ -538,7 +538,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                     <div
                                                         key={gi}
                                                         onClick={() => setLightboxIndex(gi)}
-                                                        className="group cursor-pointer rounded-xl overflow-hidden border border-neutral-200/90 bg-white shadow-sm hover:shadow-lg hover:border-[#FF5422]/60 hover:-translate-y-0.5 transition-all duration-300 flex flex-col"
+                                                        className="group cursor-pointer rounded-xl overflow-hidden border border-neutral-200/90 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600]/60 hover:-translate-y-0.5 transition-all duration-300 flex flex-col"
                                                     >
                                                         <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100">
                                                             <img
@@ -554,7 +554,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
                                                                 <div className="flex items-center justify-between w-full text-white text-xs">
                                                                     <span className="font-semibold flex items-center gap-1.5 drop-shadow-sm">
-                                                                        <Maximize2 size={13} className="text-[#FF5422]" />
+                                                                        <Maximize2 size={13} className="text-[#FF6600]" />
                                                                         Click to View
                                                                     </span>
                                                                     <span className="text-[10px] font-bold bg-white/20 backdrop-blur-xs px-2 py-0.5 rounded-full border border-white/20">
@@ -565,7 +565,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                     </div>
                                                     {img.caption && (
                                                         <div className="p-3 bg-white border-t border-neutral-100">
-                                                            <p className="text-xs font-semibold text-neutral-800 line-clamp-1 group-hover:text-[#FF5422] transition-colors">
+                                                            <p className="text-xs font-semibold text-neutral-800 line-clamp-1 group-hover:text-[#FF6600] transition-colors">
                                                                 {img.caption}
                                                             </p>
                                                         </div>
@@ -622,7 +622,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                                 : prev - 1
                                                         );
                                                     }}
-                                                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF5422] text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+                                                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF6600] text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
                                                     aria-label="Previous image"
                                                 >
                                                     <ChevronLeft size={22} />
@@ -640,7 +640,7 @@ export const AbhigyaanPage: React.FC = () => {
                                                                 : prev + 1
                                                         );
                                                     }}
-                                                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF5422] text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
+                                                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF6600] text-white flex items-center justify-center transition-all cursor-pointer border border-white/20 shadow-lg"
                                                     aria-label="Next image"
                                                 >
                                                     <ChevronRight size={22} />

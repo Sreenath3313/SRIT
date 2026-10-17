@@ -41,7 +41,7 @@ export default function OnlineFeePaymentPage() {
 
             {/* Requested Heading */}
             <div className="border-b border-neutral-100 pb-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-orange-50 text-[#F67437] border border-orange-200/80 mb-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-orange-50 text-[#FF6600] border border-orange-200/80 mb-3">
                 <ShieldCheck size={16} /> Official SRIT Account
               </div>
               <h2
@@ -82,7 +82,7 @@ export default function OnlineFeePaymentPage() {
                   <div className="space-y-4 text-neutral-800">
                     <div className="p-4 rounded-xl bg-neutral-50 border border-neutral-100">
                       <span className="text-xs uppercase font-bold tracking-wider text-neutral-600 block mb-1">Account Holder Name</span>
-                      <p className="text-base sm:text-lg font-bold text-[#F67437]">
+                      <p className="text-base sm:text-lg font-bold text-[#FF6600]">
                         SRINIVASA RAMANUJAN INSTITUTE OF TECHNOLOGY
                       </p>
                     </div>
@@ -132,7 +132,7 @@ export default function OnlineFeePaymentPage() {
 
                 {/* Note */}
                 <div className="mt-6 pt-5 border-t border-neutral-100 flex items-start gap-3 bg-orange-50/60 p-4 rounded-xl text-xs sm:text-sm text-neutral-700 border border-orange-100">
-                  <Info size={20} className="text-[#F67437] shrink-0 mt-0.5" />
+                  <Info size={20} className="text-[#FF6600] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-neutral-900 font-semibold block mb-0.5">Important:</strong>
                     Please retain payment receipt screenshot &amp; UTR Transaction ID for validation at the College Accounts Counter.
@@ -153,7 +153,7 @@ export default function OnlineFeePaymentPage() {
             </div>
             <Link
               to="/admissions/fee-structure"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F67437] text-white font-semibold text-sm hover:bg-[#e26225] transition-colors shadow-md"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF6600] text-white font-semibold text-sm hover:bg-[#e26225] transition-colors shadow-md"
             >
               <ArrowLeft size={16} /> Fee Structure Page
             </Link>

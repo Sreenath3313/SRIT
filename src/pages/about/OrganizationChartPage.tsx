@@ -56,7 +56,7 @@ const OrganizationChartPage: React.FC = () => {
                 {/* Heading */}
                 <motion.div variants={fadeUp}>
                     <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0A0903] flex items-center gap-3">
-                        <span className="w-1 h-6 sm:h-8 rounded-full bg-[#FF5422] inline-block" />
+                        <span className="w-1 h-6 sm:h-8 rounded-full bg-[#FF6600] inline-block" />
                         Organization Chart
                     </h2>
 

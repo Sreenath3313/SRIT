@@ -16,22 +16,22 @@ export const CampusOverviewPage: React.FC = () => {
                         {/* Left Column: Descriptions & Highlights */}
                         <div className="lg:col-span-7 space-y-3.5">
                             <div className="flex items-center gap-2.5 pb-1">
-                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                    About <span className="text-[#FF5422]">Campus Overview</span>
+                                    About <span className="text-[#FF6600]">Campus Overview</span>
                                 </h2>
                             </div>
 
                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                Established in <strong className="text-[#FF5422] font-bold">2008</strong> under the visionary leadership of <span className="text-[#FF5422] font-semibold">Sri Aluru Sambasiva Reddy</span> and managed by the <span className="text-[#FF5422] font-semibold">Smt. Aluru Narayanamma Memorial Educational Society</span>, <span className="text-[#FF5422] font-bold">Srinivasa Ramanujan Institute of Technology (SRIT)</span> is one of the premier technical institutions in Andhra Pradesh.
+                                Established in <strong className="text-[#FF6600] font-bold">2008</strong> under the visionary leadership of <span className="text-[#FF6600] font-semibold">Sri Aluru Sambasiva Reddy</span> and managed by the <span className="text-[#FF6600] font-semibold">Smt. Aluru Narayanamma Memorial Educational Society</span>, <span className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology (SRIT)</span> is one of the premier technical institutions in Andhra Pradesh.
                             </p>
 
                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                Permanently affiliated to <span className="text-[#FF5422] font-semibold">JNTU Ananthapuramu</span> and approved by <span className="text-[#FF5422] font-semibold">AICTE, New Delhi</span>, SRIT has earned <span className="text-[#FF5422] font-bold">NAAC "A" Grade accreditation</span> and <span className="text-[#FF5422] font-bold">NBA accreditation</span> for its engineering programs. Located on the serene outskirts of <span className="text-[#FF5422] font-semibold">Rotarypuram Village, B.K. Samudram Mandal</span> in Ananthapuramu district, the campus offers a pristine, pollution-free atmosphere across <span className="text-[#FF5422] font-bold">25+ lush green acres</span> that is ideally conducive to higher learning, research, and innovation.
+                                Permanently affiliated to <span className="text-[#FF6600] font-semibold">JNTU Ananthapuramu</span> and approved by <span className="text-[#FF6600] font-semibold">AICTE, New Delhi</span>, SRIT has earned <span className="text-[#FF6600] font-bold">NAAC "A" Grade accreditation</span> and <span className="text-[#FF6600] font-bold">NBA accreditation</span> for its engineering programs. Located on the serene outskirts of <span className="text-[#FF6600] font-semibold">Rotarypuram Village, B.K. Samudram Mandal</span> in Ananthapuramu district, the campus offers a pristine, pollution-free atmosphere across <span className="text-[#FF6600] font-bold">25+ lush green acres</span> that is ideally conducive to higher learning, research, and innovation.
                             </p>
 
                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                The campus features <span className="text-[#FF5422] font-semibold">state-of-the-art academic blocks</span>, <span className="text-[#FF5422] font-semibold">smart multimedia classrooms</span>, <span className="text-[#FF5422] font-semibold">advanced engineering laboratories</span>, <span className="text-[#FF5422] font-semibold">high-speed campus-wide Wi-Fi</span>, modern auditoriums, extensive sports facilities, hygienic dining, residential hostels, and dedicated student activity hubs.
+                                The campus features <span className="text-[#FF6600] font-semibold">state-of-the-art academic blocks</span>, <span className="text-[#FF6600] font-semibold">smart multimedia classrooms</span>, <span className="text-[#FF6600] font-semibold">advanced engineering laboratories</span>, <span className="text-[#FF6600] font-semibold">high-speed campus-wide Wi-Fi</span>, modern auditoriums, extensive sports facilities, hygienic dining, residential hostels, and dedicated student activity hubs.
                             </p>
 
                             {/* Feature Tags */}
@@ -76,7 +76,7 @@ export const CampusOverviewPage: React.FC = () => {
                                 {/* === 4. CAMPUS FACILITIES & AMENITIES (8 Cards in 2 Rows × 4 Columns with Orange Hover & Glow) === */}
                                 <div className="space-y-4 border border-neutral-200 bg-white p-5 sm:p-7">
                                     <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                                        <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                        <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                         <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                             Campus Facilities &amp; Amenities
                                         </h2>
@@ -136,7 +136,7 @@ export const CampusOverviewPage: React.FC = () => {
                                             <div
                                                 key={idx}
                                                 onClick={() => navigate(item.link)}
-                                                className="group flex cursor-pointer flex-col justify-between overflow-hidden border border-neutral-200 bg-white transition-colors duration-200 hover:border-[#FF5422]/50"
+                                                className="group flex cursor-pointer flex-col justify-between overflow-hidden border border-neutral-200 bg-white transition-colors duration-200 hover:border-[#FF6600]/50"
                                             >
                                                 {/* Image */}
                                                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/20">
@@ -154,7 +154,7 @@ export const CampusOverviewPage: React.FC = () => {
                                                 {/* Content */}
                                                 <div className="border-t border-neutral-100 bg-white p-3.5">
                                                     <div className="min-w-0">
-                                                        <h4 className="font-bold text-sm text-neutral-900 group-hover:text-[#FF5422] transition-colors truncate">
+                                                        <h4 className="font-bold text-sm text-neutral-900 group-hover:text-[#FF6600] transition-colors truncate">
                                                             {item.title}
                                                         </h4>
                                                         <p className="text-[11.5px] text-neutral-500 mt-0.5 line-clamp-1">

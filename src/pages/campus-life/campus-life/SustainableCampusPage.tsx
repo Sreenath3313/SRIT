@@ -22,27 +22,27 @@ export const SustainableCampusPage: React.FC = () => {
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         <div className="lg:col-span-7 space-y-3.5">
                                             <div className="flex items-center gap-2.5 pb-1">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                    About <span className="text-[#FF5422]">Sustainable &amp; Green Campus</span>
+                                                    About <span className="text-[#FF6600]">Sustainable &amp; Green Campus</span>
                                                 </h2>
                                             </div>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                <strong className="text-[#FF5422] font-bold">Srinivasa Ramanujan Institute of Technology</strong> is deeply committed to environmental conservation, renewable energy adoption, and sustainable development across its <strong className="text-[#FF5422] font-bold">25+ acre eco-friendly sanctuary</strong>.
+                                                <strong className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology</strong> is deeply committed to environmental conservation, renewable energy adoption, and sustainable development across its <strong className="text-[#FF6600] font-bold">25+ acre eco-friendly sanctuary</strong>.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Key milestones include extensive rooftop <strong className="text-[#FF5422] font-bold">Solar Photovoltaic Energy (50.40 kWp + 50.24 kWp)</strong> systems supplying clean, green power and significantly reducing institutional carbon footprints.
+                                                Key milestones include extensive rooftop <strong className="text-[#FF6600] font-bold">Solar Photovoltaic Energy (50.40 kWp + 50.24 kWp)</strong> systems supplying clean, green power and significantly reducing institutional carbon footprints.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                SRIT conducts comprehensive <span className="text-[#FF5422] font-semibold">environmental &amp; green audits</span>, maintains hundreds of indigenous trees, practices <span className="text-[#FF5422] font-semibold">rainwater harvesting</span>, implements solid waste segregation, and enforces a strict <strong className="text-[#FF5422] font-bold">plastic-free campus policy</strong>.
+                                                SRIT conducts comprehensive <span className="text-[#FF6600] font-semibold">environmental &amp; green audits</span>, maintains hundreds of indigenous trees, practices <span className="text-[#FF6600] font-semibold">rainwater harvesting</span>, implements solid waste segregation, and enforces a strict <strong className="text-[#FF6600] font-bold">plastic-free campus policy</strong>.
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF6600] border border-orange-200">
                                                         100+ kWp Solar Power
                                                     </span>
                                                     <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
@@ -106,7 +106,7 @@ export const SustainableCampusPage: React.FC = () => {
                                             <div className="grid sm:grid-cols-2 gap-3.5">
                                                 <div className="p-4 rounded-xl border border-orange-200/80 bg-orange-50/40">
                                                     <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
-                                                        <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
+                                                        <span className="w-2 h-2 rounded-full bg-[#FF6600] shrink-0" />
                                                         Institutional Green &amp; Energy Audit Report
                                                     </h4>
                                                     <p className="text-xs text-neutral-600 leading-relaxed">
@@ -115,7 +115,7 @@ export const SustainableCampusPage: React.FC = () => {
                                                 </div>
                                                 <div className="p-4 rounded-xl border border-neutral-200 bg-neutral-50/70">
                                                     <h4 className="font-bold text-sm text-neutral-900 mb-1 flex items-center gap-2">
-                                                        <span className="w-2 h-2 rounded-full bg-[#FF5422] shrink-0" />
+                                                        <span className="w-2 h-2 rounded-full bg-[#FF6600] shrink-0" />
                                                         Environment &amp; Water Conservation Audit
                                                     </h4>
                                                     <p className="text-xs text-neutral-600 leading-relaxed">
@@ -131,7 +131,7 @@ export const SustainableCampusPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                         <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                                 Solar Infrastructure &amp; Green Campus Gallery
                                             </h2>
@@ -139,7 +139,7 @@ export const SustainableCampusPage: React.FC = () => {
                                         <button
                                             type="button"
                                             onClick={() => setIsSustainableViewAll(!isSustainableViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF5422] bg-orange-50 border border-orange-200 hover:bg-[#FF5422] hover:text-white transition-all cursor-pointer"
+                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
                                         >
                                             {isSustainableViewAll ? 'Show Carousel' : 'View All 5 Photos'}
                                         </button>
@@ -156,7 +156,7 @@ export const SustainableCampusPage: React.FC = () => {
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                         <img
@@ -178,7 +178,7 @@ export const SustainableCampusPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setSustainableGalleryIndex((prev) => (prev <= 0 ? 2 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Previous image"
                                             >
                                                 <ChevronLeft size={20} />
@@ -196,7 +196,7 @@ export const SustainableCampusPage: React.FC = () => {
                                                     .map((img, idx) => (
                                                         <div
                                                             key={idx}
-                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF5422] transition-all duration-300 relative"
+                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
                                                         >
                                                             <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                                 <img
@@ -217,7 +217,7 @@ export const SustainableCampusPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setSustainableGalleryIndex((prev) => (prev >= 2 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Next image"
                                             >
                                                 <ChevronRight size={20} />

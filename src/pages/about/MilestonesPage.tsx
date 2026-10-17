@@ -69,7 +69,7 @@ const MilestonesPage: React.FC = () => (
             {/* Heading */}
             <motion.div variants={fadeUp}>
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0A0903] mb-1 flex items-center gap-3">
-                    <span className="w-1 h-6 sm:h-8 rounded-full bg-[#FF5422] inline-block" />
+                    <span className="w-1 h-6 sm:h-8 rounded-full bg-[#FF6600] inline-block" />
                     Our Journey
                 </h2>
 
@@ -92,7 +92,7 @@ const MilestonesPage: React.FC = () => (
                         duration: 1.2,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="absolute left-[10px] sm:left-[11px] top-0 bottom-0 w-[2px] sm:w-[3px] bg-gradient-to-b from-[#FF5422] via-orange-300 to-neutral-200 rounded-full origin-top"
+                    className="absolute left-[10px] sm:left-[11px] top-0 bottom-0 w-[2px] sm:w-[3px] bg-gradient-to-b from-[#FF6600] via-orange-300 to-neutral-200 rounded-full origin-top"
                 />
 
                 <motion.div
@@ -111,12 +111,12 @@ const MilestonesPage: React.FC = () => (
                             className="relative flex gap-3 sm:gap-5 group"
                         >
                             {/* Timeline Dot */}
-                            <div className="absolute left-0 top-2 sm:top-3 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-[2px] sm:border-[3px] border-[#FF5422] bg-white group-hover:bg-[#FF5422] transition-colors shadow-md shadow-orange-100 z-10" />
+                            <div className="absolute left-0 top-2 sm:top-3 w-4 h-4 sm:w-5 sm:h-5 rounded-full border-[2px] sm:border-[3px] border-[#FF6600] bg-white group-hover:bg-[#FF6600] transition-colors shadow-md shadow-orange-100 z-10" />
 
                             {/* Milestone Card */}
-                            <div className="flex-1 bg-white border border-neutral-200 rounded-xl sm:rounded-xl p-3 sm:p-5 shadow-sm group-hover:shadow-md group-hover:border-[#FF5422]/30 transition-all text-sm sm:text-base">
+                            <div className="flex-1 bg-white border border-neutral-200 rounded-xl sm:rounded-xl p-3 sm:p-5 shadow-sm group-hover:shadow-md group-hover:border-[#FF6600]/30 transition-all text-sm sm:text-base">
                                 {/* Year */}
-                                <span className="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-[#FF5422] to-orange-400 text-white text-[10px] sm:text-xs font-bold rounded-full mb-2 sm:mb-3 shadow-sm">
+                                <span className="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-[#FF6600] to-orange-400 text-white text-[10px] sm:text-xs font-bold rounded-full mb-2 sm:mb-3 shadow-sm">
                                     {milestone.year}
                                 </span>
 

@@ -424,7 +424,7 @@ const DepartmentStudents: React.FC<{ dept?: DepartmentData }> = ({ dept }) => {
                                                 onClick={() => setYearForSection(section.key, year)}
                                                 className={`shrink-0 rounded-md border px-3 py-2 text-xs font-medium transition-all duration-200 sm:px-4 sm:text-sm ${currentYear === year
                                                         ? 'bg-primary text-white border-primary opacity-100'
-                                                        : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF5422] hover:opacity-100'
+                                                        : 'bg-transparent text-[#0A0903] border-neutral-200 opacity-50 hover:border-primary/50 hover:text-[#FF6600] hover:opacity-100'
                                                     }`}
                                             >
                                                 {year}

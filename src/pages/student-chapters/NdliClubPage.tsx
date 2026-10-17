@@ -71,7 +71,7 @@ const NdliClubPage: React.FC = () => {
                                 <p className="font-semibold text-lg text-[#0A0903]">Dr. S. Lakshmi <span className="text-sm font-normal text-neutral-500 ml-2">,</span></p>
                                 <p className="text-neutral-600">Librarian</p>
                                 <div className="mt-4 flex flex-col sm:flex-row sm:gap-6 gap-2 pt-2">
-                                    <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:librarian.hs@srit.ac.in" className="text-[#f67437] hover:underline">librarian.hs@srit.ac.in</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:librarian.hs@srit.ac.in" className="text-[#FF6600] hover:underline">librarian.hs@srit.ac.in</a></p>
                                 </div>
                             </div>
                         </AccordionItem>

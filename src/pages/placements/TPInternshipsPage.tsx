@@ -69,7 +69,7 @@ export default function TPInternshipsPage() {
           {/* Desktop Table View */}
           <div className="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden hidden md:block">
             <table className="w-full text-left text-sm text-neutral-700">
-              <thead className="bg-[#FF5422] text-white font-serif font-bold tracking-wide">
+              <thead className="bg-[#FF6600] text-white font-serif font-bold tracking-wide">
                 <tr>
                   <th className="px-6 py-4 w-24 text-center">S.No</th>
                   <th className="px-6 py-4">Internship Providers</th>
@@ -82,7 +82,7 @@ export default function TPInternshipsPage() {
                     <td className="px-6 py-5 font-bold text-neutral-500 text-center">
                       {item.sNo}
                     </td>
-                    <td className="px-6 py-5 font-bold text-[#FF5422] text-base">
+                    <td className="px-6 py-5 font-bold text-[#FF6600] text-base">
                       {item.provider}
                     </td>
                     <td className="px-6 py-5 text-center">
@@ -116,7 +116,7 @@ export default function TPInternshipsPage() {
                     <CheckCircle2 size={14} /> Partner
                   </span>
                 </div>
-                <h3 className="font-bold text-[#FF5422] text-xl">{item.provider}</h3>
+                <h3 className="font-bold text-[#FF6600] text-xl">{item.provider}</h3>
                 <div className="pt-2">
                   <a
                     href={item.url}

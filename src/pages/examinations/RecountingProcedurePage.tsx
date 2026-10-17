@@ -77,8 +77,8 @@ export default function RecountingProcedurePage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${
                     activeTab === tab.id 
-                      ? 'bg-[#FF5422] text-white shadow-sm' 
-                      : 'bg-neutral-50 text-neutral-600 hover:bg-orange-50 hover:text-[#FF5422]'
+                      ? 'bg-[#FF6600] text-white shadow-sm' 
+                      : 'bg-neutral-50 text-neutral-600 hover:bg-orange-50 hover:text-[#FF6600]'
                   }`}
                 >
                   {tab.title}
@@ -96,7 +96,7 @@ export default function RecountingProcedurePage() {
               />
             </div>
 
-            <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-headings:text-[#FF5422] prose-p:text-neutral-700 prose-li:text-neutral-700">
+            <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-headings:text-[#FF6600] prose-p:text-neutral-700 prose-li:text-neutral-700">
               <p>
                 The recounting/re-evaluation of answer book shall not be permitted in respect of the marks awarded to the scripts of practical examination/project work (including theory part) and in viva-voce/oral/comprehensive examinations. This recounting/re-evaluation facility shall be for theory papers of Semester End Exams only.
               </p>

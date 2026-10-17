@@ -32,7 +32,7 @@ export default function AdmissionProcedurePage() {
         <article className="w-full bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
 
           {/* Header Bar */}
-          <div className="bg-gradient-to-r from-[#FF6600] to-[#FF5422] text-white px-6 sm:px-10 py-7">
+          <div className="bg-gradient-to-r from-[#FF6600] to-[#FF6600] text-white px-6 sm:px-10 py-7">
             <span className="text-white/80 text-xs uppercase tracking-widest font-bold">Official Guidelines</span>
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide mt-1">
               Admission Procedure

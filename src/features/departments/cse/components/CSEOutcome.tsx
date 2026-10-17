@@ -22,15 +22,15 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
                             </p>
                             <div className="space-y-4">
                                 <div className="flex gap-4">
-                                    <span className="font-bold text-[#FF5422] shrink-0">PEO 1:</span>
+                                    <span className="font-bold text-[#FF6600] shrink-0">PEO 1:</span>
                                     <p>Lead a successful professional career in IT / ITES industry / Government organizations with ethical values.</p>
                                 </div>
                                 <div className="flex gap-4">
-                                    <span className="font-bold text-[#FF5422] shrink-0">PEO 2:</span>
+                                    <span className="font-bold text-[#FF6600] shrink-0">PEO 2:</span>
                                     <p>Become competent and responsible computer science professional with good communication skills and leadership qualities to respond and contribute significantly for the benefit of society at large.</p>
                                 </div>
                                 <div className="flex gap-4">
-                                    <span className="font-bold text-[#FF5422] shrink-0">PEO 3:</span>
+                                    <span className="font-bold text-[#FF6600] shrink-0">PEO 3:</span>
                                     <p>Engage in life-long learning, acquiring new and relevant professional competencies / higher academic qualifications.</p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
                         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
                             {/* Programme Outcomes */}
                             <section>
-                                <h3 className="text-lg font-semibold text-[#FF5422] mb-4 uppercase tracking-wide">
+                                <h3 className="text-lg font-semibold text-[#FF6600] mb-4 uppercase tracking-wide">
                                     Programme Outcomes (POs)
                                 </h3>
                                 <div
@@ -74,7 +74,7 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
                                             <span
                                                 className="flex items-center justify-center shrink-0 font-bold text-white text-sm"
                                                 style={{
-                                                    background: '#FF5422',
+                                                    background: '#FF6600',
                                                     width: '52px',
                                                     minHeight: '52px',
                                                     alignSelf: 'stretch',
@@ -100,7 +100,7 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
 
                             {/* Programme Specific Outcomes */}
                             <section>
-                                <h3 className="text-lg font-semibold text-[#FF5422] mb-4 uppercase tracking-wide">
+                                <h3 className="text-lg font-semibold text-[#FF6600] mb-4 uppercase tracking-wide">
                                     Program Specific Outcomes (PSOs)
                                 </h3>
                                 <p className="mb-4 text-sm text-neutral-600 font-medium">
@@ -125,7 +125,7 @@ const CSEOutcome: React.FC<CSEOutcomeProps> = ({ dept }) => {
                                             <span
                                                 className="flex items-center justify-center shrink-0 font-bold text-white text-sm"
                                                 style={{
-                                                    background: '#FF5422',
+                                                    background: '#FF6600',
                                                     width: '52px',
                                                     minHeight: '52px',
                                                     alignSelf: 'stretch',

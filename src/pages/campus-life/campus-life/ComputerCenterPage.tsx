@@ -14,26 +14,26 @@ export const ComputerCenterPage: React.FC = () => {
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         <div className="lg:col-span-7 space-y-3.5">
                                             <div className="flex items-center gap-2.5 pb-1">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                    About <span className="text-[#FF5422]">Central Computer Center</span>
+                                                    About <span className="text-[#FF6600]">Central Computer Center</span>
                                                 </h2>
                                             </div>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                The <strong className="text-[#FF5422] font-bold">Central Computer Center</strong> at SRIT serves as the core computational facility for the entire institution, supporting <span className="text-[#FF5422] font-semibold">campus-wide online examinations</span>, competitive programming, skill certifications, and faculty research.
+                                                The <strong className="text-[#FF6600] font-bold">Central Computer Center</strong> at SRIT serves as the core computational facility for the entire institution, supporting <span className="text-[#FF6600] font-semibold">campus-wide online examinations</span>, competitive programming, skill certifications, and faculty research.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Equipped with over <strong className="text-[#FF5422] font-bold">300+ high-performance desktop workstations</strong>, structured <span className="text-[#FF5422] font-semibold">gigabit fiber connectivity</span>, centralized server blades, and enterprise software licenses, the Center caters to all academic departments simultaneously.
+                                                Equipped with over <strong className="text-[#FF6600] font-bold">300+ high-performance desktop workstations</strong>, structured <span className="text-[#FF6600] font-semibold">gigabit fiber connectivity</span>, centralized server blades, and enterprise software licenses, the Center caters to all academic departments simultaneously.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                The Computer Center is an authorized venue for national competitive exams, campus recruitment assessments (<span className="text-[#FF5422] font-semibold">TCS, Infosys, Cognizant</span>), <span className="text-[#FF5422] font-semibold">NPTEL online examinations</span>, and 24-hour collegiate hackathons.
+                                                The Computer Center is an authorized venue for national competitive exams, campus recruitment assessments (<span className="text-[#FF6600] font-semibold">TCS, Infosys, Cognizant</span>), <span className="text-[#FF6600] font-semibold">NPTEL online examinations</span>, and 24-hour collegiate hackathons.
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                                <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF6600] border border-orange-200">
                                                     300+ High-End PCs
                                                 </span>
                                                 <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
@@ -67,7 +67,7 @@ export const ComputerCenterPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                         <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                                 Central Computer Center Gallery
                                             </h2>
@@ -75,7 +75,7 @@ export const ComputerCenterPage: React.FC = () => {
                                         <button
                                             type="button"
                                             onClick={() => setIsComputerCenterViewAll(!isComputerCenterViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF5422] bg-orange-50 border border-orange-200 hover:bg-[#FF5422] hover:text-white transition-all cursor-pointer"
+                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
                                         >
                                             {isComputerCenterViewAll ? 'Show Carousel' : 'View All Photos'}
                                         </button>
@@ -90,7 +90,7 @@ export const ComputerCenterPage: React.FC = () => {
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                         <img
@@ -117,7 +117,7 @@ export const ComputerCenterPage: React.FC = () => {
                                                 ].map((img, idx) => (
                                                     <div
                                                         key={idx}
-                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF5422] transition-all duration-300 relative"
+                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
                                                     >
                                                         <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                             <img

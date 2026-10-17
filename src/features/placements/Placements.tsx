@@ -64,8 +64,8 @@ const Placements: React.FC = () => {
                             {placementStats.map((stat, idx) => {
                                 const Icon = statIcons[idx];
                                 return (
-                                    <div key={idx} className="group border border-neutral-200/80 bg-white p-3.5 transition-colors duration-200 hover:border-[#FF5421]/50 sm:p-4">
-                                        <Icon className="mb-2.5 h-4 w-4 text-neutral-500 transition-colors duration-200 group-hover:text-[#FF5421]" />
+                                    <div key={idx} className="group border border-neutral-200/80 bg-white p-3.5 transition-colors duration-200 hover:border-[#FF6600]/50 sm:p-4">
+                                        <Icon className="mb-2.5 h-4 w-4 text-neutral-500 transition-colors duration-200 group-hover:text-[#FF6600]" />
                                         <div className="mb-1 font-serif text-2xl font-bold leading-none text-neutral-900 lg:text-[1.65rem]">
                                             {stat.value}
                                         </div>
@@ -83,7 +83,7 @@ const Placements: React.FC = () => {
                         <motion.a 
                             variants={itemVariants}
                             href="/placements/about-t-and-p"
-                            className="inline-flex items-center gap-2 rounded-md bg-[#171b24] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FF5421]"
+                            className="inline-flex items-center gap-2 rounded-md bg-[#171b24] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FF6600]"
                         >
                             Know More
                         </motion.a>
@@ -100,7 +100,7 @@ const Placements: React.FC = () => {
                             <h3 className="relative mb-3 font-serif text-xl font-bold text-neutral-900 sm:text-2xl">
                                 Our Recruiters
                             </h3>
-                            <div className="relative mx-auto h-[3px] w-12 rounded-full bg-[#FF5421]" />
+                            <div className="relative mx-auto h-[3px] w-12 rounded-full bg-[#FF6600]" />
                         </div>
  
                         <div className="relative grid grid-cols-2 gap-2 sm:grid-cols-4 lg:gap-3">
@@ -111,12 +111,12 @@ const Placements: React.FC = () => {
                                     transition={{ duration: .36, delay: Math.min(idx * .035, .5), ease: [0.22, 1, 0.36, 1] }}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                                    className="group relative flex min-h-[56px] cursor-default items-center justify-center overflow-hidden border border-neutral-200/80 bg-white px-2 py-2.5 text-center transition-colors duration-200 hover:border-[#FF5421]/50 hover:bg-[#FFF9F6] sm:min-h-[60px]"
+                                    className="group relative flex min-h-[56px] cursor-default items-center justify-center overflow-hidden border border-neutral-200/80 bg-white px-2 py-2.5 text-center transition-colors duration-200 hover:border-[#FF6600]/50 hover:bg-[#FFF9F6] sm:min-h-[60px]"
                                 >
                                     <span className="text-[12px] font-semibold tracking-[-.015em] text-neutral-700 transition-colors duration-200 group-hover:text-[#D94B20] sm:text-[13px]">
                                         {recruiter}
                                     </span>
-                                    <span aria-hidden="true" className="absolute inset-x-4 bottom-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#FF5421] transition-transform duration-300 group-hover:scale-x-100" />
+                                    <span aria-hidden="true" className="absolute inset-x-4 bottom-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#FF6600] transition-transform duration-300 group-hover:scale-x-100" />
                                 </motion.div>
                             ))}
                         </div>

@@ -26,9 +26,9 @@ export const HostelsPage: React.FC = () => {
                         {/* Left Column */}
                         <div className="lg:col-span-7 space-y-3.5">
                             <div className="flex items-center gap-2.5 pb-1">
-                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                    Comfortable <span className="text-[#FF5422]">Accommodation..</span>
+                                    Comfortable <span className="text-[#FF6600]">Accommodation..</span>
                                 </h2>
                             </div>
 
@@ -45,18 +45,18 @@ export const HostelsPage: React.FC = () => {
                                     {/* Boys Hostel */}
                                     <div className="rounded-xl border border-orange-100 bg-orange-50/30 p-3 space-y-1.5">
                                         <p className="text-xs font-bold text-neutral-900">
-                                            Boys Hostel: <span className="text-[#FF5422]">350 students</span>
+                                            Boys Hostel: <span className="text-[#FF6600]">350 students</span>
                                         </p>
                                         <p className="text-[11.5px] text-neutral-600 font-medium">
                                             (1st: 111, 2nd: 99, 3rd: 95, 4th: 45)
                                         </p>
                                         <div className="pt-1.5 border-t border-orange-200/60 text-xs">
-                                            <span className="font-bold text-neutral-900 underline underline-offset-2 decoration-[#FF5422] block mb-0.5">
+                                            <span className="font-bold text-neutral-900 underline underline-offset-2 decoration-[#FF6600] block mb-0.5">
                                                 Boys Hostel Wardens:
                                             </span>
                                             <span className="text-neutral-700 leading-snug block">
-                                                Sreekanth: <a href="tel:6302525154" className="text-[#FF5422] font-semibold hover:underline">6302525154</a><br />
-                                                Sreedhar: <a href="tel:9347606872" className="text-[#FF5422] font-semibold hover:underline">9347606872</a>
+                                                Sreekanth: <a href="tel:6302525154" className="text-[#FF6600] font-semibold hover:underline">6302525154</a><br />
+                                                Sreedhar: <a href="tel:9347606872" className="text-[#FF6600] font-semibold hover:underline">9347606872</a>
                                             </span>
                                         </div>
                                     </div>
@@ -64,18 +64,18 @@ export const HostelsPage: React.FC = () => {
                                     {/* Girls Hostel */}
                                     <div className="rounded-xl border border-orange-100 bg-orange-50/30 p-3 space-y-1.5">
                                         <p className="text-xs font-bold text-neutral-900">
-                                            Girls Hostel: <span className="text-[#FF5422]">410 students</span>
+                                            Girls Hostel: <span className="text-[#FF6600]">410 students</span>
                                         </p>
                                         <p className="text-[11.5px] text-neutral-600 font-medium">
                                             (1st: 109, 2nd: 111, 3rd: 110, 4th: 80)
                                         </p>
                                         <div className="pt-1.5 border-t border-orange-200/60 text-xs">
-                                            <span className="font-bold text-neutral-900 underline underline-offset-2 decoration-[#FF5422] block mb-0.5">
+                                            <span className="font-bold text-neutral-900 underline underline-offset-2 decoration-[#FF6600] block mb-0.5">
                                                 Girls Hostel Wardens:
                                             </span>
                                             <span className="text-neutral-700 leading-snug block">
-                                                Sudha Rani: <a href="tel:6303141211" className="text-[#FF5422] font-semibold hover:underline">6303141211</a><br />
-                                                Naga Jyothi: <a href="tel:9347053747" className="text-[#FF5422] font-semibold hover:underline">9347053747</a>
+                                                Sudha Rani: <a href="tel:6303141211" className="text-[#FF6600] font-semibold hover:underline">6303141211</a><br />
+                                                Naga Jyothi: <a href="tel:9347053747" className="text-[#FF6600] font-semibold hover:underline">9347053747</a>
                                             </span>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@ export const HostelsPage: React.FC = () => {
 
                             {/* Feature Tags matching Cafeteria style */}
                             <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF6600] border border-orange-200">
                                     Home-Like Stay Feel
                                 </span>
                                 <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
@@ -117,14 +117,14 @@ export const HostelsPage: React.FC = () => {
                                 {/* === 5. CURRENT HOSTEL OCCUPANCY BREAKDOWN TABLE === */}
                                 {activeSection.tableData && isHostelTableOpen && (
                                     <div className="rounded-xl border-2 border-orange-200/90 bg-white shadow-md overflow-hidden animate-in fade-in duration-300">
-                                        <div className="bg-gradient-to-r from-[#111827] via-[#1c1412] to-[#2b1610] px-5 py-4 sm:px-6 sm:py-4.5 flex flex-wrap items-center justify-between gap-3 text-white border-b-2 border-[#FF5422]">
+                                        <div className="bg-gradient-to-r from-[#111827] via-[#1c1412] to-[#2b1610] px-5 py-4 sm:px-6 sm:py-4.5 flex flex-wrap items-center justify-between gap-3 text-white border-b-2 border-[#FF6600]">
                                             <div className="flex items-center gap-2.5">
-                                                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5422] shadow-[0_0_10px_#FF5422]" />
+                                                <span className="w-2.5 h-2.5 rounded-full bg-[#FF6600] shadow-[0_0_10px_#FF6600]" />
                                                 <h3 className="font-serif text-base sm:text-lg font-bold text-white tracking-tight">
                                                     {activeSection.tableData.title}
                                                 </h3>
                                             </div>
-                                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-orange-300 bg-[#FF5422]/20 px-3 py-1 rounded-full border border-[#FF5422]/40 shadow-sm">
+                                            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-orange-300 bg-[#FF6600]/20 px-3 py-1 rounded-full border border-[#FF6600]/40 shadow-sm">
                                                 Official Institutional Records
                                             </span>
                                         </div>
@@ -152,15 +152,15 @@ export const HostelsPage: React.FC = () => {
                                                             {row.map((cell, ci) => (
                                                                 <td
                                                                     key={ci}
-                                                                    className={`px-4 py-3.5 align-middle transition-colors ${ci === 0 ? 'pl-5 sm:pl-6 border-l-4 border-l-transparent group-hover:border-l-[#FF5422]' : ci === row.length - 1 ? 'pr-5 sm:pr-6' : ''}`}
+                                                                    className={`px-4 py-3.5 align-middle transition-colors ${ci === 0 ? 'pl-5 sm:pl-6 border-l-4 border-l-transparent group-hover:border-l-[#FF6600]' : ci === row.length - 1 ? 'pr-5 sm:pr-6' : ''}`}
                                                                 >
                                                                     {ci === 0 ? (
-                                                                        <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-neutral-900 group-hover:text-[#FF5422] transition-colors">
-                                                                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF5422] shadow-[0_0_4px_#FF5422] shrink-0" />
+                                                                        <div className="flex items-center gap-2.5 font-bold text-xs sm:text-[13px] text-neutral-900 group-hover:text-[#FF6600] transition-colors">
+                                                                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] shadow-[0_0_4px_#FF6600] shrink-0" />
                                                                             <span>{cell}</span>
                                                                         </div>
                                                                     ) : ci === row.length - 1 ? (
-                                                                        <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#FF5422]/10 text-[#FF5422] border border-[#FF5422]/30 shadow-2xs group-hover:bg-[#FF5422] group-hover:text-white group-hover:border-[#FF5422] transition-all duration-200 whitespace-nowrap">
+                                                                        <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-[#FF6600]/10 text-[#FF6600] border border-[#FF6600]/30 shadow-2xs group-hover:bg-[#FF6600] group-hover:text-white group-hover:border-[#FF6600] transition-all duration-200 whitespace-nowrap">
                                                                             {cell}
                                                                         </span>
                                                                     ) : (
@@ -238,7 +238,7 @@ export const HostelsPage: React.FC = () => {
                                 {activeSection.contacts && activeSection.contacts.length > 0 && (
                                     <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                         <div className="flex items-center gap-2.5 pb-2 border-b border-neutral-100">
-                                            <Phone size={18} className="text-[#FF5422]" />
+                                            <Phone size={18} className="text-[#FF6600]" />
                                             <h3 className="font-serif text-lg font-bold text-neutral-900">
                                                 Hostel Wardens &amp; Caretaker Contacts
                                             </h3>
@@ -251,7 +251,7 @@ export const HostelsPage: React.FC = () => {
                                                     className="rounded-xl border border-orange-100 bg-orange-50/30 p-4 flex items-center justify-between hover:border-orange-300 hover:bg-orange-50/60 transition-colors"
                                                 >
                                                     <div>
-                                                        <span className="text-[10px] font-bold text-[#FF5422] uppercase tracking-wider block">
+                                                        <span className="text-[10px] font-bold text-[#FF6600] uppercase tracking-wider block">
                                                             {c.role}
                                                         </span>
                                                         <span className="text-xs sm:text-sm font-bold text-neutral-900 mt-0.5 block">
@@ -261,7 +261,7 @@ export const HostelsPage: React.FC = () => {
                                                     {c.phone && (
                                                         <a
                                                             href={`tel:${c.phone}`}
-                                                            className="inline-flex items-center gap-1.5 rounded-lg bg-white border border-orange-200 hover:bg-[#FF5422] hover:text-white px-3 py-1.5 text-xs font-semibold text-neutral-800 transition shadow-2xs"
+                                                            className="inline-flex items-center gap-1.5 rounded-lg bg-white border border-orange-200 hover:bg-[#FF6600] hover:text-white px-3 py-1.5 text-xs font-semibold text-neutral-800 transition shadow-2xs"
                                                         >
                                                             <Phone size={12} />
                                                             <span>{c.phone}</span>
@@ -277,7 +277,7 @@ export const HostelsPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                         <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                                 Gallery
                                             </h2>
@@ -285,7 +285,7 @@ export const HostelsPage: React.FC = () => {
                                         <button
                                             type="button"
                                             onClick={() => setIsHostelViewAll(!isHostelViewAll)}
-                                            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#FF5422] hover:text-[#d43d0e] transition-colors group cursor-pointer"
+                                            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#FF6600] hover:text-[#d43d0e] transition-colors group cursor-pointer"
                                         >
                                             <span>{isHostelViewAll ? 'Show Carousel' : 'View All'}</span>
                                             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -304,7 +304,7 @@ export const HostelsPage: React.FC = () => {
                                             ].map((img, gi) => (
                                                 <div
                                                     key={gi}
-                                                    className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] hover:-translate-y-1 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/30 flex items-center justify-center p-2">
                                                         <img
@@ -325,7 +325,7 @@ export const HostelsPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setHostelGalleryIndex((prev) => (prev === 0 ? 3 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Previous image"
                                             >
                                                 <ChevronLeft size={20} />
@@ -356,7 +356,7 @@ export const HostelsPage: React.FC = () => {
                                                     .map((img, gi) => (
                                                         <div
                                                             key={gi}
-                                                            className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF5422] hover:-translate-y-1 transition-all duration-300"
+                                                            className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] hover:-translate-y-1 transition-all duration-300"
                                                         >
                                                             <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/30 flex items-center justify-center p-2">
                                                                 <img
@@ -376,7 +376,7 @@ export const HostelsPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setHostelGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Next image"
                                             >
                                                 <ChevronRight size={20} />

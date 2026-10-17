@@ -140,7 +140,7 @@ export default function TPAnnualCalendarPage() {
             {/* Desktop Table View */}
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full text-left text-sm text-neutral-700">
-                <thead className="bg-[#FF5422] text-white font-serif font-bold tracking-wide">
+                <thead className="bg-[#FF6600] text-white font-serif font-bold tracking-wide">
                   <tr>
                     <th className="px-6 py-4 w-52 rounded-tl-xl text-base text-center">Month</th>
                     <th className="px-6 py-4 rounded-tr-xl text-base">Activities</th>

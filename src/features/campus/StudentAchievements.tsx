@@ -53,7 +53,7 @@ const StudentAchievements: React.FC = () => {
         <motion.article
             key={`${item.name}-${index}`}
             whileHover={{ y: -4, transition: { duration: .2 } }}
-            className="group flex min-h-[330px] w-[min(82vw,350px)] shrink-0 flex-col border border-[#E99036] bg-[#FFAD52] p-5 shadow-[0_5px_16px_rgba(114,61,12,.08)] transition-shadow duration-300 hover:shadow-[0_14px_28px_rgba(114,61,12,.14)] sm:min-h-[350px] sm:w-[360px] sm:p-6 lg:w-[380px] lg:p-7"
+            className="group flex min-h-[330px] w-[min(82vw,350px)] shrink-0 flex-col border border-[#E99036] bg-[#FF6600] p-5 shadow-[0_5px_16px_rgba(114,61,12,.08)] transition-shadow duration-300 hover:shadow-[0_14px_28px_rgba(114,61,12,.14)] sm:min-h-[350px] sm:w-[360px] sm:p-6 lg:w-[380px] lg:p-7"
         >
             <div className="flex items-center justify-between gap-3 border-b border-[#8D4B12]/20 pb-4">
                 <span className="text-[10px] font-bold uppercase tracking-[.18em] text-[#713B12]">{item.illustrative ? 'Illustrative sample' : 'Student story'}</span>

@@ -9,7 +9,7 @@ const DepartmentOutcome: React.FC = () => {
 
             {/* Programme Outcomes */}
             <section>
-                <h3 className="text-lg font-semibold text-[#FF5422] mb-4 uppercase tracking-wide">
+                <h3 className="text-lg font-semibold text-[#FF6600] mb-4 uppercase tracking-wide">
                     Programme Outcomes (POs)
                 </h3>
                 <div
@@ -40,7 +40,7 @@ const DepartmentOutcome: React.FC = () => {
                             <span
                                 className="flex items-center justify-center shrink-0 font-bold text-white text-sm"
                                 style={{
-                                    background: '#FF5422',
+                                    background: '#FF6600',
                                     width: '52px',
                                     minHeight: '52px',
                                     alignSelf: 'stretch',
@@ -66,7 +66,7 @@ const DepartmentOutcome: React.FC = () => {
 
             {/* Programme Specific Outcomes */}
             <section>
-                <h3 className="text-lg font-semibold text-[#FF5422] mb-4 uppercase tracking-wide">
+                <h3 className="text-lg font-semibold text-[#FF6600] mb-4 uppercase tracking-wide">
                     Programme Specific Outcomes (PSOs)
                 </h3>
                 <div
@@ -88,7 +88,7 @@ const DepartmentOutcome: React.FC = () => {
                             <span
                                 className="flex items-center justify-center shrink-0 font-bold text-white text-sm"
                                 style={{
-                                    background: '#FF5422',
+                                    background: '#FF6600',
                                     width: '52px',
                                     minHeight: '52px',
                                     alignSelf: 'stretch',

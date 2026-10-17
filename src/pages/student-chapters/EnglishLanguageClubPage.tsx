@@ -28,7 +28,7 @@ const EnglishLanguageClubPage: React.FC = () => {
                                 <h4 className="font-bold text-lg text-[#0A0903]">
                                     ELC-SRIT is a student-run club initiated with a motto to inspire and guide SRITians to develop language skills & fluency in English speaking and to make SRIT- English speaking campus. This student club is mentored by the faculty of English.
                                 </h4>
-                                <h4 className="font-bold text-[#f67437] text-lg mt-4 mb-2">Club Aim:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mt-4 mb-2">Club Aim:</h4>
                                 <ul className="list-disc pl-5">
                                     <li>Encourage and Engage SRITians to use English Language effectively for personal, professional and overall development.</li>
                                 </ul>
@@ -37,7 +37,7 @@ const EnglishLanguageClubPage: React.FC = () => {
 
                         <AccordionItem title="Objectives">
                             <div className="text-neutral-700 leading-relaxed text-base">
-                                <h4 className="font-bold text-[#f67437] text-lg mb-4">Club Objectives:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-lg mb-4">Club Objectives:</h4>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li>Encourage the culture of speaking in English in the Campus.</li>
                                     <li>Provide platform to students to develop communication skills in both Verbal & Non-verbal ways.</li>
@@ -53,7 +53,7 @@ const EnglishLanguageClubPage: React.FC = () => {
                             <div className="overflow-x-auto rounded-xl border border-neutral-200">
                                 <table className="w-full text-left border-collapse">
                                     <thead>
-                                        <tr className="bg-[#f67437] text-white">
+                                        <tr className="bg-[#FF6600] text-white">
                                             <th colSpan={2} className="p-4 text-center text-lg font-bold">Club Members</th>
                                         </tr>
                                     </thead>
@@ -117,7 +117,7 @@ const EnglishLanguageClubPage: React.FC = () => {
                                                     href="https://docs.google.com/document/d/12DV5Nuhu5XxBVxYRx9cx_M6GeFUcWNBR/edit?usp=sharing&ouid=114791883951376108396&rtpof=true&sd=true" 
                                                     target="_blank" 
                                                     rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-2 text-[#f67437] hover:text-[#e05e20] hover:underline font-medium"
+                                                    className="inline-flex items-center gap-2 text-[#FF6600] hover:text-[#e05e20] hover:underline font-medium"
                                                 >
                                                     <FileText className="w-4 h-4" />
                                                     Annual Report
@@ -151,18 +151,18 @@ const EnglishLanguageClubPage: React.FC = () => {
 
                         <AccordionItem title="Follow Us">
                             <div className="text-neutral-700 space-y-4 m-0">
-                                <h4 className="font-bold text-[#f67437] text-xl mb-4">Contact Us:</h4>
+                                <h4 className="font-bold text-[#FF6600] text-xl mb-4">Contact Us:</h4>
                                 <div>
-                                    <p className="font-semibold text-lg text-[#f67437]">Mr. Anil Kumar D <span className="text-neutral-500 text-sm ml-1 font-normal">(PhD),</span></p>
+                                    <p className="font-semibold text-lg text-[#FF6600]">Mr. Anil Kumar D <span className="text-neutral-500 text-sm ml-1 font-normal">(PhD),</span></p>
                                     <p className="text-neutral-600">Assistant Professor in H & S.</p>
                                     <p className="text-neutral-600">Srinivasa Ramanujan Institute of Technology, Rotarypuram, Anantapuramu-515701.</p>
                                 </div>
                                 <div className="mt-4 flex flex-col sm:flex-row sm:gap-6 gap-2 pt-2">
-                                    <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:elc@srit.ac.in" className="text-[#f67437] hover:underline">elc@srit.ac.in</a></p>
-                                    <p><span className="font-medium text-[#0A0903]">Mobile No:</span> <a href="tel:+918778004869" className="text-[#f67437] hover:underline">+91-8778004869</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">Mail:</span> <a href="mailto:elc@srit.ac.in" className="text-[#FF6600] hover:underline">elc@srit.ac.in</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">Mobile No:</span> <a href="tel:+918778004869" className="text-[#FF6600] hover:underline">+91-8778004869</a></p>
                                 </div>
                                 <div className="pt-2">
-                                    <p><span className="font-medium text-[#0A0903]">Instagram Id:</span> <a href="https://instagram.com/elc_srit" target="_blank" rel="noopener noreferrer" className="text-[#f67437] hover:underline font-semibold">elc_srit</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">Instagram Id:</span> <a href="https://instagram.com/elc_srit" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline font-semibold">elc_srit</a></p>
                                 </div>
                             </div>
                         </AccordionItem>

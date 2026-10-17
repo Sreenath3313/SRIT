@@ -14,7 +14,7 @@ const ProfilePage: React.FC<{
         {/* Image */}
         <motion.div variants={slideLeft} className="w-full lg:w-[360px] xl:w-[400px] shrink-0">
             <div className="relative">
-                <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF5422] to-orange-300 blur-sm opacity-40" />
+                <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-[#FF6600] to-orange-300 blur-sm opacity-40" />
                 <img
                     src={imageSrc}
                     alt={name}
@@ -26,9 +26,9 @@ const ProfilePage: React.FC<{
                 className="mt-4 bg-gradient-to-br from-[#0A0903] to-neutral-800 rounded-xl p-4 text-center shadow"
             >
                 <p className="text-white font-bold text-lg">{name}</p>
-                <p className="text-[#FF5422] text-sm font-semibold mt-1">{role}</p>
+                <p className="text-[#FF6600] text-sm font-semibold mt-1">{role}</p>
                 {email && (
-                    <a href={`mailto:${email}`} className="mt-3 inline-block text-xs text-neutral-400 hover:text-[#FF5422] transition-colors break-all">
+                    <a href={`mailto:${email}`} className="mt-3 inline-block text-xs text-neutral-400 hover:text-[#FF6600] transition-colors break-all">
                         {email}
                     </a>
                 )}
@@ -97,10 +97,10 @@ const ProfilePage: React.FC<{
                         delay: 0.6,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="h-0.5 bg-[#FF5422] rounded-full"
+                    className="h-0.5 bg-[#FF6600] rounded-full"
                 />
 
-                <span className="text-[#FF5422] font-semibold">
+                <span className="text-[#FF6600] font-semibold">
                     {role}
                 </span>
             </motion.div>
@@ -155,13 +155,13 @@ const ChairpersonPage: React.FC = () => (
             email="chairperson@srit.ac.in"
             paragraphs={[
                 <>
-                    <strong className="text-[#FF5422] font-semibold">Smt. Jonnalagadda Padmavathy</strong>, the Chairperson of SRIT, is the youngest daughter of <strong className="text-[#FF5422] font-semibold">Sri. Jonnalagadda Chennakesavulu</strong>, born and brought up in Nellore. She completed her schooling, and intermediate education in Nellore. Being from engineering background (her father too was an engineer), she pursued Engineering at the JNTU Anantapur University campus, obtaining a graduate degree in Mechanical Engineering from the prestigious JNTUCE, Ananthapuramu, in the year 2000. She pursued M. Tech In Computer Science from JNTUA in 2012. She has worked as <strong className="text-[#FF5422] font-semibold">Assistant Professor</strong> in Sri Kottam Thulasi Reddy Memorial College of Engineering in the <strong className="text-[#FF5422] font-semibold">Department of Mechanical Engineering</strong>. She joined as <strong className="text-[#FF5422] font-semibold">Associate Professor</strong> in the CSE Department.
+                    <strong className="text-[#FF6600] font-semibold">Smt. Jonnalagadda Padmavathy</strong>, the Chairperson of SRIT, is the youngest daughter of <strong className="text-[#FF6600] font-semibold">Sri. Jonnalagadda Chennakesavulu</strong>, born and brought up in Nellore. She completed her schooling, and intermediate education in Nellore. Being from engineering background (her father too was an engineer), she pursued Engineering at the JNTU Anantapur University campus, obtaining a graduate degree in Mechanical Engineering from the prestigious JNTUCE, Ananthapuramu, in the year 2000. She pursued M. Tech In Computer Science from JNTUA in 2012. She has worked as <strong className="text-[#FF6600] font-semibold">Assistant Professor</strong> in Sri Kottam Thulasi Reddy Memorial College of Engineering in the <strong className="text-[#FF6600] font-semibold">Department of Mechanical Engineering</strong>. She joined as <strong className="text-[#FF6600] font-semibold">Associate Professor</strong> in the CSE Department.
                 </>,
                 <>
-                    Her skills at managing a society and her charitable nature, along with her vision of educating youth across the country has seen her become one of the foremost educationists in Andhra Pradesh. <strong className="text-[#FF5422] font-semibold">Smt. Aluru Narayanamma Memorial Educational Society</strong> recognized her vision. She, as the Chairperson of the society, constantly pushing the boundaries of what the society aims to achieve.
+                    Her skills at managing a society and her charitable nature, along with her vision of educating youth across the country has seen her become one of the foremost educationists in Andhra Pradesh. <strong className="text-[#FF6600] font-semibold">Smt. Aluru Narayanamma Memorial Educational Society</strong> recognized her vision. She, as the Chairperson of the society, constantly pushing the boundaries of what the society aims to achieve.
                 </>,
                 <>
-                    She is an elected <strong className="text-[#FF5422] font-semibold">Member of the Legislative Assembly</strong> representing Singanamala Constituency of Andhra Pradesh, championing the cause of women, children and education with all her considerable might.
+                    She is an elected <strong className="text-[#FF6600] font-semibold">Member of the Legislative Assembly</strong> representing Singanamala Constituency of Andhra Pradesh, championing the cause of women, children and education with all her considerable might.
                 </>,
                 <>
                     As she expands her field of influence, her vision too is expanding to see a society where education and technical knowhow, bring parity and equality to all. We are proud and honored to be guided by a mind that is constantly searching for ways to create an equitable society.

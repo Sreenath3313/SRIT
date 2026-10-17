@@ -273,7 +273,7 @@ const AwardsAchievementsPage: React.FC = () => {
                 {/* Header intro */}
                 <motion.div variants={fadeUp}>
                     <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0A0903] mb-2 flex items-center gap-3">
-                        <span className="w-1.5 h-8 rounded-full bg-[#FF5422] inline-block" />
+                        <span className="w-1.5 h-8 rounded-full bg-[#FF6600] inline-block" />
                         Awards &amp; Achievements
                     </h2>
                     <p className="text-neutral-600 mt-2 leading-relaxed text-left sm:text-justify text-sm sm:text-base">
@@ -288,7 +288,7 @@ const AwardsAchievementsPage: React.FC = () => {
                         type="button"
                         onClick={() => setIsAccordionOpen(!isAccordionOpen)}
                         aria-expanded={isAccordionOpen}
-                        className="w-full flex items-center justify-between p-4 sm:p-5 bg-gradient-to-r from-[#FF6600] to-[#FF5422] text-white hover:from-[#e65c00] hover:to-[#e0481b] transition-all text-left"
+                        className="w-full flex items-center justify-between p-4 sm:p-5 bg-gradient-to-r from-[#FF6600] to-[#FF6600] text-white hover:from-[#e65c00] hover:to-[#e0481b] transition-all text-left"
                     >
                         <div className="flex items-center gap-3">
                             <Award className="w-5 h-5 text-white/90" />
@@ -322,7 +322,7 @@ const AwardsAchievementsPage: React.FC = () => {
                                                 onClick={() => handleTabChange('Institution')}
                                                 className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                                                     activeTab === 'Institution'
-                                                        ? 'bg-[#FF5422] text-white shadow-xs'
+                                                        ? 'bg-[#FF6600] text-white shadow-xs'
                                                         : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200/80'
                                                 }`}
                                             >
@@ -338,7 +338,7 @@ const AwardsAchievementsPage: React.FC = () => {
                                                 onClick={() => handleTabChange('Faculty')}
                                                 className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                                                     activeTab === 'Faculty'
-                                                        ? 'bg-[#FF5422] text-white shadow-xs'
+                                                        ? 'bg-[#FF6600] text-white shadow-xs'
                                                         : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200/80'
                                                 }`}
                                             >
@@ -354,7 +354,7 @@ const AwardsAchievementsPage: React.FC = () => {
                                                 onClick={() => handleTabChange('Student')}
                                                 className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                                                     activeTab === 'Student'
-                                                        ? 'bg-[#FF5422] text-white shadow-xs'
+                                                        ? 'bg-[#FF6600] text-white shadow-xs'
                                                         : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200/80'
                                                 }`}
                                             >
@@ -393,7 +393,7 @@ const AwardsAchievementsPage: React.FC = () => {
                                                             ? 'Search faculty name, department, award...'
                                                             : 'Search student name, department, award...'
                                                     }
-                                                    className="w-full pl-9 pr-4 py-2 text-sm bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF5422]/20 focus:border-[#FF5422] transition-colors"
+                                                    className="w-full pl-9 pr-4 py-2 text-sm bg-white border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF6600]/20 focus:border-[#FF6600] transition-colors"
                                                 />
                                             </div>
 
@@ -470,7 +470,7 @@ const AwardsAchievementsPage: React.FC = () => {
                                                             setSearchQuery('');
                                                             setCurrentPage(1);
                                                         }}
-                                                        className="text-xs text-[#FF5422] hover:underline font-semibold px-2 py-1"
+                                                        className="text-xs text-[#FF6600] hover:underline font-semibold px-2 py-1"
                                                     >
                                                         Reset
                                                     </button>

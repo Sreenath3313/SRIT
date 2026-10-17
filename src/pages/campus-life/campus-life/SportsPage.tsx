@@ -26,9 +26,9 @@ export const SportsPage: React.FC = () => {
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         <div className="lg:col-span-7 space-y-3.5">
                                             <div className="flex items-center gap-2.5 pb-2">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight leading-tight">
-                                                    Every champion was once a contender that <span className="text-[#FF5422]">refused to give up.</span>
+                                                    Every champion was once a contender that <span className="text-[#FF6600]">refused to give up.</span>
                                                 </h2>
                                             </div>
 
@@ -40,7 +40,7 @@ export const SportsPage: React.FC = () => {
 
 
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF6600] border border-orange-200">
                                                         Floodlit Hardcourt
                                                     </span>
                                                     <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
@@ -208,7 +208,7 @@ export const SportsPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                         <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                                 Sports &amp; Athletics Gallery
                                             </h2>
@@ -216,7 +216,7 @@ export const SportsPage: React.FC = () => {
                                         <button
                                             type="button"
                                             onClick={() => setIsSportsViewAll(!isSportsViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF5422] bg-orange-50 border border-orange-200 hover:bg-[#FF5422] hover:text-white transition-all cursor-pointer"
+                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
                                         >
                                             {isSportsViewAll ? 'Show Carousel' : 'View All Photos'}
                                         </button>
@@ -232,7 +232,7 @@ export const SportsPage: React.FC = () => {
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                         <img
@@ -260,7 +260,7 @@ export const SportsPage: React.FC = () => {
                                                 ].map((img, idx) => (
                                                     <div
                                                         key={idx}
-                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF5422] transition-all duration-300 relative"
+                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
                                                     >
                                                         <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                             <img

@@ -103,8 +103,8 @@ const IciPage: React.FC = () => {
                                 <p className="font-semibold text-lg text-[#0A0903]">Dr. U. Raghu Babu <span className="text-sm font-normal text-neutral-500 ml-2">M. Tech., Ph. D.</span></p>
                                 <p className="text-neutral-600">Associate Professor in CIV, ICI-Students' Chapter Coordinator.</p>
                                 <div className="mt-4 flex flex-col sm:flex-row sm:gap-6 gap-2 pt-2">
-                                    <p><span className="font-medium text-[#0A0903]">E-mail:</span> <a href="mailto:raghubabu.ce@srit.ac.in" className="text-[#f67437] hover:underline">raghubabu.ce@srit.ac.in</a></p>
-                                    <p><span className="font-medium text-[#0A0903]">Mobile No:</span> <a href="tel:+919177964984" className="text-[#f67437] hover:underline">+91-9177964984</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">E-mail:</span> <a href="mailto:raghubabu.ce@srit.ac.in" className="text-[#FF6600] hover:underline">raghubabu.ce@srit.ac.in</a></p>
+                                    <p><span className="font-medium text-[#0A0903]">Mobile No:</span> <a href="tel:+919177964984" className="text-[#FF6600] hover:underline">+91-9177964984</a></p>
                                 </div>
                             </div>
                         </AccordionItem>

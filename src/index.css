@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #FF5422;       /* Truer, more vibrant orange */
+  --color-primary: #FF6600;       /* Truer, more vibrant orange */
   --color-primary-dark: #DD4700;  /* Deeper orange */
   --color-primary-light: #FF7043; /* Brighter orange highlight */
   

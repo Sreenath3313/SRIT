@@ -37,7 +37,7 @@ const OverviewPage: React.FC = () => {
                         className="w-full h-[240px] sm:h-[280px] object-cover"
                     loading="lazy" />
 
-                    <div className="absolute bottom-0 left-0 bg-[#FF5422] px-8 py-4">
+                    <div className="absolute bottom-0 left-0 bg-[#FF6600] px-8 py-4">
                         <h2 className="text-white text-2xl font-bold font-serif">
                             Overview Of Campus
                         </h2>
@@ -53,7 +53,7 @@ const OverviewPage: React.FC = () => {
                         Established in the year 2008 and reputable as one of the
                         leading educational institutions in the technical and
                         engineering space. (Permanently) Affiliated to{' '}
-                        <span className="text-[#FF5422] font-medium">
+                        <span className="text-[#FF6600] font-medium">
                             JNTU Ananthapuramu
                         </span>
                         , the institute has been approved by the AICTE New
@@ -94,7 +94,7 @@ const OverviewPage: React.FC = () => {
                     variants={fadeUp}
                     className="space-y-4"
                 >
-                    <p className="text-[#FF5422] font-bold tracking-[0.15em] text-sm uppercase text-center">
+                    <p className="text-[#FF6600] font-bold tracking-[0.15em] text-sm uppercase text-center">
                         About
                     </p>
 
@@ -128,11 +128,11 @@ const OverviewPage: React.FC = () => {
                     className="text-center text-[1.4rem] sm:text-[1.6rem] font-semibold text-neutral-800 leading-relaxed py-2"
                 >
                     "value based{' '}
-                    <span className="text-[#FF5422]">education</span>
+                    <span className="text-[#FF6600]">education</span>
                     {' '}&amp; employment{' '}
-                    <span className="text-[#FF5422]">avenues</span>
+                    <span className="text-[#FF6600]">avenues</span>
                     {' '}for{' '}
-                    <span className="text-[#FF5422]">rural students</span>"
+                    <span className="text-[#FF6600]">rural students</span>"
                 </motion.div>
 
                 {/* === Members + Ramanujan Portrait === */}
@@ -144,7 +144,7 @@ const OverviewPage: React.FC = () => {
                     <div className="flex-1">
                         <h3 className="text-2xl font-bold text-[#0A0903] mb-6">
                             Members of the{' '}
-                            <span className="text-[#FF5422]">
+                            <span className="text-[#FF6600]">
                                 Society
                             </span>
                         </h3>
@@ -159,7 +159,7 @@ const OverviewPage: React.FC = () => {
                                     variants={fadeUp}
                                     className="flex items-center gap-3 text-neutral-700 text-[15px]"
                                 >
-                                    <span className="w-6 h-6 rounded bg-[#FF5422] text-white flex items-center justify-center shrink-0">
+                                    <span className="w-6 h-6 rounded bg-[#FF6600] text-white flex items-center justify-center shrink-0">
                                         <ArrowRight className="w-3.5 h-3.5" />
                                     </span>
 
@@ -175,7 +175,7 @@ const OverviewPage: React.FC = () => {
                         >
                             <Link
                                 to="/about/governing-body"
-                                className="inline-flex items-center gap-3 bg-[#FF5422] text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                                className="inline-flex items-center gap-3 bg-[#FF6600] text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
                             >
                                 <span>View More</span>
                                 <span className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center shrink-0">

@@ -57,7 +57,7 @@ const SocialProfileLink: React.FC<{ url?: string }> = ({ url }) => {
             rel="noopener noreferrer"
             aria-label={`${platform.label} profile`}
             title={platform.label}
-            className={`inline-flex h-8 w-8 items-center justify-center rounded-md text-xs font-extrabold shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5422] focus-visible:ring-offset-2 ${platform.color}`}
+            className={`inline-flex h-8 w-8 items-center justify-center rounded-md text-xs font-extrabold shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6600] focus-visible:ring-offset-2 ${platform.color}`}
         >
             {platform.mark}
         </a>
@@ -72,7 +72,7 @@ const ProfileLink: React.FC<{ url?: string }> = ({ url }) => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#FF5422] px-4 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#E04515] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5422] focus-visible:ring-offset-2"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#FF6600] px-4 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#E04515] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6600] focus-visible:ring-offset-2"
         >
             <span>View Profile</span>
             <ArrowRight className="h-4 w-4" strokeWidth={2.2} />
@@ -111,15 +111,15 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
         <div className="w-full space-y-10">
             {/* Header Area */}
             <div className="text-center max-w-3xl mx-auto pt-2">
-                <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#FF5422] mb-2">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#FF6600] mb-2">
                     OUR TEAM
                 </span>
                 
                 <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 tracking-tight">
-                    Faculty <span className="text-[#FF5422]">Profiles</span>
+                    Faculty <span className="text-[#FF6600]">Profiles</span>
                 </h2>
 
-                <div className="w-12 h-1 bg-[#FF5422] rounded-full mx-auto mt-3 mb-4" />
+                <div className="w-12 h-1 bg-[#FF6600] rounded-full mx-auto mt-3 mb-4" />
 
                 <p className="text-neutral-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto px-4">
                     {subtitle}
@@ -136,7 +136,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                                 onClick={() => setSelectedCategory(cat.label)}
                                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
                                     isActive
-                                        ? 'bg-[#FF5422] text-white shadow-md shadow-[#FF5422]/25 scale-105'
+                                        ? 'bg-[#FF6600] text-white shadow-md shadow-[#FF6600]/25 scale-105'
                                         : 'bg-neutral-100 hover:bg-neutral-200/80 text-neutral-700 hover:text-neutral-900'
                                 }`}
                             >
@@ -228,7 +228,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                                 {/* Bottom Dark Gradient Mask with half opacity at transition */}
                                 <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-gradient-to-t from-black/95 via-black/75 to-transparent px-3.5 pb-3.5 pt-16 sm:px-4 sm:pb-4 transition-all duration-300">
                                     {/* Orange accent line */}
-                                    <div className="mb-1.5 h-[3px] w-8 rounded-full bg-[#FF5422]" />
+                                    <div className="mb-1.5 h-[3px] w-8 rounded-full bg-[#FF6600]" />
 
                                     {/* Faculty Name in Serif typography */}
                                     <h3 className="font-serif text-sm sm:text-base lg:text-[17px] font-bold text-white tracking-wide leading-snug drop-shadow-md">
@@ -262,7 +262,7 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         title={`${member.name} on ${item.label}`}
-                                                        className="focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF5422] rounded-xl"
+                                                        className="focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF6600] rounded-xl"
                                                     >
                                                         {content}
                                                     </a>
@@ -285,10 +285,10 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                     return (
                         <div
                             key={index}
-                            className="group relative flex h-full min-w-0 flex-col justify-between overflow-hidden rounded-xl border border-neutral-200/80 bg-white p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5422]/40 hover:shadow-[0_16px_36px_rgba(255,84,34,0.12)] sm:p-6 lg:p-7"
+                            className="group relative flex h-full min-w-0 flex-col justify-between overflow-hidden rounded-xl border border-neutral-200/80 bg-white p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#FF6600]/40 hover:shadow-[0_16px_36px_rgba(255,84,34,0.12)] sm:p-6 lg:p-7"
                         >
                             {/* Subtle Top Accent */}
-                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF5422]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF6600]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                             <div>
                                 {/* Faculty Image / Avatar */}
@@ -301,19 +301,19 @@ export const FacultyProfiles: React.FC<FacultyProfilesProps> = ({
                                             loading="lazy"
                                         />
                                     ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-xl sm:text-2xl font-serif font-bold text-[#FF5422] bg-[#FDEEE9]">
+                                        <div className="w-full h-full flex items-center justify-center text-xl sm:text-2xl font-serif font-bold text-[#FF6600] bg-[#FDEEE9]">
                                             {avatarPlaceholder(member.name)}
                                         </div>
                                     )}
                                 </div>
 
                                 {/* Faculty Name */}
-                                <h3 className="font-serif text-lg sm:text-[19px] font-bold text-neutral-900 group-hover:text-[#FF5422] transition-colors leading-snug text-center mb-1 min-h-[48px] flex items-center justify-center">
+                                <h3 className="font-serif text-lg sm:text-[19px] font-bold text-neutral-900 group-hover:text-[#FF6600] transition-colors leading-snug text-center mb-1 min-h-[48px] flex items-center justify-center">
                                     {member.name}
                                 </h3>
 
                                 {/* Designation */}
-                                <p className="text-[#FF5422] font-semibold text-sm sm:text-[14.5px] text-center mb-5">
+                                <p className="text-[#FF6600] font-semibold text-sm sm:text-[14.5px] text-center mb-5">
                                     {member.designation}
                                 </p>
 

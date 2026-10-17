@@ -21,28 +21,28 @@ export const LaboratoriesPage: React.FC = () => {
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                                         <div className="lg:col-span-7 space-y-3.5">
                                             <div className="flex items-center gap-2.5 pb-1">
-                                                <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                                <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                                 <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                    About <span className="text-[#FF5422]">Advanced Engineering Laboratories</span>
+                                                    About <span className="text-[#FF6600]">Advanced Engineering Laboratories</span>
                                                 </h2>
                                             </div>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                Laboratories at <strong className="text-[#FF5422] font-bold">Srinivasa Ramanujan Institute of Technology (SRIT)</strong> bridge academic theory with real-world engineering applications. The institution houses <strong className="text-[#FF5422] font-bold">8 specialized, fully computerized state-of-the-art laboratories</strong> designed for high-performance computing, artificial intelligence, research, and skill training.
+                                                Laboratories at <strong className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology (SRIT)</strong> bridge academic theory with real-world engineering applications. The institution houses <strong className="text-[#FF6600] font-bold">8 specialized, fully computerized state-of-the-art laboratories</strong> designed for high-performance computing, artificial intelligence, research, and skill training.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                The computing ecosystem includes the <span className="text-[#FF5422] font-semibold">C &amp; Data Structures Lab</span>, three <span className="text-[#FF5422] font-semibold">B-Block Computer Laboratories</span>, a dedicated <span className="text-[#FF5422] font-semibold">Research Lab</span>, a <span className="text-[#FF5422] font-semibold">Capstone Project Lab</span>, the <span className="text-[#FF5422] font-bold">APSSDC CM’s Skill Excellence Center</span>, and a dedicated <span className="text-[#FF5422] font-bold">Machine Learning Laboratory</span>.
+                                                The computing ecosystem includes the <span className="text-[#FF6600] font-semibold">C &amp; Data Structures Lab</span>, three <span className="text-[#FF6600] font-semibold">B-Block Computer Laboratories</span>, a dedicated <span className="text-[#FF6600] font-semibold">Research Lab</span>, a <span className="text-[#FF6600] font-semibold">Capstone Project Lab</span>, the <span className="text-[#FF6600] font-bold">APSSDC CM’s Skill Excellence Center</span>, and a dedicated <span className="text-[#FF6600] font-bold">Machine Learning Laboratory</span>.
                                             </p>
 
                                             <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
-                                                All facilities are powered by high-specification multi-core workstations with <strong className="text-[#FF5422] font-semibold">16GB RAM Intel Core i5 systems</strong>, backed by industry-standard suites (<span className="text-[#FF5422] font-semibold">TensorFlow, Keras, Scikit-learn, Hadoop, Oracle 11g, MongoDB, Selenium, and NS3</span>), gigabit networking, and continuous industrial <span className="text-[#FF5422] font-semibold">NUMERIC UPS power backup</span>.
+                                                All facilities are powered by high-specification multi-core workstations with <strong className="text-[#FF6600] font-semibold">16GB RAM Intel Core i5 systems</strong>, backed by industry-standard suites (<span className="text-[#FF6600] font-semibold">TensorFlow, Keras, Scikit-learn, Hadoop, Oracle 11g, MongoDB, Selenium, and NS3</span>), gigabit networking, and continuous industrial <span className="text-[#FF6600] font-semibold">NUMERIC UPS power backup</span>.
                                             </p>
 
                                             <div className="pt-2 flex flex-wrap items-center gap-3">
 
                                                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-600">
-                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF5422] border border-orange-200">
+                                                    <span className="px-2.5 py-1 rounded-md bg-orange-50 text-[#FF6600] border border-orange-200">
                                                         8 Computing Labs
                                                     </span>
                                                     <span className="px-2.5 py-1 rounded-md bg-neutral-100 text-neutral-800 border border-neutral-200">
@@ -155,7 +155,7 @@ export const LaboratoriesPage: React.FC = () => {
                                 <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
                                     <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
                                         <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF5422]" />
+                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
                                             <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                                                 Engineering Laboratories Gallery
                                             </h2>
@@ -163,7 +163,7 @@ export const LaboratoriesPage: React.FC = () => {
                                         <button
                                             type="button"
                                             onClick={() => setIsLabsViewAll(!isLabsViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF5422] bg-orange-50 border border-orange-200 hover:bg-[#FF5422] hover:text-white transition-all cursor-pointer"
+                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
                                         >
                                             {isLabsViewAll ? 'Show Carousel' : 'View All 6 Photos'}
                                         </button>
@@ -181,7 +181,7 @@ export const LaboratoriesPage: React.FC = () => {
                                             ].map((img, idx) => (
                                                 <div
                                                     key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF5422]/60 transition-all duration-300"
+                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
                                                 >
                                                     <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                         <img
@@ -203,7 +203,7 @@ export const LaboratoriesPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setLabsGalleryIndex((prev) => (prev <= 0 ? 3 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Previous image"
                                             >
                                                 <ChevronLeft size={20} />
@@ -222,7 +222,7 @@ export const LaboratoriesPage: React.FC = () => {
                                                     .map((img, idx) => (
                                                         <div
                                                             key={idx}
-                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF5422] transition-all duration-300 relative"
+                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
                                                         >
                                                             <div className="relative aspect-[16/11] w-full overflow-hidden">
                                                                 <img
@@ -243,7 +243,7 @@ export const LaboratoriesPage: React.FC = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setLabsGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF5422] hover:border-[#FF5422] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
+                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
                                                 aria-label="Next image"
                                             >
                                                 <ChevronRight size={20} />
