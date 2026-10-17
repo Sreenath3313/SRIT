@@ -161,15 +161,21 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
 
     return <header ref={headerRef} className={`fixed inset-x-0 top-0 z-[100] bg-white ${showShadow ? 'shadow-[0_10px_32px_rgba(255,102,0,.12)]' : 'shadow-none'}`}>
         <div className="bg-[#ff6600] text-white">
-            <div className="mx-auto flex w-full flex-col items-stretch gap-1 px-2 py-2 text-white sm:px-4 2xl:min-h-[38px] 2xl:flex-row 2xl:items-center 2xl:justify-between 2xl:gap-3 2xl:py-0">
-                <div aria-label="Contact information" className="flex min-h-7 flex-wrap items-center justify-center text-[11px] font-semibold sm:text-[12px] md:justify-start 2xl:shrink-0 2xl:text-[14px]">
-                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 whitespace-nowrap border-r border-white/80 px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3"><PhoneIcon className="h-4 w-4 fill-black text-black shrink-0" />91-951 561 1111</a>
-                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 whitespace-nowrap px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3"><MailIcon className="h-4 w-4 fill-black text-black shrink-0" />hr@srit.ac.in</a>
+            <div className="flex w-full flex-col items-stretch gap-1 px-3 py-1.5 text-white sm:px-5 md:px-6 lg:px-8 min-[960px]:min-h-[38px] min-[960px]:flex-row min-[960px]:items-center min-[960px]:justify-between min-[960px]:gap-2 min-[960px]:py-0">
+                <div aria-label="Contact information" className="flex min-h-7 flex-wrap items-center justify-center text-[11px] font-semibold sm:text-[12px] md:justify-start min-[960px]:shrink-0 min-[960px]:text-[11.5px] lg:text-[12px] xl:text-[13px] 2xl:text-[14px]">
+                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 whitespace-nowrap border-r border-white/80 px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3 min-[960px]:px-2 xl:px-3">
+                        <PhoneIcon className="h-3.5 w-3.5 fill-black text-black shrink-0 xl:h-4 xl:w-4" />
+                        <span>91-951 561 1111</span>
+                    </a>
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 whitespace-nowrap px-2 py-1 text-white transition-opacity hover:opacity-85 sm:px-3 min-[960px]:px-2 xl:px-3">
+                        <MailIcon className="h-3.5 w-3.5 fill-black text-black shrink-0 xl:h-4 xl:w-4" />
+                        <span>hr@srit.ac.in</span>
+                    </a>
                 </div>
-                <nav aria-label="Contact and quick links" className="grid w-full grid-cols-2 text-[10px] font-semibold min-[360px]:grid-cols-3 sm:grid-cols-4 sm:text-[11px] xl:grid-cols-7 2xl:flex 2xl:flex-1 2xl:items-center 2xl:justify-end 2xl:text-[12px]">
+                <nav aria-label="Contact and quick links" className="grid w-full grid-cols-2 text-[10px] font-semibold min-[360px]:grid-cols-3 sm:grid-cols-4 sm:text-[11px] min-[960px]:flex min-[960px]:w-auto min-[960px]:flex-1 min-[960px]:items-center min-[960px]:justify-end min-[960px]:text-[10px] lg:text-[10.5px] xl:text-[11.5px] 2xl:text-[12px]">
                     {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = 'inline-flex min-h-8 min-w-0 items-center justify-center gap-1.5 border-t border-white/35 px-1 py-1 text-center leading-tight text-white transition-colors hover:bg-black/10 hover:opacity-90 sm:px-2 2xl:min-h-0 2xl:whitespace-nowrap 2xl:border-l 2xl:border-t-0 2xl:border-white/80 2xl:px-2.5 2xl:py-1';
-                        const content = <><Icon className={`h-4 w-4 shrink-0 text-black ${fillIcon ? 'fill-black' : ''}`} /><span className="min-w-0">{label}</span></>;
+                        const itemClass = 'inline-flex min-h-8 min-w-0 items-center justify-center gap-1 border-t border-white/35 px-1 py-1 text-center leading-tight text-white transition-colors hover:bg-black/10 hover:opacity-90 sm:px-2 min-[960px]:min-h-0 min-[960px]:whitespace-nowrap min-[960px]:border-l min-[960px]:border-t-0 min-[960px]:border-white/80 min-[960px]:px-1.5 lg:px-2 2xl:px-2.5 min-[960px]:py-1';
+                        const content = <><Icon className={`h-3.5 w-3.5 shrink-0 text-black xl:h-4 xl:w-4 ${fillIcon ? 'fill-black' : ''}`} /><span className="min-w-0">{label}</span></>;
                         return external
                             ? <a key={label} href={href} target="_blank" rel="noreferrer" className={itemClass}>{content}</a>
                             : <Link key={label} to={href} className={itemClass}>{content}</Link>;
@@ -179,9 +185,9 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         </div>
 
         <div className="relative border-t-4 border-[#FF6600] bg-white" onMouseLeave={onMenuLeave}>
-            <div className="mx-auto flex h-[72px] max-w-[1680px] items-center justify-between gap-2 px-2 sm:gap-5 sm:px-6 md:px-8 lg:h-[88px]">
-                <Link to="/" aria-label="SRIT home" className="flex min-w-0 shrink-0 items-center gap-3">
-                    <img src="/optimized/SRIT_logo_HD_8x.png" alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade" width="10240" height="1920" fetchPriority="high" className="h-[48px] w-[220px] max-w-[58vw] shrink-0 object-contain sm:h-[56px] sm:w-[280px] sm:max-w-[52vw] lg:h-[64px] lg:w-[360px] lg:max-w-none 2xl:h-[72px] 2xl:w-[440px]" />
+            <div className="flex h-[80px] w-full items-center justify-between gap-3 px-3 sm:gap-5 sm:px-5 md:px-6 lg:h-[96px] lg:px-8 xl:h-[100px]">
+                <Link to="/" aria-label="SRIT home" className="flex min-w-0 shrink-0 items-center py-1">
+                    <img src="/optimized/SRIT_logo_HD_8x.png" alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade" width="10240" height="1920" fetchPriority="high" className="h-[56px] w-auto max-w-[65vw] shrink-0 object-contain sm:h-[66px] sm:max-w-[55vw] lg:h-[78px] xl:h-[84px] 2xl:h-[88px] lg:max-w-none transition-transform duration-200" />
                 </Link>
 
                 <nav aria-label="Primary navigation" className="ml-auto hidden h-full items-center gap-0.5 lg:flex">
@@ -193,13 +199,13 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                     </div>)}
                 </nav>
 
-                <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-2 lg:ml-3 xl:ml-4">
-                    <button type="button" onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }} aria-label={searchOpen ? 'Close search' : 'Search this site'} aria-expanded={searchOpen} className="inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center text-black transition-colors hover:text-[#FF6600]"><Search className="h-4 w-4 sm:h-5 sm:w-5" /></button>
-                    <button type="button" onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-controls="site-navigation-drawer" aria-expanded={mobileOpen} className="group inline-flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center text-[#171b24] transition-colors hover:text-[#FF6600]">
-                        <span className="flex w-5 sm:w-6 flex-col gap-[5px] sm:gap-[6px]" aria-hidden="true">
-                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[6px] rotate-45' : 'w-5 group-hover:w-4'}`} />
-                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : 'w-3.5 group-hover:w-5'}`} />
-                            <span className={`h-[1.5px] rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[6px] -rotate-45' : 'w-5 group-hover:w-4'}`} />
+                <div className="flex shrink-0 items-center gap-1 sm:gap-2 lg:ml-4 xl:ml-6">
+                    <button type="button" onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }} aria-label={searchOpen ? 'Close search' : 'Search this site'} aria-expanded={searchOpen} className="inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center text-black transition-colors hover:text-[#FF6600]"><Search className="h-4.5 w-4.5 sm:h-5 sm:w-5" /></button>
+                    <button type="button" onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-controls="site-navigation-drawer" aria-expanded={mobileOpen} className="group inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center text-[#171b24] transition-colors hover:text-[#FF6600]">
+                        <span className="flex w-6 sm:w-6.5 flex-col gap-[5px] sm:gap-[6px]" aria-hidden="true">
+                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[7px] sm:translate-y-[8px] rotate-45' : ''}`} />
+                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : ''}`} />
+                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[7px] sm:-translate-y-[8px] -rotate-45' : ''}`} />
                         </span>
                     </button>
                 </div>
@@ -207,7 +213,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
 
             <AnimatePresence>
                 {activeMenu?.hasDropdown && megaLinks.length > 0 && <motion.div key={activeMenu.label} initial={{ opacity: 0, y: -12, scaleY: .985 }} animate={{ opacity: 1, y: 0, scaleY: 1 }} exit={{ opacity: 0, y: -8, scaleY: .99 }} transition={{ duration: .28, ease: [.22, 1, .36, 1] }} style={{ transformOrigin: 'top' }} onMouseEnter={() => onMenuEnter(activeMenu.label)} onMouseLeave={onMenuLeave} className="absolute left-0 right-0 top-full z-50 max-h-[calc(100dvh-150px)] overflow-y-auto border-t border-[#FF6600]/10 bg-[#fffdfa] shadow-[0_24px_44px_rgba(255,102,0,.14)]">
-                    <div className="mx-auto max-w-[1500px] px-5 py-6 sm:px-8 sm:py-8 2xl:px-12">
+                    <div className="w-full px-5 py-6 sm:px-8 sm:py-8 2xl:px-12">
                         <div className="mb-5 flex items-end justify-between border-b border-[#FF6600]/15 pb-4"><div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#FF6600]">Explore SRIT</p><h2 className="mt-1 font-serif text-2xl font-semibold text-black">{activeMenu.label}</h2></div><Link to={activeMenu.href} className="inline-flex items-center gap-2 text-xs font-bold text-black hover:text-[#FF6600]">View section <ArrowRight className="h-3.5 w-3.5" /></Link></div>
                         <motion.div variants={{ hidden: {}, visible: { transition: { staggerChildren: .025, delayChildren: .035 } } }} initial="hidden" animate="visible" className={`grid gap-x-6 gap-y-1 ${megaLinks.length > 7 ? 'grid-cols-3' : 'grid-cols-2'}`}>
                             {megaLinks.map((item, index) => <motion.div key={`${item.label}-${item.href}-${index}`} variants={{ hidden: { opacity: 0, y: 7 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: .22, ease: [.22, 1, .36, 1] }}><Link to={item.href} className={`group flex min-h-10 items-center justify-between gap-3 border-b border-[#eadfd6] px-3 py-2 text-base leading-6 font-medium tracking-[.005em] transition-colors duration-200 hover:border-[#ff9a64] hover:bg-[#fff1e8] hover:text-[#d94b12] ${isSubItemActive(item.href) ? 'border-[#ff9a64] bg-[#fff1e8] text-[#d94b12]' : 'text-[#29313d]'}`}><span>{item.label}</span><ArrowRight className={`h-3.5 w-3.5 shrink-0 -translate-x-1 transition-all duration-200 ease-out ${isSubItemActive(item.href) ? 'translate-x-0 opacity-100 text-[#d94b12]' : 'opacity-0 group-hover:translate-x-0 group-hover:opacity-100'}`} /></Link></motion.div>)}
@@ -218,7 +224,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         </div>
 
         {showPlacementTicker && <div className="overflow-hidden bg-[#FF6600] text-white">
-            <div className="mx-auto flex h-[36px] max-w-[1680px] items-center overflow-hidden px-4 sm:px-6 lg:px-8">
+            <div className="flex h-[36px] w-full items-center overflow-hidden px-3 sm:px-5 md:px-6 lg:px-8">
                 <Link to="/placements/about-t-and-p" className="z-10 inline-flex shrink-0 items-center gap-2 bg-[#FF6600] pr-4 text-[11px] font-extrabold uppercase tracking-[.16em] sm:text-[12px]">
                     <GraduationCap className="h-3.5 w-3.5" />Placements @ SRIT
                 </Link>

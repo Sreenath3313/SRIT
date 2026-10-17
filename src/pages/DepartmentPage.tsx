@@ -309,7 +309,7 @@ const DepartmentPage: React.FC = () => {
 
 
     return (
-        <div className="min-h-screen bg-white" style={{ paddingTop: 'calc(var(--site-navbar-height, 180px) + 8px)' }}>
+        <div className="min-h-screen bg-white" style={{ paddingTop: 'var(--site-navbar-height, 120px)' }}>
 
             <Navbar showPlacementTicker={false} showShadow={false} />
 

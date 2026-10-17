@@ -39,36 +39,29 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
     };
 
     return (
-        <header className="sticky z-50 w-full border-b border-[#F0E5DE]" style={{ top: 'calc(var(--site-navbar-height, 0px) + 8px)', background: 'linear-gradient(90deg, #FFF7F1 0%, #FFFCFA 30%, #FFFFFF 62%)' }}>
-
-            {/* =====================================================
-                DEPARTMENT HEADER
-            ===================================================== */}
-
-            {/* =====================================================
-                DEPARTMENT NAVIGATION
-                Shared horizontal department navigation
-            ===================================================== */}
-
-            {/* =====================================================
-                DEPARTMENT NAVIGATION
-            ===================================================== */}
+        <header
+            className="sticky z-50 w-full border-b border-[#F0E5DE]"
+            style={{
+                top: 'calc(var(--site-navbar-height, 120px) - 2px)',
+                marginTop: '-2px',
+                background: 'linear-gradient(90deg, #FFF7F1 0%, #FFFCFA 30%, #FFFFFF 62%)',
+            }}
+        >
 
             <div className="relative z-20 border-b border-[#F0E5DE] bg-transparent">
-
-                <div className="mx-auto flex max-w-[1680px] items-center px-3 sm:px-5 lg:px-10">
+                <div className="flex w-full items-center px-3 sm:px-5 md:px-6 lg:px-8">
                     <div
                         title={dept.fullName || dept.name}
-                        className="flex h-[54px] w-[min(140px,38vw)] min-w-0 shrink-0 items-center border-r border-[#F0E5DE] pr-2 sm:w-[clamp(140px,24vw,360px)] sm:pr-4 md:h-[60px] md:w-[360px] md:pr-6"
+                        className="flex h-[54px] sm:h-[60px] shrink-0 items-center border-r border-[#F0E5DE] pr-4 sm:pr-6 mr-2 sm:mr-4"
                     >
-                        <span className="inline-flex min-w-0 max-w-full items-center gap-2 overflow-hidden rounded-lg border border-[#F5D8C8] bg-white/85 px-2.5 py-1.5 text-[10px] font-semibold tracking-[0.035em] text-[#F15A24] shadow-[0_2px_8px_rgba(164,76,31,0.09)] md:px-3 md:text-[12px] lg:text-[13px]">
+                        <span className="inline-flex min-w-0 items-center gap-2 overflow-hidden rounded-lg border border-[#F5D8C8] bg-white/95 px-2.5 py-1.5 text-[11px] font-bold tracking-[0.035em] text-[#F15A24] shadow-[0_2px_8px_rgba(164,76,31,0.09)] sm:px-3 sm:text-[12px] lg:text-[13px]">
                             <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF6600]" />
                             <span className="overflow-hidden text-ellipsis whitespace-nowrap">Dept of {dept.code}</span>
                         </span>
                     </div>
 
                     {/* MOBILE DROPDOWN TABS */}
-                    <div className="min-w-0 flex-1 2xl:hidden">
+                    <div className="min-w-0 flex-1 lg:hidden">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="flex h-[54px] w-full items-center justify-between px-2 font-bold text-[#111827]"
@@ -90,20 +83,20 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                 >
                                     <div className="flex flex-col pb-2 max-h-[60vh] overflow-y-auto">
                                         {items.map((item) => {
-                                            const active = isActive(item.key);
-                                            return (
-                                                <button
-                                                    key={item.key}
-                                                    onClick={() => {
-                                                        onTabChange(item.key);
-                                                        setIsMenuOpen(false);
-                                                    }}
-                                                    className={`flex items-center gap-3 border-t border-[#F5EAE3] px-5 py-3.5 font-bold transition-colors ${active ? 'bg-[#FFF3EA] text-[#111827]' : 'text-[#111827] hover:bg-[#FFFAF7]'}`}
-                                                >
-                                                    <span className={`${active ? 'text-[#F15A24]' : 'text-[#8192AA]'}`}>{item.icon}</span>
-                                                    <span className="font-medium text-[14px]">{item.label}</span>
-                                                </button>
-                                            )
+                                             const active = isActive(item.key);
+                                             return (
+                                                 <button
+                                                     key={item.key}
+                                                     onClick={() => {
+                                                         onTabChange(item.key);
+                                                         setIsMenuOpen(false);
+                                                     }}
+                                                     className={`flex items-center gap-3 border-t border-[#F5EAE3] px-5 py-3.5 font-bold transition-colors ${active ? 'bg-[#FFF3EA] text-[#111827]' : 'text-[#111827] hover:bg-[#FFFAF7]'}`}
+                                                 >
+                                                     <span className={`${active ? 'text-[#F15A24]' : 'text-[#8192AA]'}`}>{item.icon}</span>
+                                                     <span className="font-medium text-[14px]">{item.label}</span>
+                                                 </button>
+                                             );
                                         })}
                                     </div>
                                 </motion.div>
@@ -113,19 +106,8 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
 
                     {/* DESKTOP TABS */}
                     <nav
-                        className={`
-                            hidden 2xl:flex
-                            items-center overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar
-                            flex-1 justify-start
-                            gap-1
-                            sm:gap-2
-                            lg:gap-3
-                            xl:gap-4
-                            min-h-[54px] sm:min-h-[60px]
-                            px-2 sm:px-0
-                        `}
+                        className="hidden lg:flex items-center overflow-x-auto overflow-y-hidden whitespace-nowrap no-scrollbar flex-1 justify-start gap-1 sm:gap-2 xl:gap-3 min-h-[54px] sm:min-h-[60px]"
                     >
-
                         {items.map((item) => {
                             const active = isActive(item.key);
 
@@ -135,7 +117,7 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                                     type="button"
                                     onClick={() => onTabChange(item.key)}
                                     className={`
-                                        relative h-[54px] sm:h-[60px] px-2 sm:px-3
+                                        relative h-[54px] sm:h-[60px] px-2.5 sm:px-3.5
                                         flex items-center justify-center gap-1.5 sm:gap-2
                                         whitespace-nowrap shrink-0 text-[12px] sm:text-[13px] font-bold
                                         transition-colors duration-200 group
