@@ -24,7 +24,7 @@ export const eeeDepartment: DepartmentData = {
     "Renewable energy and smart grid technologies exposure",
     "Career preparation in power and automation engineering"
   ],
-  image: "/optimized/departments/dept about us coverpages/eee.jpg.webp",
+  image: "/departments/dept about us coverpages/eee_cover.jpg",
   researchAreas: [
     "Power Systems and Smart Grids",
     "Renewable Energy Integration",

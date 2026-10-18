@@ -1,7 +1,7 @@
 import { cadDepartment as cadData } from './data/department';
 import type { DepartmentData } from '../shared/types';
 import CADCourseStructure from './components/CADCourseStructure';
-import CSEOutcome from '../cse/components/CSEOutcome';
+import CADOutcome from './components/CADOutcome';
 import CADStudents from './components/CADStudents';
 
 export const cadDepartment: DepartmentData = {
@@ -9,7 +9,7 @@ export const cadDepartment: DepartmentData = {
     layout: 'sidebar',
     components: {
         CourseStructure: CADCourseStructure,
-        Outcome: CSEOutcome,
+        Outcome: CADOutcome,
         Students: CADStudents,
     }
 };

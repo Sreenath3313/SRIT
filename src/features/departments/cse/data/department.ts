@@ -26,7 +26,7 @@ export const cseDepartment: DepartmentData = {
         "Cybersecurity and Network Systems"
     ],
     "stats": {
-        "faculty": "32+",
+        "faculty": "47",
         "labs": "8",
         "students": "800+",
         "placement": "95%"
@@ -58,311 +58,413 @@ export const cseDepartment: DepartmentData = {
     },
     "faculty": [
         {
-            "name": "Dr. P. Veera Prakash",
-            "designation": "Associate Professor and Head",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/view/pvprakash/home",
-            "image": "/optimized/cse_hod.jpg.webp"
+                "name": "Dr. P. Veera Prakash",
+                "designation": "Associate Professor & Head",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "02/12/2010",
+                "association": "Regular",
+                "image": "/optimized/Faculty/cse_hod.jpg.webp",
+                "profileUrl": "https://sites.google.com/view/pvprakash/home"
         },
         {
-            "name": "Dr. M. Ranjit Reddy",
-            "designation": "Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/view/ranjit",
-            "image": "/optimized/ranjit.jpg.webp"
+                "name": "Dr. M. Ranjit Reddy",
+                "designation": "Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "24/09/2008",
+                "association": "Regular",
+                "image": "/optimized/Faculty/ranjit.jpg.webp",
+                "profileUrl": "https://sites.google.com/view/ranjit"
         },
         {
-            "name": "Dr. T. Venkata Naga Jayudu",
-            "designation": "Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/prod/view/tvnjayudu"
+                "name": "Dr. T. Venkata Naga Jayudu",
+                "designation": "Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "19/06/2017",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/prod/view/tvnjayudu"
         },
         {
-            "name": "Dr. T. Giri Babu",
-            "designation": "Associate Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/view/giricse/personal-details-qualifications"
+                "name": "Dr. M. Vijaya Bhaskar",
+                "designation": "Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "07/07/2026",
+                "association": "Regular",
+                "image": "/optimized/Faculty/vijay bhaskar.png.webp",
+                "profileUrl": "https://sites.google.com/view/giricse/personal-details-qualifications"
         },
         {
-            "name": "Dr. D. Rajesh Babu",
-            "designation": "Associate Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D."
+                "name": "Dr. D. Rajesh Babu",
+                "designation": "Associate Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "23/09/2022",
+                "association": "Regular"
         },
         {
-            "name": "Dr. S. Ravi Kumar",
-            "designation": "Associate Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph. D.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/drsravikumar/home"
+                "name": "Dr. S. Ravi Kumar",
+                "designation": "Associate Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "01/07/2025",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/drsravikumar/home"
         },
         {
-            "name": "Dr. S. Sunitha",
-            "designation": "Associate Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/sunitha-s/home"
+                "name": "Dr. S. Sunitha",
+                "designation": "Associate Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "06/12/2021",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/sunitha-s/home"
         },
         {
-            "name": "Dr. C. Nagesh",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech. Ph.D.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/nagesh-cse/home"
+                "name": "Dr. C. Nagesh",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, Ph.D.",
+                "joiningDate": "28/07/2022",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/nagesh-cse/home"
         },
         {
-            "name": "Mr. L. Suman",
-            "designation": "Assistant Professor (Regular)",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech, (Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/ssuman/home"
+                "name": "Mr. L. Suman",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "02/08/2010",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/ssuman/home"
         },
         {
-            "name": "Mr. M. Narasimhulu",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/view/mr-m-narasimhulu/home"
+                "name": "Mr. M. Narasimhulu",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "12/05/2011",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/view/mr-m-narasimhulu/home"
         },
         {
-            "name": "Mr. C. Sudheer Kumar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/sudheerkumar/home"
+                "name": "Mr. C. Sudheer Kumar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "04/01/2014",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/sudheerkumar/home"
         },
         {
-            "name": "Mr. G. Chinna Pullaiah",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/gandla-chinna-pullaiah"
+                "name": "Mr. G. Chinna Pullaiah",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "01/01/2014",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/gandla-chinna-pullaiah"
         },
         {
-            "name": "Mrs. T. Kavitha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/kavitha"
+                "name": "Mrs. T. Kavitha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/02/2015",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/kavitha"
         },
         {
-            "name": "Mrs. M. Soumya",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/soumya-madduru/home"
+                "name": "Mrs. M. Soumya",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "02/07/2016",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/soumya-madduru/home"
         },
         {
-            "name": "Mr. A. Erriswami Reddy",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/swamy/home"
+                "name": "Mr. A. Erriswami Reddy",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "01/06/2019",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/swamy/home"
         },
         {
-            "name": "Mrs. P. Rohini",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/rohini/home"
+                "name": "Mrs. P. Rohini",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "28/12/2020",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/rohini/home"
         },
         {
-            "name": "Mr. K. Lokeshnath",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/lokeshnath-k/home"
+                "name": "Mr. K Lokeshnath",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "05/08/2020",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/lokeshnath-k/home"
         },
         {
-            "name": "Mrs. G. Nagaleela",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/nagaleela-g/home"
+                "name": "Mrs. G. Nagaleela",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "01/12/2021",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/nagaleela-g/home"
         },
         {
-            "name": "Mr. A. Bala Ankanna",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/abalaankanna"
+                "name": "Mr. A. Bala Ankanna",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "09/09/2017",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/abalaankanna"
         },
         {
-            "name": "Mrs. K. Umadevi",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/view/kambamumadevi/home"
+                "name": "Mrs. K. Umadevi",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "20/10/2021",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/view/kambamumadevi/home"
         },
         {
-            "name": "Mr. P. Shajahan",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/pagidipalle-shajahan/home"
+                "name": "Mr. P. Shajahan",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "19/10/2022",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/pagidipalle-shajahan/home"
         },
         {
-            "name": "Ms. G. Lokeswari",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)",
-            "profileUrl": "https://sites.google.com/srit.ac.in/lokeswarig/home"
+                "name": "Ms. G. Lokeswari",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "19/07/2022",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/lokeswarig/home"
         },
         {
-            "name": "Mr. G. Ganesh",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/ganeshcse/home"
+                "name": "Mr. G. Ganesh",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "11/04/2022",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/ganeshcse/home"
         },
         {
-            "name": "Ms. C. Rekha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/rekha/home"
+                "name": "Ms. C. Rekha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "04/06/2025",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/rekha/home"
         },
         {
-            "name": "Mr. E. Nagaprabhakar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech,(Ph.D)"
+                "name": "Mr. E. Nagaprabhakar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech, (Ph.D)",
+                "joiningDate": "01/08/2024",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. N. Ahamadunnisa Begum",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/department-of-cse?usp=sharing"
+                "name": "Mrs. N. Ahamadunnisa Begum",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "05/08/2024",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/department-of-cse?usp=sharing"
         },
         {
-            "name": "Mr. N. Madhava Reddy",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/madhavareddy/copy-of-home"
+                "name": "Mr. N. Madhava Reddy",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "17/11/2025",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/madhavareddy/copy-of-home"
         },
         {
-            "name": "Mrs. K. Lavanya",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/srit.ac.in/lavanya/home"
+                "name": "Mrs. K. Lavanya",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "01/12/2025",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/lavanya/home"
         },
         {
-            "name": "Mr. k. Shakir Ahamad",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. B. Subba Chithanya",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "23/06/2025",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/srit.ac.in/beemireddy-subbachaithanya/home"
         },
         {
-            "name": "Mrs. K. Hymavathi",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mr. K. Shakir Ahamad",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/03/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. D. Vishalakshi",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. K. Hymavathi",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mr. C. Sekhar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. D. Vishalakshi",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/03/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. N. Ushasree",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech.",
-            "profileUrl": "https://sites.google.com/view/ushasree/home"
+                "name": "Mr. C. Sekhar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/03/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. K. Geetha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. N Ushasree",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "01/05/2026",
+                "association": "Regular",
+                "profileUrl": "https://sites.google.com/view/ushasree/home"
         },
         {
-            "name": "Mr. K.R. Lokesh",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. K Geetha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "02/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. P. Seenamma",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mr. K R Lokesh",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "01/08/2024",
+                "association": "Regular"
         },
         {
-            "name": "Mr. K. Mohan Ranga Rao",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. P. Seenamma",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "10/06/2023",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. T. Sushma Priya",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mr. K. Mohan Ranga Rao",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "10/06/2022",
+                "association": "Regular"
         },
         {
-            "name": "Mrs. P. Manasa",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. T Sushma Priya",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "01/07/2022",
+                "association": "Regular"
         },
         {
-            "name": "Ms. K. Asritha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mrs. P. Manasa",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "08/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Ms. R. Indu",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Ms. K. Asritha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Ms. V. Kavitha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Ms. R. Indu",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mr. V. Naveen Kumar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Ms. V. Kavitha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Ms. P. Sowmitha",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mr. V. Naveen Kumar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mr. C. Ashok Kumar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Ms. P. Sowmitha",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
         },
         {
-            "name": "Mr. B. Kishore Kumar",
-            "designation": "Assistant Professor",
-            "specialization": "Computer Science and Engineering",
-            "qualification": "M.Tech."
+                "name": "Mr. C. Ashok Kumar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "24/04/2026",
+                "association": "Regular"
+        },
+        {
+                "name": "Mr. B. Kishore Kumar",
+                "designation": "Assistant Professor",
+                "specialization": "Computer Science and Engineering",
+                "qualification": "M.Tech.",
+                "joiningDate": "27/08/2024",
+                "association": "Adjunct"
         }
-    ],
+],
     "overview": [
         {
             "title": "Vision & Mission",

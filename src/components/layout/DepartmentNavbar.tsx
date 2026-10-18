@@ -52,11 +52,11 @@ const DepartmentNavbar: React.FC<DepartmentNavbarProps> = ({
                 <div className="flex w-full items-center justify-between px-3 sm:px-5 md:px-6 lg:px-8">
                     <div
                         title={dept.fullName || dept.name}
-                        className="flex h-[56px] sm:h-[62px] shrink-0 items-center"
+                        className="flex h-[56px] sm:h-[62px] shrink-0 items-center max-w-[280px] sm:max-w-md lg:max-w-lg xl:max-w-xl"
                     >
                         <span className="inline-flex min-w-0 items-center gap-2 overflow-hidden rounded-lg border border-[#F5D8C8] bg-white/95 px-3 py-1.5 text-[12px] font-extrabold tracking-[0.03em] text-[#F15A24] shadow-[0_2px_8px_rgba(164,76,31,0.09)] sm:px-3.5 sm:py-2 sm:text-[13px] lg:text-[14px]">
                             <span aria-hidden="true" className="h-2 w-2 shrink-0 rounded-full bg-[#FF6600]" />
-                            <span className="overflow-hidden text-ellipsis whitespace-nowrap">Dept of {dept.code}</span>
+                            <span className="overflow-hidden text-ellipsis whitespace-nowrap">{dept.fullName || dept.name}</span>
                         </span>
                     </div>
 

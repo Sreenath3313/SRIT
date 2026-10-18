@@ -201,11 +201,11 @@ export const cadDepartment: DepartmentData = {
         },
         {
             "title": "Attainment of Course Outcomes",
-            "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSi4wOqSXFhQbRcAvxwxge8RfHM3cMM4-RYBUTACGDXiSQQinckXDIgpSYc2EVoew/pubhtml?widget=true&chrome=false&headers=false\" width=\"100%\" height=\"800\" style=\"border: none; overflow: hidden;\"></iframe>"
+            "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSi4wOqSXFhQbRcAvxwxge8RfHM3cMM4-RYBUTACGDXiSQQinckXDIgpSYc2EVoew/pubhtml/sheet?headers=false&gid=419195555\" width=\"100%\" height=\"800\" style=\"border: none; overflow: hidden;\"></iframe>"
         },
         {
             "title": "PO and PSO Attainment",
-            "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRbEBJ4ARUOg6CwJoolh_MLoLu7Seg3xQh36kAHc4XcPCVqEo-Xvx1SfgYhFID44Q/pubhtml?widget=true&chrome=false&headers=false\" width=\"100%\" height=\"800\" style=\"border: none; overflow: hidden;\"></iframe>"
+            "content": "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRbEBJ4ARUOg6CwJoolh_MLoLu7Seg3xQh36kAHc4XcPCVqEo-Xvx1SfgYhFID44Q/pubhtml/sheet?headers=false&gid=466099360\" width=\"100%\" height=\"800\" style=\"border: none; overflow: hidden;\"></iframe>"
         }
     ],
     "courseStructureItems": [

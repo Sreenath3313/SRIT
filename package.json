@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync:social": "node scripts/sync-social.mjs",
+    "predev": "node scripts/sync-social.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/sync-social.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

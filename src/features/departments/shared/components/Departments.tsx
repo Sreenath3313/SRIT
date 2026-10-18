@@ -2,12 +2,13 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { departments } from '../../index';
+import AnimatedCounter from '../../../../components/common/AnimatedCounter';
 
 const deptImages: Record<string, string> = {
     CSE: '/optimized/CSEDept.jpg.webp',
     CSM: '/CSMDept.JPG',
     ECE: '/optimized/ECE Dept.JPG.webp',
-    EEE: '/optimized/EEE Dept.JPG.webp',
+    EEE: '/departments/eee_cover_16x9.jpg',
     MEC: '/optimized/MechDept.JPG.webp',
     CAD: '/optimized/CSDDept.JPG.webp',
     CIV: '/optimized/CIVILDept.JPG.webp',
@@ -60,17 +61,21 @@ const Departments: React.FC = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
                                     <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
-                                        <span className="text-white font-serif text-2xl font-bold tracking-wide">
+                                        <span className="text-white font-serif text-xl sm:text-2xl font-bold tracking-wide">
                                             {dept.code}
                                         </span>
                                         <div className="flex gap-4">
                                             <div className="text-center">
                                                 <div className="text-white/70 text-[10px] uppercase tracking-wider font-bold mb-0.5">Faculty</div>
-                                                <div className="text-white font-semibold text-sm">{dept.stats.faculty}</div>
+                                                <div className="text-white font-semibold text-sm">
+                                                    <AnimatedCounter value={dept.stats.faculty} />
+                                                </div>
                                             </div>
                                             <div className="text-center">
                                                 <div className="text-white/70 text-[10px] uppercase tracking-wider font-bold mb-0.5">Labs</div>
-                                                <div className="text-white font-semibold text-sm">{dept.stats.labs}</div>
+                                                <div className="text-white font-semibold text-sm">
+                                                    <AnimatedCounter value={dept.stats.labs} />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -81,8 +86,8 @@ const Departments: React.FC = () => {
                                     {/* Default State */}
                                     <div className="p-5 sm:p-7 md:absolute md:inset-0 md:transition-transform md:duration-500 md:ease-[0.22,1,0.36,1] md:group-hover:-translate-y-full flex flex-col justify-between">
                                         <div>
-                                            <h3 className="font-serif text-[19px] font-bold text-neutral-dark mb-2.5 leading-snug">
-                                                {dept.name}
+                                            <h3 className="font-serif text-[17px] sm:text-[18px] font-bold text-neutral-dark mb-2.5 leading-snug">
+                                                {dept.fullName || dept.name}
                                             </h3>
                                             <p className="text-neutral-500 text-[13.5px] leading-relaxed line-clamp-3">
                                                 {dept.tagline}

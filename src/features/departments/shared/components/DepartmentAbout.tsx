@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Award, Users, Microscope, GraduationCap, Briefcase } from 'lucide-react';
 import type { DepartmentData } from '../../index';
+import AnimatedCounter from '../../../../components/common/AnimatedCounter';
 
 interface DepartmentAboutProps {
     dept: DepartmentData;
@@ -20,16 +21,13 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
 
                     <div className={`mt-6 mb-8 flex flex-col lg:flex-row ${dept.slug === 'mec' ? 'items-start gap-6' : 'overflow-hidden rounded-xl border border-neutral-100 bg-white shadow-md'}`}>
                         <div className={`relative h-[260px] sm:h-[320px] lg:h-[360px] lg:w-4/12 lg:shrink-0 overflow-hidden ${dept.slug === 'mec' ? 'self-start rounded-xl shadow-md' : 'self-center'}`}>
-                            <img src={dept.image} alt={dept.name} className="w-full h-full object-cover" loading="lazy" />
+                            <img src={dept.image} alt={dept.fullName || dept.name} className="w-full h-full object-cover" loading="lazy" />
                             <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase rounded shadow-sm">
                                 Featured Program
                             </span>
-                            <span className="absolute top-4 right-4 text-white/80 font-serif text-2xl font-bold">
-                                {dept.code}
-                            </span>
                         </div>
                         <div className={`flex flex-col justify-center lg:w-7/12 p-6 lg:p-10 ${dept.slug === 'mec' ? 'rounded-xl border border-neutral-100 bg-white shadow-md' : ''}`}>
-                            <h3 className="font-serif text-xl lg:text-2xl font-bold text-neutral-dark mb-3">{dept.name}</h3>
+                            <h3 className="font-serif text-xl lg:text-2xl font-bold text-neutral-dark mb-3">{dept.fullName || dept.name}</h3>
                             <p className="text-neutral-600 text-[14px] leading-[1.8] mb-6 text-justify">{dept.description[0]}</p>
 
                             <div className="mb-6 grid grid-cols-2 gap-2.5 border-b border-neutral-100 pb-6 sm:gap-3 lg:grid-cols-4">
@@ -42,7 +40,9 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                                     <div key={label} className="flex min-w-0 flex-col items-center justify-center rounded-xl border border-neutral-100 bg-[#FFFAF6] px-2 py-3 text-center sm:px-3 sm:py-4">
                                         <Icon aria-hidden="true" className="mb-1.5 h-4 w-4 text-primary sm:h-[18px] sm:w-[18px]" />
                                         <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-neutral-500 sm:text-[10px] sm:tracking-[0.1em]">{label}</span>
-                                        <span className="mt-1 break-words text-base font-bold leading-tight text-neutral-dark sm:text-lg">{value}</span>
+                                        <span className="mt-1 break-words text-base font-bold leading-tight text-neutral-dark sm:text-lg">
+                                            <AnimatedCounter value={value} />
+                                        </span>
                                     </div>
                                 ))}
                             </div>
@@ -100,7 +100,7 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                         <h3 className="font-serif text-3xl font-bold text-neutral-dark">{dept.hodMessage.name}</h3>
                         <p className="text-primary text-xs lg:text-[13px] font-bold uppercase tracking-[0.2em] mt-3 mb-6">{dept.hodMessage.designation}</p>
                         <p className="text-neutral-600 italic text-base lg:text-lg leading-[1.8] mb-8 font-serif text-justify">&ldquo;{dept.hodMessage.message}&rdquo;</p>
-                        <p className="text-neutral-400 text-sm lg:text-[15px] font-semibold">Dept. of {dept.name}</p>
+                        <p className="text-neutral-400 text-sm lg:text-[15px] font-semibold">{dept.fullName || `Department of ${dept.name}`}</p>
                     </div>
                 </div>
             </div>

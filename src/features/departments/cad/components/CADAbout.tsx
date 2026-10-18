@@ -18,12 +18,9 @@ const CADAbout: React.FC<CADAboutProps> = ({ dept }) => {
                         ABOUT THE DEPARTMENT
                     </h2>
                     <div className="relative h-[240px] sm:h-[300px] lg:h-[340px] w-full rounded-xl overflow-hidden shadow-md max-w-2xl">
-                        <img src={dept.image || "/optimized/cse_image.jpg.webp"} alt={dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                        <img src={dept.image || "/optimized/cse_image.jpg.webp"} alt={dept.fullName || dept.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                         <span className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 text-[#FF6600] text-[11px] font-bold tracking-[0.18em] uppercase rounded shadow-sm">
                             FEATURED PROGRAM
-                        </span>
-                        <span className="absolute top-4 right-4 text-white/90 font-serif text-2xl font-bold drop-shadow-md">
-                            {dept.code}
                         </span>
                     </div>
                 </div>
@@ -32,7 +29,7 @@ const CADAbout: React.FC<CADAboutProps> = ({ dept }) => {
                 <div className="space-y-8 xl:pt-16">
                     {/* Department Description */}
                     <div className="space-y-5">
-                        <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-dark">{dept.name}</h3>
+                        <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black text-neutral-dark">{dept.fullName || dept.name}</h3>
                         <div className="text-neutral-700 text-[15px] lg:text-[16px] font-medium leading-[1.8] text-justify space-y-4">
                             {dept.description.map((para, idx) => (
                                 <p key={idx}>{para}</p>
@@ -126,7 +123,7 @@ const CADAbout: React.FC<CADAboutProps> = ({ dept }) => {
                             &ldquo;{dept.hodMessage.message}&rdquo;
                         </p>
                         <p className="text-neutral-400 text-xs lg:text-[13px] font-semibold">
-                            Dept. of {dept.name}
+                            {dept.fullName || `Department of ${dept.name}`}
                         </p>
                     </div>
                 </div>

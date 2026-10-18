@@ -117,8 +117,22 @@ export const campusLifeSections: SubSection[] = [
         icon: Wifi,
         path: '/campus-life/internet',
         overview: [
-            'SRIT campus is fully interconnected with a redundant high-speed 1 Gbps fiber-optic backbone and enterprise-grade secure Wi-Fi access points across all academic, administrative, and residential blocks.',
+            'SRIT is equipped with a high-speed dedicated 80 Mbps Leased Line internet connection provided under the NMEICT program by MHRD, Government of India.',
+            'Over 200+ high-performance computer systems across centralized computing labs, digital library hubs, and department labs are fully networked with high-speed internet.',
+            'A secure, high-capacity campus-wide Wi-Fi network enables students and faculty to access academic resources seamlessly across all blocks, with specialized evening browsing access from 5:00 PM to 9:00 PM in hostels.',
         ],
+        tableData: {
+            title: 'Internet & Connectivity Specifications',
+            headers: ['Facility Parameter', 'Technical Specification', 'Operational Coverage'],
+            rows: [
+                ['Dedicated Leased Line', '80 Mbps Dedicated Bandwidth', 'High-speed fiber connectivity under MHRD NMEICT program'],
+                ['Networked Workstations', '200+ Desktop Systems', 'Central computing labs, digital library & departments'],
+                ['Campus-Wide Wi-Fi', 'Enterprise 802.11ac Access Points', 'Academic blocks, administrative hubs & seminar halls'],
+                ['Hostel Evening Browsing', 'Dedicated Hostel Wi-Fi Zones', 'Available daily after college hours: 5:00 PM – 9:00 PM'],
+                ['Digital Library Access', '12 Dedicated Digital Terminals', 'Access to DELNET, IEEE Xplore, e-journals & e-books'],
+                ['Network Security', 'Firewall & Content Filtering', 'Role-based authentication & 24/7 network monitoring']
+            ]
+        },
     },
     {
         id: 'cafeteria',
