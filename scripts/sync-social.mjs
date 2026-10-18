@@ -89,9 +89,105 @@ const pick = (re, s, i = 1) => {
 };
 
 /* ------------------------------------------------------------------ */
-/* Instagram                                                          */
+/* Instagram Official Graph API (Business & Creator) & Fallback       */
 /* ------------------------------------------------------------------ */
+async function syncInstagramFromGraphAPI(token, accountId) {
+    try {
+        log('Attempting official Instagram Graph API fetch...');
+        // Note: Instagram Basic Display API was officially sunset on December 4, 2024.
+        // We use the official Instagram Graph API for Professional (Business/Creator) accounts.
+        // If an account ID is provided directly, we query its fields and media edge:
+        // https://graph.facebook.com/v21.0/{instagram-business-account-id}?fields=...
+        let igId = accountId;
+
+        // If no explicit INSTAGRAM_ACCOUNT_ID is supplied, we can auto-discover it
+        // from the Facebook Page's instagram_business_account edge using the Page Access Token.
+        if (!igId) {
+            const pageId = process.env.FACEBOOK_PAGE_ID?.trim() || '190643840980550';
+            const pageDiscoverUrl = `https://graph.facebook.com/v21.0/${pageId}?fields=instagram_business_account&access_token=${token}`;
+            const discoverRes = await fetch(pageDiscoverUrl, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(10000) });
+            const discoverJson = await discoverRes.json();
+            if (discoverJson.instagram_business_account?.id) {
+                igId = discoverJson.instagram_business_account.id;
+                log(`[Instagram API] Auto-discovered Instagram Business Account ID: ${igId}`);
+            }
+        }
+
+        if (!igId) {
+            log('[Instagram API Warning] No INSTAGRAM_ACCOUNT_ID provided and none could be discovered from Facebook Page.');
+            return null;
+        }
+
+        const endpoint = `https://graph.facebook.com/v21.0/${igId}?fields=id,username,biography,profile_picture_url,media{id,caption,media_type,media_url,thumbnail_url,permalink,timestamp}&access_token=${token}`;
+
+        const res = await fetch(endpoint, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(15000) });
+        const json = await res.json();
+
+        if (json.error) {
+            log(`[Instagram API Warning] ${json.error.message} (code: ${json.error.code}, type: ${json.error.type})`);
+            return null;
+        }
+
+        const rawPosts = json.media?.data || [];
+        if (!rawPosts.length) {
+            log('[Instagram API] No posts returned from Instagram Graph API endpoint');
+            return null;
+        }
+
+        const handle = json.username || 'sritatp';
+        const bio = json.biography || '';
+        let avatar = null;
+        if (json.profile_picture_url && (await download(json.profile_picture_url, path.join(PUBLIC_SOCIAL, 'instagram/avatar.jpg')))) {
+            avatar = '/social/instagram/avatar.jpg';
+        }
+
+        const posts = [];
+        for (const item of rawPosts) {
+            const id = item.id;
+            const link = item.permalink || `https://www.instagram.com/p/${id}/`;
+            const type = item.media_type === 'VIDEO' ? 'video' : item.media_type === 'CAROUSEL_ALBUM' ? 'carousel' : 'image';
+            const timestamp = item.timestamp ? Math.floor(new Date(item.timestamp).getTime() / 1000) : null;
+            const caption = item.caption || '';
+            const mediaUrl = item.thumbnail_url || item.media_url;
+
+            let image = null;
+            if (mediaUrl) {
+                const rel = `/social/instagram/${id}.jpg`;
+                if (await download(mediaUrl, path.join(ROOT, 'public', rel))) {
+                    image = rel;
+                }
+            }
+
+            posts.push({ id, link, type, timestamp, caption, image });
+        }
+
+        // Sort descending by timestamp (newest first)
+        posts.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+        log(`[Instagram API Success] Synced ${posts.length} posts via official Instagram Graph API`);
+        return {
+            profile: { handle, bio, avatar, url: `https://www.instagram.com/${handle}/` },
+            posts: posts.slice(0, MAX_INSTAGRAM),
+        };
+    } catch (err) {
+        log(`[Instagram API Error] ${err.message}`);
+        return null;
+    }
+}
+
 async function syncInstagram(html) {
+    // 1. Try official Instagram Graph API if credentials are provided in environment
+    const igToken = process.env.INSTAGRAM_ACCESS_TOKEN?.trim();
+    const igAccountId = process.env.INSTAGRAM_ACCOUNT_ID?.trim();
+    if (igToken) {
+        const apiResult = await syncInstagramFromGraphAPI(igToken, igAccountId);
+        if (apiResult && apiResult.posts.length > 0) {
+            return apiResult;
+        }
+        log('Instagram API unavailable or returned no posts. Falling back to syndication feed...');
+    }
+
+    // 2. Syndication fallback from official verified feed on srit.ac.in
     const listing = await fetchText(SBI_CACHE_URL).catch(() => '');
     const cached = new Set([...listing.matchAll(/data-sort="([^"]+\.(?:webp|jpg))"/g)].map((m) => m[1]));
 
@@ -136,6 +232,9 @@ async function syncInstagram(html) {
     if (avatarRemote && (await download(avatarRemote, path.join(PUBLIC_SOCIAL, 'instagram/avatar.jpg')))) {
         avatar = '/social/instagram/avatar.jpg';
     }
+
+    // Ensure posts are strictly sorted by latest first
+    posts.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
     log(`Instagram: ${posts.length} posts, ${posts.filter((p) => p.image).length} with real images`);
     return {
@@ -250,9 +349,130 @@ async function syncTwitter(html) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Facebook                                                           */
+/* Facebook Official Graph API & Web Syndication Fallback             */
 /* ------------------------------------------------------------------ */
+async function syncFacebookFromGraphAPI(token, pageId = '190643840980550') {
+    try {
+        log('Attempting Facebook Graph API fetch...');
+        // 1. Fetch Page profile (name, about, fan_count, picture, cover)
+        const profileUrl = `https://graph.facebook.com/v21.0/${pageId}?fields=id,name,about,fan_count,picture.type(large),cover&access_token=${token}`;
+        const profileRes = await fetch(profileUrl, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(15000) });
+        const profileJson = await profileRes.json();
+
+        if (profileJson.error) {
+            log(`[Facebook API Warning] Profile fetch: ${profileJson.error.message} (code: ${profileJson.error.code})`);
+            return null;
+        }
+
+        const name = profileJson.name || 'Srinivasa Ramanujan Institute of Technology';
+        const bio = profileJson.about || '';
+        const likes = profileJson.fan_count ? profileJson.fan_count.toLocaleString('en-US') : null;
+
+        let avatar = '/social/facebook/avatar.jpg';
+        if (profileJson.picture?.data?.url) {
+            if (await download(profileJson.picture.data.url, path.join(PUBLIC_SOCIAL, 'facebook/avatar.jpg'))) {
+                avatar = '/social/facebook/avatar.jpg';
+            }
+        }
+
+        let cover = null;
+        if (profileJson.cover?.source) {
+            if (await download(profileJson.cover.source, path.join(PUBLIC_SOCIAL, 'facebook/cover.jpg'))) {
+                cover = '/social/facebook/cover.jpg';
+            }
+        }
+
+        // 2. Fetch Page published posts with attachments
+        const postsUrl = `https://graph.facebook.com/v21.0/${pageId}/published_posts?fields=id,message,created_time,permalink_url,full_picture,attachments{media_type,media,subattachments}&limit=10&access_token=${token}`;
+        const postsRes = await fetch(postsUrl, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(15000) });
+        const postsJson = await postsRes.json();
+
+        if (postsJson.error) {
+            log(`[Facebook API Warning] Posts fetch: ${postsJson.error.message} (code: ${postsJson.error.code})`);
+            return null;
+        }
+
+        const rawPosts = postsJson.data || [];
+        if (!rawPosts.length) {
+            log('[Facebook API] No posts returned from Page feed');
+            return null;
+        }
+
+        const posts = [];
+        for (const item of rawPosts) {
+            const id = item.id;
+            const text = item.message || '';
+            const url = item.permalink_url || `https://www.facebook.com/${id}`;
+            const dateObj = item.created_time ? new Date(item.created_time) : null;
+            const dateLabel = dateObj && !isNaN(dateObj.getTime())
+                ? dateObj.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
+                : 'Recent post';
+
+            const media = [];
+            if (item.full_picture) {
+                const rel = `/social/facebook/${id.replace(/[^a-zA-Z0-9_]/g, '_')}.jpg`;
+                if (await download(item.full_picture, path.join(ROOT, 'public', rel))) {
+                    media.push({ src: rel, type: 'photo' });
+                }
+            }
+
+            // Extract extra photos from subattachments if present
+            const subattachments = item.attachments?.data?.[0]?.subattachments?.data || [];
+            for (let i = 0; i < subattachments.length && media.length < 4; i++) {
+                const sub = subattachments[i];
+                if (sub.media?.image?.src) {
+                    const rel = `/social/facebook/${id.replace(/[^a-zA-Z0-9_]/g, '_')}_${i + 1}.jpg`;
+                    if (await download(sub.media.image.src, path.join(ROOT, 'public', rel))) {
+                        media.push({ src: rel, type: 'photo' });
+                    }
+                }
+            }
+
+            const isVideo = item.attachments?.data?.[0]?.media_type === 'video';
+            const type = isVideo ? 'video' : media.length > 0 ? 'photo' : 'status';
+
+            posts.push({
+                id,
+                dateLabel,
+                text,
+                url,
+                type,
+                media,
+                created_time: item.created_time,
+            });
+        }
+
+        // Sort descending by created_time
+        posts.sort((a, b) => {
+            const da = a.created_time ? new Date(a.created_time).getTime() : 0;
+            const db = b.created_time ? new Date(b.created_time).getTime() : 0;
+            return db - da;
+        });
+
+        log(`[Facebook API Success] Synced ${posts.length} posts via official Graph API`);
+        return {
+            profile: { name, bio, likes, avatar, cover, url: `https://www.facebook.com/${pageId}` },
+            posts: posts.slice(0, 8),
+        };
+    } catch (err) {
+        log(`[Facebook API Error] ${err.message}`);
+        return null;
+    }
+}
+
 async function syncFacebook(html, twitterTweets = []) {
+    // 1. Try official Facebook Graph API if credentials are provided in environment
+    const fbToken = process.env.FACEBOOK_PAGE_ACCESS_TOKEN?.trim();
+    const fbPageId = process.env.FACEBOOK_PAGE_ID?.trim() || '190643840980550';
+    if (fbToken) {
+        const apiResult = await syncFacebookFromGraphAPI(fbToken, fbPageId);
+        if (apiResult && apiResult.posts.length > 0) {
+            return apiResult;
+        }
+        log('Facebook API unavailable or returned no posts. Falling back to syndication feed...');
+    }
+
+    // 2. Syndication fallback from official verified feed on srit.ac.in
     const headerStart = html.indexOf('cff-visual-header');
     const header = headerStart >= 0 ? html.slice(headerStart, html.indexOf('id="cff"', headerStart)) : '';
     const name = htmlToText(pick(/class="cff-header-name"[^>]*>([\s\S]*?)<\/a>/, header)) || 'Srinivasa Ramanujan Institute of Technology';

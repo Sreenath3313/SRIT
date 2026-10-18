@@ -237,20 +237,6 @@ const SocialMediaFeeds: React.FC = () => {
                         Social Media
                     </h2>
                     <div className="mx-auto mt-3 h-1 w-16 rounded-full" style={{ backgroundColor: SRIT_ORANGE }} />
-                    
-                    <div className="mt-4 flex items-center justify-center gap-3">
-                        <button
-                            onClick={() => fetchLiveFeeds(true)}
-                            disabled={isRefreshing}
-                            className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-neutral-600 bg-neutral-100 hover:bg-neutral-200 rounded-full transition-all active:scale-95 disabled:opacity-50"
-                            title="Check for new posts now"
-                        >
-                            <svg className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-[#E85D30]' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                            </svg>
-                            {isRefreshing ? 'Checking for new posts…' : 'Check for new posts'}
-                        </button>
-                    </div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
@@ -490,17 +476,6 @@ const SocialMediaFeeds: React.FC = () => {
                             ))}
                         </div>
                     </FeedCard>
-                </div>
-
-                <div className="mt-6 flex flex-col items-center justify-center gap-1 text-center">
-                    <p className="text-[11px] text-neutral-400">
-                        Latest posts from SRIT's official @sritatp accounts · updated{' '}
-                        {new Date(data.syncedAt).toLocaleString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 text-[10px] text-neutral-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        Auto-sync active: checking Instagram, Facebook & X every 5 minutes
-                    </span>
                 </div>
             </div>
 

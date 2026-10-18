@@ -84,7 +84,7 @@ const DepartmentFaculty: React.FC<DepartmentFacultyProps> = ({ dept }) => {
         }))
     ];
 
-    return <DepartmentAccordion title="FACULTY" items={defaultItems} defaultOpenIndex={0} variant={dept.slug === 'ece' ? 'ece' : 'default'} />;
+    return <DepartmentAccordion title="FACULTY" items={defaultItems} defaultOpenIndex={0} variant="csm" />;
 };
 
 export default DepartmentFaculty;

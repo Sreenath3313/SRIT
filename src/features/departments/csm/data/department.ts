@@ -115,6 +115,7 @@ export const csmDepartment: DepartmentData = {
             "joiningDate": "17-08-2022",
             "qualification": "M. Tech.",
             "association": "Regular",
+            "image": "/optimized/vijay bhaskar.png.webp",
             "profileUrl": "https://sites.google.com/view/vijayareddy/about?pli=1"
         },
         {
@@ -123,6 +124,7 @@ export const csmDepartment: DepartmentData = {
             "joiningDate": "02-01-2021",
             "qualification": "M. Tech., (Ph. D)",
             "association": "Regular",
+            "image": "/optimized/venkatesh.png.webp",
             "profileUrl": "https://sites.google.com/view/venkateshk/home"
         },
         {

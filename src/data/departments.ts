@@ -164,7 +164,6 @@ export const departments: DepartmentData[] = [
                 "qualification": "M.Tech, Ph.D.",
                 "joiningDate": "07/07/2026",
                 "association": "Regular",
-                "image": "/optimized/Faculty/vijay bhaskar.png.webp",
                 "profileUrl": "https://sites.google.com/view/giricse/personal-details-qualifications"
         },
         {
