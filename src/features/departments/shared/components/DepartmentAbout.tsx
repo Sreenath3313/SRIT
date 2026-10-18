@@ -108,23 +108,16 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
             {/* Right Column */}
             <div className="space-y-8">
                 <div className="bg-primary text-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-2xl shadow-primary/30">
-                    <h3 className="font-serif text-2xl font-bold flex items-center gap-3 mb-10">
+                    <h3 className="font-serif text-2xl font-bold flex items-center gap-3 mb-8">
                         <span className="w-2 h-2 rounded-full bg-white"></span>
                         CONTACT US
                     </h3>
-                    <div className="space-y-8 mb-10">
+                    <div className="space-y-6">
                         <div className="flex items-start gap-4">
                             <Mail className="w-6 h-6 text-white/90 shrink-0 mt-0.5" strokeWidth={1.5} />
                             <div>
                                 <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1.5">Email</p>
                                 <p className="text-base text-white font-semibold">{dept.slug}@srit.ac.in</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <Phone className="w-6 h-6 text-white/90 shrink-0 mt-0.5" strokeWidth={1.5} />
-                            <div>
-                                <p className="text-xs font-bold uppercase tracking-widest text-white/70 mb-1.5">Phone</p>
-                                <p className="text-base text-white font-semibold">+91 98765 43214</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
@@ -135,9 +128,6 @@ const DepartmentAbout: React.FC<DepartmentAboutProps> = ({ dept }) => {
                             </div>
                         </div>
                     </div>
-                    <button className="w-full py-4 rounded-xl bg-white hover:bg-white/90 transition-colors text-xs font-black uppercase tracking-[0.2em] text-primary">
-                        View on Map
-                    </button>
                 </div>
 
                 <div className="bg-white rounded-xl p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-neutral-100">

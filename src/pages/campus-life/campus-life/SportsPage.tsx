@@ -13,8 +13,6 @@ export const SportsPage: React.FC = () => {
     const [isSportsTeamSheetOpen, setIsSportsTeamSheetOpen] = useState(false);
     const [isSportsAchievementsOpen, setIsSportsAchievementsOpen] = useState(false);
     const [isSportsContactOpen, setIsSportsContactOpen] = useState(false);
-    const [isSportsViewAll, setIsSportsViewAll] = useState(false);
-
     const activeSection = campusLifeSections.find((s) => s.id === 'sports') || campusLifeSections[0];
 
     return (
@@ -32,7 +30,7 @@ export const SportsPage: React.FC = () => {
                                                 </h2>
                                             </div>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify pt-1">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify pt-1">
                                                 Sport is an integral part of the curriculum. Various sports facility is provided to the students within the campus. The college is committed to create a balanced atmosphere of academic, cultural and sports activities for the overall personality development of its students. Various sports competitions such as inter departmental, Inter collegiate, Inter University, etc help in developing team spirit in students. Sports and games help the students to improve their interpersonal relationship am in healthy manner. Talented students are honored with medals, trophies and certificates.
                                             </p>
 
@@ -94,7 +92,7 @@ export const SportsPage: React.FC = () => {
                                                     <h4 className="font-bold text-sm text-[#FF6600] mb-1.5 uppercase tracking-wide">
                                                         Vision Statement
                                                     </h4>
-                                                    <p className="text-xs sm:text-sm text-[#334155] leading-relaxed">
+                                                    <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
                                                         We endeavor to become the leading voice at the intersection of athletics and academics. We hope to use this voice to unite, challenge and inspire the next generation of leaders to improve lives of athletes and to act as stewards of the best practices in the sports industry as a whole.
                                                     </p>
                                                 </div>
@@ -102,7 +100,7 @@ export const SportsPage: React.FC = () => {
                                                     <h4 className="font-bold text-sm text-[#FF6600] mb-1.5 uppercase tracking-wide">
                                                         Mission Statement
                                                     </h4>
-                                                    <p className="text-xs sm:text-sm text-[#334155] leading-relaxed">
+                                                    <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
                                                         Advance cutting-edge sports-specific research, educate current and future sports professionals, improve the physical and emotional lives of current and former athletes, and harness the power of sport to inspire positive social change.
                                                     </p>
                                                 </div>
@@ -203,83 +201,6 @@ export const SportsPage: React.FC = () => {
                                         </DepartmentAccordionRow>
                                     </AccordionContainer>
                                 </section>
-
-                                {/* === 6. PHOTO GALLERY === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Sports &amp; Athletics Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsSportsViewAll(!isSportsViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
-                                        >
-                                            {isSportsViewAll ? 'Show Carousel' : 'View All Photos'}
-                                        </button>
-                                    </div>
-
-                                    {isSportsViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                            {[
-                                                { url: '/optimized/BasketBall.webp.webp', caption: 'SRIT Professional Basketball Hardcourt Arena' },
-                                                { url: '/optimized/sportfacilites.jpg.webp', caption: 'Inter-Collegiate Basketball Matches & Practice' },
-                                                { url: '/optimized/sports.jpg.webp', caption: 'Student-Athletes Competitive Match Action' },
-                                                { url: '/optimized/Campus.JPG.webp', caption: '25+ Acre Expansive Outdoor Grounds' },
-                                            ].map((img, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            decoding="async"
-                                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative px-2 py-1">
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                                {[
-                                                    { url: '/optimized/BasketBall.webp.webp', caption: 'SRIT Professional Basketball Hardcourt Arena' },
-                                                    { url: '/optimized/sportfacilites.jpg.webp', caption: 'Inter-Collegiate Basketball Matches & Practice' },
-                                                    { url: '/optimized/sports.jpg.webp', caption: 'Student-Athletes Competitive Match Action' },
-                                                    { url: '/optimized/Campus.JPG.webp', caption: '25+ Acre Expansive Outdoor Grounds' },
-                                                ].map((img, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
-                                                    >
-                                                        <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                            <img
-                                                                src={img.url}
-                                                                alt={img.caption}
-                                                                loading="lazy"
-                                                                decoding="async"
-                                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                onError={(e) => {
-                                                                    (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
                             </>
         </CampusLifeLayout>
     );

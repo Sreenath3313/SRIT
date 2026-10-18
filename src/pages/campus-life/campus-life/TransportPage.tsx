@@ -8,8 +8,6 @@ import { AccordionContainer, DepartmentAccordionRow } from '../../../components/
 
 export const TransportPage: React.FC = () => {
     const [isTransportSpreadsheetOpen, setIsTransportSpreadsheetOpen] = useState(false);
-    const [isTransportViewAll, setIsTransportViewAll] = useState(false);
-    const [transportGalleryIndex, setTransportGalleryIndex] = useState(0);
     const [isBusFeeOpen, setIsBusFeeOpen] = useState(false);
     const [isBusSeatingOpen, setIsBusSeatingOpen] = useState(false);
 
@@ -28,15 +26,15 @@ export const TransportPage: React.FC = () => {
                                 </h2>
                             </div>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 The institution runs <strong className="text-[#FF6600] font-bold">30 buses</strong> covering all important points in <span className="text-[#FF6600] font-semibold">Anantapur City, Tadipatri, Dharmavaram &amp; Pamidi</span> towns with a total seating capacity of <strong className="text-[#FF6600] font-bold">1,528 students</strong>.
                             </p>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 To ensure convenient, safe, and punctual transit for day-scholar students and faculty members, <span className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology</span> operates a dedicated fleet of modern buses synchronized with daily academic and laboratory schedules.
                             </p>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 Every vehicle is maintained with stringent safety compliance, <span className="text-[#FF6600] font-semibold">speed governors</span>, first-aid equipment, and <span className="text-[#FF6600] font-semibold">experienced licensed drivers</span>. Clear route schedules and designated boarding points ensure students arrive and return safely every day.
                             </p>
 
@@ -103,118 +101,6 @@ export const TransportPage: React.FC = () => {
                                         </div>
                                     </DepartmentAccordionRow>
                                 </AccordionContainer>
-
-                                {/* === 6. GALLERY (Horizontal Slider / Carousel with Left & Right Arrow Buttons) === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsTransportViewAll(!isTransportViewAll)}
-                                            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#FF6600] hover:text-[#d43d0e] transition-colors group cursor-pointer"
-                                        >
-                                            <span>{isTransportViewAll ? 'Show Carousel' : 'View All'}</span>
-                                            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                                        </button>
-                                    </div>
-
-                                    {isTransportViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {[
-                                                { url: '/optimized/Transport.jpg.webp', caption: 'SRIT 30-Bus Transit Fleet & Campus Parking' },
-                                                { url: '/optimized/Transport.webp.webp', caption: 'Punctual Daily Commute & Route Operations' },
-                                                { url: '/optimized/CollegeMain.jpg.webp', caption: 'Campus Terminal & Main Entrance Gate' },
-                                                { url: '/optimized/Campus.JPG.webp', caption: 'Sprawling 25+ Acre Campus Road Network' },
-                                                { url: '/optimized/College 2.JPG.webp', caption: 'Academic Block Drop-off Zone & Courtyard' },
-                                                { url: '/optimized/College 3.JPG.webp', caption: 'Scenic Landscaped Transit Pathways' },
-                                            ].map((img, gi) => (
-                                                <div
-                                                    key={gi}
-                                                    className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] hover:-translate-y-1 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/30 flex items-center justify-center p-2">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Transport.jpg.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative group/transportsilder px-1">
-                                            <button
-                                                type="button"
-                                                onClick={() => setTransportGalleryIndex((prev) => (prev === 0 ? 3 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Previous image"
-                                            >
-                                                <ChevronLeft size={20} />
-                                            </button>
-
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                {[
-                                                    { url: '/optimized/Transport.jpg.webp', caption: 'SRIT 30-Bus Transit Fleet & Campus Parking' },
-                                                    { url: '/optimized/Transport.webp.webp', caption: 'Punctual Daily Commute & Route Operations' },
-                                                    { url: '/optimized/CollegeMain.jpg.webp', caption: 'Campus Terminal & Main Entrance Gate' },
-                                                    { url: '/optimized/Campus.JPG.webp', caption: 'Sprawling 25+ Acre Campus Road Network' },
-                                                    { url: '/optimized/College 2.JPG.webp', caption: 'Academic Block Drop-off Zone & Courtyard' },
-                                                    { url: '/optimized/College 3.JPG.webp', caption: 'Scenic Landscaped Transit Pathways' },
-                                                ]
-                                                    .slice(transportGalleryIndex, transportGalleryIndex + 3)
-                                                    .concat(
-                                                        transportGalleryIndex + 3 > 6
-                                                            ? [
-                                                                  { url: '/optimized/Transport.jpg.webp', caption: 'SRIT 30-Bus Transit Fleet & Campus Parking' },
-                                                                  { url: '/optimized/Transport.webp.webp', caption: 'Punctual Daily Commute & Route Operations' },
-                                                                  { url: '/optimized/CollegeMain.jpg.webp', caption: 'Campus Terminal & Main Entrance Gate' },
-                                                                  { url: '/optimized/Campus.JPG.webp', caption: 'Sprawling 25+ Acre Campus Road Network' },
-                                                                  { url: '/optimized/College 2.JPG.webp', caption: 'Academic Block Drop-off Zone & Courtyard' },
-                                                                  { url: '/optimized/College 3.JPG.webp', caption: 'Scenic Landscaped Transit Pathways' },
-                                                              ].slice(0, (transportGalleryIndex + 3) % 6)
-                                                            : []
-                                                    )
-                                                    .map((img, gi) => (
-                                                        <div
-                                                            key={gi}
-                                                            className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] hover:-translate-y-1 transition-all duration-300"
-                                                        >
-                                                            <div className="relative aspect-[16/10] w-full overflow-hidden bg-orange-50/30 flex items-center justify-center p-2">
-                                                                <img
-                                                                    src={img.url}
-                                                                    alt={img.caption}
-                                                                    loading="lazy"
-                                                                    className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                    onError={(e) => {
-                                                                        (e.target as HTMLImageElement).src = '/optimized/Transport.jpg.webp';
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-
-                                            <button
-                                                type="button"
-                                                onClick={() => setTransportGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Next image"
-                                            >
-                                                <ChevronRight size={20} />
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
                             </>
         </CampusLifeLayout>
     );

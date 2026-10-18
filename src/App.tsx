@@ -240,6 +240,7 @@ function App() {
           <Route path="/campus-life/library" element={<CentralLibraryPage />} />
           <Route path="/campus-life/transport" element={<TransportPage />} />
           <Route path="/campus-life/hostels" element={<HostelsPage />} />
+          <Route path="/campus-life/hostel" element={<Navigate to="/campus-life/hostels" replace />} />
           <Route path="/campus-life/internet" element={<InternetPage />} />
           <Route path="/campus-life/cafeteria" element={<CafeteriaPage />} />
           <Route path="/campus-life/labs" element={<LaboratoriesPage />} />

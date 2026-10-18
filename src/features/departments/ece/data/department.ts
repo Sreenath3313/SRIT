@@ -306,7 +306,7 @@ export const eceDepartment: DepartmentData = {
     "overview": [
         {
             "title": "Vision and Mission",
-            "content": "<p>Content coming soon.</p>"
+            "content": "<h4 style=\"padding-left: 40px;\"><span style=\"color: #ff6600;\"><strong>VISION:</strong></span></h4><p style=\"padding-left: 40px;\" align=\"justify\">To become a department of excellence in Electronics and Communication and allied areas of engineering by empowering rural students with latest technological updates and human values.</p><h4 style=\"padding-left: 40px;\"><span style=\"color: #ff6600;\"><strong>MISSION:</strong></span></h4><p style=\"padding-left: 40px;\" align=\"justify\"><strong>DM1:</strong> Continually improve the teaching learning and associated processes to prepare the students with problem solving skills.</p><p style=\"padding-left: 40px;\" align=\"JUSTIFY\"><strong>DM2:</strong> Provide comprehensive learning experiences to imbibe industry based technical knowledge and encourage students to pursue higher studies with awareness on ethical values.</p><p style=\"padding-left: 40px;\" align=\"justify\"><strong>DM3:</strong> Nurture a strong research eco-system that facilitates quality research by faculty and students.</p>"
         },
         {
             "title": "Course Expert Team",
@@ -444,7 +444,7 @@ export const eceDepartment: DepartmentData = {
     "studentChapters": [
         {
             "title": "IETE",
-            "content": ""
+            "content": "<div class=\"p-4 space-y-4\"><p class=\"text-neutral-700 leading-relaxed\">The Institution of Electronics and Telecommunication Engineers (IETE) is India's leading recognized professional society devoted to the advancement of Science and Technology of Electronics, Telecommunication & IT. SRIT IETE Student Forum actively conducts technical workshops, guest lectures, symposiums, and hands-on sessions.</p></div>"
         }
     ],
     components: {

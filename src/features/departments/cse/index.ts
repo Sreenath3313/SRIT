@@ -1,5 +1,4 @@
 import { cseDepartment as cseData } from './data/department';
-import CSEAbout from './components/CSEAbout';
 import CSEOutcome from './components/CSEOutcome';
 import CSEStudents from './components/CSEStudents';
 import CSEFaculty from './components/CSEFaculty';
@@ -11,7 +10,6 @@ export const cseDepartment: DepartmentData = {
     ...cseData,
     layout: 'sidebar',
     components: {
-        About: CSEAbout,
         Outcome: CSEOutcome,
         Students: CSEStudents,
         Faculty: CSEFaculty,

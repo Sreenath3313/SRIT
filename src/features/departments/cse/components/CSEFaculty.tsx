@@ -31,7 +31,7 @@ const CSEFaculty: React.FC<CSEFacultyProps> = ({ dept }) => {
         },
         { 
             title: 'Faculty Certifications',
-            content: <IframeWithLoader src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRrYU2pef2LM-i-sgBRkT7sOiCMnmWWKzaAs9yteRm7WYl-H5DUKAzjpYC_30GgUrIeiyJHukFjcutE/pubhtml?widget=true&chrome=false&headers=false" style={{ width: '100%', height: '800px', border: 'none', borderRadius: '8px' }} />
+            content: <p className="text-neutral-500 p-4">Content coming soon.</p>
         },
         { 
             title: "Faculty Development Program's",

@@ -10,9 +10,6 @@ import { AccordionContainer, DepartmentAccordionRow } from '../../../components/
 export const SustainableCampusPage: React.FC = () => {
     const [isSolarEnergyOpen, setIsSolarEnergyOpen] = useState(false);
     const [isSustainabilityReportsOpen, setIsSustainabilityReportsOpen] = useState(false);
-    const [isSustainableViewAll, setIsSustainableViewAll] = useState(false);
-    const [sustainableGalleryIndex, setSustainableGalleryIndex] = useState(0);
-
     return (
         <CampusLifeLayout activeSectionId="sustainable-campus">
             <>
@@ -28,15 +25,15 @@ export const SustainableCampusPage: React.FC = () => {
                                                 </h2>
                                             </div>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 <strong className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology</strong> is deeply committed to environmental conservation, renewable energy adoption, and sustainable development across its <strong className="text-[#FF6600] font-bold">25+ acre eco-friendly sanctuary</strong>.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 Key milestones include extensive rooftop <strong className="text-[#FF6600] font-bold">Solar Photovoltaic Energy (50.40 kWp + 50.24 kWp)</strong> systems supplying clean, green power and significantly reducing institutional carbon footprints.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 SRIT conducts comprehensive <span className="text-[#FF6600] font-semibold">environmental &amp; green audits</span>, maintains hundreds of indigenous trees, practices <span className="text-[#FF6600] font-semibold">rainwater harvesting</span>, implements solid waste segregation, and enforces a strict <strong className="text-[#FF6600] font-bold">plastic-free campus policy</strong>.
                                             </p>
 
@@ -109,7 +106,7 @@ export const SustainableCampusPage: React.FC = () => {
                                                         <span className="w-2 h-2 rounded-full bg-[#FF6600] shrink-0" />
                                                         Institutional Green &amp; Energy Audit Report
                                                     </h4>
-                                                    <p className="text-xs text-neutral-600 leading-relaxed">
+                                                    <p className="text-sm text-neutral-600 leading-relaxed">
                                                         Comprehensive institutional audit records certifying renewable energy generation, energy conservation parameters, and compliance with statutory green campus frameworks.
                                                     </p>
                                                 </div>
@@ -118,7 +115,7 @@ export const SustainableCampusPage: React.FC = () => {
                                                         <span className="w-2 h-2 rounded-full bg-[#FF6600] shrink-0" />
                                                         Environment &amp; Water Conservation Audit
                                                     </h4>
-                                                    <p className="text-xs text-neutral-600 leading-relaxed">
+                                                    <p className="text-sm text-neutral-600 leading-relaxed">
                                                         Institutional environmental evaluation confirming 100% surface rainwater recharging, zero hazardous emissions, and strict single-use plastic ban across campus.
                                                     </p>
                                                 </div>
@@ -126,105 +123,6 @@ export const SustainableCampusPage: React.FC = () => {
                                         </div>
                                     </DepartmentAccordionRow>
                                 </AccordionContainer>
-
-                                {/* === 6. PHOTO GALLERY === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Solar Infrastructure &amp; Green Campus Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsSustainableViewAll(!isSustainableViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
-                                        >
-                                            {isSustainableViewAll ? 'Show Carousel' : 'View All 5 Photos'}
-                                        </button>
-                                    </div>
-
-                                    {isSustainableViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {[
-                                                { url: '/optimized/College 2.JPG.webp', caption: 'Sustainable Campus Grounds' },
-                                                { url: '/optimized/solar/image2.jpg.webp', caption: 'Solar Infrastructure View' },
-                                                { url: '/optimized/solar/image3.png.webp', caption: 'Campus Solar Energy System' },
-                                                { url: '/optimized/solar/image4.jpg.webp', caption: 'Rooftop Solar Array' },
-                                                { url: '/optimized/Campus.JPG.webp', caption: 'Lush Green Environment' },
-                                            ].map((img, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            decoding="async"
-                                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative px-2 py-1">
-                                            <button
-                                                type="button"
-                                                onClick={() => setSustainableGalleryIndex((prev) => (prev <= 0 ? 2 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Previous image"
-                                            >
-                                                <ChevronLeft size={20} />
-                                            </button>
-
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                {[
-                                                    { url: '/optimized/College 2.JPG.webp', caption: 'Sustainable Campus Grounds' },
-                                                    { url: '/optimized/solar/image2.jpg.webp', caption: 'Solar Infrastructure View' },
-                                                    { url: '/optimized/solar/image3.png.webp', caption: 'Campus Solar Energy System' },
-                                                    { url: '/optimized/solar/image4.jpg.webp', caption: 'Rooftop Solar Array' },
-                                                    { url: '/optimized/Campus.JPG.webp', caption: 'Lush Green Environment' },
-                                                ]
-                                                    .slice(sustainableGalleryIndex, sustainableGalleryIndex + 3)
-                                                    .map((img, idx) => (
-                                                        <div
-                                                            key={idx}
-                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
-                                                        >
-                                                            <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                                <img
-                                                                    src={img.url}
-                                                                    alt={img.caption}
-                                                                    loading="lazy"
-                                                                    decoding="async"
-                                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                    onError={(e) => {
-                                                                        (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-
-                                            <button
-                                                type="button"
-                                                onClick={() => setSustainableGalleryIndex((prev) => (prev >= 2 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Next image"
-                                            >
-                                                <ChevronRight size={20} />
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
                             </>
         </CampusLifeLayout>
     );

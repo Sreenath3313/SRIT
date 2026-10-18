@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import CampusLifeLayout from './CampusLifeLayout';
 
 export const ComputerCenterPage: React.FC = () => {
-    const [isComputerCenterViewAll, setIsComputerCenterViewAll] = useState(false);
-
     return (
         <CampusLifeLayout activeSectionId="computer-center">
             <>
@@ -20,15 +18,15 @@ export const ComputerCenterPage: React.FC = () => {
                                                 </h2>
                                             </div>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 The <strong className="text-[#FF6600] font-bold">Central Computer Center</strong> at SRIT serves as the core computational facility for the entire institution, supporting <span className="text-[#FF6600] font-semibold">campus-wide online examinations</span>, competitive programming, skill certifications, and faculty research.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 Equipped with over <strong className="text-[#FF6600] font-bold">300+ high-performance desktop workstations</strong>, structured <span className="text-[#FF6600] font-semibold">gigabit fiber connectivity</span>, centralized server blades, and enterprise software licenses, the Center caters to all academic departments simultaneously.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 The Computer Center is an authorized venue for national competitive exams, campus recruitment assessments (<span className="text-[#FF6600] font-semibold">TCS, Infosys, Cognizant</span>), <span className="text-[#FF6600] font-semibold">NPTEL online examinations</span>, and 24-hour collegiate hackathons.
                                             </p>
 
@@ -58,84 +56,6 @@ export const ComputerCenterPage: React.FC = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-
-
-                                {/* === 5. PHOTO GALLERY === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Central Computer Center Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsComputerCenterViewAll(!isComputerCenterViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
-                                        >
-                                            {isComputerCenterViewAll ? 'Show Carousel' : 'View All Photos'}
-                                        </button>
-                                    </div>
-
-                                    {isComputerCenterViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {[
-                                                { url: '/optimized/ComputerLab.webp.webp', caption: 'Central Computer Center & Online Examination Hub' },
-                                                { url: '/optimized/ComputerLab.JPG.webp', caption: 'High-Performance Workstation Testing Nodes' },
-                                                { url: '/digital_library.jpg', caption: 'Central Digital Computing Hub' },
-                                            ].map((img, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            decoding="async"
-                                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative px-2 py-1">
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                {[
-                                                    { url: '/optimized/ComputerLab.webp.webp', caption: 'Central Computer Center & Online Examination Hub' },
-                                                    { url: '/optimized/ComputerLab.JPG.webp', caption: 'High-Performance Workstation Testing Nodes' },
-                                                    { url: '/digital_library.jpg', caption: 'Central Digital Computing Hub' },
-                                                ].map((img, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
-                                                    >
-                                                        <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                            <img
-                                                                src={img.url}
-                                                                alt={img.caption}
-                                                                loading="lazy"
-                                                                decoding="async"
-                                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                onError={(e) => {
-                                                                    (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
                                 </div>
                             </>
         </CampusLifeLayout>

@@ -37,7 +37,7 @@ export const MathematicsDayPage: React.FC = () => {
                                         <span className="w-1.5 h-3.5 rounded-full bg-[#FF6600]" />
                                         About the Test:
                                     </h4>
-                                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed pl-3.5">
+                                    <p className="text-sm sm:text-base text-[#475569] leading-relaxed pl-3.5">
                                         The Srinivasa Ramanujan Intelligence Test is a dedicated platform for young minds to showcase their mathematical prowess and problem-solving abilities, engineered to identify and nurture the brightest mathematical talents.
                                     </p>
                                 </div>
@@ -47,7 +47,7 @@ export const MathematicsDayPage: React.FC = () => {
                                         <span className="w-1.5 h-3.5 rounded-full bg-[#FF6600]" />
                                         Join Us in Celebrating Mathematics:
                                     </h4>
-                                    <p className="text-xs sm:text-sm text-[#475569] leading-relaxed pl-3.5">
+                                    <p className="text-sm sm:text-base text-[#475569] leading-relaxed pl-3.5">
                                         Let's celebrate the spirit of Srinivasa Ramanujan's timeless legacy together. We look forward to witnessing the brilliance and innovation that young mathematicians bring to our campus!
                                     </p>
                                 </div>

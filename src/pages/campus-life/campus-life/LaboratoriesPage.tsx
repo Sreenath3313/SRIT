@@ -7,8 +7,6 @@ import { AccordionContainer, DepartmentAccordionRow } from '../../../components/
 
 export const LaboratoriesPage: React.FC = () => {
     const [isLabsTableOpen, setIsLabsTableOpen] = useState(false);
-    const [isLabsViewAll, setIsLabsViewAll] = useState(false);
-    const [labsGalleryIndex, setLabsGalleryIndex] = useState(0);
     const [isCivilLabsOpen, setIsCivilLabsOpen] = useState(false);
     const [isCseLabsOpen, setIsCseLabsOpen] = useState(false);
 
@@ -27,15 +25,15 @@ export const LaboratoriesPage: React.FC = () => {
                                                 </h2>
                                             </div>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 Laboratories at <strong className="text-[#FF6600] font-bold">Srinivasa Ramanujan Institute of Technology (SRIT)</strong> bridge academic theory with real-world engineering applications. The institution houses <strong className="text-[#FF6600] font-bold">8 specialized, fully computerized state-of-the-art laboratories</strong> designed for high-performance computing, artificial intelligence, research, and skill training.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 The computing ecosystem includes the <span className="text-[#FF6600] font-semibold">C &amp; Data Structures Lab</span>, three <span className="text-[#FF6600] font-semibold">B-Block Computer Laboratories</span>, a dedicated <span className="text-[#FF6600] font-semibold">Research Lab</span>, a <span className="text-[#FF6600] font-semibold">Capstone Project Lab</span>, the <span className="text-[#FF6600] font-bold">APSSDC CM’s Skill Excellence Center</span>, and a dedicated <span className="text-[#FF6600] font-bold">Machine Learning Laboratory</span>.
                                             </p>
 
-                                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                                 All facilities are powered by high-specification multi-core workstations with <strong className="text-[#FF6600] font-semibold">16GB RAM Intel Core i5 systems</strong>, backed by industry-standard suites (<span className="text-[#FF6600] font-semibold">TensorFlow, Keras, Scikit-learn, Hadoop, Oracle 11g, MongoDB, Selenium, and NS3</span>), gigabit networking, and continuous industrial <span className="text-[#FF6600] font-semibold">NUMERIC UPS power backup</span>.
                                             </p>
 
@@ -95,7 +93,7 @@ export const LaboratoriesPage: React.FC = () => {
                                         >
                                             <div className="p-5 sm:p-6 bg-white space-y-3">
                                                 <div className="p-4 sm:p-5 rounded-xl border border-[#FFD9C4] bg-[#FFFAF6]">
-                                                    <p className="text-xs sm:text-sm text-[#334155] leading-relaxed">
+                                                    <p className="text-sm sm:text-base text-[#334155] leading-relaxed">
                                                         Civil Engineering departmental laboratories including Surveying, Concrete Technology, Fluid Mechanics, and Environmental Engineering are housed in the Civil Block with specialized apparatus and field testing equipment.
                                                     </p>
                                                 </div>
@@ -150,107 +148,6 @@ export const LaboratoriesPage: React.FC = () => {
                                         </DepartmentAccordionRow>
                                     </AccordionContainer>
                                 </section>
-
-                                {/* === 6. PHOTO GALLERY === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Engineering Laboratories Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsLabsViewAll(!isLabsViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
-                                        >
-                                            {isLabsViewAll ? 'Show Carousel' : 'View All 6 Photos'}
-                                        </button>
-                                    </div>
-
-                                    {isLabsViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {[
-                                                { url: '/optimized/ComputerLab.JPG.webp', caption: 'SRIT Advanced Computing & Machine Learning Center' },
-                                                { url: '/optimized/cse_lab.png.webp', caption: 'High-Performance Computer Science Laboratory' },
-                                                { url: '/optimized/cad_lab.png.webp', caption: 'CAD & Computational Simulation Hub' },
-                                                { url: '/optimized/civ_lab.png.webp', caption: 'Civil Engineering Materials & Surveying Lab' },
-                                                { url: '/optimized/ece_lab.png.webp', caption: 'ECE Digital Signal Processing & IoT Lab' },
-                                                { url: '/optimized/eee_lab.png.webp', caption: 'Electrical Machines & Simulation Center' },
-                                            ].map((img, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-neutral-200/90 bg-orange-50/20 shadow-sm hover:shadow-md hover:border-[#FF6600]/60 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            decoding="async"
-                                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative px-2 py-1">
-                                            <button
-                                                type="button"
-                                                onClick={() => setLabsGalleryIndex((prev) => (prev <= 0 ? 3 : prev - 1))}
-                                                className="absolute -left-2.5 sm:-left-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Previous image"
-                                            >
-                                                <ChevronLeft size={20} />
-                                            </button>
-
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                {[
-                                                    { url: '/optimized/ComputerLab.JPG.webp', caption: 'SRIT Advanced Computing & Machine Learning Center' },
-                                                    { url: '/optimized/cse_lab.png.webp', caption: 'High-Performance Computer Science Laboratory' },
-                                                    { url: '/optimized/cad_lab.png.webp', caption: 'CAD & Computational Simulation Hub' },
-                                                    { url: '/optimized/civ_lab.png.webp', caption: 'Civil Engineering Materials & Surveying Lab' },
-                                                    { url: '/optimized/ece_lab.png.webp', caption: 'ECE Digital Signal Processing & IoT Lab' },
-                                                    { url: '/optimized/eee_lab.png.webp', caption: 'Electrical Machines & Simulation Center' },
-                                                ]
-                                                    .slice(labsGalleryIndex, labsGalleryIndex + 3)
-                                                    .map((img, idx) => (
-                                                        <div
-                                                            key={idx}
-                                                            className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-orange-50/20 shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
-                                                        >
-                                                            <div className="relative aspect-[16/11] w-full overflow-hidden">
-                                                                <img
-                                                                    src={img.url}
-                                                                    alt={img.caption}
-                                                                    loading="lazy"
-                                                                    decoding="async"
-                                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                    onError={(e) => {
-                                                                        (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                                    }}
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                            </div>
-
-                                            <button
-                                                type="button"
-                                                onClick={() => setLabsGalleryIndex((prev) => (prev >= 3 ? 0 : prev + 1))}
-                                                className="absolute -right-2.5 sm:-right-3.5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-neutral-300 shadow-md flex items-center justify-center text-neutral-800 hover:text-white hover:bg-[#FF6600] hover:border-[#FF6600] hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-                                                aria-label="Next image"
-                                            >
-                                                <ChevronRight size={20} />
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
                             </>
         </CampusLifeLayout>
     );

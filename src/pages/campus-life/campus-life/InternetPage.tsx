@@ -4,8 +4,6 @@ import CampusLifeLayout from './CampusLifeLayout';
 import { campusLifeSections } from './types';
 
 export const InternetPage: React.FC = () => {
-    const [isInternetViewAll, setIsInternetViewAll] = useState(false);
-
     const activeSection = campusLifeSections.find((s) => s.id === 'internet') || campusLifeSections[0];
 
     return (
@@ -22,15 +20,15 @@ export const InternetPage: React.FC = () => {
                                 </h2>
                             </div>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 SRIT is equipped with a high-speed dedicated <strong className="text-[#FF6600] font-bold">80 Mbps Leased Line</strong> internet connection provided under the <span className="text-[#FF6600] font-semibold">NMEICT program by MHRD, Government of India</span>.
                             </p>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 Over <strong className="text-[#FF6600] font-bold">200+ high-performance computer systems</strong> across centralized computing labs, digital library hubs, and department labs are fully networked with high-speed internet.
                             </p>
 
-                            <p className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 text-justify">
+                            <p className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 text-justify">
                                 A secure, high-capacity <strong className="text-[#FF6600] font-bold">campus-wide Wi-Fi network</strong> enables students and faculty to access academic resources seamlessly across all blocks, with specialized <span className="text-[#FF6600] font-semibold">evening browsing access from 5:00 PM to 9:00 PM</span> in hostels.
                             </p>
 
@@ -113,81 +111,6 @@ export const InternetPage: React.FC = () => {
                                         </div>
                                     </div>
                                 )}
-
-                                {/* === 6. PHOTO GALLERY === */}
-                                <div className="rounded-xl border border-neutral-200/60 bg-white p-5 sm:p-7 shadow-sm space-y-4">
-                                    <div className="flex items-center justify-between pb-2 border-b border-neutral-100">
-                                        <div className="flex items-center gap-2.5">
-                                            <span className="h-5 w-1.5 rounded-full bg-[#FF6600]" />
-                                            <h2 className="font-serif text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
-                                                Internet &amp; Network Infrastructure Gallery
-                                            </h2>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setIsInternetViewAll(!isInternetViewAll)}
-                                            className="px-3.5 py-1 rounded-full text-xs font-bold text-[#FF6600] bg-orange-50 border border-orange-200 hover:bg-[#FF6600] hover:text-white transition-all cursor-pointer"
-                                        >
-                                            {isInternetViewAll ? 'Show Carousel' : 'View All Photos'}
-                                        </button>
-                                    </div>
-
-                                    {isInternetViewAll ? (
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                            {[
-                                                { url: '/optimized/cse_lab.png.webp', caption: 'High-Speed Internet Connected CSE Laboratory' },
-                                                { url: '/optimized/ComputerLab.webp.webp', caption: 'Campus Central Computer Centre' },
-                                                { url: '/optimized/csm_lab.png.webp', caption: 'Dedicated Student Browsing & Learning Hub' },
-                                            ].map((img, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className="group rounded-xl overflow-hidden border border-orange-200/80 bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] hover:-translate-y-1 transition-all duration-300"
-                                                >
-                                                    <div className="relative aspect-[16/11] w-full overflow-hidden bg-orange-50/30 flex items-center justify-center p-2">
-                                                        <img
-                                                            src={img.url}
-                                                            alt={img.caption}
-                                                            loading="lazy"
-                                                            decoding="async"
-                                                            className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                            onError={(e) => {
-                                                                (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                            }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="relative px-2 py-1">
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                {[
-                                                    { url: '/optimized/cse_lab.png.webp', caption: 'High-Speed Internet Connected CSE Laboratory' },
-                                                    { url: '/optimized/ComputerLab.webp.webp', caption: 'Campus Central Computer Centre' },
-                                                    { url: '/optimized/csm_lab.png.webp', caption: 'Dedicated Student Browsing & Learning Hub' },
-                                                ].map((img, idx) => (
-                                                    <div
-                                                        key={idx}
-                                                        className="group rounded-xl border-2 border-orange-200/90 overflow-hidden bg-white shadow-sm hover:shadow-lg hover:border-[#FF6600] transition-all duration-300 relative"
-                                                    >
-                                                        <div className="relative aspect-[16/11] w-full overflow-hidden bg-orange-50/20 flex items-center justify-center p-2">
-                                                            <img
-                                                                src={img.url}
-                                                                alt={img.caption}
-                                                                loading="lazy"
-                                                                decoding="async"
-                                                                className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 ease-out"
-                                                                onError={(e) => {
-                                                                    (e.target as HTMLImageElement).src = '/optimized/Campus.JPG.webp';
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
                             </>
         </CampusLifeLayout>
     );

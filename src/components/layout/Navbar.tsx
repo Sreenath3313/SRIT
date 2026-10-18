@@ -4,6 +4,7 @@ import { ArrowRight, ChevronDown, GraduationCap, Search, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom';
 import { navLinks, type NavLink } from '../../data/navigation';
 import { placementStats } from '../../data/placements';
+import Notifications from '../../features/notifications/Notifications';
 
 const researchLink: NavLink = {
     label: 'Research',
@@ -289,29 +290,68 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         </div>
 
         <div className="relative border-t-4 border-[#FF6600] bg-white" onMouseLeave={onMenuLeave}>
-            <div className="flex h-[80px] w-full items-center justify-between gap-3 px-3 sm:gap-5 sm:px-5 md:px-6 lg:h-[96px] lg:px-8 xl:h-[100px]">
+            <div className="flex h-[80px] w-full items-center justify-between gap-4 px-3 sm:gap-6 sm:px-5 md:px-6 lg:h-[96px] lg:px-8 xl:h-[100px]">
                 <Link to="/" aria-label="SRIT home" className="flex min-w-0 shrink-0 items-center py-1">
                     <img src="/optimized/SRIT_logo_HD_8x.png" alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade" width="10240" height="1920" fetchPriority="high" className="h-[56px] w-auto max-w-[65vw] shrink-0 object-contain sm:h-[66px] sm:max-w-[55vw] lg:h-[78px] xl:h-[84px] 2xl:h-[88px] lg:max-w-none transition-transform duration-200" />
                 </Link>
 
-                <nav aria-label="Primary navigation" className="ml-auto hidden h-full items-center gap-0.5 lg:flex">
-                    {desktopLinks.map((item) => <div key={item.label} className="relative flex h-full items-center" onMouseEnter={() => { setMobileOpen(false); setMobileSubmenu(null); onMenuEnter(item.label); }}>
-                        <Link to={item.href} onFocus={() => onMenuEnter(item.label)} className={`relative inline-flex h-full items-center gap-0.5 px-1 text-[13px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] lg:px-1.5 lg:text-[14px] xl:px-2 xl:text-[15px] 2xl:px-3 2xl:text-[17px] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'}`}>
-                            {item.label}{item.hasDropdown && <ChevronDown className={`h-3 w-3 transition-transform duration-300 ease-out ${openMenu === item.label ? 'rotate-180' : ''}`} />}
-                            <span className={`absolute inset-x-1 bottom-4 h-[2px] origin-center bg-[#FF6600] transition-transform duration-300 ease-out ${isActive(item) || openMenu === item.label ? 'scale-x-100' : 'scale-x-0'}`} />
-                        </Link>
-                    </div>)}
-                </nav>
+                {/* Right cluster: Navigation links and Action buttons close together */}
+                <div className="flex items-center gap-3 md:gap-5 lg:gap-6 ml-auto self-stretch">
+                    <nav aria-label="Primary navigation" className="hidden h-full items-stretch gap-1 xl:gap-2 lg:flex">
+                        {desktopLinks.map((item) => (
+                            <div
+                                key={item.label}
+                                className="relative flex h-full items-center"
+                                onMouseEnter={() => { setMobileOpen(false); setMobileSubmenu(null); onMenuEnter(item.label); }}
+                            >
+                                <Link
+                                    to={item.href}
+                                    onFocus={() => onMenuEnter(item.label)}
+                                    className={`relative inline-flex h-full items-center gap-1.5 px-2 text-[14px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] xl:px-3 xl:text-[16px] 2xl:px-4 2xl:text-[18px] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'}`}
+                                >
+                                    <span className="relative py-2">
+                                        <span className="inline-flex items-center gap-1">
+                                            {item.label}
+                                            {item.hasDropdown && (
+                                                <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${openMenu === item.label ? 'rotate-180' : ''}`} />
+                                            )}
+                                        </span>
+                                        <span
+                                            className={`absolute left-0 right-0 -bottom-1 h-[2.5px] rounded-full bg-[#FF6600] transition-all duration-300 ease-out ${
+                                                isActive(item) || openMenu === item.label ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'
+                                            }`}
+                                        />
+                                    </span>
+                                </Link>
+                            </div>
+                        ))}
+                    </nav>
 
-                <div className="flex shrink-0 items-center gap-1 sm:gap-2 lg:ml-4 xl:ml-6">
-                    <button type="button" onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }} aria-label={searchOpen ? 'Close search' : 'Search this site'} aria-expanded={searchOpen} className="inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center text-black transition-colors hover:text-[#FF6600]"><Search className="h-4.5 w-4.5 sm:h-5 sm:w-5" /></button>
-                    <button type="button" onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }} aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-controls="site-navigation-drawer" aria-expanded={mobileOpen} className="group inline-flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center text-[#171b24] transition-colors hover:text-[#FF6600]">
-                        <span className="flex w-6 sm:w-6.5 flex-col gap-[5px] sm:gap-[6px]" aria-hidden="true">
-                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[7px] sm:translate-y-[8px] rotate-45' : ''}`} />
-                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : ''}`} />
-                            <span className={`h-[2px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[7px] sm:-translate-y-[8px] -rotate-45' : ''}`} />
-                        </span>
-                    </button>
+                    <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+                        <button
+                            type="button"
+                            onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }}
+                            aria-label={searchOpen ? 'Close search' : 'Search this site'}
+                            aria-expanded={searchOpen}
+                            className="inline-flex h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13 items-center justify-center rounded-xl text-black transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
+                        >
+                            <Search className="h-6 w-6 sm:h-[26px] sm:w-[26px] lg:h-7 lg:w-7 stroke-[2.2]" />
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => { setMobileOpen((open) => !open); setSearchOpen(false); setOpenMenu(null); }}
+                            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+                            aria-controls="site-navigation-drawer"
+                            aria-expanded={mobileOpen}
+                            className="group inline-flex h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13 items-center justify-center rounded-xl text-[#171b24] transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
+                        >
+                            <span className="flex w-7 sm:w-8 lg:w-8 flex-col gap-[5.5px] sm:gap-[6px] lg:gap-[6.5px]" aria-hidden="true">
+                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[8px] sm:translate-y-[8.5px] lg:translate-y-[9.5px] rotate-45' : ''}`} />
+                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : ''}`} />
+                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[8px] sm:-translate-y-[8.5px] lg:-translate-y-[9.5px] -rotate-45' : ''}`} />
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -353,16 +393,84 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
             {mobileOpen && <>
                 <motion.button aria-label="Close navigation" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .25 }} onClick={() => setMobileOpen(false)} className="absolute inset-x-0 top-full z-40 h-[100dvh] bg-black/20 backdrop-blur-[1px]" />
                 <motion.div id="site-navigation-drawer" initial={{ opacity: 0, height: 0, y: -10 }} animate={{ opacity: 1, height: 'auto', y: 0 }} exit={{ opacity: 0, height: 0, y: -6 }} transition={{ height: { duration: .34, ease: [.22, 1, .36, 1] }, opacity: { duration: .22 }, y: { duration: .28, ease: [.22, 1, .36, 1] } }} className="absolute left-0 right-0 top-full z-50 max-h-[calc(100dvh-15rem)] overflow-y-auto overscroll-contain border-t border-[#FF6600]/10 bg-white shadow-[0_24px_48px_rgba(23,27,36,.14)] md:max-h-[calc(100dvh-9.125rem)] lg:max-h-[calc(100dvh-9.625rem)]">
-                    <nav aria-label="Site navigation" className="mx-auto max-w-[1500px] px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:px-6 lg:px-8">
-                        <div className="flex items-end justify-between border-b border-[#FF6600]/20 py-4">
-                            <div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#FF6600]">Explore SRIT</p><p className="mt-1 text-xs text-neutral-500">Browse departments and services</p></div>
+                    <nav aria-label="Site navigation" className="mx-auto max-w-[1500px] px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-6 lg:px-8">
+                        <div className="flex items-end justify-between border-b border-[#FF6600]/20 py-4 sm:py-5">
+                            <div>
+                                <p className="text-[12px] sm:text-[13px] font-extrabold uppercase tracking-[.22em] text-[#FF6600]">Explore SRIT</p>
+                                <p className="mt-1 text-sm sm:text-base font-medium text-neutral-600">Browse departments and services</p>
+                            </div>
                         </div>
-                        <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 xl:grid-cols-4">
-                            {(typeof window !== 'undefined' && window.innerWidth >= 1024 ? menuLinks : navLinks.filter(item => item.href !== '/')).map((item) => <div key={item.label} className={`border-b border-[#FF6600]/15 py-1 ${mobileSubmenu === item.label ? 'xl:col-span-4' : ''}`}>
-                                <div className="flex min-h-12 items-center justify-between">{item.hasDropdown ? <button type="button" aria-expanded={mobileSubmenu === item.label} onClick={() => setMobileSubmenu((open) => open === item.label ? null : item.label)} className={`flex min-h-11 w-full items-center justify-between rounded-sm px-3 py-3 text-left text-sm font-semibold transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${mobileSubmenu === item.label ? 'bg-[#FFF1E8] text-[#FF6600]' : 'text-[#171b24]'}`}><span>{item.label}</span><ChevronDown className={`h-4 w-4 text-[#FF6600] transition-transform ${mobileSubmenu === item.label ? 'rotate-180' : ''}`} /></button> : <Link to={item.href} onClick={() => setMobileOpen(false)} className="flex min-h-11 w-full items-center rounded-sm px-3 py-3 text-sm font-semibold text-[#171b24] transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600]">{item.label}</Link>}</div>
-                                <AnimatePresence>{item.hasDropdown && mobileSubmenu === item.label && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: .3, ease: [.22, 1, .36, 1] }} className="grid grid-cols-1 gap-x-5 gap-y-1 overflow-hidden pb-3 pl-4 sm:grid-cols-2 xl:grid-cols-3">{item.subItems?.map((sub, index) => <motion.div key={`${sub.label}-${sub.href}`} initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .2, delay: index * .018, ease: 'easeOut' }}><Link to={sub.href} onClick={() => setMobileOpen(false)} className={`flex min-h-12 items-center border-b border-[#FF6600]/10 px-3 py-3 text-base leading-6 transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${isSubItemActive(sub.href) ? 'font-semibold text-[#FF6600]' : 'text-black'}`}>{sub.label}</Link></motion.div>)}</motion.div>}</AnimatePresence>
-                            </div>)}
+                        <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 xl:grid-cols-4">
+                            {(typeof window !== 'undefined' && window.innerWidth >= 1024 ? menuLinks : navLinks.filter(item => item.href !== '/')).map((item) => (
+                                <div key={item.label} className={`border-b border-[#FF6600]/20 py-1.5 ${mobileSubmenu === item.label ? 'xl:col-span-4' : ''}`}>
+                                    <div className="flex min-h-14 items-center justify-between">
+                                        {item.hasDropdown ? (
+                                            <button
+                                                type="button"
+                                                aria-expanded={mobileSubmenu === item.label}
+                                                onClick={() => setMobileSubmenu((open) => open === item.label ? null : item.label)}
+                                                className={`flex min-h-13 w-full items-center justify-between rounded-md px-3.5 py-3.5 text-left text-[16px] sm:text-[17px] xl:text-[18px] font-bold transition-all duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${
+                                                    mobileSubmenu === item.label ? 'bg-[#FFF1E8] text-[#FF6600]' : 'text-[#171b24]'
+                                                }`}
+                                            >
+                                                <span>{item.label}</span>
+                                                <ChevronDown className={`h-5 w-5 text-[#FF6600] transition-transform duration-300 ${mobileSubmenu === item.label ? 'rotate-180' : ''}`} />
+                                            </button>
+                                        ) : (
+                                            <Link
+                                                to={item.href}
+                                                onClick={() => setMobileOpen(false)}
+                                                className="flex min-h-13 w-full items-center rounded-md px-3.5 py-3.5 text-[16px] sm:text-[17px] xl:text-[18px] font-bold text-[#171b24] transition-all duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600]"
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        )}
+                                    </div>
+                                    <AnimatePresence>
+                                        {item.hasDropdown && mobileSubmenu === item.label && (
+                                            <motion.div
+                                                initial={{ opacity: 0, height: 0 }}
+                                                animate={{ opacity: 1, height: 'auto' }}
+                                                exit={{ opacity: 0, height: 0 }}
+                                                transition={{ duration: .3, ease: [.22, 1, .36, 1] }}
+                                                className="grid grid-cols-1 gap-x-6 gap-y-1.5 overflow-hidden pb-4 pl-4 sm:grid-cols-2 xl:grid-cols-3 pt-1"
+                                            >
+                                                {item.subItems?.map((sub, index) => (
+                                                    <motion.div
+                                                        key={`${sub.label}-${sub.href}`}
+                                                        initial={{ opacity: 0, x: -6 }}
+                                                        animate={{ opacity: 1, x: 0 }}
+                                                        transition={{ duration: .2, delay: index * .018, ease: 'easeOut' }}
+                                                    >
+                                                        <Link
+                                                            to={sub.href}
+                                                            onClick={() => setMobileOpen(false)}
+                                                            className={`flex min-h-13 items-center border-b border-[#FF6600]/15 px-3.5 py-3 text-[15px] sm:text-[16px] leading-relaxed transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${
+                                                                isSubItemActive(sub.href) ? 'font-bold text-[#FF6600]' : 'text-neutral-800'
+                                                            }`}
+                                                        >
+                                                            {sub.label}
+                                                        </Link>
+                                                    </motion.div>
+                                                ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            ))}
                         </div>
+
+                        {/* Hamburger Notifications Section */}
+                        <div className="mt-8 border-t-2 border-[#FF6600]/15 pt-6 pb-2">
+                            <div className="mb-4">
+                                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#FF6600]">Live Bulletins</p>
+                                <h3 className="font-sans text-xl sm:text-2xl font-black text-[#171b24] uppercase tracking-wide">
+                                    Campus Notifications
+                                </h3>
+                            </div>
+                            <Notifications compact={true} showHeader={false} />
+                        </div>
+
                         <div className="grid grid-cols-2 gap-2 border-t border-[#FF6600]/15 pt-4 lg:hidden">
                             {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
                                 const btnClass = "flex items-center gap-2 px-3 py-2.5 rounded-lg bg-[#FFF3EA] text-[#FF6600] hover:bg-[#FFE6D5] text-xs font-bold transition-colors";

@@ -39,7 +39,7 @@ const AlumniSuccess: React.FC = () => {
                              * Two white "bite" shapes sit over the top-left and
                              * bottom-right corners to create the cutout effect.
                              */}
-                            <div className="relative flex h-full min-h-[340px] flex-col overflow-hidden rounded-[24px] bg-[#FF6600] shadow-sm hover:shadow-md transition-shadow">
+                            <div className="relative flex h-full min-h-[340px] flex-col overflow-hidden rounded-[24px] bg-[#FFA952] shadow-sm hover:shadow-md transition-shadow">
 
                                 {/* ── TOP-LEFT WHITE CUTOUT ── */}
                                 <div
@@ -70,7 +70,7 @@ const AlumniSuccess: React.FC = () => {
                                 >
                                     <a
                                         href="#"
-                                        className="flex items-center justify-center gap-0.5 sm:gap-1 text-orange-700 hover:text-orange-900 font-bold text-xs sm:text-sm transition-colors"
+                                        className="flex items-center justify-center gap-0.5 sm:gap-1 text-[#CE4211] hover:text-[#9e310a] font-bold text-xs sm:text-sm transition-colors"
                                     >
                                         Connect Here
                                         <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -96,8 +96,8 @@ const AlumniSuccess: React.FC = () => {
 
                                     {/* ROW 1: Company badge */}
                                     <div className="flex items-center justify-end mb-3">
-                                        <div className="z-20 flex max-w-[58%] min-w-0 flex-wrap items-center justify-end gap-1.5 rounded-full bg-orange-200/80 px-3 py-1.5 text-right text-xs font-semibold leading-tight text-orange-950 shadow-2xs">
-                                            <Briefcase className="w-3.5 h-3.5 text-orange-900" />
+                                        <div className="z-20 flex max-w-[58%] min-w-0 flex-wrap items-center justify-end gap-1.5 rounded-full bg-[#FFC98F] px-3.5 py-1.5 text-right text-xs font-semibold leading-tight text-[#832F10] shadow-2xs">
+                                            <Briefcase className="w-3.5 h-3.5 text-[#832F10]" />
                                             <span className="min-w-0 break-words">{alumni.company}</span>
                                         </div>
                                     </div>
@@ -116,13 +116,13 @@ const AlumniSuccess: React.FC = () => {
 
                                     {/* ROW 4: Location */}
                                     <div className="z-20 mt-4 flex items-center gap-1.5 text-sm font-semibold text-neutral-800">
-                                        <MapPin className="w-4 h-4 text-[#FF6600] shrink-0" />
+                                        <MapPin className="w-4 h-4 text-[#FF5422] shrink-0" />
                                         SRIT Alumni Network
                                     </div>
 
                                     {/* ROW 5: Bottom button */}
                                     <div className="z-20 mt-auto flex items-end justify-start pb-1 pt-6">
-                                        <button className="bg-[#FF6600] hover:bg-[#e04515] text-white text-xs sm:text-sm font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg transition-colors shadow-xs">
+                                        <button className="bg-[#FF5422] hover:bg-[#e04515] text-white text-xs sm:text-sm font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg transition-colors shadow-xs">
                                             View Details
                                         </button>
                                     </div>

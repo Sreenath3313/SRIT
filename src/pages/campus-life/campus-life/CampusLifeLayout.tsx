@@ -43,10 +43,10 @@ export const CampusLifeLayout: React.FC<CampusLifeLayoutProps> = ({
             <Navbar />
 
             {/* Standard SRIT Cover Page */}
-            <PageHeader title={displayTitle} categoryTitle="Campus Life" variant={activeSectionId === 'campus' ? 'editorial' : 'default'} />
+            <PageHeader title={displayTitle} categoryTitle="Campus Life" />
 
             {/* Main Content */}
-            <main className={`w-full mx-auto px-4 sm:px-6 flex-1 relative z-10 ${activeSectionId === 'campus' ? 'max-w-[1400px] py-2 sm:py-4 lg:py-6' : 'max-w-[1300px] py-10 lg:py-16 -mt-8'}`}>
+            <main className="w-full mx-auto px-4 sm:px-6 flex-1 relative z-10 max-w-[1300px] py-10 lg:py-16 -mt-8">
                 <div className="flex flex-col gap-8 w-full">
                     {/* Main Content Column */}
                     <motion.div

@@ -1,0 +1,784 @@
+{
+  "library_committee_members": {
+    "label": "Library Committee - Team Members",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRjQeyH0if_NMefPurR0F3hzK5MvUZBP72p8Z_5bJJ27oASrpY__HbnRcCaia1DQRcG9d6ZSuzWCmOQ/pubhtml/sheet?headers=false&gid=0",
+    "rows": [
+      [
+        "1",
+        "Library Committee - Team Members"
+      ],
+      [
+        "2",
+        "S. No.",
+        "Name of Faculty member",
+        "Designation",
+        "Role"
+      ],
+      [
+        "3",
+        "1",
+        "Dr.G. Balakrishna",
+        "Principal",
+        "Chairman"
+      ],
+      [
+        "4",
+        "2",
+        "B. Chandrakala",
+        "Assistant Librarian",
+        "Convener"
+      ],
+      [
+        "5",
+        "3",
+        "Dr. M. Ranjit Reddy",
+        "Vice President",
+        "Member"
+      ],
+      [
+        "6",
+        "4",
+        "Dr. U. Sreenivas",
+        "Vice Principal",
+        "Member"
+      ],
+      [
+        "7",
+        "5",
+        "Ms. D. Lakshmi Sireesha",
+        "Asst. Professor of CE",
+        "Member"
+      ],
+      [
+        "8",
+        "6",
+        "Ms. B. Shravani",
+        "Asst. Professor of EEE",
+        "Member"
+      ],
+      [
+        "9",
+        "7",
+        "Mr.B.Vijaya Bhaskar reddy",
+        "Asst. Professor of CSM",
+        "Member"
+      ],
+      [
+        "10",
+        "8",
+        "Mr. C. H. Joseph Sundar",
+        "Asst. Professor of ME",
+        "Member"
+      ],
+      [
+        "11",
+        "9",
+        "Ms. K.Bharathi",
+        "Asst. Professor of Physics",
+        "Member"
+      ]
+    ]
+  },
+  "titles_and_volumes": {
+    "label": "No. of Titles and Volumes Department-wise",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxVB9zK02tu4gVIzXNMuDMRZV0E7xphn3u5-fuTb9csoCYF-mCiGx9CyB7DeHbqXzxbz9Fyr9fL6uU/pubhtml/sheet?headers=false&gid=0",
+    "rows": [
+      [
+        "1",
+        "S. No.",
+        "Branch",
+        "Number of Titles",
+        "Number of Volumes"
+      ],
+      [
+        "2",
+        "1",
+        "Civil Engineering",
+        "261",
+        "5651"
+      ],
+      [
+        "3",
+        "2",
+        "Electrical &amp; Electronics Engineering - UG",
+        "366",
+        "6612"
+      ],
+      [
+        "4",
+        "3",
+        "Electrical &amp; Electronics Engineering - PG",
+        "58",
+        "627"
+      ],
+      [
+        "5",
+        "4",
+        "Mechanical Engineering",
+        "312",
+        "5609"
+      ],
+      [
+        "6",
+        "5",
+        "Electronics &amp; Communications Engineering-UG",
+        "516",
+        "7265"
+      ],
+      [
+        "7",
+        "6",
+        "Electronics &amp; Communications Engineering-PG",
+        "56",
+        "595"
+      ],
+      [
+        "8",
+        "7",
+        "Computer Science Engineering- UG",
+        "946",
+        "10747"
+      ],
+      [
+        "9",
+        "8",
+        "Computer Science Engineering- PG",
+        "88",
+        "701"
+      ],
+      [
+        "10",
+        "9",
+        "Humanities &amp; Sciences",
+        "389",
+        "10744"
+      ],
+      [
+        "11",
+        "10",
+        "Management Studies",
+        "979",
+        "2710"
+      ],
+      [
+        "12",
+        "11",
+        "General Books",
+        "477",
+        "2029"
+      ]
+    ]
+  },
+  "print_journals": {
+    "label": "Details of Print Journals",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTCl2et84ceaiM6YuycfwWbNLOK9nYd0ljGNMxEtaA0vVQ-WJO3VpmVaO4ygbcWZAGNju61fWogHMdJ/pubhtml/sheet?headers=false&gid=0",
+    "rows": [
+      [
+        "1",
+        "S. No.",
+        "National/ International",
+        "Name of the Journal",
+        "ISSN",
+        "Periodicity"
+      ],
+      [
+        "2",
+        "1",
+        "National",
+        "Bulletin of Materials Science",
+        "0250-4707",
+        "Bi-Monthly"
+      ],
+      [
+        "3",
+        "2",
+        "National",
+        "Journal of Astrophysics and Astronomy",
+        "0250-6335",
+        "Quarterly"
+      ],
+      [
+        "4",
+        "3",
+        "National",
+        "Journal of Chemical Sciences",
+        "0253-4126",
+        "Monthly"
+      ],
+      [
+        "5",
+        "4",
+        "National",
+        "Journal of Earth System Science",
+        "0253-4126",
+        "Bi-Monthly"
+      ],
+      [
+        "6",
+        "5",
+        "National",
+        "Pramana-Journal of Physics",
+        "0304-4289",
+        "Monthly"
+      ],
+      [
+        "7",
+        "6",
+        "National",
+        "Proceedings(Mathematical Sciences)",
+        "0253-4142",
+        "Quarterly"
+      ],
+      [
+        "8",
+        "7",
+        "National",
+        "Sadhana (Engineering Sciences)",
+        "0256-2499",
+        "Monthly"
+      ],
+      [
+        "9",
+        "8",
+        "National",
+        "Resonance-journal of Science Education",
+        "0250-8044",
+        "Monthly"
+      ],
+      [
+        "10",
+        "9",
+        "National",
+        "Current Science",
+        "0011-1333",
+        "Fortnightly"
+      ],
+      [
+        "11",
+        "10",
+        "National",
+        "IETE Technical Review",
+        "0256-4802",
+        "Bi-Monthly"
+      ],
+      [
+        "12",
+        "11",
+        "National",
+        "IETE Journal of Research",
+        "0377-2063",
+        "Bi-Monthly"
+      ],
+      [
+        "13",
+        "12",
+        "International",
+        "International journal of Computer Engineering Software Technology",
+        "2229-3086",
+        "Half-Yearly"
+      ],
+      [
+        "14",
+        "13",
+        "International",
+        "International journal of Computer Science, Software Engineering &amp; Electrical Communication Engineering",
+        "2229-3175",
+        "Half-Yearly"
+      ],
+      [
+        "15",
+        "14",
+        "International",
+        "International journal of Computer Sciences, Systems Engineering and Information Technology",
+        "0974-5807",
+        "Half-Yearly"
+      ],
+      [
+        "16",
+        "15",
+        "International",
+        "International journal of Neural Networks and Applications",
+        "0974-6048",
+        "Half-Yearly"
+      ],
+      [
+        "17",
+        "16",
+        "International",
+        "International journal of Computer and Electronics Engineering",
+        "0975-4202",
+        "Half-Yearly"
+      ],
+      [
+        "18",
+        "17",
+        "International",
+        "International journal of Embedded Systems and Computer Engineering",
+        "0975-4482",
+        "Half-Yearly"
+      ],
+      [
+        "19",
+        "18",
+        "International",
+        "International journal of Energy Systems Computers and Control",
+        "0976-6782",
+        "Half-Yearly"
+      ],
+      [
+        "20",
+        "19",
+        "International",
+        "International journal of Nano System Technology, Electrical Engineering and Electronics System",
+        "0974-6447",
+        "Half-Yearly"
+      ],
+      [
+        "21",
+        "20",
+        "International",
+        "International journal of Power Electronics and Technology",
+        "4421-1336",
+        "Half-Yearly"
+      ],
+      [
+        "22",
+        "21",
+        "International",
+        "International journal of Power System and Power Electronics",
+        "4421-1403",
+        "Half-Yearly"
+      ],
+      [
+        "23",
+        "22",
+        "International",
+        "International journal of Power system optimization and Control (IJPSOC)",
+        "0975-3982",
+        "Half-Yearly"
+      ],
+      [
+        "24",
+        "23",
+        "International",
+        "International journal of VLSI Design",
+        "2229-3167",
+        "Half-Yearly"
+      ],
+      [
+        "25",
+        "24",
+        "International",
+        "International journal of Advanced Manufacturing Systems",
+        "2229-5860",
+        "Half-Yearly"
+      ],
+      [
+        "26",
+        "25",
+        "International",
+        "International journal of Advanced in Thermal Sciences and Engineering",
+        "0976-6820",
+        "Half-Yearly"
+      ],
+      [
+        "27",
+        "26",
+        "International",
+        "International journal of Fluid Mechanics",
+        "0975-4199",
+        "Half-Yearly"
+      ],
+      [
+        "28",
+        "27",
+        "International",
+        "International journal of Manufacturing Technology and Industrial Engineering",
+        "0974-5823",
+        "Half-Yearly"
+      ],
+      [
+        "29",
+        "28",
+        "International",
+        "International journal of Mechanical Engineering",
+        "0974-5823",
+        "Half-Yearly"
+      ],
+      [
+        "30",
+        "29",
+        "International",
+        "International journal of Nanoscience, Nanoengineering and Nanotechnology",
+        "2229-7383",
+        "Half-Yearly"
+      ],
+      [
+        "31",
+        "30",
+        "International",
+        "International journal of Advances in Civil Engineering",
+        "4421-1339",
+        "Half-Yearly"
+      ],
+      [
+        "32",
+        "31",
+        "International",
+        "International journal of Civil Engineering (IJCE)",
+        "0975-5314",
+        "Half-Yearly"
+      ],
+      [
+        "33",
+        "32",
+        "International",
+        "International journal of civil Engineering and Construction Technology",
+        "4421-1405",
+        "Half-Yearly"
+      ],
+      [
+        "34",
+        "33",
+        "International",
+        "International journal of Sustainable Civil Engineering",
+        "-",
+        "Half-Yearly"
+      ],
+      [
+        "35",
+        "34",
+        "International",
+        "International journal of Environmental pollution Control and Management",
+        "0975-3842",
+        "Half-Yearly"
+      ],
+      [
+        "36",
+        "35",
+        "International",
+        "International journal of Process Wastes Treatment",
+        "0975-4571",
+        "Half-Yearly"
+      ]
+    ]
+  },
+  "online_journals": {
+    "label": "Details of Online Journals",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQSrguCPfjBX7riPoGHtDhng9hWg_vkiMvn3dDS06fVRaKyTJRm2dgyz6AWaJCqAwEznGViPh1fWu16/pubhtml/sheet?headers=false&gid=0",
+    "rows": [
+      [
+        "1",
+        "S. No.",
+        "Name of the Journal",
+        "Link",
+        "Periodicity"
+      ],
+      [
+        "2"
+      ],
+      [
+        "3",
+        "1",
+        "Journal of The Institution of Engineers (India) Series A Civil, Architectural, Environmental and Agricultural Engineering",
+        "ieindia.org",
+        "Quarterly"
+      ],
+      [
+        "4",
+        "2",
+        "Journal of The Institution of Engineers (India) Series B Electrical, Electronics &amp; Telecommunication and Computer Engineers",
+        "ieindia.org",
+        "Bi-Monthly"
+      ],
+      [
+        "5",
+        "3",
+        "Journal of The Institution of Engineers (India) Series C Mechanical, Production, Aerospace and Marine Engineering",
+        "ieindia.org",
+        "Bi-Monthly"
+      ],
+      [
+        "6",
+        "4",
+        "Journal of The institution of Engineers (India) Series D Metallugical &amp; Materials and Mining Engineering",
+        "ieindia.org",
+        "Half-Yearly"
+      ],
+      [
+        "7",
+        "5",
+        "Journal of The institution of Engineers (India) Series E Chemical and Textile Engineering",
+        "ieindia.org",
+        "Half-Yearly"
+      ],
+      [
+        "8",
+        "6",
+        "IEI News: Monthly Tabloid of Technical Activities",
+        "ieindia.org",
+        "Monthly"
+      ],
+      [
+        "9",
+        "7",
+        "IEI Epitome: Monthly e news letter",
+        "ieindia.org",
+        "Monthly"
+      ],
+      [
+        "10",
+        "8",
+        "ICTACT Journal on Communication Technology",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "11",
+        "9",
+        "ICTACT Journal on Image &amp; Video Processing",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "12",
+        "10",
+        "ICTACT Journal on Soft Computing",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "13",
+        "11",
+        "ICTACT Journal on Microelectronics",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "14",
+        "12",
+        "ICTACT Journal on Management Studies",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "15",
+        "13",
+        "ICTACT Journal on Data Science and Machine Learning",
+        "http://www.ictactjournals.in",
+        "Quarterly"
+      ],
+      [
+        "16",
+        "14",
+        "JNTUA Consortium",
+        "https://jntuaengg.knimbus.com",
+        ""
+      ],
+      [
+        "17",
+        "15",
+        "DELNET(Developing Library Network)",
+        "delnet.nic.in",
+        ""
+      ]
+    ]
+  },
+  "eresources": {
+    "label": "Details of e-Resources Available @ SRIT",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSgiWCy7-Qn6CTp3ZQeFFJHZSIrYMiHV1iaSFiNM1v3XuMU3hP_sZlwyKzmJswwoBh4RZldf2KKxNaA/pubhtml/sheet?headers=false&gid=0",
+    "rows": [
+      [
+        "1",
+        "S. No.",
+        "e-Resources",
+        "Type of Digital Content",
+        "Url"
+      ],
+      [
+        "2"
+      ],
+      [
+        "3",
+        "1",
+        "DELNET(Developing Library Network)",
+        "E-Journals,E-Books, Theses &amp; Dissertations",
+        "delnet.nic.in"
+      ],
+      [
+        "4",
+        "2",
+        "IEI(The Institution of Engineers (India))",
+        "IEI-Springer Journals: Series A: Civil, Architectural, Environmental, Agricultural Engineering. Series B:Electrical, Electronics and Telecommunication and Computer Engineering Series C: Mechanical, Production, Aerospace and Marine Engineering Series D: Metallurgical &amp; Materials and Mining Engineering Series- E: Chemical &amp; Textile Engineering IEI News: Monthly Tabloid of Technical Activities IEI Epitome: Monthly e-news letter",
+        "www.ieindia.org"
+      ],
+      [
+        "5",
+        "3",
+        "JNTUA Consortium",
+        "1. e books:5,00,000+; e journals:70,000+; videos &amp; Presentations: 1,50,000+; Research Articles: 10,000,000+; NPTEL courses:750+",
+        "https://jntuaengg.knimbus.com"
+      ],
+      [
+        "6",
+        "4",
+        "ICT Academy",
+        "ICTACT Journal on Communication Technolo; ICTACT Journal on Image &amp; Video Processing; ICTACT Journal on Soft Computing;ICTACT Journal on Microelectronics; ICTACT Journal on Management Studies; ICTACT Journal on Data Science and Machine Learning",
+        "http://www.ictactjournals.in"
+      ],
+      [
+        "7",
+        "5",
+        "National Digital Library of India",
+        "National Digital Library of India (NDLI) is a virtual repository of learning resources which is not just a repository with search/browse facilities but provides a host of services for the learner community. It is sponsored and mentored by Ministry of Education, Government of India, through its National Mission on Education through Information and Communication Technology (NMEICT). Filtered and federated searching is employed to facilitate focused searching so that learners can find the right resource with least effort and in minimum time. NDLI provides user group-specific services such as Examination Preparatory for School and College students and job aspirants. Services for Researchers and general learners are also provided. NDLI is designed to hold content of any language and provides interface support for 10 most widely used Indian languages. It is built to provide support for all academic levels including researchers and life-long learners, all disciplines, all popular forms of access devices and differently-abled learners. It is designed to enable people to learn and prepare from best practices from all over the world and to facilitate researchers to perform inter-linked exploration from multiple sources. It is developed, operated and maintained from Indian Institute of Technology Kharagpur.",
+        "https://ndl.iitkgp.ac.in/"
+      ],
+      [
+        "8",
+        "6",
+        "Rashtriya e-Pustakalaya (ReP) platform",
+        "Here is a step-by-step procedure for students and faculty to access and utilize the Rashtriya e-Pustakalaya (ReP) platform: Step-by-Step Access Guide Step 1: Platform Selection Decide whether to use the web version or download the mobile app from Google Play Store (Android) or Apple App Store (iOS). Step 2: Registration and Login On the web platform (https://ndl.education.gov.in) or through the mobile app, register with your email and create a profile for personalized recommendations and bookmarks. Step 3: Browsing and Searching Books Use the search bar or browse by categories, language, genre, or age group to find desired books. The library offers content in 23 Indian languages and various genres for ages 3–18. Step 4: Reading &amp; Using Features Select a book to read. Utilize available features such as text-to-speech, bookmarks, notes, font size adjustment, and dark/light/kids themes. Offline reading is supported—download books within the app for access without internet connectivity. Step 5: Suggesting New Titles Compile a list of non-academic titles the institution would like added. Email suggestions to the ReP Secretariat at rashtriyaepustakalaya@gmail.com. Step 6: Sharing and Promoting Encourage peers to install and use the app/web platform for cultivating reading habits. Share ReP access details through notice boards, institutional emails, and social platforms for maximum outreach.",
+        "https://ndl.education.gov.in/home"
+      ]
+    ]
+  },
+  "moms": {
+    "label": "Library Committee - Minutes of Meetings (MOMs)",
+    "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSDc-7C8BmRQFRbykY8lvSWNCOv2Cd9Z4iymuqV9o2FDYa_pctVIapLBKV6XAD4RA/pubhtml/sheet?headers=false&gid=1265848057",
+    "rows": [
+      [
+        "1",
+        "S.no.",
+        "Academic year",
+        "Date of Meeting",
+        "MOM Document"
+      ],
+      [
+        "2",
+        "1",
+        "2018-19",
+        "22/10/2018",
+        "View"
+      ],
+      [
+        "3",
+        "2",
+        "2019-20",
+        "18/04/2019",
+        "View"
+      ],
+      [
+        "4",
+        "3",
+        "2019-20",
+        "20/01/2020",
+        "View"
+      ],
+      [
+        "5",
+        "4",
+        "2020-21",
+        "19/01/2021",
+        "View"
+      ],
+      [
+        "6",
+        "5",
+        "2022-23",
+        "01/07/2021",
+        "View"
+      ],
+      [
+        "7",
+        "6",
+        "2022-23",
+        "08/07/2021",
+        "View"
+      ],
+      [
+        "8",
+        "7",
+        "2022-23",
+        "07/04/2022",
+        "View"
+      ],
+      [
+        "9",
+        "8",
+        "2022-23",
+        "05/06/2022",
+        "View"
+      ],
+      [
+        "10",
+        "9",
+        "2022-23",
+        "04/01/2023",
+        "View"
+      ],
+      [
+        "11",
+        "10",
+        "2023-24",
+        "09/08/2023",
+        "View"
+      ],
+      [
+        "12",
+        "11",
+        "2023-24",
+        "16/02/2024",
+        "View"
+      ],
+      [
+        "13",
+        "12",
+        "2024-25",
+        "12/08/2024",
+        "View"
+      ],
+      [
+        "14",
+        "13",
+        "2024-25",
+        "10/09/2024",
+        "View"
+      ],
+      [
+        "15",
+        "14",
+        "2025-26",
+        "12/08/2025",
+        "View"
+      ],
+      [
+        "16",
+        "15",
+        "2025-26",
+        "07/11/2025",
+        "view"
+      ],
+      [
+        "17",
+        "16",
+        "2026-2027",
+        "21/01/2026",
+        "view"
+      ],
+      [
+        "18",
+        "17",
+        "",
+        "07/07/2026",
+        "view"
+      ],
+      [
+        "19",
+        "18",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

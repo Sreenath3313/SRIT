@@ -1,22 +1,29 @@
 import React from 'react';
 import { FileText, Calendar, GraduationCap } from 'lucide-react';
 
-const Notifications: React.FC = () => {
+interface NotificationsProps {
+    compact?: boolean;
+    showHeader?: boolean;
+}
+
+const Notifications: React.FC<NotificationsProps> = ({ compact = false, showHeader = true }) => {
     return (
-        <div className="w-full pb-16">
+        <div className={`w-full ${compact ? 'pb-4 pt-2' : 'pb-16'}`}>
 
             {/* Main Heading */}
-            <h2
-                className="text-center font-sans font-black text-[#FF6600] uppercase tracking-wider mb-10"
-                style={{
-                    fontSize: 'clamp(1.5rem, 2.2vw, 2.5rem)',
-                    lineHeight: '1',
-                }}
-            >
-                NOTIFICATIONS
-            </h2>
+            {showHeader && (
+                <h2
+                    className="text-center font-sans font-black text-[#FF6600] uppercase tracking-wider mb-6 sm:mb-8 md:mb-10"
+                    style={{
+                        fontSize: compact ? 'clamp(1.25rem, 1.8vw, 1.75rem)' : 'clamp(1.5rem, 2.2vw, 2.5rem)',
+                        lineHeight: '1.2',
+                    }}
+                >
+                    NOTIFICATIONS
+                </h2>
+            )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 ${compact ? 'w-full' : 'max-w-7xl mx-auto'}`}>
 
                 {/* Circulars */}
                 <div className="bg-white rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col border border-neutral-100 h-[600px]">

@@ -15,7 +15,7 @@ export const SymphonyPage: React.FC = () => {
                         About <span className="text-[#FF6600]">{activeSection.title}</span>
                     </h2>
                 </div>
-                <div className="text-xs sm:text-[13.5px] leading-relaxed text-neutral-700 space-y-3 text-justify">
+                <div className="text-sm sm:text-[15px] lg:text-base leading-[1.8] text-neutral-700 space-y-3 text-justify">
                     {activeSection.overview && activeSection.overview.map((p, pi) => (
                         <p key={pi}>{p}</p>
                     ))}
@@ -42,7 +42,7 @@ export const SymphonyPage: React.FC = () => {
                                     <span>{typeof feat === 'string' ? feat : (feat as any).title}</span>
                                 </div>
                                 {typeof feat !== 'string' && (feat as any).desc && (
-                                    <p className="text-xs text-neutral-600 leading-relaxed pl-3.5">
+                                    <p className="text-sm text-neutral-600 leading-relaxed pl-3.5">
                                         {(feat as any).desc}
                                     </p>
                                 )}

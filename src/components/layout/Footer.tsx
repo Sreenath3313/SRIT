@@ -115,7 +115,17 @@ const Footer: React.FC = () => (
             </div>
 
             <div className="flex flex-col gap-4 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-xs text-slate-400">© 2007–{new Date().getFullYear()} Srinivasa Ramanujan Institute of Technology. All rights reserved.</p>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs sm:text-[13px]">
+                    <span className="text-slate-400">© 2026 Copyright All Rights Reserved</span>
+                    <span className="hidden sm:inline text-white/30">•</span>
+                    <Link
+                        to="/sdc-director"
+                        className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#FF6600] via-[#FF7A32] to-[#FF5500] text-white font-black shadow-[0_0_20px_rgba(255,102,0,0.75)] border border-white/30 hover:scale-105 hover:shadow-[0_0_28px_rgba(255,102,0,0.95)] transition-all duration-300 tracking-wide text-xs sm:text-[12.5px] uppercase"
+                    >
+                        <span className="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_#ffffff] animate-pulse shrink-0" />
+                        <span>Designed by SDC Cell SRIT</span>
+                    </Link>
+                </div>
                 <div className="flex items-center gap-2">
                     {socialLinks.map((social) => (
                         <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#080C0E]/50 text-slate-200 transition-colors hover:border-[#FF6422] hover:bg-[#FF6422] hover:text-white" aria-label={social.label}>

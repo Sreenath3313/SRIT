@@ -19,17 +19,17 @@ export const cseDepartment: DepartmentData = {
         "Industry-Institute interaction and real-time problem solving",
         "Focus on professional ethics and social responsibility"
     ],
-    "image": "https://www.srit.ac.in/wp-content/uploads/2022/07/Computer-Science-and-Engineering-2.jpg",
+    "image": "/optimized/CSEDept.jpg.webp",
     "researchAreas": [
         "Artificial Intelligence and Machine Learning",
         "Cloud Computing and Big Data",
         "Cybersecurity and Network Systems"
     ],
     "stats": {
-        "faculty": "32",
-        "labs": "Not specified",
-        "students": "Not specified",
-        "placement": "Not specified"
+        "faculty": "32+",
+        "labs": "8",
+        "students": "800+",
+        "placement": "95%"
     },
     "intake": 420,
     "accreditation": "See official CSE department information",
@@ -365,8 +365,8 @@ export const cseDepartment: DepartmentData = {
     ],
     "overview": [
         {
-            "title": "Vision and Mission",
-            "content": "\n                <h4>VISION</h4>\n                <p>\n                    To evolve as a leading department by offering best comprehensive\n                    teaching and learning practices for students to be self-competent\n                    technocrats with professional ethics and social responsibilities.\n                </p>\n\n                <h4>MISSION</h4>\n\n                <p>\n                    <strong>DM1:</strong>\n                    Continuous enhancement of teaching-learning practices for theoretical\n                    and practical computer science knowledge.\n                </p>\n\n                <p>\n                    <strong>DM2:</strong>\n                    Training on emerging technologies, self-learning, ethics and social\n                    consciousness.\n                </p>\n\n                <p>\n                    <strong>DM3:</strong>\n                    Industry-Institute interaction and real-time problems for society.\n                </p>\n            "
+            "title": "Vision & Mission",
+            "content": "<div class=\"p-4 sm:p-6 space-y-5 text-neutral-800 text-[15px] leading-relaxed\"><h4 class=\"text-[#ff6600] font-bold text-base tracking-wide\">VISION:</h4><p align=\"justify\">To evolve as a leading department by offering best comprehensive teaching and learning practices for  students to be self-competent technocrats with professional ethics and social responsibilities.</p><h4 class=\"text-[#ff6600] font-bold text-base tracking-wide pt-2\">MISSION:</h4><div class=\"space-y-4\"><p align=\"justify\"><strong>DM 1:</strong> Continuous enhancement of the teaching-learning practices to gain profound knowledge in theoretical &amp; practical aspects of computer science applications.</p><p align=\"justify\"><strong>DM 2:</strong> Administer training on emerging technologies and motivate the students to inculcate self-learning abilities, ethical values and social consciousness to become competent professionals.</p><p align=\"justify\"><strong>DM 3:</strong> Perpetual elevation of Industry-Institute interactions to facilitate the students to work on real-time problems to serve the needs of the society.</p></div></div>"
         },
         {
             "title": "Course Expert Team",
@@ -390,57 +390,7 @@ export const cseDepartment: DepartmentData = {
         },
         {
             "title": "Achievements",
-            "content": `
-                <div class="overflow-x-auto">
-                    <table class="min-w-full bg-white border border-gray-200">
-                        <thead class="bg-[#1e293b] text-white">
-                            <tr>
-                                <th class="py-2 px-4 border text-sm">Sl.No</th>
-                                <th class="py-2 px-4 border text-sm">Achievement</th>
-                                <th class="py-2 px-4 border text-sm" colspan="2">Period of Validity</th>
-                                <th class="py-2 px-4 border text-sm">Basis of Evaluation</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center text-gray-700 text-sm">
-                            <tr>
-                                <td class="py-2 px-4 border">1</td>
-                                <td class="py-2 px-4 border">Accredited by NBA</td>
-                                <td class="py-2 px-4 border">2018-2019</td>
-                                <td class="py-2 px-4 border">2020-2021</td>
-                                <td class="py-2 px-4 border">Tier - II</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border">2</td>
-                                <td class="py-2 px-4 border">Accredited by NBA</td>
-                                <td class="py-2 px-4 border">2020-2021</td>
-                                <td class="py-2 px-4 border">2021-2022</td>
-                                <td class="py-2 px-4 border">Tier - II</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border">3</td>
-                                <td class="py-2 px-4 border">Accredited by NBA</td>
-                                <td class="py-2 px-4 border">2021-2022</td>
-                                <td class="py-2 px-4 border">2024-2025</td>
-                                <td class="py-2 px-4 border">Tier - II</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border">4</td>
-                                <td class="py-2 px-4 border">Accredited by NBA</td>
-                                <td class="py-2 px-4 border">2025-2026</td>
-                                <td class="py-2 px-4 border">2028-2029</td>
-                                <td class="py-2 px-4 border">Tier - I</td>
-                            </tr>
-                            <tr>
-                                <td class="py-2 px-4 border">5</td>
-                                <td class="py-2 px-4 border">Research Center - CSE</td>
-                                <td class="py-2 px-4 border">06-01-2026</td>
-                                <td class="py-2 px-4 border">-</td>
-                                <td class="py-2 px-4 border">Inspection Committee - JNTUA</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            `
+            "content": "\n                <iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vTAbkdqHIMRvBWJAzzrrSqNuquO6i9pyEBLBFfIDrKb8EV3s8c3-BHM-LeRnGMibWzv94zzEQAAZDbx/pubhtml?widget=true&amp;chrome=false&amp;headers=false\" width=\"100%\" height=\"600px\" style=\"border: none;\"></iframe>\n            "
         },
         {
             "title": "News Letters",

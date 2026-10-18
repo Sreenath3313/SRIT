@@ -130,13 +130,6 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <Phone className="w-5 h-5 text-white/90 shrink-0 mt-0.5" strokeWidth={1.5} />
-                                <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-widest text-white/70 mb-1">Phone</p>
-                                    <p className="text-[14px] text-white font-semibold">+91 98765 43214</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-4">
                                 <MapPin className="w-5 h-5 text-white/90 shrink-0 mt-0.5" strokeWidth={1.5} />
                                 <div>
                                     <p className="text-[10px] font-bold uppercase tracking-widest text-white/70 mb-1">Location</p>
@@ -145,9 +138,6 @@ const CSEAbout: React.FC<CSEAboutProps> = ({ dept }) => {
                             </div>
                         </div>
                     </div>
-                    <button className="w-full py-3.5 rounded-xl bg-white hover:bg-white/90 transition-colors text-[11px] font-black uppercase tracking-[0.2em] text-primary">
-                        View on Map
-                    </button>
                 </div>
             </div>
 
