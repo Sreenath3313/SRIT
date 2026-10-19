@@ -112,6 +112,16 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
     const headerRef = useRef<HTMLElement | null>(null);
     const location = useLocation();
 
+    const [isDesktopScreen, setIsDesktopScreen] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsDesktopScreen(window.innerWidth >= 1024);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     useEffect(() => {
         setOpenMenu(null);
         setMobileOpen(false);
@@ -164,25 +174,25 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
 
     return <header ref={headerRef} className={`fixed inset-x-0 top-0 z-[100] bg-white ${showShadow ? 'shadow-[0_10px_32px_rgba(255,102,0,.12)]' : 'shadow-none'}`}>
         <div className="bg-[#FF6600] text-white shadow-xs">
-            <div className="flex w-full items-center justify-between px-3 sm:px-5 md:px-6 lg:px-8 py-1.5 lg:py-0 min-h-[38px] lg:min-h-[42px]">
+            <div className="flex w-full items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-1 lg:py-0 min-h-[36px] lg:min-h-[40px] xl:min-h-[42px]">
                 {/* Contact information (Phone & Email) */}
-                <div aria-label="Contact information" className="flex items-center gap-2.5 sm:gap-4 shrink-0 text-[11.5px] sm:text-[13px] md:text-[13.5px] font-extrabold tracking-wide">
-                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
-                        <PhoneIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                <div aria-label="Contact information" className="flex items-center gap-2 sm:gap-3 md:gap-4 shrink-0 text-[11px] sm:text-[12px] md:text-[13px] xl:text-[13.5px] font-extrabold tracking-wide">
+                    <a href="tel:+919515611111" className="inline-flex items-center gap-1 sm:gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <PhoneIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
                         <span className="font-extrabold tracking-wider">91-951 561 1111</span>
                     </a>
                     <span className="h-3.5 w-[1px] bg-white/40" aria-hidden="true" />
-                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
-                        <MailIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1 sm:gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <MailIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
                         <span className="font-extrabold tracking-wider">hr@srit.ac.in</span>
                     </a>
                 </div>
 
-                {/* Mobile-only section: Faculty Login, Student Login and hamburger for other links */}
+                {/* Mobile/Zoomed-in section: Faculty Login, Student Login and hamburger for other links */}
                 <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
-                    {/* Faculty Login & Student Login taken out of hamburger */}
+                    {/* Faculty Login & Student Login */}
                     {utilityLinks.slice(0, 2).map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = "inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-2 py-1 rounded transition-colors whitespace-nowrap";
+                        const itemClass = "inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded transition-colors whitespace-nowrap";
                         const shortLabel = label.replace(' Login', '');
                         const content = (
                             <>
@@ -201,7 +211,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                         );
                     })}
 
-                    {/* Dedicated hamburger button for remaining links */}
+                    {/* Dedicated button for remaining links */}
                     <button
                         type="button"
                         onClick={() => {
@@ -211,7 +221,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                         }}
                         aria-label={topUtilityOpen ? 'Close more links' : 'Open more links'}
                         aria-expanded={topUtilityOpen}
-                        className="inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-2 py-1 rounded transition-colors"
+                        className="inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded transition-colors"
                     >
                         <span className="flex w-3 flex-col gap-[2.5px]" aria-hidden="true">
                             <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'translate-y-[4px] rotate-45' : ''}`} />
@@ -222,16 +232,16 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                     </button>
                 </div>
 
-                {/* Desktop-only utility links (exactly untouched on desktop) */}
+                {/* Desktop-only utility links (flex with wrap-safety and zoom scaling) */}
                 <nav
                     aria-label="Contact and quick links"
-                    className="hidden lg:flex items-center justify-end text-[11px] xl:text-[11.5px] 2xl:text-[12px] font-bold tracking-tight"
+                    className="hidden lg:flex items-center justify-end text-[10.5px] xl:text-[11.5px] 2xl:text-[12px] font-bold tracking-tight"
                 >
                     {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = 'inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 border-l border-white/40 px-2 lg:px-2.5 2xl:px-3 py-1.5 text-white hover:bg-black/15 hover:text-white transition-all font-bold';
+                        const itemClass = 'inline-flex items-center gap-1 xl:gap-1.5 whitespace-nowrap shrink-0 border-l border-white/40 px-1.5 xl:px-2.5 2xl:px-3 py-1 text-white hover:bg-black/15 hover:text-white transition-all font-bold';
                         const content = (
                             <>
-                                <Icon className={`h-3.5 w-3.5 xl:h-4 xl:w-4 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
+                                <Icon className={`h-3 w-3 xl:h-3.5 xl:w-3.5 2xl:h-4 2xl:w-4 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
                                 <span className="font-bold">{label}</span>
                             </>
                         );
@@ -242,7 +252,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                 </nav>
             </div>
 
-            {/* Mobile Dropdown Menu for Other Utility Links */}
+            {/* Dropdown Menu for Other Utility Links */}
             <AnimatePresence>
                 {topUtilityOpen && (
                     <motion.div
@@ -290,14 +300,21 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
         </div>
 
         <div className="relative border-t-4 border-[#FF6600] bg-white" onMouseLeave={onMenuLeave}>
-            <div className="flex h-[80px] w-full items-center justify-between gap-4 px-3 sm:gap-6 sm:px-5 md:px-6 lg:h-[96px] lg:px-8 xl:h-[100px]">
+            <div className="flex h-[72px] sm:h-[80px] lg:h-[90px] xl:h-[96px] 2xl:h-[100px] w-full items-center justify-between gap-2 sm:gap-4 md:gap-6 px-2 sm:px-4 md:px-6 lg:px-8">
                 <Link to="/" aria-label="SRIT home" className="flex min-w-0 shrink-0 items-center py-1">
-                    <img src="/optimized/SRIT_logo_HD_8x.png" alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade" width="10240" height="1920" fetchPriority="high" className="h-[56px] w-auto max-w-[65vw] shrink-0 object-contain sm:h-[66px] sm:max-w-[55vw] lg:h-[78px] xl:h-[84px] 2xl:h-[88px] lg:max-w-none transition-transform duration-200" />
+                    <img
+                        src="/optimized/SRIT_logo_HD_8x.png"
+                        alt="Srinivasa Ramanujan Institute of Technology — Autonomous, NBA, NAAC A Grade"
+                        width="10240"
+                        height="1920"
+                        fetchPriority="high"
+                        className="h-[48px] sm:h-[58px] md:h-[64px] lg:h-[72px] xl:h-[80px] 2xl:h-[86px] w-auto max-w-[55vw] sm:max-w-[50vw] md:max-w-[45vw] lg:max-w-none shrink-0 object-contain transition-all duration-200"
+                    />
                 </Link>
 
-                {/* Right cluster: Navigation links and Action buttons close together */}
-                <div className="flex items-center gap-3 md:gap-5 lg:gap-6 ml-auto self-stretch">
-                    <nav aria-label="Primary navigation" className="hidden h-full items-stretch gap-1 xl:gap-2 lg:flex">
+                {/* Right cluster: Navigation links and Action buttons */}
+                <div className="flex items-center gap-1.5 sm:gap-3 md:gap-4 lg:gap-3 xl:gap-5 ml-auto self-stretch shrink-0">
+                    <nav aria-label="Primary navigation" className="hidden h-full items-stretch gap-0.5 xl:gap-1.5 2xl:gap-2 lg:flex">
                         {desktopLinks.map((item) => (
                             <div
                                 key={item.label}
@@ -307,13 +324,15 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                 <Link
                                     to={item.href}
                                     onFocus={() => onMenuEnter(item.label)}
-                                    className={`relative inline-flex h-full items-center gap-1.5 px-2 text-[14px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] xl:px-3 xl:text-[16px] 2xl:px-4 2xl:text-[18px] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'}`}
+                                    className={`relative inline-flex h-full items-center gap-0.5 xl:gap-1 px-1.5 lg:text-[13px] xl:px-2.5 xl:text-[15px] 2xl:px-3.5 2xl:text-[17px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] ${
+                                        isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'
+                                    }`}
                                 >
                                     <span className="relative py-2">
-                                        <span className="inline-flex items-center gap-1">
+                                        <span className="inline-flex items-center gap-0.5 xl:gap-1">
                                             {item.label}
                                             {item.hasDropdown && (
-                                                <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ease-out ${openMenu === item.label ? 'rotate-180' : ''}`} />
+                                                <ChevronDown className={`h-3 w-3 xl:h-3.5 xl:w-3.5 transition-transform duration-300 ease-out ${openMenu === item.label ? 'rotate-180' : ''}`} />
                                             )}
                                         </span>
                                         <span
@@ -327,15 +346,15 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                         ))}
                     </nav>
 
-                    <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+                    <div className="flex shrink-0 items-center gap-1 sm:gap-1.5 md:gap-2">
                         <button
                             type="button"
                             onClick={() => { setSearchOpen((open) => !open); setOpenMenu(null); }}
                             aria-label={searchOpen ? 'Close search' : 'Search this site'}
                             aria-expanded={searchOpen}
-                            className="inline-flex h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13 items-center justify-center rounded-xl text-black transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
+                            className="inline-flex h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 xl:h-12 xl:w-12 items-center justify-center rounded-xl text-black transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
                         >
-                            <Search className="h-6 w-6 sm:h-[26px] sm:w-[26px] lg:h-7 lg:w-7 stroke-[2.2]" />
+                            <Search className="h-5 w-5 sm:h-5 sm:w-5 lg:h-6 lg:w-6 xl:h-[26px] xl:w-[26px] stroke-[2.2]" />
                         </button>
                         <button
                             type="button"
@@ -343,12 +362,12 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                             aria-controls="site-navigation-drawer"
                             aria-expanded={mobileOpen}
-                            className="group inline-flex h-11 w-11 sm:h-12 sm:w-12 lg:h-13 lg:w-13 items-center justify-center rounded-xl text-[#171b24] transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
+                            className="group inline-flex h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 xl:h-12 xl:w-12 items-center justify-center rounded-xl text-[#171b24] transition-all hover:text-[#FF6600] hover:bg-neutral-100 active:scale-95"
                         >
-                            <span className="flex w-7 sm:w-8 lg:w-8 flex-col gap-[5.5px] sm:gap-[6px] lg:gap-[6.5px]" aria-hidden="true">
-                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[8px] sm:translate-y-[8.5px] lg:translate-y-[9.5px] rotate-45' : ''}`} />
-                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : ''}`} />
-                                <span className={`h-[2.5px] lg:h-[3px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[8px] sm:-translate-y-[8.5px] lg:-translate-y-[9.5px] -rotate-45' : ''}`} />
+                            <span className="flex w-5 sm:w-6 lg:w-7 flex-col gap-[4.5px] sm:gap-[5px] lg:gap-[5.5px]" aria-hidden="true">
+                                <span className={`h-[2px] lg:h-[2.5px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'translate-y-[6.5px] sm:translate-y-[7.5px] lg:translate-y-[8px] rotate-45' : ''}`} />
+                                <span className={`h-[2px] lg:h-[2.5px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? 'scale-x-0 opacity-0' : ''}`} />
+                                <span className={`h-[2px] lg:h-[2.5px] w-full rounded-full bg-current transition-all duration-300 ease-out ${mobileOpen ? '-translate-y-[6.5px] sm:-translate-y-[7.5px] lg:-translate-y-[8px] -rotate-45' : ''}`} />
                             </span>
                         </button>
                     </div>
@@ -401,7 +420,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                             </div>
                         </div>
                         <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 xl:grid-cols-4">
-                            {(typeof window !== 'undefined' && window.innerWidth >= 1024 ? menuLinks : navLinks.filter(item => item.href !== '/')).map((item) => (
+                            {(isDesktopScreen ? menuLinks : navLinks.filter(item => item.href !== '/')).map((item) => (
                                 <div key={item.label} className={`border-b border-[#FF6600]/20 py-1.5 ${mobileSubmenu === item.label ? 'xl:col-span-4' : ''}`}>
                                     <div className="flex min-h-14 items-center justify-between">
                                         {item.hasDropdown ? (
@@ -486,27 +505,6 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 border-t border-[#FF6600]/15 pt-4 lg:hidden">
-                            {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
-                                const btnClass = "flex items-center gap-2 px-3 py-2.5 rounded-lg bg-[#FFF3EA] text-[#FF6600] hover:bg-[#FFE6D5] text-xs font-bold transition-colors";
-                                const itemInner = (
-                                    <>
-                                        <Icon className={`h-3.5 w-3.5 shrink-0 text-[#FF6600] ${fillIcon ? 'fill-[#FF6600]' : ''}`} />
-                                        <span className="truncate">{label}</span>
-                                    </>
-                                );
-                                return external ? (
-                                    <a key={label} href={href} target="_blank" rel="noreferrer" className={btnClass}>
-                                        {itemInner}
-                                    </a>
-                                ) : (
-                                    <Link key={label} to={href} onClick={() => setMobileOpen(false)} className={btnClass}>
-                                        {itemInner}
-                                    </Link>
-                                );
-                            })}
-                        </div>
-                        <Link to="/admissions/admission-procedure" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex h-11 w-full items-center justify-center gap-2 bg-[#FF6600] text-sm font-bold text-white transition-colors hover:bg-[#FF6600]/90 sm:hidden">Apply to SRIT <ArrowRight className="h-4 w-4" /></Link>
                     </nav>
                 </motion.div>
             </>}
