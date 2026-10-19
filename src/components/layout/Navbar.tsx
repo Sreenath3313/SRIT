@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, GraduationCap, Search, X } from 'lucide-react';
+import { ArrowRight, Bell, ChevronDown, GraduationCap, Search, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { navLinks, type NavLink } from '../../data/navigation';
 import { placementStats } from '../../data/placements';
-import Notifications from '../../features/notifications/Notifications';
 
 const researchLink: NavLink = {
     label: 'Research',
@@ -76,6 +75,7 @@ const DownloadIcon = ({ className = "h-4 w-4 fill-black text-black shrink-0" }: 
 const utilityLinks = [
     { label: 'Faculty Login', href: 'https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f', external: true, icon: FacultyLoginIcon, fillIcon: true },
     { label: 'Student Login', href: 'https://webprosindia.com/srit/default.aspx?ReturnUrl=%2fsrit%2f', external: true, icon: UserGraduateIcon, fillIcon: true },
+    { label: 'Notifications', href: '/notifications', icon: Bell, fillIcon: false },
     { label: 'Degree Verification', href: '/degree-verification', icon: DegreeVerificationIcon, fillIcon: true },
     { label: 'Alumni', href: 'https://alumni.srit.ac.in/', external: true, icon: UsersIcon, fillIcon: true },
     { label: 'EAPCET/ECET Ranks', href: '/previousranks', icon: UsersIcon, fillIcon: true },
@@ -460,15 +460,30 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                             ))}
                         </div>
 
-                        {/* Hamburger Notifications Section */}
+                        {/* Hamburger Notifications Link */}
                         <div className="mt-8 border-t-2 border-[#FF6600]/15 pt-6 pb-2">
-                            <div className="mb-4">
-                                <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#FF6600]">Live Bulletins</p>
-                                <h3 className="font-sans text-xl sm:text-2xl font-black text-[#171b24] uppercase tracking-wide">
-                                    Campus Notifications
-                                </h3>
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-[#FFF3EA] via-[#FFF8F3] to-[#FFF3EA] border border-[#FF6600]/25 shadow-sm">
+                                <div className="flex items-start sm:items-center gap-3.5">
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FF6600] text-white shadow-md shadow-[#FF6600]/30">
+                                        <Bell className="h-5 w-5" />
+                                    </div>
+                                    <div>
+                                        <p className="text-[11px] font-bold uppercase tracking-[.18em] text-[#FF6600]">Live Bulletins</p>
+                                        <h3 className="font-sans text-lg sm:text-xl font-black text-[#171b24] tracking-tight">
+                                            Campus Notifications & Circulars
+                                        </h3>
+                                        <p className="text-xs text-neutral-600 mt-0.5">View latest exam notifications, circulars, and placement drives</p>
+                                    </div>
+                                </div>
+                                <Link
+                                    to="/notifications"
+                                    onClick={() => setMobileOpen(false)}
+                                    className="inline-flex items-center justify-center gap-2 self-start sm:self-center px-4 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF6600]/20 hover:bg-[#e05500] transition-all hover:scale-102 shrink-0"
+                                >
+                                    <span>View All Notifications</span>
+                                    <ArrowRight className="h-4 w-4" />
+                                </Link>
                             </div>
-                            <Notifications compact={true} showHeader={false} />
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 border-t border-[#FF6600]/15 pt-4 lg:hidden">

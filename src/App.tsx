@@ -42,6 +42,7 @@ import MilestonesPage from './pages/about/MilestonesPage';
 import SopPage from './pages/about/SopPage';
 import StrategicPlanPage from './pages/about/StrategicPlanPage';
 import AdmissionsCommitteePage from './pages/admissions/AdmissionsCommitteePage';
+import CampusNotificationsPage from './pages/CampusNotificationsPage';
 import NotificationsPage from './pages/examinations/NotificationsPage';
 import EvaluationProcedurePage from './pages/examinations/EvaluationProcedurePage';
 import RecountingProcedurePage from './pages/examinations/RecountingProcedurePage';
@@ -164,6 +165,8 @@ function App() {
           <Route path="/sdc-director" element={<SdcDirectorPage />} />
           <Route path="/about/sdc-director" element={<SdcDirectorPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/notifications" element={<CampusNotificationsPage />} />
+          <Route path="/campus-notifications" element={<CampusNotificationsPage />} />
           <Route path="/departments" element={<AllDepartmentsPage />} />
           <Route path="/department/:slug/*" element={<DepartmentPage />} />
           <Route path="/message-from-head" element={<MessageFromHead />} />
