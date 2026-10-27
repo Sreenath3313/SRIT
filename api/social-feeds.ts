@@ -24,10 +24,10 @@ export default async function handler(req: any, res: any) {
     console.error('[api/social-feeds] Error reading bundled json:', e?.message);
   }
 
-  // Check if live refresh was requested or cache is older than 15 minutes
+  // Check if live refresh was requested or cache is older than 2 minutes
   const now = Date.now();
   const lastSynced = currentData?.syncedAt ? new Date(currentData.syncedAt).getTime() : 0;
-  const isStale = (now - lastSynced) > 15 * 60 * 1000;
+  const isStale = (now - lastSynced) > 2 * 60 * 1000;
   const shouldRefresh = req.query?.refresh === 'true' || isStale;
 
   if (shouldRefresh) {

@@ -38,14 +38,14 @@ export const navLinks: NavLink[] = [
         hasDropdown: true,
         subItems: [
             { label: 'All Departments', href: '/departments' },
-            { label: 'Computer Science (CSE)', href: '/department/cse' },
-            { label: 'CSE — AI and ML (CSM)', href: '/department/csm' },
-            { label: 'CSE — AI and DS (CAD)', href: '/department/cad' },
-            { label: 'Electronics and Communication (ECE)', href: '/department/ece' },
-            { label: 'Electrical and Electronics (EEE)', href: '/department/eee' },
+            { label: 'Computer Science and Engineering (CSE)', href: '/department/cse' },
+            { label: 'Computer Science and Engineering — Artificial Intelligence & Machine Learning (CSM)', href: '/department/csm' },
+            { label: 'Computer Science and Engineering — Artificial Intelligence & Data Science (CAD)', href: '/department/cad' },
+            { label: 'Electronics and Communication Engineering (ECE)', href: '/department/ece' },
+            { label: 'Electrical and Electronics Engineering (EEE)', href: '/department/eee' },
             { label: 'Mechanical Engineering (MEC)', href: '/department/mec' },
             { label: 'Civil Engineering (CIVIL)', href: '/department/civil' },
-            { label: 'H&S', href: '/department/has' }
+            { label: 'Humanities and Sciences (H&S)', href: '/department/has' }
         ]
     },
     { 

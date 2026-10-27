@@ -18,11 +18,16 @@
  *
  * Usage: npm run sync:social
  */
-import { mkdir, readdir, rm, writeFile, access } from 'node:fs/promises';
+import { mkdir, readdir, rm, writeFile, readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+// Load API tokens (INSTAGRAM_ACCESS_TOKEN, FACEBOOK_PAGE_ACCESS_TOKEN, ...) from .env / .env.local if present.
+for (const envFile of ['.env.local', '.env']) {
+    try { process.loadEnvFile(path.join(ROOT, envFile)); } catch { /* file missing — ignore */ }
+}
 const OUT_JSON = path.join(ROOT, 'src/features/home/socialData.json');
 const PUBLIC_SOCIAL = path.join(ROOT, 'public/social');
 const SOURCE_URL = 'https://www.srit.ac.in/';
@@ -545,6 +550,10 @@ async function syncFacebook(html, twitterTweets = []) {
 
 /* ------------------------------------------------------------------ */
 async function cleanUnused(data) {
+    // Only clean unused images if we actually have valid posts to prevent accidental deletion
+    if (!data.instagram?.posts?.length || !data.facebook?.posts?.length) {
+        return;
+    }
     const used = new Set();
     JSON.stringify(data, (_, v) => {
         if (typeof v === 'string' && v.startsWith('/social/')) used.add(path.join(ROOT, 'public', v));
@@ -561,36 +570,87 @@ async function cleanUnused(data) {
 }
 
 export async function syncSocialFeeds() {
-    let html;
+    let existing = null;
+    try {
+        existing = JSON.parse(await readFile(OUT_JSON, 'utf-8'));
+    } catch {
+        // no existing file
+    }
+
+    let html = '';
     try {
         html = await fetchText(SOURCE_URL);
     } catch (err) {
         log(`Could not reach ${SOURCE_URL} (${err.cause?.code || err.message}). Keeping existing social data.`);
-        return null;
     }
 
     try {
         const [instagram, twitter] = await Promise.all([
-            syncInstagram(html),
-            syncTwitter(html),
+            syncInstagram(html).catch(() => null),
+            syncTwitter(html).catch(() => null),
         ]);
-        const facebook = await syncFacebook(html, twitter.tweets);
-        if (!instagram.posts.length && !twitter.tweets.length && !facebook.posts.length) {
-            log('No posts found in source page. Keeping existing social data.');
-            return null;
+        const facebook = await syncFacebook(html, twitter?.tweets || []).catch(() => null);
+
+        // Smart merge: prepend new incoming posts while preserving existing archive
+        const mergePosts = (freshPosts = [], existingPosts = [], max = 40) => {
+            const map = new Map();
+            for (const p of freshPosts) if (p && p.id) map.set(String(p.id), p);
+            for (const p of existingPosts) if (p && p.id && !map.has(String(p.id))) map.set(String(p.id), p);
+            const combined = Array.from(map.values());
+            combined.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+            return combined.slice(0, max);
+        };
+
+        const mergeTweets = (freshTweets = [], existingTweets = [], max = 30) => {
+            const map = new Map();
+            for (const t of freshTweets) if (t && t.id) map.set(String(t.id), t);
+            for (const t of existingTweets) if (t && t.id && !map.has(String(t.id))) map.set(String(t.id), t);
+            return Array.from(map.values()).slice(0, max);
+        };
+
+        const mergedIgPosts = mergePosts(instagram?.posts, existing?.instagram?.posts, 35);
+        const finalInstagram = {
+            profile: instagram?.profile?.handle ? instagram.profile : (existing?.instagram?.profile || { handle: 'sritatp', url: 'https://www.instagram.com/sritatp/' }),
+            posts: mergedIgPosts.length > 0 ? mergedIgPosts : (existing?.instagram?.posts || []),
+        };
+
+        const mergedFbPosts = mergePosts(facebook?.posts, existing?.facebook?.posts, 20);
+        const finalFacebook = {
+            profile: facebook?.profile?.name ? facebook.profile : (existing?.facebook?.profile || { name: 'Srinivasa Ramanujan Institute of Technology', url: 'https://www.facebook.com/sritatp' }),
+            posts: mergedFbPosts.length > 0 ? mergedFbPosts : (existing?.facebook?.posts || []),
+        };
+
+        const mergedX = mergeTweets(twitter?.tweets, existing?.twitter?.tweets, 20);
+        const finalTwitter = {
+            profile: twitter?.profile?.name ? twitter.profile : (existing?.twitter?.profile || { name: 'SRIT - Anantapur', handle: 'sritatp', url: 'https://x.com/sritatp' }),
+            tweets: mergedX.length > 0 ? mergedX : (existing?.twitter?.tweets || []),
+        };
+
+        if (!finalInstagram.posts.length && !finalTwitter.tweets.length && !finalFacebook.posts.length) {
+            log('No social posts available. Keeping existing social data.');
+            return existing;
         }
-        const data = { syncedAt: new Date().toISOString(), source: SOURCE_URL, instagram, twitter, facebook };
+
+        const data = {
+            syncedAt: new Date().toISOString(),
+            source: SOURCE_URL,
+            instagram: finalInstagram,
+            twitter: finalTwitter,
+            facebook: finalFacebook
+        };
+
         await writeFile(OUT_JSON, JSON.stringify(data, null, 2) + '\n');
         await cleanUnused(data);
         log(`Saved ${path.relative(ROOT, OUT_JSON)}`);
         return data;
     } catch (err) {
         log(`Sync failed (${err.message}). Keeping existing social data.`);
-        return null;
+        return existing;
     }
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {
     syncSocialFeeds();
 }
+
 

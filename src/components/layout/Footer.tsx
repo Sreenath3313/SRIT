@@ -63,74 +63,133 @@ const socialLinks = [
 const footerIcons = { About: Landmark, Academics: GraduationCap, Departments: Network, Connect: Send };
 
 const Footer: React.FC = () => (
-    <footer className="relative isolate overflow-hidden border-t-2 border-[#FF5B18] bg-[#080C0E] text-white">
-        <div className="relative z-10 section-container py-10 md:py-12">
-            <div className="grid gap-7 border-b border-white/15 pb-7 lg:grid-cols-[1fr_auto_auto] lg:items-end lg:gap-10">
+    <footer className="relative isolate overflow-hidden bg-[#080C0E] text-white">
+        {/* Compliance / Policy Links on top of footer */}
+        <div className="border-t-2 border-[#FF5B18] border-b border-white/10 bg-[#060A0C] py-2 sm:py-2.5">
+            <div className="section-container flex flex-wrap items-center justify-center gap-x-3.5 sm:gap-x-6 gap-y-1.5 text-xs text-slate-300">
+                <Link to="/privacy-policy" className="transition-colors hover:text-[#FF7A32] whitespace-nowrap">
+                    Privacy Policy
+                </Link>
+                <span className="hidden sm:inline text-white/20 select-none">•</span>
+                <Link to="/terms-and-conditions" className="transition-colors hover:text-[#FF7A32] whitespace-nowrap">
+                    Terms &amp; Conditions
+                </Link>
+                <span className="hidden sm:inline text-white/20 select-none">•</span>
+                <Link to="/refund-and-cancellation" className="transition-colors hover:text-[#FF7A32] whitespace-nowrap">
+                    Refund &amp; Cancellation
+                </Link>
+                <span className="hidden sm:inline text-white/20 select-none">•</span>
+                <Link to="/admissions/online-fee-payment" className="transition-colors hover:text-[#FF7A32] whitespace-nowrap">
+                    Fee Payments
+                </Link>
+            </div>
+        </div>
+
+        <div className="relative z-10 section-container py-6 md:py-7">
+            {/* Top Brand & Contact Row */}
+            <div className="grid gap-4 border-b border-white/15 pb-4 md:gap-5 md:pb-5 lg:grid-cols-[1fr_auto_auto] lg:items-end lg:gap-8">
                 <div>
-                    <div className="mb-3 h-[3px] w-12 bg-[#FF5B18]" />
-                    <Link to="/" className="block max-w-max text-xl font-bold leading-tight tracking-tight transition-colors hover:text-[#FF7A32] md:text-2xl">
+                    <div className="mb-2 h-[2.5px] w-10 bg-[#FF5B18]" />
+                    <Link to="/" className="block max-w-max text-base font-bold leading-tight tracking-tight transition-colors hover:text-[#FF7A32] sm:text-lg md:text-xl">
                         Srinivasa Ramanujan<br /><span className="text-[#FF6422]">Institute of Technology</span>
                     </Link>
-                    <p className="mt-3 flex items-center gap-2 text-sm text-slate-300">
-                        <MapPin className="h-4 w-4 shrink-0 text-[#FF6422]" />
-                        Rotarypuram, Anantapur — 515701, Andhra Pradesh
+                    <p className="mt-2 flex items-start sm:items-center gap-2 text-xs sm:text-[13px] text-slate-300">
+                        <MapPin className="h-4 w-4 shrink-0 text-[#FF6422] mt-0.5 sm:mt-0" />
+                        <span>Rotarypuram, Anantapur — 515701, Andhra Pradesh</span>
                     </p>
                 </div>
-                <div className="flex flex-col gap-3 text-sm text-slate-200 sm:flex-row sm:items-center sm:gap-6">
-                    <a href="tel:9515611111" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]"><Phone className="h-4 w-4 text-[#FF6422]" />91-951 561 1111</a>
-                    <span className="hidden h-6 w-px bg-white/20 sm:block" />
-                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]"><Mail className="h-4 w-4 text-[#FF6422]" />hr@srit.ac.in</a>
+                <div className="flex flex-col gap-2 text-xs text-slate-200 sm:flex-row sm:items-center sm:gap-6 sm:text-[13px]">
+                    <a href="tel:9515611111" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]">
+                        <Phone className="h-4 w-4 shrink-0 text-[#FF6422]" />
+                        <span>91-951 561 1111</span>
+                    </a>
+                    <span className="hidden h-4 w-px bg-white/20 sm:block" />
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-2 transition-colors hover:text-[#FF7A32]">
+                        <Mail className="h-4 w-4 shrink-0 text-[#FF6422]" />
+                        <span>hr@srit.ac.in</span>
+                    </a>
                 </div>
-                <p className="hidden border-l border-white/20 pl-6 text-[10px] font-semibold uppercase leading-[1.9] tracking-[.24em] text-slate-400 xl:block">
+                <p className="hidden border-l border-white/20 pl-5 text-[10px] font-semibold uppercase leading-relaxed tracking-[.22em] text-slate-400 xl:block">
                     Learn<br />Innovate<br />Build<br />Belong
                 </p>
             </div>
 
-            <div className="grid gap-8 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+            {/* Main Links Grid - 2 cols on mobile, 4 cols on tablet & desktop */}
+            <div className="grid grid-cols-2 gap-x-5 gap-y-7 py-5 md:grid-cols-4 md:gap-0 md:py-6">
                 {Object.entries(columns).map(([title, links], index) => {
                     const Icon = footerIcons[title as keyof typeof footerIcons];
                     return (
-                        <div key={title} className={`flex gap-4 lg:px-6 ${index === 0 ? 'lg:pl-0' : 'lg:border-l lg:border-white/15'}`}>
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#FF6422]/25 bg-[#FF6422]/[0.06] text-[#FF6422]">
-                                <Icon className="h-5 w-5" strokeWidth={2.2} />
+                        <div
+                            key={title}
+                            className={`flex flex-col md:px-5 lg:px-6 ${
+                                index === 0
+                                    ? 'md:pl-0'
+                                    : 'md:border-l md:border-white/15'
+                            }`}
+                        >
+                            <div className="flex items-center gap-2 sm:gap-2.5">
+                                <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center border border-[#FF6422]/25 bg-[#FF6422]/[0.06] text-[#FF6422]">
+                                    <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2.2} />
+                                </div>
+                                <p className="text-xs font-bold uppercase tracking-[.14em] text-slate-100 sm:tracking-[.15em]">{title}</p>
                             </div>
-                            <div>
-                                <p className="text-xs font-bold uppercase tracking-[.16em] text-slate-100">{title}</p>
-                                <div className="mb-4 mt-2 h-[2px] w-7 bg-[#FF5B18]" />
-                                <ul className="space-y-2.5">
-                                    {links.map((link) => (
-                                        <li key={link.label}>
-                                            {link.external ? (
-                                                <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-300 transition-colors hover:text-[#FF7A32]">{link.label}</a>
-                                            ) : (
-                                                <Link to={link.href} className="text-sm text-slate-300 transition-colors hover:text-[#FF7A32]">{link.label}</Link>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                            <div className="mb-2 mt-1.5 h-[2px] w-7 bg-[#FF5B18]" />
+                            <ul className="space-y-1.5">
+                                {links.map((link) => (
+                                    <li key={link.label}>
+                                        {link.external ? (
+                                            <a
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block text-xs sm:text-[13px] text-slate-300 transition-colors hover:text-[#FF7A32] leading-snug"
+                                            >
+                                                {link.label}
+                                            </a>
+                                        ) : (
+                                            <Link
+                                                to={link.href}
+                                                className="block text-xs sm:text-[13px] text-slate-300 transition-colors hover:text-[#FF7A32] leading-snug"
+                                            >
+                                                {link.label}
+                                            </Link>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     );
                 })}
             </div>
 
-            <div className="flex flex-col gap-4 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs sm:text-[13px]">
+            {/* Bottom Copyright & Social Strip */}
+            <div className="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-4 text-center sm:flex-row sm:text-left">
+                <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 text-xs sm:justify-start sm:text-[13px]">
                     <span className="text-slate-400">© 2026 Copyright All Rights Reserved</span>
                     <span className="hidden sm:inline text-white/30">•</span>
-                    <Link
-                        to="/sdc-director"
-                        className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#FF6600] via-[#FF7A32] to-[#FF5500] text-white font-black shadow-[0_0_20px_rgba(255,102,0,0.75)] border border-white/30 hover:scale-105 hover:shadow-[0_0_28px_rgba(255,102,0,0.95)] transition-all duration-300 tracking-wide text-xs sm:text-[12.5px] uppercase"
+                    <span
+                        className="inline-flex items-center gap-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-gradient-to-r from-[#FF6600] via-[#FF7A32] to-[#FF5500] text-white font-extrabold shadow-[0_0_15px_rgba(255,102,0,0.6)] border border-white/30 tracking-wide text-[11px] sm:text-xs uppercase cursor-default"
                     >
-                        <span className="w-2 h-2 rounded-full bg-white shadow-[0_0_6px_#ffffff] animate-pulse shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_5px_#ffffff] animate-pulse shrink-0" />
                         <span>Designed by SDC Cell SRIT</span>
-                    </Link>
+                    </span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-center gap-2 shrink-0">
                     {socialLinks.map((social) => (
-                        <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#080C0E]/50 text-slate-200 transition-colors hover:border-[#FF6422] hover:bg-[#FF6422] hover:text-white" aria-label={social.label}>
-                            {social.label === 'Instagram' ? <Instagram className="h-4 w-4" /> : (
-                                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d={social.icon} /></svg>
+                        <a
+                            key={social.label}
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex h-8 w-8 sm:h-8.5 sm:w-8.5 items-center justify-center rounded-full border border-white/20 bg-[#080C0E]/50 text-slate-200 transition-colors hover:border-[#FF6422] hover:bg-[#FF6422] hover:text-white"
+                            aria-label={social.label}
+                        >
+                            {social.label === 'Instagram' ? (
+                                <Instagram className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                            ) : (
+                                <svg className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d={social.icon} />
+                                </svg>
                             )}
                         </a>
                     ))}

@@ -13,7 +13,7 @@ const governingBodyMembers = [
     { sNo: 5, name: 'Sri E.S. Chakravarthy', affiliation: 'Advisor to SRIT, Bangalore', designation: 'Nominated by Management' },
     { sNo: 6, name: 'Dr. D. Sai Chaitanya Kishore', affiliation: 'Professor, Mechanical Engineering, SRIT', designation: 'Nominated by Principal', link: '/department/mec' },
     { sNo: 7, name: 'Dr. U. Raghu Babu', affiliation: 'Associate Professor, Civil Engineering, SRIT', designation: 'Nominated by Principal', link: '/department/civil' },
-    { sNo: 8, name: 'Prof. A. Suresh Babu', affiliation: 'Director, Software Development Centre, JNTUA', designation: 'Nominated by APSCHE', link: '/sdc-director' },
+    { sNo: 8, name: 'Prof. A. Suresh Babu', affiliation: 'Director, Software Development Centre, JNTUA', designation: 'Nominated by APSCHE' },
     { sNo: 9, name: 'Prof. S.V. Satyanarayana', affiliation: 'Principal, JNTUA College of Engineering, Kalikiri', designation: 'Nominated by JNTUA' },
     { sNo: 10, name: 'Dr. G. Balakrishna', affiliation: 'Principal of SRIT', designation: 'Ex-Officio', link: '/about/principal' },
 ];

@@ -12,7 +12,7 @@ const researchLink: NavLink = {
 };
 
 const desktopLinks: NavLink[] = [
-    navLinks[1], navLinks[3], navLinks[2], navLinks[4], navLinks[7], researchLink,
+    navLinks[1], navLinks[2], navLinks[3], navLinks[4], navLinks[7], researchLink,
 ];
 
 const mainNavLabels = new Set(desktopLinks.map(({ label }) => label));
@@ -174,29 +174,29 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
 
     return <header ref={headerRef} className={`fixed inset-x-0 top-0 z-[100] bg-white ${showShadow ? 'shadow-[0_10px_32px_rgba(255,102,0,.12)]' : 'shadow-none'}`}>
         <div className="bg-[#FF6600] text-white shadow-xs">
-            <div className="flex w-full items-center justify-between px-2 sm:px-4 md:px-6 lg:px-8 py-1 lg:py-0 min-h-[36px] lg:min-h-[40px] xl:min-h-[42px]">
+            <div className="flex w-full items-center justify-between px-2 sm:px-4 md:px-6 lg:pl-6 lg:pr-0 xl:pl-8 xl:pr-0 py-1 lg:py-0 min-h-[40px] sm:min-h-[42px] lg:min-h-[44px] xl:min-h-[48px]">
                 {/* Contact information (Phone & Email) */}
-                <div aria-label="Contact information" className="flex items-center gap-2 sm:gap-3 md:gap-4 shrink-0 text-[11px] sm:text-[12px] md:text-[13px] xl:text-[13.5px] font-extrabold tracking-wide">
-                    <a href="tel:+919515611111" className="inline-flex items-center gap-1 sm:gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
-                        <PhoneIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                <div aria-label="Contact information" className="flex items-center gap-2 sm:gap-3 md:gap-4 xl:gap-5 shrink-0 text-[11.5px] sm:text-[12.5px] md:text-[13.5px] xl:text-[14.5px] 2xl:text-[15px] font-extrabold tracking-wide">
+                    <a href="tel:+919515611111" className="inline-flex items-center gap-1.5 sm:gap-2 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <PhoneIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-[17px] md:w-[17px] xl:h-[18px] xl:w-[18px] 2xl:h-5 2xl:w-5 fill-black text-black shrink-0 drop-shadow-2xs" />
                         <span className="font-extrabold tracking-wider">91-951 561 1111</span>
                     </a>
-                    <span className="h-3.5 w-[1px] bg-white/40" aria-hidden="true" />
-                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1 sm:gap-1.5 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
-                        <MailIcon className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4 fill-black text-black shrink-0 drop-shadow-2xs" />
+                    <span className="h-4 w-[1px] bg-white/40" aria-hidden="true" />
+                    <a href="mailto:hr@srit.ac.in" className="inline-flex items-center gap-1.5 sm:gap-2 whitespace-nowrap text-white hover:text-black transition-colors py-0.5">
+                        <MailIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-[17px] md:w-[17px] xl:h-[18px] xl:w-[18px] 2xl:h-5 2xl:w-5 fill-black text-black shrink-0 drop-shadow-2xs" />
                         <span className="font-extrabold tracking-wider">hr@srit.ac.in</span>
                     </a>
                 </div>
 
                 {/* Mobile/Zoomed-in section: Faculty Login, Student Login and hamburger for other links */}
-                <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+                <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
                     {/* Faculty Login & Student Login */}
                     {utilityLinks.slice(0, 2).map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = "inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded transition-colors whitespace-nowrap";
+                        const itemClass = "inline-flex items-center gap-1.5 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[11px] sm:text-[12.5px] px-2 sm:px-2.5 py-1 sm:py-1.5 rounded transition-colors whitespace-nowrap";
                         const shortLabel = label.replace(' Login', '');
                         const content = (
                             <>
-                                <Icon className={`h-3 w-3 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
+                                <Icon className={`h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
                                 <span>{shortLabel}</span>
                             </>
                         );
@@ -221,12 +221,12 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                         }}
                         aria-label={topUtilityOpen ? 'Close more links' : 'Open more links'}
                         aria-expanded={topUtilityOpen}
-                        className="inline-flex items-center gap-1 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded transition-colors"
+                        className="inline-flex items-center gap-1.5 bg-black/15 hover:bg-black/25 text-white font-extrabold text-[11px] sm:text-[12.5px] px-2 sm:px-2.5 py-1 sm:py-1.5 rounded transition-colors"
                     >
-                        <span className="flex w-3 flex-col gap-[2.5px]" aria-hidden="true">
-                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'translate-y-[4px] rotate-45' : ''}`} />
+                        <span className="flex w-3.5 flex-col gap-[3px]" aria-hidden="true">
+                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'translate-y-[4.5px] rotate-45' : ''}`} />
                             <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? 'scale-x-0 opacity-0' : ''}`} />
-                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? '-translate-y-[4px] -rotate-45' : ''}`} />
+                            <span className={`h-[1.5px] w-full rounded-full bg-white transition-all duration-200 ${topUtilityOpen ? '-translate-y-[4.5px] -rotate-45' : ''}`} />
                         </span>
                         <span>More</span>
                     </button>
@@ -235,13 +235,13 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                 {/* Desktop-only utility links (flex with wrap-safety and zoom scaling) */}
                 <nav
                     aria-label="Contact and quick links"
-                    className="hidden lg:flex items-center justify-end text-[10.5px] xl:text-[11.5px] 2xl:text-[12px] font-bold tracking-tight"
+                    className="hidden lg:flex items-center justify-end text-[11.5px] xl:text-[13px] 2xl:text-[14.5px] font-bold tracking-tight"
                 >
                     {utilityLinks.map(({ label, href, external, icon: Icon, fillIcon }) => {
-                        const itemClass = 'inline-flex items-center gap-1 xl:gap-1.5 whitespace-nowrap shrink-0 border-l border-white/40 px-1.5 xl:px-2.5 2xl:px-3 py-1 text-white hover:bg-black/15 hover:text-white transition-all font-bold';
+                        const itemClass = 'inline-flex items-center gap-1.5 xl:gap-2 whitespace-nowrap shrink-0 border-l border-white/50 last:border-r border-r-white/50 px-2 xl:px-2.5 2xl:px-3.5 py-1.5 xl:py-2 text-white hover:bg-black/15 hover:text-white transition-all font-bold';
                         const content = (
                             <>
-                                <Icon className={`h-3 w-3 xl:h-3.5 xl:w-3.5 2xl:h-4 2xl:w-4 shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
+                                <Icon className={`h-3.5 w-3.5 xl:h-4 xl:w-4 2xl:h-[18px] 2xl:w-[18px] shrink-0 text-black drop-shadow-2xs ${fillIcon ? 'fill-black' : ''}`} />
                                 <span className="font-bold">{label}</span>
                             </>
                         );
@@ -324,9 +324,8 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                 <Link
                                     to={item.href}
                                     onFocus={() => onMenuEnter(item.label)}
-                                    className={`relative inline-flex h-full items-center gap-0.5 xl:gap-1 px-1.5 lg:text-[13px] xl:px-2.5 xl:text-[15px] 2xl:px-3.5 2xl:text-[17px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] ${
-                                        isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'
-                                    }`}
+                                    className={`relative inline-flex h-full items-center gap-0.5 xl:gap-1 px-1.5 lg:text-[13px] xl:px-2.5 xl:text-[15px] 2xl:px-3.5 2xl:text-[17px] font-bold whitespace-nowrap transition-colors duration-200 ease-out hover:text-[#FF6600] ${isActive(item) || openMenu === item.label ? 'text-[#FF6600]' : 'text-[#171b24]'
+                                        }`}
                                 >
                                     <span className="relative py-2">
                                         <span className="inline-flex items-center gap-0.5 xl:gap-1">
@@ -336,9 +335,8 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                             )}
                                         </span>
                                         <span
-                                            className={`absolute left-0 right-0 -bottom-1 h-[2.5px] rounded-full bg-[#FF6600] transition-all duration-300 ease-out ${
-                                                isActive(item) || openMenu === item.label ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'
-                                            }`}
+                                            className={`absolute left-0 right-0 -bottom-1 h-[2.5px] rounded-full bg-[#FF6600] transition-all duration-300 ease-out ${isActive(item) || openMenu === item.label ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'
+                                                }`}
                                         />
                                     </span>
                                 </Link>
@@ -379,7 +377,7 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                     <div className="w-full px-5 py-6 sm:px-8 sm:py-8 2xl:px-12">
                         <div className="mb-5 flex items-end justify-between border-b border-[#FF6600]/15 pb-4"><div><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#FF6600]">Explore SRIT</p><h2 className="mt-1 font-serif text-2xl font-semibold text-black">{activeMenu.label}</h2></div><Link to={activeMenu.href} className="inline-flex items-center gap-2 text-xs font-bold text-black hover:text-[#FF6600]">View section <ArrowRight className="h-3.5 w-3.5" /></Link></div>
                         <motion.div variants={{ hidden: {}, visible: { transition: { staggerChildren: .025, delayChildren: .035 } } }} initial="hidden" animate="visible" className={`grid gap-x-6 gap-y-1 ${megaLinks.length > 7 ? 'grid-cols-3' : 'grid-cols-2'}`}>
-                            {megaLinks.map((item, index) => <motion.div key={`${item.label}-${item.href}-${index}`} variants={{ hidden: { opacity: 0, y: 7 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: .22, ease: [.22, 1, .36, 1] }}><Link to={item.href} className={`group flex min-h-10 items-center justify-between gap-3 border-b border-[#eadfd6] px-3 py-2 text-base leading-6 font-medium tracking-[.005em] transition-colors duration-200 hover:border-[#ff9a64] hover:bg-[#fff1e8] hover:text-[#d94b12] ${isSubItemActive(item.href) ? 'border-[#ff9a64] bg-[#fff1e8] text-[#d94b12]' : 'text-[#29313d]'}`}><span>{item.label}</span><ArrowRight className={`h-3.5 w-3.5 shrink-0 -translate-x-1 transition-all duration-200 ease-out ${isSubItemActive(item.href) ? 'translate-x-0 opacity-100 text-[#d94b12]' : 'opacity-0 group-hover:translate-x-0 group-hover:opacity-100'}`} /></Link></motion.div>)}
+                            {megaLinks.map((item, index) => <motion.div key={`${item.label}-${item.href}-${index}`} variants={{ hidden: { opacity: 0, y: 7 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: .22, ease: [.22, 1, .36, 1] }}><Link to={item.href} className={`group flex min-h-10 items-center justify-between gap-3 border-b border-[#eadfd6] px-3 py-2 text-[14.5px] leading-snug font-medium tracking-[.005em] transition-colors duration-200 hover:border-[#ff9a64] hover:bg-[#fff1e8] hover:text-[#d94b12] ${isSubItemActive(item.href) ? 'border-[#ff9a64] bg-[#fff1e8] text-[#d94b12]' : 'text-[#29313d]'}`}><span>{item.label}</span><ArrowRight className={`h-3.5 w-3.5 shrink-0 -translate-x-1 transition-all duration-200 ease-out ${isSubItemActive(item.href) ? 'translate-x-0 opacity-100 text-[#d94b12]' : 'opacity-0 group-hover:translate-x-0 group-hover:opacity-100'}`} /></Link></motion.div>)}
                         </motion.div>
                     </div>
                 </motion.div>}
@@ -428,9 +426,8 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                                 type="button"
                                                 aria-expanded={mobileSubmenu === item.label}
                                                 onClick={() => setMobileSubmenu((open) => open === item.label ? null : item.label)}
-                                                className={`flex min-h-13 w-full items-center justify-between rounded-md px-3.5 py-3.5 text-left text-[16px] sm:text-[17px] xl:text-[18px] font-bold transition-all duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${
-                                                    mobileSubmenu === item.label ? 'bg-[#FFF1E8] text-[#FF6600]' : 'text-[#171b24]'
-                                                }`}
+                                                className={`flex min-h-13 w-full items-center justify-between rounded-md px-3.5 py-3.5 text-left text-[16px] sm:text-[17px] xl:text-[18px] font-bold transition-all duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${mobileSubmenu === item.label ? 'bg-[#FFF1E8] text-[#FF6600]' : 'text-[#171b24]'
+                                                    }`}
                                             >
                                                 <span>{item.label}</span>
                                                 <ChevronDown className={`h-5 w-5 text-[#FF6600] transition-transform duration-300 ${mobileSubmenu === item.label ? 'rotate-180' : ''}`} />
@@ -464,9 +461,8 @@ const Navbar: React.FC<NavbarProps> = ({ showPlacementTicker = true, showShadow 
                                                         <Link
                                                             to={sub.href}
                                                             onClick={() => setMobileOpen(false)}
-                                                            className={`flex min-h-13 items-center border-b border-[#FF6600]/15 px-3.5 py-3 text-[15px] sm:text-[16px] leading-relaxed transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${
-                                                                isSubItemActive(sub.href) ? 'font-bold text-[#FF6600]' : 'text-neutral-800'
-                                                            }`}
+                                                            className={`flex min-h-13 items-center border-b border-[#FF6600]/15 px-3.5 py-3 text-[15px] sm:text-[16px] leading-relaxed transition-colors duration-200 hover:bg-[#FFE0CF] hover:text-[#FF6600] ${isSubItemActive(sub.href) ? 'font-bold text-[#FF6600]' : 'text-neutral-800'
+                                                                }`}
                                                         >
                                                             {sub.label}
                                                         </Link>

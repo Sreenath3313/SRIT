@@ -28,11 +28,11 @@ function socialFeedsPlugin() {
             console.error('[social-api] Read error:', err?.message);
           }
 
-          // Check if explicit refresh requested or if cached data is older than 15 minutes (900,000 ms)
+          // Check if explicit refresh requested or if cached data is older than 2 minutes (120,000 ms)
           const now = Date.now();
           const syncedAtStr = currentData && typeof currentData.syncedAt === 'string' ? currentData.syncedAt : null;
           const lastSynced = syncedAtStr ? new Date(syncedAtStr).getTime() : 0;
-          const isStale = (now - lastSynced) > 15 * 60 * 1000;
+          const isStale = (now - lastSynced) > 2 * 60 * 1000;
           const forceRefresh = req.url.includes('refresh=true');
 
           if (forceRefresh || isStale) {

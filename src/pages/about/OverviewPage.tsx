@@ -32,10 +32,14 @@ const OverviewPage: React.FC = () => {
                     className="relative rounded-xl overflow-hidden shadow-md"
                 >
                     <img
-                        src="https://www.srit.ac.in/wp-content/uploads/2021/12/grd-img.jpg"
+                        src="/srit-campus-overview.webp"
                         alt="SRIT Campus"
-                        className="w-full h-[240px] sm:h-[280px] object-cover"
-                    loading="lazy" />
+                        className="w-full h-[240px] sm:h-[300px] lg:h-[340px] object-cover"
+                        loading="eager"
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src = '/srit-campus-overview.jpg';
+                        }}
+                    />
 
                     <div className="absolute bottom-0 left-0 bg-[#FF6600] px-8 py-4">
                         <h2 className="text-white text-2xl font-bold font-serif">
@@ -201,10 +205,11 @@ const OverviewPage: React.FC = () => {
                         </div>
 
                         <img
-                            src="https://www.srit.ac.in/wp-content/uploads/2021/12/srini-ramanuj-img-main.jpeg"
+                            src="/ramanujan.jpg"
                             alt="Srinivasa Ramanujan"
-                            className="w-full h-auto object-cover"
-                        loading="lazy" />
+                            className="w-full h-auto object-cover max-h-[460px]"
+                            loading="lazy"
+                        />
                     </motion.div>
                 </motion.div>
             </motion.div>

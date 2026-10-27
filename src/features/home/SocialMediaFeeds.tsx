@@ -16,7 +16,61 @@ type InstaPost = (typeof socialData.instagram.posts)[number];
 const LOGO = '/SRIT_LOGO.jpg';
 const SRIT_ORANGE = '#E85D30';
 
+/* ---------- live Instagram (Behold.so feed → official Instagram API) ---------- */
+
+const BEHOLD_FEED_ID = (import.meta.env.VITE_BEHOLD_FEED_ID as string | undefined)?.trim();
+
+type BeholdPost = {
+    id: string;
+    timestamp?: string;
+    permalink?: string;
+    mediaType?: string;
+    mediaUrl?: string;
+    thumbnailUrl?: string;
+    caption?: string;
+    sizes?: { medium?: { mediaUrl?: string }; large?: { mediaUrl?: string } };
+};
+
+/** Fetches the latest @sritatp posts straight from Behold in the browser. Returns null if not configured or on failure. */
+async function fetchLiveInstagram() {
+    if (!BEHOLD_FEED_ID) return null;
+    try {
+        const res = await fetch(`https://feeds.behold.so/${BEHOLD_FEED_ID}`, { cache: 'no-store' });
+        if (!res.ok) return null;
+        const json = await res.json();
+        const raw: BeholdPost[] = Array.isArray(json) ? json : json.posts || [];
+        const posts = raw.map((p) => ({
+            id: String(p.id),
+            link: p.permalink || 'https://www.instagram.com/sritatp/',
+            type: p.mediaType === 'VIDEO' ? 'video' : p.mediaType === 'CAROUSEL_ALBUM' ? 'carousel' : 'image',
+            timestamp: p.timestamp ? Math.floor(new Date(p.timestamp).getTime() / 1000) : 0,
+            caption: p.caption || '',
+            image: p.sizes?.medium?.mediaUrl || p.thumbnailUrl || p.mediaUrl || '',
+        }));
+        if (!posts.length) return null;
+        posts.sort((a, b) => b.timestamp - a.timestamp);
+        return {
+            profile: {
+                handle: (!Array.isArray(json) && json.username) || 'sritatp',
+                ...(!Array.isArray(json) && json.biography ? { bio: json.biography } : {}),
+                ...(!Array.isArray(json) && json.profilePictureUrl ? { avatar: json.profilePictureUrl } : {}),
+            },
+            posts,
+        };
+    } catch {
+        return null;
+    }
+}
+
 /* ---------- helpers ---------- */
+
+const resolveAssetUrl = (path?: string | null) => {
+    if (!path) return '';
+    if (path.startsWith('/social/')) {
+        return `${path}?v=srit3`;
+    }
+    return path;
+};
 
 const formatShortDate = (iso?: string | null, fallback = '') => {
     if (!iso) return fallback;
@@ -172,6 +226,7 @@ const SocialMediaFeeds: React.FC = () => {
     const ref = useRef<HTMLElement>(null);
     const inView = useInView(ref, { once: true, margin: '-100px' });
     const [activePost, setActivePost] = useState<InstaPost | null>(null);
+    const [instaView, setInstaView] = useState<'feed' | 'grid'>('feed');
 
     // Dynamic state initialized with bundled data, updated live from API
     const [data, setData] = useState<typeof socialData>(socialData);
@@ -182,16 +237,22 @@ const SocialMediaFeeds: React.FC = () => {
         try {
             if (forceRefresh) setIsRefreshing(true);
             setLiveStatus('syncing');
-            const res = await fetch(`/api/social-feeds${forceRefresh ? '?refresh=true' : ''}`, {
-                headers: { 'Cache-Control': 'no-cache' },
-            });
-            if (res.ok) {
-                const fresh = await res.json();
-                if (fresh?.instagram && fresh?.twitter && fresh?.facebook) {
-                    setData(fresh);
-                    setLiveStatus('live');
-                }
-            }
+            const [res, liveInsta] = await Promise.all([
+                fetch(`/api/social-feeds${forceRefresh ? '?refresh=true' : ''}`, {
+                    headers: { 'Cache-Control': 'no-cache' },
+                }).catch(() => null),
+                fetchLiveInstagram(),
+            ]);
+            const fresh = res && res.ok ? await res.json().catch(() => null) : null;
+            setData((prev) => ({
+                ...prev,
+                instagram: liveInsta?.posts?.length
+                    ? { ...prev.instagram, ...liveInsta, profile: { ...prev.instagram.profile, ...liveInsta.profile } }
+                    : fresh?.instagram?.posts?.length ? fresh.instagram : prev.instagram,
+                twitter: fresh?.twitter?.tweets?.length ? fresh.twitter : prev.twitter,
+                facebook: fresh?.facebook?.posts?.length ? fresh.facebook : prev.facebook,
+            }));
+            setLiveStatus(fresh || liveInsta ? 'live' : 'idle');
         } catch {
             // Keep current feeds on network hiccups
             setLiveStatus('idle');
@@ -200,16 +261,28 @@ const SocialMediaFeeds: React.FC = () => {
         }
     };
 
-    // Live background polling: checks for new posts every 5 minutes while user is on page
+    // Live background polling: checks for new posts every 2 minutes while user is on page
     React.useEffect(() => {
         // Fetch once on mount to get latest updates
         fetchLiveFeeds(false);
 
+        // Auto-check every 2 minutes
         const interval = setInterval(() => {
             fetchLiveFeeds(false);
-        }, 5 * 60 * 1000);
+        }, 2 * 60 * 1000);
 
-        return () => clearInterval(interval);
+        // Immediate check when user returns to this tab
+        const handleVisibilityChange = () => {
+            if (!document.hidden) {
+                fetchLiveFeeds(false);
+            }
+        };
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            clearInterval(interval);
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
     }, []);
 
     const { twitter, instagram, facebook } = data;
@@ -297,9 +370,13 @@ const SocialMediaFeeds: React.FC = () => {
                                             {tweet.media.map((m, i) => (
                                                 <img
                                                     key={m.src}
-                                                    src={m.src}
+                                                    src={resolveAssetUrl(m.src)}
                                                     alt={`Image ${i + 1} from SRIT post on X`}
                                                     loading="lazy"
+                                                    onError={(e) => {
+                                                        const img = e.currentTarget;
+                                                        if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                                    }}
                                                     className={`w-full object-cover ${tweet.media.length === 1 ? 'max-h-64' : 'h-32'} ${tweet.media.length === 3 && i === 0 ? 'col-span-2 h-40' : ''}`}
                                                 />
                                             ))}
@@ -340,50 +417,153 @@ const SocialMediaFeeds: React.FC = () => {
                             </div>
                         </a>
 
-                        <div className="custom-scrollbar flex-1 overflow-y-auto bg-neutral-50 p-2.5">
-                            <div className="grid grid-cols-3 gap-1.5 sm:grid-cols-4">
-                                {instagram.posts.map((post) =>
-                                    post.image ? (
-                                        <button
-                                            key={post.id}
-                                            type="button"
-                                            onClick={() => setActivePost(post)}
-                                            className="group relative aspect-square overflow-hidden rounded bg-neutral-200"
-                                            title={post.caption.split('\n')[0]}
-                                        >
-                                            <img
-                                                src={post.image}
-                                                alt={post.caption.split('\n')[0] || 'SRIT Instagram post'}
-                                                loading="lazy"
-                                                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                            />
-                                            {post.type !== 'image' && (
-                                                <span className="pointer-events-none absolute right-1 top-1 rounded bg-black/55 p-0.5 text-white">
-                                                    {post.type === 'video' ? (
-                                                        <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                                                    ) : (
-                                                        <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" /></svg>
-                                                    )}
-                                                </span>
-                                            )}
-                                            <span className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/25" />
-                                        </button>
-                                    ) : (
-                                        // No image synced: link straight to the real post instead of showing a stand-in photo.
-                                        <a
-                                            key={post.id}
-                                            href={post.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex aspect-square items-center justify-center rounded bg-neutral-200 text-neutral-500 hover:text-[#E1306C]"
-                                            title={post.caption.split('\n')[0]}
-                                        >
-                                            <InstagramIcon className="w-5 h-5" />
-                                        </a>
-                                    )
-                                )}
+                        {/* View Switcher: Posts Feed vs Photo Grid */}
+                        <div className="flex items-center justify-between border-b border-neutral-200 bg-white px-3.5 py-2 text-xs">
+                            <span className="font-semibold text-neutral-600">
+                                {instaView === 'feed' ? `${instagram.posts.length} Posts` : 'Photo Grid'}
+                            </span>
+                            <div className="flex items-center rounded-lg bg-neutral-100 p-0.5">
+                                <button
+                                    type="button"
+                                    onClick={() => setInstaView('feed')}
+                                    className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-bold transition-all ${
+                                        instaView === 'feed'
+                                            ? 'bg-white text-neutral-900 shadow-xs'
+                                            : 'text-neutral-500 hover:text-neutral-900'
+                                    }`}
+                                >
+                                    <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M3 15h18" /></svg>
+                                    Posts
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setInstaView('grid')}
+                                    className={`flex items-center gap-1.5 rounded-md px-2.5 py-1 text-[11px] font-bold transition-all ${
+                                        instaView === 'grid'
+                                            ? 'bg-white text-neutral-900 shadow-xs'
+                                            : 'text-neutral-500 hover:text-neutral-900'
+                                    }`}
+                                >
+                                    <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg>
+                                    Grid
+                                </button>
                             </div>
                         </div>
+
+                        {/* Content: Rich Post Feed OR Classic Grid */}
+                        {instaView === 'feed' ? (
+                            <div className="custom-scrollbar flex-1 space-y-3 overflow-y-auto bg-neutral-50/60 p-3">
+                                {instagram.posts.map((post) => (
+                                    <article key={post.id} className="rounded-lg border border-neutral-200 bg-white p-3.5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-md">
+                                        <div className="mb-2 flex items-center justify-between gap-2">
+                                            <div className="flex min-w-0 items-center gap-2">
+                                                <Avatar src={instagram.profile.avatar || sharedAvatar} alt="" className="h-8 w-8 rounded-full border border-pink-500/30" />
+                                                <div className="min-w-0 leading-tight">
+                                                    <a href={instagram.profile.url} target="_blank" rel="noopener noreferrer" className="block truncate text-[13px] font-bold text-neutral-900 hover:text-[#E1306C]">
+                                                        {instagram.profile.handle}
+                                                    </a>
+                                                    <span className="text-[11px] text-neutral-500">
+                                                        {formatLongDate(post.timestamp)}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <a href={post.link} target="_blank" rel="noopener noreferrer" className="p-1 text-neutral-400 hover:text-[#E1306C]" aria-label="Open on Instagram">
+                                                <InstagramIcon className="w-3.5 h-3.5" />
+                                            </a>
+                                        </div>
+
+                                        {post.caption && <ExpandableText text={post.caption} limit={240} />}
+
+                                        {post.image && (
+                                            <div className="relative mt-3 overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100">
+                                                <img
+                                                    src={resolveAssetUrl(post.image)}
+                                                    alt={post.caption.split('\n')[0] || 'SRIT Instagram post'}
+                                                    loading="lazy"
+                                                    onError={(e) => {
+                                                        const img = e.currentTarget;
+                                                        if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                                    }}
+                                                    className="max-h-72 w-full object-cover cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+                                                    onClick={() => setActivePost(post)}
+                                                />
+                                                {post.type !== 'image' && (
+                                                    <span className="pointer-events-none absolute right-2 top-2 inline-flex items-center gap-1 rounded-md bg-black/70 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-xs">
+                                                        {post.type === 'video' ? '▶ Reel' : '❐ Carousel'}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        )}
+
+                                        <div className="mt-3 flex items-center justify-between border-t border-neutral-100 pt-2.5 text-xs text-neutral-500">
+                                            <button
+                                                type="button"
+                                                onClick={() => setActivePost(post)}
+                                                className="font-medium text-[#E1306C] hover:underline"
+                                            >
+                                                View details
+                                            </button>
+                                            <a
+                                                href={post.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1 font-semibold text-[#E1306C] hover:underline"
+                                            >
+                                                {post.type === 'video' ? 'Watch Reel' : 'View on Instagram'} →
+                                            </a>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="custom-scrollbar flex-1 overflow-y-auto bg-neutral-50 p-2.5">
+                                <div className="grid grid-cols-3 gap-1.5 sm:grid-cols-4">
+                                    {instagram.posts.map((post) =>
+                                        post.image ? (
+                                            <button
+                                                key={post.id}
+                                                type="button"
+                                                onClick={() => setActivePost(post)}
+                                                className="group relative aspect-square overflow-hidden rounded bg-neutral-200"
+                                                title={post.caption.split('\n')[0]}
+                                            >
+                                                <img
+                                                    src={resolveAssetUrl(post.image)}
+                                                    alt={post.caption.split('\n')[0] || 'SRIT Instagram post'}
+                                                    loading="lazy"
+                                                    onError={(e) => {
+                                                        const img = e.currentTarget;
+                                                        if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                                    }}
+                                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                                />
+                                                {post.type !== 'image' && (
+                                                    <span className="pointer-events-none absolute right-1 top-1 rounded bg-black/55 p-0.5 text-white">
+                                                        {post.type === 'video' ? (
+                                                            <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                                                        ) : (
+                                                            <svg className="h-3 w-3 fill-current" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" /></svg>
+                                                        )}
+                                                    </span>
+                                                )}
+                                                <span className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/25" />
+                                            </button>
+                                        ) : (
+                                            <a
+                                                key={post.id}
+                                                href={post.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex aspect-square items-center justify-center rounded bg-neutral-200 text-neutral-500 hover:text-[#E1306C]"
+                                                title={post.caption.split('\n')[0]}
+                                            >
+                                                <InstagramIcon className="w-5 h-5" />
+                                            </a>
+                                        )
+                                    )}
+                                </div>
+                            </div>
+                        )}
 
                         <div className="border-t border-neutral-200 bg-white p-3">
                             <a
@@ -401,7 +581,15 @@ const SocialMediaFeeds: React.FC = () => {
                     <FeedCard title="Facebook" icon={<FacebookIcon className="w-5 h-5" />} accent="#1877F2" href={facebook.profile.url} delay={0.3} inView={inView} isLoading={isRefreshing}>
                         <div className="border-b border-neutral-100">
                             {facebook.profile.cover && (
-                                <img src={facebook.profile.cover} alt="" className="h-24 w-full object-cover" />
+                                <img
+                                    src={resolveAssetUrl(facebook.profile.cover)}
+                                    alt=""
+                                    className="h-24 w-full object-cover"
+                                    onError={(e) => {
+                                        const img = e.currentTarget;
+                                        if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                    }}
+                                />
                             )}
                             <div className="flex items-start gap-3 p-4">
                                 <Avatar src={facebook.profile.avatar || sharedAvatar} alt={facebook.profile.name} className="h-12 w-12 rounded-md" />
@@ -446,9 +634,13 @@ const SocialMediaFeeds: React.FC = () => {
                                             {post.media.map((m: any, i: number) => (
                                                 <img
                                                     key={m.src}
-                                                    src={m.src}
+                                                    src={resolveAssetUrl(m.src)}
                                                     alt={`Photo from SRIT Facebook post`}
                                                     loading="lazy"
+                                                    onError={(e) => {
+                                                        const img = e.currentTarget;
+                                                        if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                                    }}
                                                     className={`w-full object-cover ${post.media.length === 1 ? 'max-h-64' : 'h-32'} ${post.media.length === 3 && i === 0 ? 'col-span-2 h-40' : ''}`}
                                                 />
                                             ))}
@@ -484,7 +676,15 @@ const SocialMediaFeeds: React.FC = () => {
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm" onClick={() => setActivePost(null)} role="dialog" aria-modal="true">
                     <div className="flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-xl bg-white shadow-2xl md:flex-row" onClick={(e) => e.stopPropagation()}>
                         <div className="flex items-center justify-center bg-black md:w-1/2">
-                            <img src={activePost.image} alt={activePost.caption.split('\n')[0]} className="max-h-[45vh] w-full object-contain md:max-h-[90vh]" />
+                            <img
+                                src={resolveAssetUrl(activePost.image)}
+                                alt={activePost.caption.split('\n')[0]}
+                                onError={(e) => {
+                                    const img = e.currentTarget;
+                                    if (!img.src.includes('SRIT_LOGO')) img.src = LOGO;
+                                }}
+                                className="max-h-[45vh] w-full object-contain md:max-h-[90vh]"
+                            />
                         </div>
                         <div className="flex min-h-0 flex-1 flex-col md:w-1/2">
                             <div className="flex items-center justify-between border-b border-neutral-100 p-3">

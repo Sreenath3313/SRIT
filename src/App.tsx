@@ -69,6 +69,7 @@ import DegreeVerificationPage from './pages/DegreeVerificationPage';
 import PreviousRanksPage from './pages/PreviousRanksPage';
 import DownloadsPage from './pages/DownloadsPage';
 import ContactUsPage from './pages/ContactUsPage';
+import LegalPoliciesPage from './pages/LegalPoliciesPage';
 
 // Campus Life Pages
 import { CampusOverviewPage } from './pages/campus-life/campus-life/CampusOverviewPage'
@@ -113,8 +114,6 @@ import TPPlacementStatisticsPage from './pages/placements/TPPlacementStatisticsP
 import TPTeamMembersPage from './pages/placements/TPTeamMembersPage'
 import TPTrainingProgramsPage from './pages/placements/TPTrainingProgramsPage'
 
-
-import SdcDirectorPage from './pages/about/SdcDirectorPage'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -162,8 +161,6 @@ function App() {
           <Route path="/about/milestones" element={<MilestonesPage />} />
           <Route path="/about/standard-operating-procedures" element={<SopPage />} />
           <Route path="/about/institutional-strategic-plan" element={<StrategicPlanPage />} />
-          <Route path="/sdc-director" element={<SdcDirectorPage />} />
-          <Route path="/about/sdc-director" element={<SdcDirectorPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/notifications" element={<CampusNotificationsPage />} />
           <Route path="/campus-notifications" element={<CampusNotificationsPage />} />
@@ -272,6 +269,11 @@ function App() {
           <Route path="/previousranks" element={<PreviousRanksPage />} />
           <Route path="/downloads" element={<DownloadsPage />} />
           <Route path="/contact-us" element={<ContactUsPage />} />
+
+          {/* Institutional Compliance & Legal Routes */}
+          <Route path="/privacy-policy" element={<LegalPoliciesPage type="privacy" />} />
+          <Route path="/terms-and-conditions" element={<LegalPoliciesPage type="terms" />} />
+          <Route path="/refund-and-cancellation" element={<LegalPoliciesPage type="refund" />} />
 
           <Route path="/:category/:page" element={<InformationPage />} />
         </Routes>
